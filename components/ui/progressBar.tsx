@@ -23,7 +23,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   return (
     <div 
       className={twMerge(
-        'mx-auto w-full h-9 rounded-sm text-center bg-[#9B9C9F] relative overflow-hidden',
+        'mx-auto w-full h-5 rounded-sm text-center bg-[#9B9C9F] relative overflow-hidden',
         className
       )}
     >
