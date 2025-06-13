@@ -30,7 +30,6 @@ const patientTestimonies = [
 export default function PatientStories() {
   return (
     <section className="">
-      {/* Dr. Mboni Simala Section */}
       <div className="bg-[#003882]">
         <div className="container grid grid-cols-5 mx-auto px-0 md:px-4 md:max-w-2xl lg:max-w-4xl">
             <div className="col-span-2">
@@ -74,12 +73,11 @@ export default function PatientStories() {
             </div>
           </div>
       </div>
-      
-      {/* Patient Testimonies Section */}
+
       <div className="">
           <div className="grid grid-cols-1 gap-0">
             {patientTestimonies.map((patient, index) => {
-              const isOdd = index % 2 === 0; // Note: array index 0 is first position (odd), index 1 is second position (even)
+              const isOdd = index % 2 === 0;
               
               return (
                 <div 
@@ -89,7 +87,6 @@ export default function PatientStories() {
                   <div className="container mx-auto px-0 md:px-4 md:max-w-2xl lg:max-w-4xl">
                     <div className="grid grid-cols-5">
                       {isOdd ? (
-                        // Content on left, Image on right
                         <>
                           <div className="col-span-3 p-4 md:p-10 text-white">
                             <h3 className="text-sm font-light  mb-2">
@@ -125,7 +122,6 @@ export default function PatientStories() {
                           </div>
                         </>
                       ) : (
-                        // Even positions: Image on left, Content on right
                         <>
                           <div className="col-span-2">
                             <Image 

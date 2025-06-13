@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 
-// Types
 interface Slide {
   src: string;
   alt: string;
@@ -25,7 +24,6 @@ interface ServiceIcon {
   title: string;
 }
 
-// Constants
 const SLIDE_INTERVAL = 4000;
 
 const COLORS = {
@@ -103,7 +101,6 @@ const serviceIcons: ServiceIcon[] = [
   }
 ];
 
-// Helper functions
 const getPreviousSlideIndex = (currentSlide: number, totalSlides: number): number => {
   return (currentSlide - 1 + totalSlides) % totalSlides;
 };
@@ -112,7 +109,6 @@ const getNextSlideIndex = (currentSlide: number, totalSlides: number): number =>
   return (currentSlide + 1) % totalSlides;
 };
 
-// Components
 const SlideImage = ({ 
   slide, 
   priority = false, 
@@ -172,7 +168,6 @@ const HeroSlider = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }, []);
 
-  // Auto-slide functionality
   useEffect(() => {
     const timer = setInterval(nextSlide, SLIDE_INTERVAL);
     return () => clearInterval(timer);
@@ -195,18 +190,16 @@ const HeroSlider = () => {
             opacity="opacity-60" 
           />
         </div>
-        
-        {/* Center Main Image */}
+
         <div className="relative w-1/2 h-full z-20">
           <SlideImage 
             slide={slides[currentSlide]} 
             priority 
           />
-          {/* Dark overlay for center image */}
+
           <div className="absolute inset-0 bg-black opacity-40" aria-hidden="true"></div>
         </div>
-        
-        {/* Right Peeping Image */}
+
         <div className="absolute right-0 w-1/4 h-full z-10">
           <SlideImage 
             slide={slides[nextSlideIndex]} 
@@ -215,19 +208,16 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Single Image Slider Container - Mobile */}
       <div className="absolute inset-0 flex md:hidden items-center justify-center">
         <div className="relative w-full h-full z-20">
           <SlideImage 
             slide={slides[currentSlide]} 
             priority 
           />
-          {/* Dark overlay for mobile image */}
           <div className="absolute inset-0 bg-black opacity-40" aria-hidden="true"></div>
         </div>
       </div>
-      
-      {/* Slider Decoration */}
+
       <div className="absolute top-4 md:top-8 right-4 md:right-1/4 z-30">
         <div className="w-48 h-32 md:w-72 md:h-48 relative">
           <Image 
@@ -239,8 +229,7 @@ const HeroSlider = () => {
           />
         </div>
       </div>
-      
-      {/* Content - Title and Navigation at bottom */}
+
       <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-4">
         <h1 className="text-base md:text-lg font-semibold mb-2 md:mb-4 text-white drop-shadow-lg italic">
           {slides[currentSlide].title}
@@ -251,8 +240,7 @@ const HeroSlider = () => {
           onSlideChange={goToSlide}
         />
       </div>
-      
-      {/* Decorative Wave */}
+
       <div className="absolute bottom-1 md:bottom-2 left-0 w-full z-30">
         <div className="w-full h-6 md:h-8 relative">
           <Image 
@@ -343,7 +331,6 @@ const ServicesSection = () => (
   </section>
 );
 
-// Main Component
 export default function Home() {
   return (
     <main>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Play, Download } from "lucide-react";
+
 interface GetYouTubeVideoId {
     (url: string): string | null;
 }
@@ -12,7 +13,6 @@ const getYouTubeVideoId: GetYouTubeVideoId = (url) => {
     return match ? match[1] : null;
 };
 
-// Types
 interface VideoThumbnailProps {
   title: string;
   description: string;
@@ -31,8 +31,7 @@ interface DownloadSectionProps {
 
 const VideoThumbnail = ({ title, description, bgColor, videoUrl }: VideoThumbnailProps) => {
   const videoId = getYouTubeVideoId(videoUrl);
-  
-  // Try multiple thumbnail qualities as fallbacks
+
   const getThumbnailUrl = (id: string) => {
     return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
   };
@@ -40,12 +39,10 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl }: VideoThumbnai
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, videoId: string | null) => {
     const target = e.currentTarget;
     if (videoId) {
-      // Try fallback with hqdefault
       const fallbackUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
       if (target.src !== fallbackUrl) {
         target.src = fallbackUrl;
       } else {
-        // Final fallback to local image
         target.src = '/thumbnail.png';
       }
     } else {
@@ -134,7 +131,6 @@ const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, file
 export default function PatientResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Resources Header */}
       <div className="bg-[#4FB29E] py-10 text-white">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
@@ -148,7 +144,6 @@ export default function PatientResourcesPage() {
         </div>
       </div>
 
-      {/* Video Sections */}
       <VideoThumbnail
         title='HOW TO <span class="text-[#0e3692]"> ADJUST</span> YOUR TRUST'
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
@@ -182,7 +177,6 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         videoUrl="https://www.youtube.com/watch?v=zQsls0z6XCE"
       />
 
-      {/* PDF Resources Section */}
       <div className="bg-white py-10">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
@@ -198,7 +192,6 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         </div>
       </div>
 
-      {/* Download Sections */}
       <DownloadSection
         title="LOREM IPSUM DOLOR AMET"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-

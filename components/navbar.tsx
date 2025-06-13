@@ -35,7 +35,7 @@ const Navbar = () => {
     ];
 
     return (
-        <header className="w-full bg-white">
+        <header className="w-full bg-white sticky top-0 z-50">
             <div
                 className="w-full h-1 border-t-4"
                 style={{

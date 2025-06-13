@@ -1,8 +1,6 @@
-// app/contact-us/page.tsx
 export default function ContactUsPage() {
   return (
     <div className="bg-white">
-      {/* Contact Us Section */}
       <div className="bg-[#4FB29E] py-16">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md text-white">
