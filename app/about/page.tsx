@@ -254,7 +254,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="relative flex h-3">
+            <section className="relative flex h-2">
                 {mobileColorPattern.map((item, index) => (
                     <div
                         key={index}
@@ -294,7 +294,7 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="absolute -right-18 top-12 bottom-0 h-[300px] w-[500px]">
+                        <div className="absolute right-2 top-12 bottom-0 h-[300px] w-[400px]">
                             <Image
                                 src="/hospital.png"
                                 alt="Aerial view of Kijabe Hospital"
