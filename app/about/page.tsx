@@ -15,7 +15,7 @@ export default function AboutPage() {
             <section className="bg-[#4FB29E] flex items-center relative overflow-hidden">
                 <div className="container mx-auto px-8 lg:px-0 py-16 relative">
                     <div className="flex flex-row gap-8 items-center h-full">
-                        <div className="hidden lg:flex justify-center items-center">
+                        <div className="hidden lg:flex lg:ml-24 justify-center items-center">
                             <Image
                                 src="/question-mark.svg"
                                 alt="Question marks"
@@ -45,7 +45,7 @@ export default function AboutPage() {
                                 </div>
                             </div>
 
-                            <p className="text-lg md:text-xl text-left z-10 leading-relaxed font-light max-w-lg">
+                            <p className="text-left z-10 leading-relaxed font-light max-w-lg">
                                 There is a little-known epidemic. Conditions such as childhood deformity,
                                 neglected trauma and infected fractures cause massive suffering globally. This
                                 results in a significant physical, psychological and social burden as well as often
@@ -94,7 +94,7 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    <div className="hidden lg:block absolute top-0 bottom-0 left-[400px] transform -translate-x-1/2 w-[400px] z-0">
+                    <div className="hidden lg:block absolute top-0 bottom-0 xl:left-[500px] lg:left-[450px] transform -translate-x-1/2 lg:w-[400px] xl:w-[500px] z-0">
                         <Image
                             src="/IMG4.jpg"
                             alt="Patient and medical staff"
@@ -103,9 +103,9 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    <div className="text-white space-y-4 flex flex-col justify-center w-full lg:w-2/6 z-10">
+                    <div className="text-white space-y-4 flex flex-col justify-center w-full lg:w-3/6 z-10">
                         <div className="flex items-center space-x-4">
-                            <h2 className="text-xl md:text-2xl tracking-wider font-bold uppercase">
+                            <h2 className="lg:ml-4 xl:ml-32 text-xl md:text-2xl tracking-wider font-bold uppercase">
                                 THE ANSWER
                             </h2>
                             <Image
@@ -116,23 +116,34 @@ export default function AboutPage() {
                             />
                         </div>
 
-                        <div className="space-y-2 text-lg leading-relaxed font-light">
+                        <div className="lg:ml-4 xl:ml-32 leading-relaxed font-light">
                             <p>
                                 Limb reconstruction is a field of orthopaedic surgery that is at the cutting
-                                edge of the treatment of limb deformities, fracture-related infection and
-                                poorly healing fractures. The Kijabe Limb Reconstruction Unit exists to
-                            </p>
-                            <p className="font-bold text-[#083783]">
-                                equalise access to limb reconstruction surgery by providing world-class,
-                                compassionate specialist surgical care
+                                edge
+                                <br />
+                                of the treatment of limb deformities, fracture-related infection,
+                                <br />
+                                and poorly healing fractures.
                             </p>
 
                             <p>
-                                to patients whilst serving as a first-of-a-kind training centre for surgical
-                                trainees and fellows nationally and regionally. The goal of this unit is to do
-                                this at little or no cost to the under-privileged.
+                                The Kijabe Limb Reconstruction Unit exists to
+                                <br />
+                            </p>
+
+                            <p className="font-bold text-[#083783]">
+                                equalise access to limb reconstruction surgery <br />
+                                by providing world-class, compassionate specialist surgical care.
+                            </p>
+
+                            <p>
+                                The unit serves as a first-of-a-kind training centre <br />
+                                for surgical trainees and fellows nationally and regionally.
+                                <br /><br />
+                                The goal is to do this at little or no cost to the under-privileged.
                             </p>
                         </div>
+
                     </div>
 
                     <div className="lg:hidden absolute bottom-56 left-28">
@@ -149,12 +160,12 @@ export default function AboutPage() {
 
             <section className="bg-[#083783]">
                 <div className="container mx-auto px-8 lg:px-0 py-16">
-                    <div className="grid grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
-                        <div className="text-white space-y-8">
+                    <div className="grid grid-cols-2 gap-1 md:gap-2 items-center">
+                        <div className="text-white space-y-8 lg:pl-24 lg:ml-24">
                             <h2 className="text-xl md:text-2xl font-bold tracking-wider uppercase">
                                 THE VISION
                             </h2>
-                            <p className="text-lg md:text-xl leading-relaxed font-light">
+                            <p className="text-base leading-relaxed font-light">
                                 The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is
                                 a world where men, women and children can access the limb reconstruction care they
                                 need, when they need it - regardless of where they were born or how much money they
@@ -181,10 +192,10 @@ export default function AboutPage() {
                     className="object-cover object-top"
                 />
             </section>
-            <section className="bg-white h-[500px] relative">
+            <section className="bg-white h-[400px] relative">
                 <div className="container mx-auto px-8 lg:px-0 relative h-full">
                     <div className="hidden lg:flex w-full h-full relative">
-                        <div className="absolute -left-24 top-0 bottom-0 h-full w-[400px]">
+                        <div className="absolute -left-24 top-0 bottom-0 h-full w-[600px]">
                             <Image
                                 src="/mbonisi.png"
                                 alt="Dr. Mbonisi Malaba"
@@ -193,17 +204,17 @@ export default function AboutPage() {
                             />
                         </div>
 
-                        <div className="ml-[450px] flex items-center w-full">
-                            <div className="text-[#083783] space-y-8 w-full">
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                        <div className="ml-[620px] flex items-center w-full">
+                            <div className="text-[#083783] space-y-4 w-full">
+                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                                     meet the surgeon
                                 </h2>
 
                                 <div className="space-y-4">
-                                    <h3 className="text-xl md:text-2xl font-bold tracking-wider uppercase">
+                                    <h3 className="text-lg md:text-xl font-bold tracking-wider uppercase">
                                         DR. MBONISI MALABA
                                     </h3>
-                                    <p className="text-lg font-light ">
+                                    <p className="font-light ">
                                         Orthopaedic and Limb Reconstruction Surgeon, founder of{' '}
                                         <span className="font-bold text-[#083783]">
                                             Kijabe Limb Reconstruction Unit
@@ -211,7 +222,7 @@ export default function AboutPage() {
                                     </p>
                                 </div>
 
-                                <div className="space-y-4 text-base md:text-lg leading-relaxed font-light ">
+                                <div className="text-base leading-relaxed font-light ">
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua...
@@ -224,16 +235,16 @@ export default function AboutPage() {
                     <div className="lg:hidden h-full">
                         <div className="flex w-full h-full">
                             <div className="flex items-center w-full">
-                                <div className="text-[#083783] space-y-8 w-full">
-                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                                <div className="text-[#083783] space-y-4 w-full">
+                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                                         meet the surgeon
                                     </h2>
 
                                     <div className="space-y-4">
-                                        <h3 className="text-xl md:text-2xl font-bold tracking-wider uppercase">
+                                        <h3 className="text-lg md:text-xl font-bold tracking-wider uppercase">
                                             DR. MBONISI MALABA
                                         </h3>
-                                        <p className="text-lg font-light ">
+                                        <p className="font-light ">
                                             Orthopaedic and Limb Reconstruction Surgeon, founder of{' '}
                                             <span className="font-bold text-[#083783]">
                                             Kijabe Limb Reconstruction Unit
@@ -241,7 +252,7 @@ export default function AboutPage() {
                                         </p>
                                     </div>
 
-                                    <div className="space-y-4 text-base md:text-lg leading-relaxed font-light ">
+                                    <div className="text-base leading-relaxed font-light ">
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua...
@@ -267,22 +278,22 @@ export default function AboutPage() {
                 <div className="container mx-auto px-8 lg:px-0 relative h-full">
                     <div className="hidden lg:flex w-full h-full relative">
                         <div className="mr-[450px] flex items-center w-full">
-                            <div className="text-white space-y-8 w-full">
+                            <div className="text-white space-y-2 w-full lg:px-18 xl:px-28">
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-light">
                                     the <span className="font-bold">hospital</span>
                                 </h2>
 
-                                <div className="flex items-start justify-between gap-4">
-                                    <p className="text-lg md:text-xl leading-relaxed font-light text-[#083783] text-left">
+                                <div className="flex items-start justify-between gap-1">
+                                    <p className="leading-relaxed font-light text-[#083783] text-left">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+                                        Sed do eiusmod tempor incididunt ut labore et dolore magna<br />
                                         Ut enim ad minim veniam, quis nostrud exercitation.<br />
                                         Ullamco laboris nisi ut aliquip.<br />
                                         Ex ea commodo consequat.<br />
                                         Duis aute irure dolor.<br />
                                         In voluptate.
                                     </p>
-                                    <div className="flex-shrink-0 pt-12">
+                                    <div className="flex-shrink-0 pt-10 lg:pr-8 xl:pr-28 2xl:pr-64">
                                         <Image
                                             src="/hospital-icon.svg"
                                             alt="Hospital icon"
@@ -294,7 +305,10 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="absolute right-2 top-12 bottom-0 h-[300px] w-[400px]">
+                        <div
+                            className="absolute top-0 bottom-0 h-full lg:w-[600px] hidden lg:block"
+                            style={{ right: 'clamp(0px, calc((100vw - 1024px) / (1280 - 1024) * -108), -108px)' }}
+                        >
                             <Image
                                 src="/hospital.png"
                                 alt="Aerial view of Kijabe Hospital"
@@ -346,7 +360,7 @@ export default function AboutPage() {
 
             <section className="bg-[#149ECC] flex items-center">
                 <div className="container mx-auto px-8 lg:px-0 py-16">
-                    <div className="flex flex-row gap-8 items-start">
+                    <div className="flex flex-row gap-8 items-start px-16">
                         <div className="hidden lg:flex justify-center items-center">
                             <Image
                                 src="/bone-about.svg"
@@ -358,11 +372,11 @@ export default function AboutPage() {
                         </div>
 
                         <div className="text-white space-y-8 relative">
-                            <h2 className="text-4xl md:text-5xl font-light leading-tight">
+                            <h2 className="text-3xl md:text-4xl font-light leading-tight">
                                 the need for <span className="font-bold">reconstruction surgery</span>
                             </h2>
                             <div className="flex flex-row gap-4">
-                                <div className="space-y-6 text-lg md:text-xl leading-relaxed font-light relative">
+                                <div className="space-y-6  leading-relaxed font-light relative">
                                     <div className="flex flex-row gap-4">
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
@@ -396,12 +410,12 @@ export default function AboutPage() {
 
 
                                 </div>
-                                <div className="hidden lg:flex justify-center items-center">
+                                <div className="hidden lg:flex justify-center items-center px-10">
                                     <Image
                                         src="/bone-about-light.svg"
                                         alt=""
-                                        width={1000}
-                                        height={1000}
+                                        width={700}
+                                        height={700}
                                     />
                                 </div>
                             </div>
