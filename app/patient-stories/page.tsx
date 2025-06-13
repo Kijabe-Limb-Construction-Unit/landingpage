@@ -29,7 +29,7 @@ const patientTestimonies = [
 
 export default function PatientStories() {
   return (
-    <section className="">
+    <section className="min-h-screen">
       {/* Dr. Mboni Simala Section */}
       <div className="bg-[#003882]">
         <div className="container grid grid-cols-5 mx-auto px-0 md:px-4 md:max-w-2xl lg:max-w-4xl">
