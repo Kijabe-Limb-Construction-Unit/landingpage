@@ -158,7 +158,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="bg-[#083783]">
+            <section className="bg-[#0E3692]">
                 <div className="container mx-auto px-8 lg:px-0 py-16">
                     <div className="grid grid-cols-2 gap-1 md:gap-2 items-center">
                         <div className="text-white space-y-8 lg:pl-24 lg:ml-24">
