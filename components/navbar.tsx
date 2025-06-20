@@ -120,19 +120,19 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className="bg-white px-8 pt-4">
+            <div className="bg-white px-8 pt-1 md:pt-4">
                 <div className="flex items-center justify-between">
-                    <Link href="/donate">
+                    <Link href="/donate" className="mb-4">
                         <Image
                             src="/donate-butterfly-navbar.svg"
                             alt="Donate"
-                            width={120}
-                            height={80}
+                            width={80}
+                            height={70}
                             className="h-auto hover:opacity-80 transition-opacity"
                         />
                     </Link>
 
-                    <div className="text-right text-sm sm:text-base md:text-lg text-[#003683]">
+                    <div className="text-right text-[10px] sm:text-base md:text-lg text-[#003683]">
                         <span className="font-light">
                             Restoring limbs |
                         </span>

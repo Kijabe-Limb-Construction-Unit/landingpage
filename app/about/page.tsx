@@ -28,10 +28,10 @@ export default function AboutPage() {
                             <div className="space-y-4">
                                 <div className="flex flex-row gap-6">
                                     <div>
-                                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-light">
+                                        <h1 className="text-2xl md:text-3xl font-light">
                                             <span className="font-bold">about</span> us
                                         </h1>
-                                        <h2 className="text-xl md:text-2xl font-light tracking-wider uppercase">
+                                        <h2 className="text-lg md:text-xl font-bold tracking-wider uppercase">
                                             THE NEED
                                         </h2>
                                     </div>
@@ -45,7 +45,7 @@ export default function AboutPage() {
                                 </div>
                             </div>
 
-                            <p className="text-left z-10 leading-relaxed font-light max-w-lg">
+                            <p className="text-left z-10 text-sm leading-relaxed font-light max-w-lg">
                                 There is a little-known epidemic. Conditions such as childhood deformity,
                                 neglected trauma and infected fractures cause massive suffering globally. This
                                 results in a significant physical, psychological and social burden as well as often
@@ -67,12 +67,12 @@ export default function AboutPage() {
                                 <Image
                                     src="/chatbox.svg"
                                     alt="Patient stories chatbox"
-                                    width={150}
-                                    height={150}
+                                    width={180}
+                                    height={180}
                                     className=""
                                 />
                                 <div className="absolute bottom-6 md:bottom-8 inset-0 flex items-center justify-center text-center text-white">
-                                    <div className="text-lg md:text-xl lg:text-3xl font-light leading-tight">
+                                    <div className=" md:text-lg lg:text-2xl font-light leading-tight">
                                         <span className="font-bold">patient</span><br />stories
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    <div className="hidden lg:block absolute top-0 bottom-0 xl:left-[500px] lg:left-[450px] transform -translate-x-1/2 lg:w-[400px] xl:w-[500px] z-0">
+                    <div className="hidden lg:block absolute top-0 bottom-0 xl:left-[460px] lg:left-[300px] transform -translate-x-1/2 lg:w-[400px] xl:w-[500px] z-0">
                         <Image
                             src="/IMG4.jpg"
                             alt="Patient and medical staff"
@@ -105,7 +105,7 @@ export default function AboutPage() {
 
                     <div className="text-white space-y-4 flex flex-col justify-center w-full lg:w-3/6 z-10">
                         <div className="flex items-center space-x-4">
-                            <h2 className="lg:ml-4 xl:ml-32 text-xl md:text-2xl tracking-wider font-bold uppercase">
+                            <h2 className="lg:ml-4 xl:ml-32 text-2xl md:text-3xl tracking-wider font-bold uppercase">
                                 THE ANSWER
                             </h2>
                             <Image
@@ -116,7 +116,7 @@ export default function AboutPage() {
                             />
                         </div>
 
-                        <div className="lg:ml-4 xl:ml-32 leading-relaxed font-light">
+                        <div className="lg:ml-4 text-sm xl:ml-32 leading-relaxed font-light">
                             <p>
                                 Limb reconstruction is a field of orthopaedic surgery that is at the cutting
                                 edge
@@ -158,14 +158,14 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="bg-[#083783]">
+            <section className="bg-[#0E3692]">
                 <div className="container mx-auto px-8 lg:px-0 py-16">
                     <div className="grid grid-cols-2 gap-1 md:gap-2 items-center">
                         <div className="text-white space-y-8 lg:pl-24 lg:ml-24">
-                            <h2 className="text-xl md:text-2xl font-bold tracking-wider uppercase">
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase">
                                 THE VISION
                             </h2>
-                            <p className="text-base leading-relaxed font-light">
+                            <p className="text-sm leading-relaxed font-light">
                                 The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is
                                 a world where men, women and children can access the limb reconstruction care they
                                 need, when they need it - regardless of where they were born or how much money they
@@ -215,14 +215,14 @@ export default function AboutPage() {
                                         DR. MBONISI MALABA
                                     </h3>
                                     <p className="font-light ">
-                                        Orthopaedic and Limb Reconstruction Surgeon, founder of{' '}
+                                        Orthopaedic and Limb Reconstruction Surgeon, Founder of{' '}
                                         <span className="font-bold text-[#083783]">
                                             Kijabe Limb Reconstruction Unit
                                         </span>
                                     </p>
                                 </div>
 
-                                <div className="text-base leading-relaxed font-light ">
+                                <div className="text-sm leading-relaxed font-light ">
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua...
@@ -275,16 +275,16 @@ export default function AboutPage() {
             </section>
             <section className="bg-[#4FB29E] h-[400px] flex items-center">
 
-                <div className="container mx-auto px-8 lg:px-0 relative h-full">
+                <div className="px-4 md:px-8 lg:px-0 relative h-full">
                     <div className="hidden lg:flex w-full h-full relative">
                         <div className="mr-[450px] flex items-center w-full">
                             <div className="text-white space-y-2 w-full lg:px-18 xl:px-28">
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light">
+                                <h2 className="text-3xl md:text-4xl  font-light">
                                     the <span className="font-bold">hospital</span>
                                 </h2>
 
                                 <div className="flex items-start justify-between gap-1">
-                                    <p className="leading-relaxed font-light text-[#083783] text-left">
+                                    <p className=" font-light text-[#083783] text-sm text-left">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
                                         Sed do eiusmod tempor incididunt ut labore et dolore magna<br />
                                         Ut enim ad minim veniam, quis nostrud exercitation.<br />
@@ -297,8 +297,8 @@ export default function AboutPage() {
                                         <Image
                                             src="/hospital-icon.svg"
                                             alt="Hospital icon"
-                                            width={150}
-                                            height={150}
+                                            width={100}
+                                            height={100}
                                         />
                                     </div>
                                 </div>
@@ -326,7 +326,7 @@ export default function AboutPage() {
                                         the <span className="font-bold">hospital</span>
                                     </h2>
 
-                                    <div className="flex items-start justify-between gap-4">
+                                    <div className="flex items-center justify-between gap-4">
                                         <p className="text-base md:text-lg leading-relaxed font-light text-[#083783]">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -359,8 +359,8 @@ export default function AboutPage() {
             </section>
 
             <section className="bg-[#149ECC] flex items-center">
-                <div className="container mx-auto px-8 lg:px-0 py-16">
-                    <div className="flex flex-row gap-8 items-start px-16">
+                <div className="md:px-8 lg:px-0 py-16">
+                    <div className="flex flex-row gap-8 items-start px-4 md:px-16">
                         <div className="hidden lg:flex justify-center items-center">
                             <Image
                                 src="/bone-about.svg"
@@ -394,19 +394,6 @@ export default function AboutPage() {
                                             />
                                         </div>
                                     </div>
-
-                                    <p>
-                                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ocia
-                                        deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus.
-                                        Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra,
-                                        est eros bibendum elit, nec luctus magna felis sollicitudin mauris.
-                                        Integer in mauris eu nibh euismod gravida.
-                                    </p>
-
-                                    <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur.
-                                    </p>
 
 
                                 </div>
