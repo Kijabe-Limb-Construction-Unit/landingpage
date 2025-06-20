@@ -174,7 +174,7 @@ export default function AboutPage() {
                         </div>
                         <div className="flex justify-center">
                             <Image
-                                src="/africa-map-light.png"
+                                src="/africa-map-light.svg"
                                 alt="Map of Africa"
                                 width={300}
                                 height={400}
