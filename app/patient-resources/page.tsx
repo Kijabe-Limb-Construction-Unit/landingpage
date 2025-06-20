@@ -18,6 +18,7 @@ interface VideoThumbnailProps {
   description: string;
   bgColor: string;
   videoUrl: string;
+  showTeddy?: boolean;
 }
 
 interface DownloadSectionProps {
@@ -29,7 +30,9 @@ interface DownloadSectionProps {
   fileName: string;
 }
 
-const VideoThumbnail = ({ title, description, bgColor, videoUrl }: VideoThumbnailProps) => {
+
+
+const VideoThumbnail = ({ title, description, bgColor, videoUrl, showTeddy = false }: VideoThumbnailProps) => {
   const videoId = getYouTubeVideoId(videoUrl);
 
   const getThumbnailUrl = (id: string) => {
@@ -51,7 +54,7 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl }: VideoThumbnai
   };
 
   return (
-    <div className={`py-10 ${bgColor}`}>
+    <div className={`py-10 ${bgColor} relative overflow-hidden`}>
       <div className="max-w-4xl mx-auto px-8 flex justify-center">
         <div className="w-full max-w-md">
           <div className="relative mb-8 bg-gray-900 rounded-lg overflow-hidden" style={{ width: '200px', height: '112px' }}>
@@ -85,7 +88,7 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl }: VideoThumbnai
               </a>
             </div>
           </div>
-          <div className="text-white">
+          <div className="text-white relative z-10">
             <h3 className="text-xl font-bold mb-6 tracking-widest" dangerouslySetInnerHTML={{ __html: title }}></h3>
             <p className="text-sm leading-relaxed">
               {description}
@@ -93,6 +96,19 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl }: VideoThumbnai
           </div>
         </div>
       </div>
+      
+      {/* Teddy Bear - keep original desktop positioning, make visible on mobile */}
+      {showTeddy && (
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 md:right-1/5 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:block">
+          <Image
+            src="/Teddy.svg"
+            alt="Teddy Bear"
+            width={150}
+            height={150}
+            className="opacity-60 md:opacity-30 md:w-[250px] md:h-[250px]"
+          />
+        </div>
+      )}
     </div>
   );
 };
@@ -175,6 +191,7 @@ quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
 in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         bgColor="bg-[#4FB29E]"
         videoUrl="https://www.youtube.com/watch?v=zQsls0z6XCE"
+        showTeddy={true}
       />
 
       <div className="bg-white py-10">

@@ -300,29 +300,38 @@ const NavigationSection = () => (
     </div>
   </section>
 );
-
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
-  <div className="flex flex-col items-center group">
-    <div className="relative w-44 h-44 md:w-40 md:h-40 mb-4 md:mb-6 transition-transform group-hover:scale-105">
-      <Image 
-        src={icon.src} 
-        alt={icon.alt} 
-        fill
-        className="object-contain"
-        sizes="(max-width: 768px) 176px, 160px"
+  <div className="flex flex-col items-center justify-start group w-full max-w-[200px] mx-auto">
+    {/* Fixed size container for all images - using largest size for alignment */}
+    <div className="relative w-44 h-44 mb-4 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center">
+      <div className={`relative ${
+        icon.alt === "Childhood Deformity" || icon.alt === "Infected Fractures" 
+          ? "w-44 h-44" 
+          : "w-38 h-38"
+      }`}>
+        <Image 
+          src={icon.src} 
+          alt={icon.alt} 
+          fill
+          className="object-contain"
+          sizes="176px"
+        />
+      </div>
+    </div>
+    {/* Fixed height container for text at the bottom */}
+    <div className="h-12 flex items-start justify-center">
+      <h2 
+        className="text-sm md:text-base font-semibold text-[#003882] text-center leading-tight" 
+        dangerouslySetInnerHTML={{ __html: icon.title }}
       />
     </div>
-    <h2 
-      className="text-sm md:text-base font-semibold text-[#003882] text-center" 
-      dangerouslySetInnerHTML={{ __html: icon.title }}
-    />
   </div>
 );
-
 const ServicesSection = () => (
   <section className="py-8 md:py-16 bg-white" aria-label="Our services">
     <div className="container mx-auto px-4 md:px-8">
-      <div className="flex flex-col md:flex-row justify-center items-center md:items-start text-center gap-8 md:gap-8">
+      {/* Reduced gap on mobile, ultra-compact layout for desktop with perfect centering */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 max-w-xl mx-auto justify-items-center">
         {serviceIcons.map((icon, index) => (
           <ServiceIconItem key={index} icon={icon} />
         ))}
