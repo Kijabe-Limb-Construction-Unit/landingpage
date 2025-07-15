@@ -12,65 +12,69 @@ export default function AboutPage() {
 
     return (
         <div className="min-h-screen bg-white">
-      {/* Desktop (web) layout */}
-            <section className="bg-[#4FB29E] relative overflow-hidden hidden lg:flex items-center">
-                <div className="container mx-auto px-8 lg:px-0 py-16 relative">
-                    <div className="flex flex-row gap-8 items-center h-full">
-                        <div className="hidden lg:flex lg:ml-24 justify-center items-center">
-                            <Image
-                                src="/question-mark.svg"
-                                alt="Question marks"
-                                width={300}
-                                height={400}
-                                className=""
-                            />
+      {/* Desktop*/}
+      <section className="bg-[#4FB29E] relative overflow-hidden hidden lg:flex items-center">
+    <div className="container mx-auto px-8 lg:px-0 py-6 relative">
+        <div className="flex flex-row gap-6 items-center h-full">
+            <div className="hidden lg:flex lg:ml-24 justify-center items-center">
+                <Image
+                    src="/question-mark.svg"
+                    alt="Question marks"
+                    width={300}
+                    height={400}
+                    className=""
+                />
+            </div>
+            <div className="text-white space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+                <div className="space-y-4">
+                    <div className="flex flex-row gap-6">
+                        <div className=''>
+                            <h1 className="text-2xl md:text-3xl font-light">
+                                <span className="font-bold">about</span> us
+                            </h1>
+                            <h2 className="text-lg md:text-xl font-bold tracking-wider uppercase">
+                                THE NEED
+                            </h2>
                         </div>
-                        <div className="text-white space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
-                            <div className="space-y-4">
-                                <div className="flex flex-row gap-6">
-                                    <div className=''>
-                                        <h1 className="text-2xl md:text-3xl font-light">
-                                            <span className="font-bold">about</span> us
-                                        </h1>
-                                        <h2 className="text-lg md:text-xl font-bold tracking-wider uppercase">
-                                            THE NEED
-                                        </h2>
-                                    </div>
-                                    <Image
-                                        src="/question-mark-3d.svg"
-                                        alt="3D Question mark"
-                                        width={80}
-                                        height={80}
-                                        className=""
-                                    />
-                                </div>
-                            </div>
-                            <p className="text-left z-10 text-sm leading-relaxed font-light max-w-lg">
-                                There is a little-known epidemic. Conditions such as childhood deformity,
-                                neglected trauma and infected fractures cause massive suffering globally. This
-                                results in a significant physical, psychological and social burden as well as often
-                                catastrophic healthcare-related costs and loss of income.
-                            </p>
-                        </div>
-                        <div className="flex justify-center items-start lg:items-center">
-                            <div className="relative">
-                                <Image
-                                    src="/chatbox.svg"
-                                    alt="Patient stories chatbox"
-                                    width={180}
-                                    height={180}
-                                    className=""
-                                />
-                                <div className="absolute bottom-6 md:bottom-8 inset-0 flex items-center justify-center text-center text-white">
-                                    <div className=" md:text-lg lg:text-2xl font-light leading-tight">
-                                        <span className="font-bold">patient</span><br />stories
-                                    </div>
-                                </div>
-                            </div>
+                        <Image
+                            src="/question-mark-3d.svg"
+                            alt="3D Question mark"
+                            width={80}
+                            height={80}
+                            className=""
+                        />
+                    </div>
+                </div>
+                <div className="w-full flex justify-center mt-[-32px]">
+                    <div className="max-w-sm mx-auto py-8">
+                        <p className="text-center z-10 text-base leading-relaxed font-light -mt-12">
+                            There is a little-known epidemic. Conditions such as childhood deformity,
+                            neglected trauma and infected fractures cause massive suffering globally. This
+                            results in a significant physical, psychological and social burden as well as often
+                            catastrophic healthcare-related costs and loss of income.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-center items-start lg:items-center">
+                <div className="relative">
+                    <Image
+                        src="/chatbox.svg"
+                        alt="Patient stories chatbox"
+                        width={180}
+                        height={180}
+                        className=""
+                    />
+                    <div className="absolute bottom-6 md:bottom-8 inset-0 flex items-center justify-center text-center text-white">
+                        <div className=" md:text-lg lg:text-2xl font-light leading-tight">
+                            <span className="font-bold">patient</span><br />stories
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </div>
+</section>
 
             {/* Mobile layout */}
             <section className="bg-[#4FB29E] flex lg:hidden items-center relative overflow-hidden">
@@ -375,7 +379,7 @@ privileged.
                                     </h2>
 
                                     <div className="flex items-center justify-between gap-4">
-                                        <p className="text-base md:text-lg leading-relaxed font-light text-[#083783]">
+                                        <p className="text-base md:text-lg leading-relaxed font-light text-[#083783] mt-[-16px]">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             Ut enim ad minim veniam, quis nostrud exercitation.
