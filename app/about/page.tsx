@@ -12,7 +12,8 @@ export default function AboutPage() {
 
     return (
         <div className="min-h-screen bg-white">
-            <section className="bg-[#4FB29E] flex items-center relative overflow-hidden">
+      {/* Desktop (web) layout */}
+            <section className="bg-[#4FB29E] relative overflow-hidden hidden lg:flex items-center">
                 <div className="container mx-auto px-8 lg:px-0 py-16 relative">
                     <div className="flex flex-row gap-8 items-center h-full">
                         <div className="hidden lg:flex lg:ml-24 justify-center items-center">
@@ -27,7 +28,7 @@ export default function AboutPage() {
                         <div className="text-white space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
                             <div className="space-y-4">
                                 <div className="flex flex-row gap-6">
-                                    <div>
+                                    <div className=''>
                                         <h1 className="text-2xl md:text-3xl font-light">
                                             <span className="font-bold">about</span> us
                                         </h1>
@@ -44,24 +45,13 @@ export default function AboutPage() {
                                     />
                                 </div>
                             </div>
-
                             <p className="text-left z-10 text-sm leading-relaxed font-light max-w-lg">
                                 There is a little-known epidemic. Conditions such as childhood deformity,
                                 neglected trauma and infected fractures cause massive suffering globally. This
                                 results in a significant physical, psychological and social burden as well as often
                                 catastrophic healthcare-related costs and loss of income.
                             </p>
-                            <div className="lg:hidden absolute z-0 top-56">
-                                <Image
-                                    src="/question-mark.svg"
-                                    alt="Question marks"
-                                    width={200}
-                                    height={150}
-                                    className=""
-                                />
-                            </div>
                         </div>
-
                         <div className="flex justify-center items-start lg:items-center">
                             <div className="relative">
                                 <Image
@@ -82,8 +72,83 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="bg-[#149ECC] relative overflow-hidden h-[80vh] flex items-center">
-                <div className="container mx-auto px-8 lg:px-0 py-16 relative h-full flex flex-row items-center justify-between">
+            {/* Mobile layout */}
+            <section className="bg-[#4FB29E] flex lg:hidden items-center relative overflow-hidden">
+                <div className="container mx-auto px-8 lg:px-0 py-4 relative">
+                    <div className="flex flex-row gap-6 items-center h-full">
+                        
+                        <div className="text-white space-y-2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div className="w-full text-left">
+                                <h1 className="text-2xl md:text-3xl font-light">
+                                    <span className="font-bold">about</span> us
+                                </h1>
+                                <div className="flex items-center flex-nowrap min-h-[40px]">
+                                    <h4 className="text-lg md:text-xl font-bold tracking-wider uppercase whitespace-nowrap">
+                                        THE NEED 
+                                    </h4>
+                                    <Image
+                                        src="/question-mark-3d.svg"
+                                        alt="3D Question mark"
+                                        width={90}
+                                        height={90}
+                                        className='ml-15 -mt-10'
+                                    />
+                                </div>
+                            </div>
+                            <div className="space-y-4">
+                           
+                            </div>
+
+                            <p className="text-center lg:text-left z-10 text-sm leading-relaxed font-light max-w-sm">
+                                There is a little-known epidemic. Conditions such as childhood deformity,
+                                neglected trauma and infected fractures cause massive suffering globally. This
+                                results in a significant physical, psychological and social burden as well as of-
+                                ten catastrophic healthcare-related costs and loss of income.
+                            </p>
+                            <div className="lg:hidden absolute z-0 top-48">
+                                <Image
+                                    src="/question-mark.svg"
+                                    alt="Question marks"
+                                    width={200}
+                                    height={150}
+                                    className="-mt-10"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex justify-center items-start lg:items-center">
+                            <div className="relative">
+                                <Image
+                                    src="/chatbox.svg"
+                                    alt="Patient stories chatbox"
+                                    width={180}
+                                    height={180}
+                                    className=""
+                                />
+                                <div className="absolute bottom-8 md:bottom-10 inset-0 flex items-center justify-center text-center text-white">
+                                    <div className=" md:text-lg lg:text-2xl font-light leading-tight">
+                                        <span className="font-bold">patient</span><br />stories
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Mobile: Show image above answer section */}
+            <section className="lg:hidden h-[180px] relative bg-transparent">
+                <Image
+                    src="/IMG4.jpg"
+                    alt="Patient and medical staff"
+                    fill
+                    className="object-cover"
+                />
+            </section>
+
+            {/* Answer Section */}
+            <section className="bg-[#149ECC] relative overflow-hidden flex items-center h-[50vh]">
+                <div className="container mx-auto px-8 lg:px-0 py-6 md:py-16 relative h-full flex flex-row items-center justify-between">
 
                     <div className="hidden lg:flex justify-center items-center w-1/7 z-10">
                         <Image
@@ -117,36 +182,19 @@ export default function AboutPage() {
                         </div>
 
                         <div className="lg:ml-4 text-sm xl:ml-32 leading-relaxed font-light">
-                            <p>
-                                Limb reconstruction is a field of orthopaedic surgery that is at the cutting
-                                edge
-                                <br />
-                                of the treatment of limb deformities, fracture-related infection,
-                                <br />
-                                and poorly healing fractures.
-                            </p>
-
-                            <p>
-                                The Kijabe Limb Reconstruction Unit exists to
-                                <br />
-                            </p>
-
-                            <p className="font-bold text-[#083783]">
-                                equalise access to limb reconstruction surgery <br />
-                                by providing world-class, compassionate specialist surgical care.
-                            </p>
-
-                            <p>
-                                The unit serves as a first-of-a-kind training centre <br />
-                                for surgical trainees and fellows nationally and regionally.
-                                <br /><br />
-                                The goal is to do this at little or no cost to the under-privileged.
-                            </p>
+                        Limb reconstruction is a f ield of orthopaedic surgery that is at the cutting
+                         edge of the treatment of limb deformities, fracture-related infection and
+                         poorly healing fractures. The Kijabe Limb Reconstruction Unit exists to
+                         <span className="font-bold text-[#083783]"> equalise access to limb reconstruction surgery by providing world-class,
+                          compassionate specialist surgical care </span> to patients whilst serving as a f
+                        irst-of-a-kind training centre for surgical trainees and fellows nationally and
+                         regionally. The goal of this unit is to do this at little or no cost to the under-
+privileged.
                         </div>
 
                     </div>
 
-                    <div className="lg:hidden absolute bottom-56 left-28">
+                    <div className="lg:hidden absolute mt-25 left-28">
                         <Image
                             src="/ticks-light.svg"
                             alt="Tick marks"
@@ -159,9 +207,9 @@ export default function AboutPage() {
             </section>
 
             <section className="bg-[#0E3692]">
-                <div className="container mx-auto px-8 lg:px-0 py-16">
+                <div className="container mx-auto px-8 lg:px-0 py-6">
                     <div className="grid grid-cols-2 gap-1 md:gap-2 items-center">
-                        <div className="text-white space-y-8 lg:pl-24 lg:ml-24">
+                        <div className="text-white space-y-2 lg:pl-24 lg:ml-24">
                             <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase">
                                 THE VISION
                             </h2>
@@ -192,7 +240,7 @@ export default function AboutPage() {
                     className="object-cover object-top"
                 />
             </section>
-            <section className="bg-white h-[400px] relative">
+            <section className="bg-white h-[54vh] relative">
                 <div className="container mx-auto px-8 lg:px-0 relative h-full">
                     <div className="hidden lg:flex w-full h-full relative">
                         <div className="absolute -left-24 top-0 bottom-0 h-full w-[600px]">
@@ -273,9 +321,9 @@ export default function AboutPage() {
                     />
                 ))}
             </section>
-            <section className="bg-[#4FB29E] h-[400px] flex items-center">
+            <section className="bg-[#4FB29E] flex items-center">
 
-                <div className="px-4 md:px-8 lg:px-0 relative h-full">
+                <div className="px-4 md:px-8 lg:px-0 relative py-8">
                     <div className="hidden lg:flex w-full h-full relative">
                         <div className="mr-[450px] flex items-center w-full">
                             <div className="text-white space-y-2 w-full lg:px-18 xl:px-28">
@@ -359,8 +407,8 @@ export default function AboutPage() {
             </section>
 
             <section className="bg-[#149ECC] flex items-center">
-                <div className="md:px-8 lg:px-0 py-16">
-                    <div className="flex flex-row gap-8 items-start px-4 md:px-16">
+                <div className="md:px-8 lg:px-0 py-8">
+                    <div className="flex flex-row gap-4 items-start px-4 md:px-16">
                         <div className="hidden lg:flex justify-center items-center">
                             <Image
                                 src="/bone-about.svg"

@@ -12,12 +12,12 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { name: 'home', path: '/', bgColor: 'bg-[#083783]' },
-        { name: 'about us', path: '/about', bgColor: 'bg-[#C7D886]' },
-        { name: 'patient stories', path: '/patient-stories', bgColor: 'bg-[#4FB29E]' },
-        { name: 'patient resources', path: '/patient-resources', bgColor: 'bg-[#149ECC]' },
-        { name: 'donate', path: '/donate', bgColor: 'bg-[#083783]' },
-        { name: 'contact us', path: '/contact', bgColor: 'bg-[#C7D886]' },
+        { name: 'Home', path: '/', bgColor: 'bg-[#083783]' },
+        { name: 'About Us', path: '/about', bgColor: 'bg-[#C7D886]' },
+        { name: 'Patient Stories', path: '/patient-stories', bgColor: 'bg-[#4FB29E]' },
+        { name: 'Patient Resources', path: '/patient-resources', bgColor: 'bg-[#149ECC]' },
+        { name: 'Donate', path: '/donate', bgColor: 'bg-[#083783]' },
+        { name: 'Contact us', path: '/contact', bgColor: 'bg-[#C7D886]' },
     ];
 
     const colorPattern = [
