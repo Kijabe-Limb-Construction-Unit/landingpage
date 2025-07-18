@@ -47,7 +47,7 @@ export default function AboutPage() {
                 </div>
                 <div className="w-full flex justify-center mt-[-32px]">
                     <div className="max-w-sm mx-auto py-8">
-                        <p className="text-center z-10 text-base leading-relaxed font-light -mt-12">
+                        <p className="text-left z-10 text-base leading-relaxed font-light -mt-12">
                             There is a little-known epidemic. Conditions such as childhood deformity,
                             neglected trauma and infected fractures cause massive suffering globally. This
                             results in a significant physical, psychological and social burden as well as often
@@ -103,7 +103,7 @@ export default function AboutPage() {
                            
                             </div>
 
-                            <p className="text-center lg:text-left z-10 text-sm leading-relaxed font-light max-w-sm">
+                            <p className="text-left lg:text-left z-10 text-sm leading-relaxed font-light max-w-sm">
                                 There is a little-known epidemic. Conditions such as childhood deformity,
                                 neglected trauma and infected fractures cause massive suffering globally. This
                                 results in a significant physical, psychological and social burden as well as of-
@@ -154,7 +154,7 @@ export default function AboutPage() {
             <section className="bg-[#149ECC] relative overflow-hidden flex items-center h-[50vh]">
                 <div className="container mx-auto px-8 lg:px-0 py-6 md:py-16 relative h-full flex flex-row items-center justify-between">
 
-                    <div className="hidden lg:flex justify-center items-center w-1/7 z-10">
+                    <div className="hidden lg:flex justify-center items-center w-1/5 z-10">
                         <Image
                             src="/ticks-light.svg"
                             alt="Tick marks"
@@ -163,7 +163,7 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    <div className="hidden lg:block absolute top-0 bottom-0 xl:left-[460px] lg:left-[300px] transform -translate-x-1/2 lg:w-[400px] xl:w-[500px] z-0">
+                    <div className="hidden lg:block absolute top-0 bottom-0 xl:left-[460px] lg:left-[300px] transform -translate-x-1/2 lg:w-[400px] xl:w-[350px] z-0">
                         <Image
                             src="/IMG4.jpg"
                             alt="Patient and medical staff"
@@ -172,9 +172,9 @@ export default function AboutPage() {
                         />
                     </div>
 
-                    <div className="text-white space-y-4 flex flex-col justify-center w-full lg:w-3/6 z-10">
+                    <div className="text-white space-y-4 flex flex-col justify-center w-full lg:w-[52%] z-10 lg:ml-8">
                         <div className="flex items-center space-x-4">
-                            <h2 className="lg:ml-4 xl:ml-32 text-2xl md:text-3xl tracking-wider font-bold uppercase">
+                            <h2 className="lg:ml-8 xl:ml-16 text-2xl md:text-3xl tracking-wider font-bold uppercase">
                                 THE ANSWER
                             </h2>
                             <Image
@@ -185,15 +185,10 @@ export default function AboutPage() {
                             />
                         </div>
 
-                        <div className="lg:ml-4 text-sm xl:ml-32 leading-relaxed font-light">
-                        Limb reconstruction is a f ield of orthopaedic surgery that is at the cutting
-                         edge of the treatment of limb deformities, fracture-related infection and
-                         poorly healing fractures. The Kijabe Limb Reconstruction Unit exists to
-                         <span className="font-bold text-[#083783]"> equalise access to limb reconstruction surgery by providing world-class,
-                          compassionate specialist surgical care </span> to patients whilst serving as a f
-                        irst-of-a-kind training centre for surgical trainees and fellows nationally and
-                         regionally. The goal of this unit is to do this at little or no cost to the under-
-privileged.
+                        <div className="lg:ml-8 xl:ml-16 text-sm leading-relaxed font-light">
+                            Limb reconstruction is a field of orthopaedic surgery that is at the cutting edge of the treatment of limb deformities, fracture-related infection and poorly healing fractures. The Kijabe Limb Reconstruction Unit exists to
+                            <span className="font-bold text-[#083783]"> equalise access to limb reconstruction surgery by providing world-class, compassionate specialist surgical care </span>
+                            to patients whilst serving as a first-of-a-kind training centre for surgical trainees and fellows nationally and regionally. The goal of this unit is to do this at little or no cost to the underprivileged.
                         </div>
 
                     </div>
@@ -212,12 +207,12 @@ privileged.
 
             <section className="bg-[#0E3692]">
                 <div className="container mx-auto px-8 lg:px-0 py-6">
-                    <div className="grid grid-cols-2 gap-1 md:gap-2 items-center">
-                        <div className="text-white space-y-2 lg:pl-24 lg:ml-24">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase">
+                    <div className="flex flex-col lg:flex-row gap-2 items-center justify-center">
+                        <div className="text-white space-y-2 max-w-xs">
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-center lg:text-left">
                                 THE VISION
                             </h2>
-                            <p className="text-sm leading-relaxed font-light">
+                            <p className="text-sm leading-relaxed font-light text-center lg:text-left">
                                 The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is
                                 a world where men, women and children can access the limb reconstruction care they
                                 need, when they need it - regardless of where they were born or how much money they
@@ -228,8 +223,8 @@ privileged.
                             <Image
                                 src="/africa-map-light.svg"
                                 alt="Map of Africa"
-                                width={300}
-                                height={400}
+                                width={200}
+                                height={300}
                                 className=""
                             />
                         </div>
@@ -267,17 +262,20 @@ privileged.
                                         DR. MBONISI MALABA
                                     </h3>
                                     <p className="font-light ">
-                                        Orthopaedic and Limb Reconstruction Surgeon, Founder of{' '}
+                                        Orthopaedic and Limb Reconstruction <br /> Surgeon, Founder of { ' '}
                                         <span className="font-bold text-[#083783]">
-                                            Kijabe Limb Reconstruction Unit
+                                            Kijabe Limb <br /> Reconstruction Unit
                                         </span>
                                     </p>
                                 </div>
 
-                                <div className="text-sm leading-relaxed font-light ">
+                                <div className="text-sm leading-relaxed max-w-md font-light ">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua...
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
+                                         mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                         voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                                     </p>
                                 </div>
                             </div>

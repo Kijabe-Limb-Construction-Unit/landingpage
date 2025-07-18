@@ -89,8 +89,8 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl, showTeddy = fal
             </div>
           </div>
           <div className="text-white relative z-10">
-            <h3 className="text-xl font-bold mb-6 tracking-widest" dangerouslySetInnerHTML={{ __html: title }}></h3>
-            <p className="text-sm leading-relaxed">
+            <h3 className="text-xl font-bold mb-6 tracking-widest" style={{ fontFamily: 'Caveat, cursive' }} dangerouslySetInnerHTML={{ __html: title }}></h3>
+            <p className="text-sm leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               {description}
             </p>
           </div>
@@ -124,11 +124,11 @@ const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, file
   };
 
   return (
-    <div className={`py-16 ${bgColor}`}>
+    <div className={`py-8 ${bgColor}`}>
       <div className="max-w-4xl mx-auto px-8 flex justify-center">
         <div className="w-full max-w-md">
-          <h3 className="text-xl font-bold text-white mb-6 tracking-widest">{title}</h3>
-          <p className="text-white text-sm leading-relaxed mb-8">
+          <h3 className="text-xl font-bold text-white mb-4 tracking-widest" style={{ fontFamily: 'Caveat, cursive' }}>{title}</h3>
+          <p className="text-white text-sm leading-relaxed mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
             {description}
           </p>
           <button 
@@ -136,7 +136,7 @@ const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, file
             className="flex items-center gap-3 text-white hover:text-blue-200 transition-colors cursor-pointer"
           >
             <Download className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-widest">{buttonText}</span>
+            <span className="text-sm font-medium tracking-widest" style={{ fontFamily: 'Caveat, cursive' }}>{buttonText}</span>
           </button>
         </div>
       </div>
@@ -150,9 +150,9 @@ export default function PatientResourcesPage() {
       <div className="bg-[#4FB29E] py-10 text-white">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-xl font-normal mb-2">resources for patients</h2>
-            <p className="text-4xl font-light mb-6" style={{ fontStyle: 'italic', fontFamily: 'serif' }}>Facts are our friends.</p>
-            <p className="text-sm leading-relaxed">
+            <h2 className="text-xl font-normal mb-2" style={{ fontFamily: 'Caveat, cursive' }}>resources for patients</h2>
+            <p className="text-4xl font-light mb-6" style={{ fontStyle: 'italic', fontFamily: 'Chalkduster, cursive' }}>Facts are our friends.</p>
+            <p className="text-sm leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               Here is where you can get more information<br />
               about your condition or treatment.
             </p>
@@ -161,7 +161,7 @@ export default function PatientResourcesPage() {
       </div>
 
       <VideoThumbnail
-        title='HOW TO <span class="text-[#0e3692]"> ADJUST</span> YOUR TRUST'
+        title='HOW TO <span class="text-[#0e3692]" style="font-family: Chalkduster, cursive;"> ADJUST</span> YOUR TRUST'
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
 mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
@@ -183,7 +183,7 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       />
 
       <VideoThumbnail
-        title='information for <span class="text-blue-800">kids</span>'
+        title='information for <span class="text-blue-800" style="font-family: Chalkduster, cursive;">kids</span>'
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
 mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
@@ -197,8 +197,8 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       <div className="bg-white py-10">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6">more <em className="text-teal-500">pdf</em> resources</h2>
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <h2 className="text-2xl font-bold text-blue-900 mb-6" style={{ fontFamily: 'Caveat, cursive' }}>more <em className="text-teal-500" style={{ fontFamily: 'Chalkduster, cursive' }}>pdf</em> resources</h2>
+            <p className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-<br />
               mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad<br />
               minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span className="text-blue-600 underline cursor-pointer italic">ali-<br />

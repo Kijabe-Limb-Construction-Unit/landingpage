@@ -69,17 +69,10 @@ const navigationItems: NavigationItem[] = [
     width: "w-40"
   },
   {
-    label: "Patient\nstories",
-    href: "/patient-stories",
-    bgColor: COLORS.quaternary,
-    width: "w-34",
-    isHighlighted: true
-  },
-  {
     label: "Book an\nappointment",
-    href: "/book-appointment",
+    href: "#",
     bgColor: COLORS.primary,
-    width: "w-30"
+    width: "w-48"
   }
 ];
 
@@ -181,9 +174,7 @@ const HeroSlider = () => {
       className="relative h-[60vh] flex items-center justify-center text-white bg-black bg-cover bg-center overflow-hidden"
       aria-label="Hero image slider"
     >
-      {/* Three Image Slider Container - Desktop */}
       <div className="absolute inset-0 hidden md:flex items-center justify-center">
-        {/* Left Peeping Image */}
         <div className="absolute left-0 w-1/4 h-full z-10">
           <SlideImage 
             slide={slides[previousSlideIndex]} 
@@ -257,64 +248,104 @@ const HeroSlider = () => {
 };
 
 const NavigationBox = ({ item }: { item: NavigationItem }) => (
-  <Link 
-    href={item.href}
-    className={`${item.width} relative flex flex-col items-center justify-center h-20 transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 ${
-      item.isHighlighted ? 'rounded-2xl right-4' : ''
-    }`}
+  <div 
+    className={`${item.width} relative flex flex-col items-center justify-center h-24 cursor-default`}
     style={{ backgroundColor: item.bgColor }}
   >
     <p className="text-white text-sm text-center leading-tight font-light whitespace-pre-line">
-      {item.isHighlighted ? (
-        <>
-          <span className="font-bold">Patient</span><br />stories
-        </>
-      ) : (
-        item.label
-      )}
+      {item.label}
     </p>
-    {item.isHighlighted && (
-      <div 
-        className="absolute top-full left-1/2 transform -translate-x-1/2"
-        style={{
-          width: '0',
-          height: '0',
-          borderLeft: '15px solid transparent',
-          borderRight: '15px solid transparent',
-          borderTop: `40px solid ${item.bgColor}`
-        }}
-        aria-hidden="true"
-      />
-    )}
-  </Link>
+  </div>
 );
 
+const PatientStoriesBox = () => (
+  <div className="w-20 relative flex flex-col items-center justify-center h-20">
+    <div className="absolute inset-0 z-10 flex items-center justify-center" style={{ width: '330px', height: '120px', left: '72%', top: '73%', transform: 'translate(-50%, -50%)' }}>
+      <Image 
+        src="/patientstories.svg"
+        alt=""
+        fill
+        className="object-contain"
+        aria-hidden="true"
+      />
+    </div>
+  </div>
+);
+
+// Mobile Navigation Components
+const MobileNavigationBox = ({ item }: { item: NavigationItem }) => (
+  <div 
+    className="flex-1 relative flex flex-col items-center justify-center h-16 cursor-default"
+    style={{ backgroundColor: item.bgColor }}
+  >
+    <p className="text-white text-xs text-center leading-tight font-light whitespace-pre-line">
+      {item.label}
+    </p>
+  </div>
+);
+
+const MobilePatientStoriesBox = () => (
+  <div className="absolute left-1/2 transform -translate-x-1/2 -top-10 z-20">
+    <div className="relative w-30 h-40 flex items-center justify-center">
+      <Image 
+        src="/patientstories.svg"
+        alt=""
+        fill
+        className="object-contain"
+        aria-hidden="true"
+      />
+    </div>
+  </div>
+);
+
+// Desktop Navigation Section (Original)
 const NavigationSection = () => (
-  <section className="h-22" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
+  <section className="h-26 hidden md:block" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
     <div className="flex w-full relative items-end">
-      <div className="flex-1 h-20" style={{ backgroundColor: COLORS.secondary }} aria-hidden="true" />
-      {navigationItems.map((item, index) => (
-        <NavigationBox key={index} item={item} />
-      ))}
-      <div className="flex-1 h-20" style={{ backgroundColor: COLORS.tertiary }} aria-hidden="true" />
+      <div className="flex-1 h-24" style={{ backgroundColor: COLORS.secondary }} aria-hidden="true" />
+      {navigationItems.map((item, index) => {
+        if (index === 0) {
+          return <NavigationBox key={index} item={item} />;
+        } else {
+          return (
+            <div key={index} className="flex">
+              <PatientStoriesBox />
+              <NavigationBox item={item} />
+            </div>
+          );
+        }
+      })}
+      <div className="flex-1 h-24" style={{ backgroundColor: COLORS.tertiary }} aria-hidden="true" />
     </div>
   </section>
 );
+
+// Mobile Navigation Section (New)
+const MobileNavigationSection = () => (
+  <section className="block md:hidden relative" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
+    <div className="flex w-full relative">
+      {navigationItems.map((item, index) => (
+        <MobileNavigationBox key={index} item={item} />
+      ))}
+    </div>
+    <MobilePatientStoriesBox />
+  </section>
+);
+
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
   <div className="flex flex-col items-center justify-start group w-full max-w-[200px] mx-auto">
-    {/* Fixed size container for all images - using largest size for alignment */}
-    <div className="relative w-44 h-44 mb-4 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center">
+    <div className="relative w-48 h-48 md:w-44 md:h-44 mb-3 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center">
       <div className={`relative ${
         icon.alt === "Childhood Deformity" || icon.alt === "Infected Fractures" 
-          ? "w-44 h-44" 
-          : "w-38 h-38"
+          ? "w-48 h-48 md:w-44 md:h-44" 
+          : "w-44 h-44 md:w-38 md:h-38"
       }`}>
         <Image 
           src={icon.src} 
           alt={icon.alt} 
           fill
           className="object-contain"
-          sizes="176px"
+          sizes="(max-width: 768px) 192px, 176px"
         />
       </div>
     </div>
@@ -327,11 +358,19 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
     </div>
   </div>
 );
+
 const ServicesSection = () => (
   <section className="py-8 md:py-16 bg-white" aria-label="Our services">
     <div className="container mx-auto px-4 md:px-8">
-      {/* Reduced gap on mobile, ultra-compact layout for desktop with perfect centering */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-0 max-w-xl mx-auto justify-items-center">
+      {/* Mobile: Single column layout */}
+      <div className="flex flex-col items-center gap-4 md:hidden">
+        {serviceIcons.map((icon, index) => (
+          <ServiceIconItem key={index} icon={icon} />
+        ))}
+      </div>
+      
+      {/* Desktop: Three column layout */}
+      <div className="hidden md:grid grid-cols-3 gap-0 max-w-4xl md:max-w-xl mx-auto justify-items-center items-start">
         {serviceIcons.map((icon, index) => (
           <ServiceIconItem key={index} icon={icon} />
         ))}
@@ -345,6 +384,7 @@ export default function Home() {
     <main>
       <HeroSlider />
       <NavigationSection />
+      <MobileNavigationSection />
       <ServicesSection />
     </main>
   );

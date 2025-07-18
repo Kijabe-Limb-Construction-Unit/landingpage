@@ -43,13 +43,13 @@ export default function DonatePage() {
   const amounts = [10, 25, 50, 100];
 
   return (
-    <section className="w-full">
+    <section className="w-full overflow-x-hidden">
       <div className="flex flex-col">
         {/* Hero Section with Background Image */}
-        <div className=" bg-[#149ECC] relative">
-          <div className="w-full h-[255px] md:h-[350px] items-center justify-center mx-auto md:max-w-xl lg:max-w-[720px] relative">
+        <div className=" bg-[#149ECC] relative overflow-hidden">
+          <div className="w-full h-[255px] md:h-[350px] items-center justify-center mx-auto md:max-w-xl lg:max-w-[720px] relative overflow-hidden">
             <Image src="/donate-hero1.png" alt="Medical team providing care" fill className="relative object-cover object-top" />
-            <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-4 md:top-8 -right-14 h-auto" />{" "}
+            <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-4 md:top-8 -right-8 md:-right-14 h-auto max-w-none" />{" "}
           </div>
         </div>
 
@@ -79,10 +79,23 @@ export default function DonatePage() {
                 {/* Frequency Selection */}
                 <div className="items-center w-full lg:max-w-md py-1 lg:ml-20">
                   <label className="block text-sm font-light mb-2 text-white tracking-wide">Select frequency</label>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-3 gap-1 xs:gap-2">
                     {frequencies.map((freq) => (
-                      <Button key={freq} variant={selectedFrequency === freq ? "default" : "outline"} type="button" onClick={() => setSelectedFrequency(freq)}>
-                        {freq}
+                      <Button 
+                        key={freq} 
+                        variant={selectedFrequency === freq ? "default" : "outline"} 
+                        type="button" 
+                        onClick={() => setSelectedFrequency(freq)}
+                        className="text-[10px] xs:text-xs sm:text-sm px-1 xs:px-2 sm:px-3 py-2 h-auto min-w-0 leading-tight"
+                      >
+                        {freq === "Legacy Giving" ? (
+                          <span className="flex flex-col items-center">
+                            <span>Legacy</span>
+                            <span>Giving</span>
+                          </span>
+                        ) : (
+                          freq
+                        )}
                       </Button>
                     ))}
                   </div>
