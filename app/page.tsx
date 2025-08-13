@@ -26,7 +26,7 @@ interface ServiceIcon {
 const SLIDE_INTERVAL = 4000;
 
 const COLORS = {
-  primary: '#083783',
+  primary: '#003683',
   secondary: '#149ecc',
   tertiary: '#4fb29d',
   quaternary: '#c7d886',

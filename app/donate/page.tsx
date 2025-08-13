@@ -20,7 +20,7 @@ const keyFacts = [
     icon: Accessibility,
     uppercase: true,
     iconColor: "text-white",
-    textColor: "text-[#083783]",
+    textColor: "text-[#003683]",
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export default function DonatePage() {
         </div>
 
         {/* Donation Section */}
-        <div className="bg-[#083783] text-white py-12 px-4 items-center justify-center">
+        <div className="bg-[#003683] text-white py-12 px-4 items-center justify-center">
           <div className=" flex flex-col w-full md:max-w-xl lg:max-w-[720px] mx-auto justify-center items-center">
             {/* Butterfly and Progress */}
             <div className="w-full items-center flex gap-2 md:gap-4 px-2 md:px-10  justify-center">

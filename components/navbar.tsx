@@ -12,11 +12,11 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { name: 'Home', path: '/', bgColor: 'bg-[#083783]' },
+        { name: 'Home', path: '/', bgColor: 'bg-[#003683]' },
         { name: 'About Us', path: '/about', bgColor: 'bg-[#C7D886]' },
         { name: 'Patient Stories', path: '/patient-stories', bgColor: 'bg-[#4FB29E]' },
         { name: 'Patient Resources', path: '/patient-resources', bgColor: 'bg-[#149ECC]' },
-        { name: 'Donate', path: '/donate', bgColor: 'bg-[#083783]' },
+        { name: 'Donate', path: '/donate', bgColor: 'bg-[#003683]' },
         { name: 'Contact us', path: '/contact', bgColor: 'bg-[#C7D886]' },
     ];
 
@@ -24,11 +24,11 @@ const Navbar = () => {
         { bgColor: 'bg-[#149ECC]' },
         { bgColor: 'bg-[#4FB29E]' },
         { bgColor: 'bg-[#C7D886]' },
-        { bgColor: 'bg-[#083783]' },
+        { bgColor: 'bg-[#003683]' },
     ];
 
     const mobileColorPattern = [
-        { bgColor: 'bg-[#083783]' },
+        { bgColor: 'bg-[#003683]' },
         { bgColor: 'bg-[#C7D886]' },
         { bgColor: 'bg-[#4FB29E]' },
         { bgColor: 'bg-[#149ECC]' },
@@ -39,7 +39,7 @@ const Navbar = () => {
             <div
                 className="w-full h-1 border-t-4"
                 style={{
-                    borderTopColor: navItems.find(item => pathname === item.path)?.bgColor.replace('bg-[', '').replace(']', '') || '#083783'
+                    borderTopColor: navItems.find(item => pathname === item.path)?.bgColor.replace('bg-[', '').replace(']', '') || '#003683'
                 }}
             />
 
@@ -92,7 +92,7 @@ const Navbar = () => {
                         <Sheet open={isOpen} onOpenChange={setIsOpen}>
                             <SheetTrigger asChild>
                                 <button className="p-2 hover:bg-gray-100 rounded-md transition-colors">
-                                    <Menu className="h-8 w-8 text-[#083783]" />
+                                    <Menu className="h-8 w-8 text-[#003683]" />
                                 </button>
                             </SheetTrigger>
                             <SheetContent side="right" className="w-52 bg-white">
@@ -106,7 +106,7 @@ const Navbar = () => {
                                                 px-6 py-1 text-lg font-light transition-all duration-200 rounded-sm
                                                 ${pathname === item.path
                                                 ? `${item.bgColor.replace('bg-', 'bg-')} text-white`
-                                                : 'text-[#083783] hover:bg-gray-100'
+                                                : 'text-[#003683] hover:bg-gray-100'
                                             }
                                             `}
                                         >
@@ -132,14 +132,15 @@ const Navbar = () => {
                         />
                     </Link>
 
-                    <div className="text-right text-[10px] sm:text-base md:text-lg text-[#003683]">
-                        <span className="font-light">
-                            Restoring limbs |
-                        </span>
-                        <span className="font-bold ml-2">
-                            Rebuilding lives.
-                        </span>
-                    </div>
+                                                                                   <div className="text-right">
+                          <Image
+                              src="/Group16.svg"
+                              alt="Restoring limbs | Rebuilding lives"
+                              width={200}
+                              height={70}
+                              className="h-auto w-auto max-w-[120px] min-[250px]:max-w-[150px] sm:max-w-[200px] md:max-w-[250px]"
+                          />
+                      </div>
 
                 </div>
             </div>

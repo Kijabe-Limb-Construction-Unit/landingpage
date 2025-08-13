@@ -6,7 +6,7 @@ export default function AboutPage() {
         { bgColor: 'bg-[#149ECC]' },
         { bgColor: 'bg-[#4FB29E]' },
         { bgColor: 'bg-[#C7D886]' },
-        { bgColor: 'bg-[#083783]' },
+        { bgColor: 'bg-[#003683]' },
 
     ];
 
@@ -211,7 +211,7 @@ export default function AboutPage() {
 
                         <div className="text-sm leading-relaxed font-light lg:ml-8 xl:ml-16">
                             Limb reconstruction is a field of orthopaedic surgery that is at the cutting edge of the treatment of limb deformities, fracture-related infection and poorly healing fractures. The Kijabe Limb Reconstruction Unit exists to
-                            <span className="font-bold text-[#083783]"> equalise access to limb reconstruction surgery by providing world-class, compassionate specialist surgical care </span>
+                            <span className="font-bold text-[#003683]"> equalise access to limb reconstruction surgery by providing world-class, compassionate specialist surgical care </span>
                             to patients whilst serving as a first-of-a-kind training centre for surgical trainees and fellows nationally and regionally. The goal of this unit is to do this at little or no cost to the underprivileged.
                         </div>
 
@@ -230,7 +230,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="bg-[#083783] py-12">
+            <section className="bg-[#003683] py-12">
                 <div className="container mx-auto px-8 lg:px-0">
                     <div className="flex flex-col lg:flex-row gap-2 items-center justify-center">
                         <div className="text-white space-y-2 max-w-xs">
@@ -277,7 +277,7 @@ export default function AboutPage() {
                         </div>
 
                         <div className="ml-[620px] flex items-center w-full">
-                            <div className="text-[#083783] space-y-4 w-full">
+                            <div className="text-[#003683] space-y-4 w-full">
                                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                                     meet the surgeon
                                 </h2>
@@ -288,7 +288,7 @@ export default function AboutPage() {
                                     </h3>
                                     <p className="font-light ">
                                         Orthopaedic and Limb Reconstruction <br /> Surgeon, Founder of { ' '}
-                                        <span className="font-bold text-[#083783]">
+                                        <span className="font-bold text-[#003683]">
                                             Kijabe Limb <br /> Reconstruction Unit
                                         </span>
                                     </p>
@@ -310,7 +310,7 @@ export default function AboutPage() {
                     <div className="lg:hidden h-full">
                         <div className="flex w-full h-full">
                             <div className="flex items-center w-full">
-                                <div className="text-[#083783] space-y-4 w-full">
+                                <div className="text-[#003683] space-y-4 w-full">
                                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                                         meet the surgeon
                                     </h2>
@@ -321,7 +321,7 @@ export default function AboutPage() {
                                         </h3>
                                         <p className="font-light ">
                                             Orthopaedic and Limb Reconstruction Surgeon, founder of{' '}
-                                            <span className="font-bold text-[#083783]">
+                                            <span className="font-bold text-[#003683]">
                                             Kijabe Limb Reconstruction Unit
                                         </span>
                                         </p>
@@ -359,7 +359,7 @@ export default function AboutPage() {
                                 </h2>
 
                                 <div className="flex items-start justify-between gap-1">
-                                    <p className=" font-light text-[#083783] text-sm text-left">
+                                    <p className=" font-light text-[#003683] text-sm text-left">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
                                         Sed do eiusmod tempor incididunt ut labore et dolore magna<br />
                                         Ut enim ad minim veniam, quis nostrud exercitation.<br />
@@ -417,7 +417,7 @@ export default function AboutPage() {
                                                 height={120}
                                             />
                                         </div>
-                                        <p className="text-sm leading-relaxed font-light text-[#083783] text-justify">
+                                        <p className="text-sm leading-relaxed font-light text-[#003683] text-justify">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
