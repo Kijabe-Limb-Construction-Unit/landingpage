@@ -13,8 +13,8 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen bg-white">
       {/* Desktop*/}
-      <section className="bg-[#4FB29E] relative overflow-hidden hidden lg:flex items-center">
-    <div className="container mx-auto px-8 lg:px-0 py-6 relative">
+      <section className="bg-[#4FB29E] relative overflow-hidden hidden lg:flex items-center py-12">
+    <div className="container mx-auto px-8 lg:px-0 relative">
         <div className="flex flex-row gap-6 items-center h-full">
             <div className="hidden lg:flex lg:ml-24 justify-center items-center">
                 <Image
@@ -77,8 +77,8 @@ export default function AboutPage() {
 </section>
 
             {/* Mobile layout */}
-            <section className="bg-[#4FB29E] flex lg:hidden items-center relative overflow-hidden">
-                <div className="container mx-auto px-8 lg:px-0 py-4 relative">
+            <section className="bg-[#4FB29E] flex lg:hidden items-center relative overflow-hidden py-12">
+                <div className="container mx-auto px-8 lg:px-0 relative">
                     <div className="flex flex-row gap-6 items-center h-full">
                         
                         <div className="text-white space-y-2 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -86,17 +86,40 @@ export default function AboutPage() {
                                 <h1 className="text-2xl md:text-3xl font-light">
                                     <span className="font-bold">about</span> us
                                 </h1>
-                                <div className="flex items-center flex-nowrap min-h-[40px]">
+                                <div className="flex items-center flex-nowrap min-h-[40px] relative">
                                     <h4 className="text-lg md:text-xl font-bold tracking-wider uppercase whitespace-nowrap">
                                         THE NEED 
                                     </h4>
-                                    <Image
-                                        src="/question-mark-3d.svg"
-                                        alt="3D Question mark"
-                                        width={90}
-                                        height={90}
-                                        className='ml-15 -mt-10'
-                                    />
+                                    <div 
+                                        className="absolute top-0 overflow-visible z-10" 
+                                        style={{
+                                            right: 'calc(-100vw + 100% + 70px)',
+                                            top: '-60px'
+                                        }}
+                                    >
+                                        <Image
+                                            src="/question-mark-3d.svg"
+                                            alt="3D Question mark"
+                                            width={130}
+                                            height={130}
+                                            className='sm:hidden'
+                                        />
+                                    </div>
+                                    <div 
+                                        className="absolute top-0 overflow-visible z-10 hidden sm:block" 
+                                        style={{
+                                            right: 'calc(-100vw + 100% + 100px)',
+                                            top: '-60px'
+                                        }}
+                                    >
+                                        <Image
+                                            src="/question-mark-3d.svg"
+                                            alt="3D Question mark"
+                                            width={130}
+                                            height={130}
+                                            className=''
+                                        />
+                                    </div>
                                 </div>
                             </div>
                             <div className="space-y-4">
@@ -151,8 +174,8 @@ export default function AboutPage() {
             </section>
 
             {/* Answer Section */}
-            <section className="bg-[#149ECC] relative overflow-hidden flex items-center h-[50vh]">
-                <div className="container mx-auto px-8 lg:px-0 py-6 md:py-16 relative h-full flex flex-row items-center justify-between">
+            <section className="bg-[#149ECC] relative overflow-hidden flex items-center py-12">
+                <div className="container mx-auto px-4 sm:px-8 lg:px-0 relative h-full flex flex-col lg:flex-row items-center justify-between">
 
                     <div className="hidden lg:flex justify-center items-center w-1/5 z-10">
                         <Image
@@ -173,8 +196,8 @@ export default function AboutPage() {
                     </div>
 
                     <div className="text-white space-y-4 flex flex-col justify-center w-full lg:w-[52%] z-10 lg:ml-8">
-                        <div className="flex items-center space-x-4">
-                            <h2 className="lg:ml-8 xl:ml-16 text-2xl md:text-3xl tracking-wider font-bold uppercase">
+                        <div className="flex items-center space-x-2">
+                            <h2 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold uppercase lg:ml-8 xl:ml-16">
                                 THE ANSWER
                             </h2>
                             <Image
@@ -182,10 +205,11 @@ export default function AboutPage() {
                                 alt="Blue tick"
                                 width={40}
                                 height={40}
+                                className="flex-shrink-0"
                             />
                         </div>
 
-                        <div className="lg:ml-8 xl:ml-16 text-sm leading-relaxed font-light">
+                        <div className="text-sm leading-relaxed font-light lg:ml-8 xl:ml-16">
                             Limb reconstruction is a field of orthopaedic surgery that is at the cutting edge of the treatment of limb deformities, fracture-related infection and poorly healing fractures. The Kijabe Limb Reconstruction Unit exists to
                             <span className="font-bold text-[#083783]"> equalise access to limb reconstruction surgery by providing world-class, compassionate specialist surgical care </span>
                             to patients whilst serving as a first-of-a-kind training centre for surgical trainees and fellows nationally and regionally. The goal of this unit is to do this at little or no cost to the underprivileged.
@@ -193,7 +217,8 @@ export default function AboutPage() {
 
                     </div>
 
-                    <div className="lg:hidden absolute mt-25 left-28">
+                    {/* Mobile ticks - always centered */}
+                    <div className="lg:hidden absolute inset-0 flex items-center justify-center pointer-events-none z-0">
                         <Image
                             src="/ticks-light.svg"
                             alt="Tick marks"
@@ -205,8 +230,8 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="bg-[#0E3692]">
-                <div className="container mx-auto px-8 lg:px-0 py-6">
+            <section className="bg-[#083783] py-12">
+                <div className="container mx-auto px-8 lg:px-0">
                     <div className="flex flex-col lg:flex-row gap-2 items-center justify-center">
                         <div className="text-white space-y-2 max-w-xs">
                             <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-center lg:text-left">
@@ -239,7 +264,7 @@ export default function AboutPage() {
                     className="object-cover object-top"
                 />
             </section>
-            <section className="bg-white h-[54vh] relative">
+            <section className="bg-white py-12 relative">
                 <div className="container mx-auto px-8 lg:px-0 relative h-full">
                     <div className="hidden lg:flex w-full h-full relative">
                         <div className="absolute -left-24 top-0 bottom-0 h-full w-[600px]">
@@ -323,9 +348,9 @@ export default function AboutPage() {
                     />
                 ))}
             </section>
-            <section className="bg-[#4FB29E] flex items-center">
+            <section className="bg-[#4FB29E] flex items-center py-12">
 
-                <div className="px-4 md:px-8 lg:px-0 relative py-8">
+                <div className="px-4 md:px-8 lg:px-0 relative">
                     <div className="hidden lg:flex w-full h-full relative">
                         <div className="mr-[450px] flex items-center w-full">
                             <div className="text-white space-y-2 w-full lg:px-18 xl:px-28">
@@ -376,21 +401,30 @@ export default function AboutPage() {
                                         the <span className="font-bold">hospital</span>
                                     </h2>
 
-                                    <div className="flex items-center justify-between gap-4">
-                                        <p className="text-base md:text-lg leading-relaxed font-light text-[#083783] mt-[-16px]">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            Ut enim ad minim veniam, quis nostrud exercitation.
-                                        </p>
-
-                                        <div className="flex-shrink-0">
+                                    <div className="relative">
+                                        <div 
+                                            className="float-right ml-3 mb-3" 
+                                            style={{
+                                                shapeOutside: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+                                                width: "120px",
+                                                height: "120px"
+                                            }}
+                                        >
                                             <Image
                                                 src="/hospital-icon.svg"
                                                 alt="Hospital icon"
-                                                width={150}
-                                                height={150}
+                                                width={120}
+                                                height={120}
                                             />
                                         </div>
+                                        <p className="text-sm leading-relaxed font-light text-[#083783] text-justify">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -408,8 +442,8 @@ export default function AboutPage() {
                 />
             </section>
 
-            <section className="bg-[#149ECC] flex items-center">
-                <div className="md:px-8 lg:px-0 py-8">
+            <section className="bg-[#149ECC] flex items-center py-12">
+                <div className="md:px-8 lg:px-0">
                     <div className="flex flex-row gap-4 items-start px-4 md:px-16">
                         <div className="hidden lg:flex justify-center items-center">
                             <Image

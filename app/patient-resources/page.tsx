@@ -161,7 +161,7 @@ export default function PatientResourcesPage() {
       </div>
 
       <VideoThumbnail
-        title='HOW TO <span class="text-[#0e3692]" style="font-family: Chalkduster, cursive;"> ADJUST</span> YOUR TRUST'
+        title='HOW TO <span class="text-[#083783]" style="font-family: Chalkduster, cursive;"> ADJUST</span> YOUR TRUST'
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
 mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
@@ -178,7 +178,7 @@ mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
 quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
 in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#0E3692]"
+        bgColor="bg-[#083783]"
         videoUrl="https://www.youtube.com/watch?v=6i7yvVt_EIM"
       />
 
@@ -229,7 +229,7 @@ mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
 minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
 quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
 in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#0E3692]"
+        bgColor="bg-[#083783]"
         buttonText="QUIS AUTEM VEL DOLOR"
         pdfUrl="/documents/DummyPDF.pdf"
         fileName="DummyPDF.pdf"

@@ -20,7 +20,7 @@ const keyFacts = [
     icon: Accessibility,
     uppercase: true,
     iconColor: "text-white",
-    textColor: "text-[#0E3692]",
+    textColor: "text-[#083783]",
   },
   {
     id: 3,
@@ -49,12 +49,12 @@ export default function DonatePage() {
         <div className=" bg-[#149ECC] relative overflow-hidden">
           <div className="w-full h-[255px] md:h-[350px] items-center justify-center mx-auto md:max-w-xl lg:max-w-[720px] relative overflow-hidden">
             <Image src="/donate-hero1.png" alt="Medical team providing care" fill className="relative object-cover object-top" />
-            <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-4 md:top-8 -right-8 md:-right-14 h-auto max-w-none" />{" "}
+            <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute  md:top-4 -right-20 md:-right-14 h-auto max-w-none" />{" "}
           </div>
         </div>
 
         {/* Donation Section */}
-        <div className="bg-[#0E3692] text-white py-12 px-4 items-center justify-center">
+        <div className="bg-[#083783] text-white py-12 px-4 items-center justify-center">
           <div className=" flex flex-col w-full md:max-w-xl lg:max-w-[720px] mx-auto justify-center items-center">
             {/* Butterfly and Progress */}
             <div className="w-full items-center flex gap-2 md:gap-4 px-2 md:px-10  justify-center">

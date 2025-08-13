@@ -136,7 +136,7 @@ const NavigationDots = ({
       <button
         key={index}
         onClick={() => onSlideChange(index)}
-        className={`h-2 w-2 rounded-full mx-1 md:mx-2 transition-all duration-200 border-2 border-white ${
+        className={`h-1 w-1 min-[250px]:h-1.5 min-[250px]:w-1.5 min-[320px]:h-2 min-[320px]:w-2 rounded-full mx-0.5 min-[320px]:mx-1 md:mx-2 transition-all duration-200 border border-white min-[320px]:border-2 ${
           index === currentSlide
             ? 'bg-white'
             : 'bg-transparent hover:bg-white hover:bg-opacity-50'
@@ -170,7 +170,7 @@ const HeroSlider = () => {
 
   return (
     <section 
-      className="relative h-[60vh] flex items-center justify-center text-white bg-black bg-cover bg-center overflow-hidden"
+      className="relative h-[40vh] min-[250px]:h-[45vh] min-[320px]:h-[50vh] sm:h-[60vh] flex items-center justify-center text-white bg-black bg-cover bg-center overflow-hidden"
       aria-label="Hero image slider"
     >
       <div className="absolute inset-0 hidden md:flex items-center justify-center">
@@ -208,8 +208,8 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute top-4 md:top-8 right-4 md:right-1/4 z-30">
-        <div className="w-48 h-32 md:w-72 md:h-48 relative">
+      <div className="absolute top-1 min-[250px]:top-2 min-[320px]:top-4 md:top-8 right-1 min-[250px]:right-2 min-[320px]:right-4 md:right-1/4 z-30">
+        <div className="w-20 h-12 min-[250px]:w-24 min-[250px]:h-16 min-[320px]:w-32 min-[320px]:h-20 sm:w-48 sm:h-32 md:w-72 md:h-48 relative">
           <Image 
             src="/slider.svg"
             alt=""
@@ -220,8 +220,8 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-4">
-        <h1 className="text-base md:text-lg font-semibold mb-2 md:mb-4 text-white drop-shadow-lg italic">
+      <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
+        <h1 className="text-[9px] min-[250px]:text-[10px] min-[320px]:text-xs sm:text-base md:text-lg font-semibold mb-0.5 min-[250px]:mb-1 min-[320px]:mb-2 md:mb-4 text-white drop-shadow-lg italic leading-tight">
           {slides[currentSlide].title}
         </h1>     
         <NavigationDots 
@@ -231,8 +231,8 @@ const HeroSlider = () => {
         />
       </div>
 
-      <div className="absolute bottom-1 md:bottom-2 left-0 w-full z-30">
-        <div className="w-full h-6 md:h-8 relative">
+      <div className="absolute bottom-0 min-[320px]:bottom-1 md:bottom-2 left-0 w-full z-30">
+        <div className="w-full h-2 min-[250px]:h-3 min-[320px]:h-4 sm:h-6 md:h-8 relative">
           <Image 
             src="/line.svg"
             alt=""
@@ -274,18 +274,18 @@ const PatientStoriesBox = () => (
 // Mobile Navigation Components
 const MobileNavigationBox = ({ item }: { item: NavigationItem }) => (
   <div 
-    className="flex-1 relative flex flex-col items-center justify-center h-16 cursor-default"
+    className="flex-1 relative flex flex-col items-center justify-center h-8 min-[250px]:h-10 min-[320px]:h-12 sm:h-16 cursor-default min-w-0"
     style={{ backgroundColor: item.bgColor }}
   >
-    <p className="text-white text-xs text-center leading-tight font-light whitespace-pre-line">
+    <p className="text-white text-[8px] min-[250px]:text-[9px] min-[320px]:text-[10px] sm:text-xs text-center leading-[1.1] font-light whitespace-pre-line px-0.5 min-[250px]:px-1 overflow-hidden">
       {item.label}
     </p>
   </div>
 );
 
 const MobilePatientStoriesBox = () => (
-  <div className="absolute left-1/2 transform -translate-x-1/2 -top-10 z-20">
-    <div className="relative w-30 h-40 flex items-center justify-center">
+  <div className="absolute left-1/2 transform -translate-x-1/2 -top-2 min-[250px]:-top-0.5 min-[290px]:-top-0.5 min-[300px]:-top-1 min-[320px]:top-0 sm:top-0.5 z-20">
+    <div className="relative w-[67px] min-[250px]:w-[75px] min-[320px]:w-[91px] sm:w-[139px] flex items-center justify-center h-[52px] min-[300px]:h-[58px] sm:h-[64px]">
       <Image 
         src="/patientstories.svg"
         alt=""
@@ -319,10 +319,10 @@ const NavigationSection = () => (
   </section>
 );
 
-// Mobile Navigation Section (New)
+// Mobile Navigation Section (Updated with taller patient stories card)
 const MobileNavigationSection = () => (
   <section className="block md:hidden relative" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
-    <div className="flex w-full relative">
+    <div className="flex w-full relative gap-1 min-[250px]:gap-2 min-[320px]:gap-3 sm:gap-4">
       {navigationItems.map((item, index) => (
         <MobileNavigationBox key={index} item={item} />
       ))}
@@ -332,26 +332,26 @@ const MobileNavigationSection = () => (
 );
 
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
-  <div className="flex flex-col items-center justify-start group w-full max-w-[200px] mx-auto">
-    <div className="relative w-48 h-48 md:w-44 md:h-44 mb-3 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center">
+  <div className="flex flex-col items-center justify-start group w-full flex-shrink-0">
+    <div className="relative w-16 h-16 min-[250px]:w-20 min-[250px]:h-20 min-[320px]:w-24 min-[320px]:h-24 sm:w-40 sm:h-40 md:w-44 md:h-44 mb-1 min-[250px]:mb-2 min-[320px]:mb-3 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center">
       <div className={`relative ${
-        icon.alt === "Childhood Deformity" || icon.alt === "Infected Fractures" 
-          ? "w-48 h-48 md:w-44 md:h-44" 
-          : "w-44 h-44 md:w-38 md:h-38"
+        icon.alt === "Poorly Healing Fractures" 
+          ? "w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-40 md:h-40" 
+          : "w-16 h-16 min-[250px]:w-20 min-[250px]:h-20 min-[320px]:w-24 min-[320px]:h-24 sm:w-40 sm:h-40 md:w-44 md:h-44"
       }`}>
         <Image 
           src={icon.src} 
           alt={icon.alt} 
           fill
           className="object-contain"
-          sizes="(max-width: 768px) 192px, 176px"
+          sizes="(max-width: 250px) 64px, (max-width: 320px) 80px, (max-width: 640px) 96px, (max-width: 768px) 160px, 176px"
         />
       </div>
     </div>
     {/* Fixed height container for text at the bottom */}
-    <div className="h-12 flex items-start justify-center">
+    <div className="h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex items-start justify-center">
       <h2 
-        className="text-sm md:text-base font-semibold text-[#003882] text-center leading-tight" 
+        className="text-[9px] min-[250px]:text-[10px] min-[320px]:text-xs md:text-base font-semibold text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden" 
         dangerouslySetInnerHTML={{ __html: icon.title }}
       />
     </div>
@@ -359,10 +359,10 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
 );
 
 const ServicesSection = () => (
-  <section className="py-8 md:py-16 bg-white" aria-label="Our services">
-    <div className="container mx-auto px-4 md:px-8">
-      {/* Mobile: Single column layout */}
-      <div className="flex flex-col items-center gap-4 md:hidden">
+  <section className="py-3 min-[250px]:py-4 min-[320px]:py-6 md:py-16 bg-white" aria-label="Our services">
+    <div className="container mx-auto px-1 min-[250px]:px-2 min-[320px]:px-4 md:px-8">
+      {/* Mobile: Grid layout for equal spacing */}
+      <div className="grid grid-cols-3 items-center justify-items-center gap-0 md:hidden w-full">
         {serviceIcons.map((icon, index) => (
           <ServiceIconItem key={index} icon={icon} />
         ))}
