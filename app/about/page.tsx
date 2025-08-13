@@ -67,7 +67,7 @@ export default function AboutPage() {
                     />
                     <div className="absolute bottom-6 md:bottom-8 inset-0 flex items-center justify-center text-center text-white">
                         <div className=" md:text-lg lg:text-2xl font-light leading-tight">
-                            <span className="font-bold">patient</span><br />stories
+                            <span className="font-bold justify-center text-center">patient</span><br />stories
                         </div>
                     </div>
                 </div>
@@ -152,11 +152,12 @@ export default function AboutPage() {
                                     height={180}
                                     className=""
                                 />
-                                <div className="absolute bottom-8 md:bottom-10 inset-0 flex items-center justify-center text-center text-white">
-                                    <div className=" md:text-lg lg:text-2xl font-light leading-tight">
-                                        <span className="font-bold">patient</span><br />stories
-                                    </div>
-                                </div>
+                              <div className="absolute inset-0 -top-3 flex items-center justify-center text-center text-white">
+  <div className="md:text-lg lg:text-2xl font-light leading-tight">
+    <span className="font-bold">patient</span><br />stories
+  </div>
+</div>
+
                             </div>
                         </div>
                     </div>
