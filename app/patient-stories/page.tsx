@@ -1,6 +1,7 @@
 import Mboniso from "@/public/mbonisi.png";
 import Bovin from "@/public/bovin.png";
 import Moses from "@/public/moses.png";
+import Doris from "@/public/Screenshot.png";
 import YoutubeIcon from "@/public/youtube.svg"
 import YoutubeBlue from "@/public/youtube-blue.svg"
 import Image from "next/image";
@@ -25,6 +26,16 @@ const patientTestimonies = [
     image: Moses,
     bgColor: "bg-[#149ECC]",
     youtubeLink: "https://www.youtube.com/watch?v=moses-example"
+  },
+  {
+    id: 3,
+    name: "Doris",
+    testimonial: "I see a beautiful me.",
+    fullStory:
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.",
+    image: Doris,
+    bgColor: "bg-[#003683]",
+    youtubeLink: "https://www.youtube.com/watch?v=doris-example"
   },
 ];
 
@@ -65,15 +76,14 @@ export default function PatientStories() {
   height={150}
 />
 
-
               {/* Content */}
               <div className="relative z-10">
-                <h1 className="text-3xl font-bold mb-6">
+                <h1 className="text-3xl font-bold mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
                   Patient <span className="font-light">Stories</span>
                 </h1>
                 <div className="mb-4">
-                  <h3 className="text-sm font-light mb-2 tracking-wide">DR MBONISI MALABA</h3>
-                  <p className="font-bold text-lg italic leading-tight">
+                  <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
+                  <p className="font-bold text-lg italic leading-tight" style={{ fontFamily: 'Caveat, cursive' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -93,7 +103,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic font-bold">
+                    <p className="text-lg italic font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
@@ -137,12 +147,12 @@ export default function PatientStories() {
 
               {/* Content */}
               <div className="relative z-10">
-                <h1 className="text-3xl lg:text-4xl font-bold mb-6">
+                <h1 className="text-3xl lg:text-4xl font-bold mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
                   Patient <span className="font-light">Stories</span>
                 </h1>
                 <div className="mb-4">
-                  <h3 className="text-sm font-light mb-2 tracking-wide">DR MBONISI MALABA</h3>
-                  <p className="font-bold text-lg italic leading-tight">
+                  <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
+                  <p className="font-bold text-lg italic leading-tight" style={{ fontFamily: 'Caveat, cursive' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -162,7 +172,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic font-bold">
+                    <p className="text-lg italic font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
@@ -191,17 +201,17 @@ export default function PatientStories() {
                         <Image 
                           src={patient.image} 
                           alt={patient.name} 
-                          className="w-full h-auto object-cover" 
+                          className={`w-full object-cover ${patient.name === 'Doris' ? 'h-64' : 'h-auto'}`}
                         />
                       </div>
                       <div className="p-4 text-white">
-                        <h3 className="text-sm font-light mb-2">
+                        <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
                           {patient.name.toUpperCase()}
                         </h3>
-                        <p className="text-xl font-bold italic mb-4">
+                        <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                           &#34;{patient.testimonial}&#34;
                         </p>
-                        <p className="text- font-light mb-4">
+                        <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
                           {patient.fullStory}
                         </p>
                         <div className="flex justify-start">
@@ -226,13 +236,13 @@ export default function PatientStories() {
                       {isOdd ? (
                         <>
                           <div className="col-span-3 p-4 md:p-10 text-white">
-                            <h3 className="text-sm font-light  mb-2">
+                            <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
                               {patient.name.toUpperCase()}
                             </h3>
-                            <p className="text-xl font-bold italic mb-4">
+                            <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                               &#34;{patient.testimonial}&#34;
                             </p>
-                            <p className="text- font-light mb-4">
+                            <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
                               {patient.fullStory}
                             </p>
                             <div className="flex justify-end">
@@ -250,31 +260,31 @@ export default function PatientStories() {
                               </a>
                             </div>
                           </div>
-                          <div className="col-span-2">
+                          <div className={`${patient.name === 'Doris' ? 'col-span-2 h-48 md:h-64' : 'col-span-2'}`}>
                             <Image 
                               src={patient.image} 
                               alt={patient.name} 
-                              className="w-full h-full object-cover" 
+                              className={`w-full object-cover ${patient.name === 'Doris' ? 'h-64 md:h-80' : 'h-full'}`}
                             />
                           </div>
                         </>
                       ) : (
                         <>
-                          <div className="col-span-2">
+                          <div className={`${patient.name === 'Doris' ? 'col-span-2 h-48 md:h-64' : 'col-span-2'}`}>
                             <Image 
                               src={patient.image} 
                               alt={patient.name} 
-                              className="w-full h-full object-cover object-top" 
+                              className={`w-full object-cover object-top ${patient.name === 'Doris' ? 'h-64 md:h-80' : 'h-full'}`}
                             />
                           </div>
                           <div className="col-span-3 p-4 text-white md:p-10">
-                            <h3 className="text-sm font-light mb-2">
+                            <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
                              {patient.name.toUpperCase()}
                             </h3>
-                            <p className="text-xl  font-bold italic mb-4">
+                            <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                                &#34;{patient.testimonial} &#34;
                             </p>
-                            <p className="text- font-light mb-4">
+                            <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
                               {patient.fullStory}
                             </p>
                             <div className="flex justify-start">
