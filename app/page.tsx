@@ -351,6 +351,8 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
       <div className={`relative ${
         icon.alt === "Poorly Healing Fractures" 
           ? "w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-40 md:h-40" 
+          : icon.alt === "Infected Fractures"
+          ? "w-24 h-24 min-[250px]:w-28 min-[250px]:h-28 min-[320px]:w-32 min-[320px]:h-32 sm:w-52 sm:h-52 md:w-60 md:h-60"
           : "w-16 h-16 min-[250px]:w-20 min-[250px]:h-20 min-[320px]:w-24 min-[320px]:h-24 sm:w-40 sm:h-40 md:w-44 md:h-44"
       }`}>
         <Image 
