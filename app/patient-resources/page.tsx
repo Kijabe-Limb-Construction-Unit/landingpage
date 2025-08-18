@@ -89,7 +89,7 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl, showTeddy = fal
             </div>
           </div>
           <div className="text-white relative z-10">
-            <h3 className="text-xl font-bold mb-6 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }} dangerouslySetInnerHTML={{ __html: title }}></h3>
+            <h3 className="text-xl font-bold mb-6 tracking-widest" style={{ fontFamily: 'Caveat, cursive' }} dangerouslySetInnerHTML={{ __html: title }}></h3>
             <p className="text-sm leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               {description}
             </p>
@@ -127,7 +127,7 @@ const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, file
     <div className={`py-8 ${bgColor}`}>
       <div className="max-w-4xl mx-auto px-8 flex justify-center">
         <div className="w-full max-w-md">
-          <h3 className="text-xl font-bold text-white mb-4 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>{title}</h3>
+          <h3 className="text-xl font-bold text-white mb-4 tracking-widest" style={{ fontFamily: 'Caveat, cursive' }}>{title}</h3>
           <p className="text-white text-sm leading-relaxed mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
             {description}
           </p>
@@ -150,7 +150,7 @@ export default function PatientResourcesPage() {
       <div className="bg-[#4FB29E] py-10 text-white">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-xl font-normal mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>resources for patients</h2>
+            <h2 className="text-xl font-normal mb-2" style={{ fontFamily: 'Caveat, cursive' }}><strong>resources</strong> for patients</h2>
             <p className="text-4xl font-light mb-6" style={{ fontStyle: 'italic', fontFamily: 'Caveat, cursive' }}>Facts are our friends.</p>
             <p className="text-sm leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               Here is where you can get more information<br />
@@ -197,7 +197,7 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       <div className="bg-white py-10">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>more <em className="text-teal-500 not-italic" style={{ fontFamily: 'Coves, sans-serif' }}>pdf</em> resources</h2>
+            <h2 className="text-2xl font-bold text-blue-900 mb-6" style={{ fontFamily: 'Caveat, cursive' }}>more <em className="text-teal-500 not-italic" style={{ fontFamily: 'Caveat, cursive' }}>pdf</em> resources</h2>
             <p className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-<br />
               mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad<br />

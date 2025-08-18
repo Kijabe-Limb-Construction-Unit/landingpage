@@ -49,7 +49,7 @@ export default function DonatePage() {
         <div className=" bg-[#149ECC] relative overflow-hidden">
           <div className="w-full h-[255px] md:h-[350px] items-center justify-center mx-auto md:max-w-xl lg:max-w-[720px] relative overflow-hidden">
             <Image src="/donate-hero1.png" alt="Medical team providing care" fill className="relative object-cover object-top" />
-            <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute  md:top-4 -right-20 md:-right-14 h-auto max-w-none" />{" "}
+            <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-8 md:top-12 -right-16 md:-right-10 h-auto max-w-none" />{" "}
           </div>
         </div>
 
@@ -57,7 +57,7 @@ export default function DonatePage() {
         <div className="bg-[#003683] text-white py-12 px-4 items-center justify-center">
           <div className=" flex flex-col w-full md:max-w-xl lg:max-w-[720px] mx-auto justify-center items-center">
             {/* Butterfly and Progress */}
-            <div className="w-full items-center flex gap-2 md:gap-4 px-2 md:px-10  justify-center">
+            <div className="w-full items-center flex gap-2 md:gap-4 px-2 md:px-10 justify-center mt-24 md:mt-32">
               <div className="">
                 <Image src="/butterfly.svg" alt="Donate" width={120} height={100} />
               </div>
