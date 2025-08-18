@@ -151,7 +151,7 @@ export default function PatientResourcesPage() {
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
             <h2 className="text-xl font-normal mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>resources for patients</h2>
-            <p className="text-4xl font-light mb-6" style={{ fontStyle: 'italic', fontFamily: 'Chalkduster, cursive' }}>Facts are our friends.</p>
+            <p className="text-4xl font-light mb-6" style={{ fontStyle: 'italic', fontFamily: 'Caveat, cursive' }}>Facts are our friends.</p>
             <p className="text-sm leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               Here is where you can get more information<br />
               about your condition or treatment.

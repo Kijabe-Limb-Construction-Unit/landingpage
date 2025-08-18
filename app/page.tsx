@@ -271,27 +271,41 @@ const PatientStoriesBox = () => (
   </div>
 );
 
-// Mobile Navigation Components
-const MobileNavigationBox = ({ item }: { item: NavigationItem }) => (
+// Mobile Navigation Components - FORCED CLOSER TOGETHER
+const MobileNavigationBox = ({ item, index }: { item: NavigationItem; index: number }) => (
   <div 
-    className="flex-1 relative flex flex-col items-center justify-center h-8 min-[250px]:h-10 min-[320px]:h-12 sm:h-16 cursor-default min-w-0"
+    className={`flex-1 relative flex flex-col items-center justify-center h-16 min-[250px]:h-20 min-[320px]:h-24 sm:h-32 cursor-default min-w-0 ${
+      index === 1 ? '-ml-4 min-[250px]:-ml-6 min-[320px]:-ml-8' : ''
+    }`}
     style={{ backgroundColor: item.bgColor }}
   >
-    <p className="text-white text-[8px] min-[250px]:text-[9px] min-[320px]:text-[10px] sm:text-xs text-center leading-[1.1] font-light whitespace-pre-line px-0.5 min-[250px]:px-1 overflow-hidden">
-      {item.label}
-    </p>
+    <div className={`flex items-center justify-center h-full w-full ${
+      index === 0 ? 'justify-start pl-4 min-[250px]:pl-5 min-[320px]:pl-6' : 
+      index === 1 ? 'justify-end pr-4 min-[250px]:pr-5 min-[320px]:pr-6' : 
+      'justify-center'
+    }`}>
+      <p className="text-white text-[10px] min-[250px]:text-xs min-[320px]:text-sm sm:text-base text-center leading-[1.1] font-light whitespace-pre-line overflow-hidden">
+        {item.label}
+      </p>
+    </div>
   </div>
 );
 
+// FIXED: Patient Stories Box - PERFECTLY CENTERED ON ALL MOBILE DEVICES
 const MobilePatientStoriesBox = () => (
-  <div className="absolute left-1/2 transform -translate-x-1/2 -top-2 min-[250px]:-top-0.5 min-[290px]:-top-0.5 min-[300px]:-top-1 min-[320px]:top-0 sm:top-0.5 z-20">
-    <div className="relative w-[67px] min-[250px]:w-[75px] min-[320px]:w-[91px] sm:w-[139px] flex items-center justify-center h-[52px] min-[300px]:h-[58px] sm:h-[64px]">
+  <div className="absolute top-0 z-20 h-21 min-[250px]:h-25 min-[320px]:h-29 sm:h-35 flex items-center justify-center left-0 right-0">
+    <div className="relative w-[120px] min-[250px]:w-[140px] min-[320px]:w-[160px] sm:w-[190px] h-21 min-[250px]:h-25 min-[320px]:h-29 sm:h-35 mx-auto">
       <Image 
         src="/patientstories.svg"
         alt=""
         fill
         className="object-contain"
         aria-hidden="true"
+        style={{ 
+          objectFit: 'contain', 
+          width: '100%', 
+          height: '100%'
+        }}
       />
     </div>
   </div>
@@ -319,12 +333,12 @@ const NavigationSection = () => (
   </section>
 );
 
-// Mobile Navigation Section (Updated with taller patient stories card)
+// FIXED: Mobile Navigation Section with equal height patient stories
 const MobileNavigationSection = () => (
   <section className="block md:hidden relative" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
-    <div className="flex w-full relative gap-1 min-[250px]:gap-2 min-[320px]:gap-3 sm:gap-4">
+    <div className="flex w-full relative" style={{ gap: '0px' }}>
       {navigationItems.map((item, index) => (
-        <MobileNavigationBox key={index} item={item} />
+        <MobileNavigationBox key={index} item={item} index={index} />
       ))}
     </div>
     <MobilePatientStoriesBox />
@@ -359,13 +373,20 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
 );
 
 const ServicesSection = () => (
-  <section className="py-3 min-[250px]:py-4 min-[320px]:py-6 md:py-16 bg-white" aria-label="Our services">
+  <section className="py-2 min-[250px]:py-3 min-[320px]:py-4 md:py-12 bg-white" aria-label="Our services">
     <div className="container mx-auto px-1 min-[250px]:px-2 min-[320px]:px-4 md:px-8">
-      {/* Mobile: Grid layout for equal spacing */}
-      <div className="grid grid-cols-3 items-center justify-items-center gap-0 md:hidden w-full">
-        {serviceIcons.map((icon, index) => (
-          <ServiceIconItem key={index} icon={icon} />
-        ))}
+      {/* Mobile: Display service.jpeg image */}
+      <div className="md:hidden w-full flex justify-center mt-4 min-[250px]:mt-5 min-[320px]:mt-6">
+        <div className="relative w-full max-w-md">
+          <Image 
+            src="/service.jpeg"
+            alt="Our Services"
+            width={400}
+            height={300}
+            className="w-full h-auto object-contain"
+            sizes="(max-width: 768px) 100vw, 400px"
+          />
+        </div>
       </div>
       
       {/* Desktop: Three column layout */}

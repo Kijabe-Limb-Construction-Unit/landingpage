@@ -83,7 +83,7 @@ export default function PatientStories() {
                 </h1>
                 <div className="mb-4">
                   <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="font-bold text-lg italic leading-tight" style={{ fontFamily: 'Caveat, cursive' }}>
+                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Dancing Script, cursive' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -103,7 +103,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
+                    <p className="text-lg italic" style={{ fontFamily: 'Dancing Script, cursive' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
@@ -152,7 +152,7 @@ export default function PatientStories() {
                 </h1>
                 <div className="mb-4">
                   <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="font-bold text-lg italic leading-tight" style={{ fontFamily: 'Caveat, cursive' }}>
+                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Dancing Script, cursive' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -172,7 +172,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
+                    <p className="text-lg italic" style={{ fontFamily: 'Dancing Script, cursive' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
