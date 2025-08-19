@@ -347,13 +347,19 @@ const MobileNavigationSection = () => (
 
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
   <div className="flex flex-col items-center justify-start group w-full flex-shrink-0">
-    <div className="relative w-16 h-16 min-[250px]:w-20 min-[250px]:h-20 min-[320px]:w-24 min-[320px]:h-24 sm:w-40 sm:h-40 md:w-44 md:h-44 mb-1 min-[250px]:mb-2 min-[320px]:mb-3 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center">
+    <div className={`relative mb-1 min-[250px]:mb-2 min-[320px]:mb-3 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
+      icon.alt === "Poorly Healing Fractures" 
+        ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-40 md:h-40" 
+        : icon.alt === "Infected Fractures"
+        ? "w-20 h-20 min-[250px]:w-24 min-[250px]:h-24 min-[320px]:w-28 min-[320px]:h-28 sm:w-42 sm:h-42 md:w-46 md:h-46"
+        : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-21 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-46 md:h-46"
+    }`}>
       <div className={`relative ${
         icon.alt === "Poorly Healing Fractures" 
-          ? "w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-40 md:h-40" 
+          ? "w-full h-full" 
           : icon.alt === "Infected Fractures"
-          ? "w-24 h-24 min-[250px]:w-28 min-[250px]:h-28 min-[320px]:w-32 min-[320px]:h-32 sm:w-52 sm:h-52 md:w-60 md:h-60"
-          : "w-16 h-16 min-[250px]:w-20 min-[250px]:h-20 min-[320px]:w-24 min-[320px]:h-24 sm:w-40 sm:h-40 md:w-44 md:h-44"
+          ? "w-full h-full"
+          : "w-full h-full"
       }`}>
         <Image 
           src={icon.src} 
@@ -365,7 +371,9 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
       </div>
     </div>
     {/* Fixed height container for text at the bottom */}
-    <div className="h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex items-start justify-center">
+    <div className={`h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex items-start justify-center ${
+      icon.alt === "Poorly Healing Fractures" ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4" : ""
+    }`}>
       <h2 
         className="text-[9px] min-[250px]:text-[10px] min-[320px]:text-xs md:text-base font-semibold text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden" 
         dangerouslySetInnerHTML={{ __html: icon.title }}
