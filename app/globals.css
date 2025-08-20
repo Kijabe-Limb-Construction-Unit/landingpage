@@ -120,3 +120,15 @@
     @apply bg-background text-foreground;
   }
 }
+@font-face {
+  font-family: 'Coves';
+  src: url('/fonts/Coves-Light.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CovesBold';
+  src: url('/fonts/Coves-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

@@ -9,7 +9,7 @@ import Image from "next/image";
 const patientTestimonies = [
   {
     id: 1,
-    name: "Bovin",
+    name: "B o V I N",
     testimonial: "I feel so happy 'cause now I can walk.",
     fullStory:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.",
@@ -19,7 +19,7 @@ const patientTestimonies = [
   },
   {
     id: 2,
-    name: "Moses",
+    name: "M o s e s",
     testimonial: "I can go back to my work",
     fullStory:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.",
@@ -29,7 +29,7 @@ const patientTestimonies = [
   },
   {
     id: 3,
-    name: "Doris",
+    name: "D o R I S",
     testimonial: "I see a beautiful me.",
     fullStory:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.",
@@ -82,8 +82,8 @@ export default function PatientStories() {
                   Patient <span className="font-light">Stories</span>
                 </h1>
                 <div className="mb-4">
-                  <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                  <h3 className="text-sm font-bold mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
+                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Caveat,Great Vibes' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -103,7 +103,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                    <p className="text-lg italic" style={{ fontFamily: 'Caveat, Great Vibes' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
@@ -151,8 +151,8 @@ export default function PatientStories() {
                   Patient <span className="font-light">Stories</span>
                 </h1>
                 <div className="mb-4">
-                  <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                  <h3 className="text-sm font-bold mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
+                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Caveat, cursive' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -172,7 +172,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                    <p className="text-lg italic" style={{ fontFamily: 'Caveat, cursive' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
@@ -205,7 +205,7 @@ export default function PatientStories() {
                         />
                       </div>
                       <div className="p-4 text-white">
-                        <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
+                        <h3 className="text-sm font-normal mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
                           {patient.name.toUpperCase()}
                         </h3>
                         <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
@@ -236,8 +236,8 @@ export default function PatientStories() {
                       {isOdd ? (
                         <>
                           <div className="col-span-3 p-4 md:p-10 text-white">
-                            <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
-                              {patient.name.toUpperCase()}
+                            <h3 className="text-sm font-bold mb-2 uppercase" style={{ fontFamily: 'Coves, sans-serif' }}>
+                              {patient.name}
                             </h3>
                             <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                               &#34;{patient.testimonial}&#34;
@@ -278,8 +278,8 @@ export default function PatientStories() {
                             />
                           </div>
                           <div className="col-span-3 p-4 text-white md:p-10">
-                            <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
-                             {patient.name.toUpperCase()}
+                            <h3 className="text-sm font-bold mb-2 uppercase" style={{ fontFamily: 'Coves, sans-serif' }}>
+                             {patient.name}
                             </h3>
                             <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                                &#34;{patient.testimonial} &#34;

@@ -70,7 +70,7 @@ const navigationItems: NavigationItem[] = [
   {
     label: "Book an\nappointment",
     href: "#",
-    bgColor: COLORS.primary,
+    bgColor: COLORS.secondary,
     width: "w-48"
   }
 ];
@@ -280,8 +280,8 @@ const MobileNavigationBox = ({ item, index }: { item: NavigationItem; index: num
     style={{ backgroundColor: item.bgColor }}
   >
     <div className={`flex items-center justify-center h-full w-full ${
-      index === 0 ? 'justify-start pl-4 min-[250px]:pl-5 min-[320px]:pl-6' : 
-      index === 1 ? 'justify-end pr-4 min-[250px]:pr-5 min-[320px]:pr-6' : 
+      index === 0 ? 'justify-start pl-4 min-[250px]:pl-5 min-[320px]:pl-6 min-[320px]:pr-6' : 
+      index === 1 ? 'justify-end pr-4 min-[250px]:pr-5 min-[320px]:pr-6 min-[320px]:pl-6' : 
       'justify-center'
     }`}>
       <p className="text-white text-[10px] min-[250px]:text-xs min-[320px]:text-sm sm:text-base text-center leading-[1.1] font-light whitespace-pre-line overflow-hidden">
@@ -314,7 +314,7 @@ const MobilePatientStoriesBox = () => (
 // Desktop Navigation Section (Original)
 const NavigationSection = () => (
   <section className="h-26 hidden md:block" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
-    <div className="flex w-full relative items-end">
+    <div className="flex w-full relative items-end" style={{ backgroundColor: COLORS.secondary }}>
       <div className="flex-1 h-24" style={{ backgroundColor: COLORS.secondary }} aria-hidden="true" />
       {navigationItems.map((item, index) => {
         if (index === 0) {
@@ -336,7 +336,7 @@ const NavigationSection = () => (
 // FIXED: Mobile Navigation Section with equal height patient stories
 const MobileNavigationSection = () => (
   <section className="block md:hidden relative" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
-    <div className="flex w-full relative" style={{ gap: '0px' }}>
+    <div className="flex w-full relative "  style={{ gap: '0px' }}>
       {navigationItems.map((item, index) => (
         <MobileNavigationBox key={index} item={item} index={index} />
       ))}
@@ -349,10 +349,10 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
   <div className="flex flex-col items-center justify-start group w-full flex-shrink-0">
     <div className={`relative mb-1 min-[250px]:mb-2 min-[320px]:mb-3 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
       icon.alt === "Poorly Healing Fractures" 
-        ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-40 md:h-40" 
+        ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-39 md:h-39" 
         : icon.alt === "Infected Fractures"
         ? "w-20 h-20 min-[250px]:w-24 min-[250px]:h-24 min-[320px]:w-28 min-[320px]:h-28 sm:w-42 sm:h-42 md:w-46 md:h-46"
-        : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-21 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-46 md:h-46"
+        : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-24 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-46 md:h-44 pb-2"
     }`}>
       <div className={`relative ${
         icon.alt === "Poorly Healing Fractures" 
@@ -371,8 +371,8 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
       </div>
     </div>
     {/* Fixed height container for text at the bottom */}
-    <div className={`h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex items-start justify-center ${
-      icon.alt === "Poorly Healing Fractures" ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4" : ""
+    <div className={`h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex  items-start justify-center ${
+      icon.alt === "Poorly Healing Fractures" ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-" : ""
     }`}>
       <h2 
         className="text-[9px] min-[250px]:text-[10px] min-[320px]:text-xs md:text-base font-semibold text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden" 

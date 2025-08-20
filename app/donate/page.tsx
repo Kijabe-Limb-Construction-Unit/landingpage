@@ -49,19 +49,28 @@ export default function DonatePage() {
         <div className=" bg-[#149ECC] relative overflow-hidden">
           <div className="w-full h-[255px] md:h-[350px] items-center justify-center mx-auto md:max-w-xl lg:max-w-[720px] relative overflow-hidden">
             <Image src="/donate-hero1.png" alt="Medical team providing care" fill className="relative object-cover object-top" />
-            <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-8 md:top-12 -right-16 md:-right-10 h-auto max-w-none" />{" "}
+            <div className="absolute top-4 md:top-8 -right-6 md:-right-10 p-2 bg-transparent ">
+              <Image
+                src="/donate-butterfly-navbar.svg"
+                alt="Donate"
+                width={150}
+                height={120}
+                className="h-auto w-[80px] md:w-[200px] max-w-none"
+              />
+              </div>
+            {/* <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-8 md:top-12 -right-16 md:-right-10 h-auto max-w-none" />{" "} */}
           </div>
         </div>
 
         {/* Donation Section */}
-        <div className="bg-[#003683] text-white py-12 px-4 items-center justify-center">
-          <div className=" flex flex-col w-full md:max-w-xl lg:max-w-[720px] mx-auto justify-center items-center">
+        <div className="bg-[#003683] text-white py-12 px-4 items-center justify-center pb-0">
+          <div className=" flex flex-col w-full md:max-w-xl lg:max-w-[720px] mx-auto justify-center items-center mb-10">
             {/* Butterfly and Progress */}
-            <div className="w-full items-center flex gap-2 md:gap-4 px-2 md:px-10 justify-center mt-24 md:mt-32">
+            <div className="w-full items-center flex gap-2 md:gap-4 px-2 md:px-10 justify-center mt-1 md:mt-0">
               <div className="">
                 <Image src="/butterfly.svg" alt="Donate" width={120} height={100} />
               </div>
-              <div className="flex flex-col p-1 w-full md:w-3/5 mt-4">
+              <div className="flex flex-col p-1 w-full md:w-3/5 mt-0">
                 <h2 className="text-md font-lighht uppercase tracking-wide">SUPPORT OUR GROWTH</h2>
                 <div className="flex flex-col mt-2 gap-1.5">
                   <p className="text-white/50 text-sm mt-1 uppercase tracking-wider">
@@ -132,7 +141,7 @@ export default function DonatePage() {
         </div>
 
         {/* Partner Section */}
-        <div className="bg-[#4FB29E] text-white py-16 px-8">
+        <div className="bg-[#4FB29E] text-white py-8 px-8">
           <div className="w-full md:max-w-lg mx-auto text-center items-center justify-center">
             <h2 className="text-lg font-bold mb-4 uppercase tracking-wide text-left md:text-center">PARTNER WITH US TO MAKE THIS VISION A REALITY</h2>
             <p className="text-sm w-full md:max-w-[400px] mx-auto p-1 font-light leading-relaxed text-left">
@@ -142,7 +151,7 @@ export default function DonatePage() {
         </div>
 
         {/* Key Facts Section */}
-        <div className="bg-[#009EE0] text-white py-16 px-8">
+        <div className="bg-[#009EE0] text-white py-8 px-8">
           <div className="w-full px-0 md:max-w-md mx-auto ">
             <h2 className="text-3xl font-bold text-left md:text-center mb-5 lowercase">
               key <span className="font-light"> facts</span>{" "}
