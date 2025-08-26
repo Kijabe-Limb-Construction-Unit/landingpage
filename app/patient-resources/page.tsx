@@ -89,8 +89,8 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl, showTeddy = fal
             </div>
           </div>
           <div className="text-white relative z-10">
-            <h3 className="text-xl font-bold mb-6 tracking-widest" style={{ fontFamily: 'Caveat, cursive' }} dangerouslySetInnerHTML={{ __html: title }}></h3>
-            <p className="text-sm leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }} dangerouslySetInnerHTML={{ __html: title }}></h3>
+            <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
               {description}
             </p>
           </div>
@@ -127,8 +127,8 @@ const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, file
     <div className={`py-8 ${bgColor}`}>
       <div className="max-w-4xl mx-auto px-8 flex justify-center">
         <div className="w-full max-w-md">
-          <h3 className="text-xl font-bold text-white mb-4 tracking-widest" style={{ fontFamily: 'Caveat, cursive' }}>{title}</h3>
-          <p className="text-white text-sm leading-relaxed mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>{title}</h3>
+          <p className="text-white text-base md:text-lg leading-relaxed mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
             {description}
           </p>
           <button 
@@ -150,9 +150,9 @@ export default function PatientResourcesPage() {
       <div className="bg-[#4FB29E] py-10 text-white">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-xl font-normal mb-2" style={{ fontFamily: 'Coves, sans-serif' }}><strong>resources</strong> for patients</h2>
-            <p className="text-4xl font-light mb-6" style={{ fontStyle: 'italic', fontFamily: 'Caveat, cursive' }}>Facts are our friends.</p>
-            <p className="text-sm leading-relaxed font-bold" style={{ fontFamily: 'Coves, sans-serif' }}>
+            <h2 className="text-3xl md:text-4xl font-normal mb-2" style={{ fontFamily: 'Coves, sans-serif' }}><strong>resources</strong> for patients</h2>
+            <p className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Caveat, cursive' }}>Facts are our friends.</p>
+            <p className="text-base md:text-lg leading-relaxed font-bold" style={{ fontFamily: 'Coves, sans-serif' }}>
               Here is where you can get more information<br />
               about your condition or treatment.
             </p>
@@ -161,34 +161,22 @@ export default function PatientResourcesPage() {
       </div>
 
       <VideoThumbnail
-        title='HOW TO <span class="text-[#003683]" style="font-family: Coves, sans-serif;"> ADJUST</span> YOUR STRUTS'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
-mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
-quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        title='HOW TO <span class="text-[#003683]"> ADJUST</span> YOUR STRUTS'
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         bgColor="bg-[#149ECC]"
         videoUrl="https://www.youtube.com/watch?v=QwkcAiTGgQc"
       />
 
       <VideoThumbnail
-        title='HOW TO <span class="text-[#00aeef]" style="font-family: Coves, sans-serif;"> CHANGE</span> YOUR STRUTS'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
-mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
-quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        title='HOW TO <span class="text-[#00aeef]"> CHANGE</span> YOUR STRUTS'
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         bgColor="bg-[#003683]"
         videoUrl="https://www.youtube.com/watch?v=6i7yvVt_EIM"
       />
 
       <VideoThumbnail
-        title='INFORMATION FOR  <span class="text-blue-800" style="font-family: Chalkduster, cursive;">kids</span>'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
-mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
-quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        title='INFORMATION FOR  <span class="text-blue-800">kids</span>'
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         bgColor="bg-[#4FB29E]"
         videoUrl="https://www.youtube.com/watch?v=zQsls0z6XCE"
         showTeddy={true}
@@ -197,13 +185,9 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
       <div className="bg-white py-10">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6" style={{ fontFamily: 'Caveat, cursive' }}>more <em className="text-teal-500 not-italic" style={{ fontFamily: 'Caveat, cursive' }}>pdf</em> resources</h2>
-            <p className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-<br />
-              mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad<br />
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span className="text-blue-600 underline cursor-pointer italic">ali-<br />
-              quip ex ea</span> commodo consequat. Duis aute irure dolor in reprehenderit<br />
-              in voluptate velit esse <span className="text-blue-600 underline cursor-pointer italic">cillum dolore</span> eu fugiat nulla pariatur.
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>more <span className="text-teal-500">pdf</span> resources</h2>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span className="text-blue-600 underline cursor-pointer italic">aliquip ex ea</span> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <span className="text-blue-600 underline cursor-pointer italic">cillum dolore</span> eu fugiat nulla pariatur.
             </p>
           </div>
         </div>
@@ -211,11 +195,7 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
 
       <DownloadSection
         title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
-mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
-quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         bgColor="bg-[#149ECC]"
         buttonText="QUIS AUTEM VEL DOLOR"
         pdfUrl="/documents/DummyPDF.pdf"
@@ -224,11 +204,7 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
 
       <DownloadSection
         title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
-mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
-quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         bgColor="bg-[#003683]"
         buttonText="QUIS AUTEM VEL DOLOR"
         pdfUrl="/documents/DummyPDF.pdf"
@@ -237,11 +213,7 @@ in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
 
       <DownloadSection
         title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
-mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali-
-quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         bgColor="bg-[#4FB29E]"
         buttonText="QUIS AUTEM VEL DOLOR"
         pdfUrl="/documents/DummyPDF.pdf"

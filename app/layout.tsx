@@ -45,6 +45,7 @@ export default function RootLayout({
         <html lang="en">
         <head>
             <link rel="icon" href="/favicon.ico" />
+            <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet" />
             <title>Kijabe Limb Reconstruction Unit</title>
         </head>
         <body className="min-h-screen flex flex-col">

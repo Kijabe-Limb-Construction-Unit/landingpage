@@ -82,8 +82,8 @@ export default function PatientStories() {
                   Patient <span className="font-light">Stories</span>
                 </h1>
                 <div className="mb-4">
-                  <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                  <h3 className="text-xs font-light mb-2 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
+                  <p className="text-2xl leading-tight font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -103,7 +103,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                    <p className="text-2xl font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
@@ -151,8 +151,8 @@ export default function PatientStories() {
                   Patient <span className="font-light">Stories</span>
                 </h1>
                 <div className="mb-4">
-                  <h3 className="text-sm font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="text-lg italic leading-tight" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                  <h3 className="text-sm md:text-base lg:text-lg font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
+                  <p className="text-lg md:text-xl lg:text-2xl leading-tight font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
                   &#34;A world where men, women and children can access the limb 
                     reconstruction care they need, when they need it, irrespective 
                     of where they were born or how much money they happen to have, 
@@ -172,7 +172,7 @@ export default function PatientStories() {
                         />
                       </a>
                     </div>
-                    <p className="text-lg italic" style={{ fontFamily: 'Dancing Script, cursive' }}>
+                    <p className="text-lg md:text-xl lg:text-2xl font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
                       they deserve the best that we can give.&#34;
                     </p>
                   </div>
@@ -208,7 +208,7 @@ export default function PatientStories() {
                         <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
                           {patient.name.toUpperCase()}
                         </h3>
-                        <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
+                        <p className="text-3xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                           &#34;{patient.testimonial}&#34;
                         </p>
                         <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
@@ -239,7 +239,7 @@ export default function PatientStories() {
                             <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
                               {patient.name.toUpperCase()}
                             </h3>
-                            <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
+                            <p className="text-3xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                               &#34;{patient.testimonial}&#34;
                             </p>
                             <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
@@ -281,7 +281,7 @@ export default function PatientStories() {
                             <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
                              {patient.name.toUpperCase()}
                             </h3>
-                            <p className="text-xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
+                            <p className="text-3xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
                                &#34;{patient.testimonial} &#34;
                             </p>
                             <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>

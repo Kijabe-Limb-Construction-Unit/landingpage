@@ -122,13 +122,13 @@
 }
 @font-face {
   font-family: 'Coves';
-  src: url('/fonts/Coves-Light.otf') format('truetype');
-  font-weight: normal;
+  src: url('/fonts/Coves-Light.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'CovesBold';
-  src: url('/fonts/Coves-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-family: 'Coves';
+  src: url('/fonts/Coves-Bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
 }
