@@ -238,7 +238,7 @@ export default function AboutPage() {
                             <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-center lg:text-left">
                                 THE VISION
                             </h2>
-                            <p className="text-sm leading-relaxed font-light text-center lg:text-left">
+                            <p className="text-sm leading-relaxed font-light text-center lg:text-left"style={{ fontFamily: 'Coves, sans-serif' }}>
                                 The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is
                                 a world where men, women and children can access the limb reconstruction care they
                                 need, when they need it - regardless of where they were born or how much money they
@@ -418,7 +418,7 @@ export default function AboutPage() {
                                                 height={120}
                                             />
                                         </div>
-                                        <p className="text-sm leading-relaxed font-light text-[#003683] text-justify">
+                                        <p className="text-sm leading-relaxed font-light text-[#003683] text-justify" >
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
