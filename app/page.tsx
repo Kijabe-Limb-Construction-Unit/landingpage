@@ -291,10 +291,10 @@ const MobileNavigationBox = ({ item, index }: { item: NavigationItem; index: num
   </div>
 );
 
-// FIXED: Patient Stories Box - PERFECTLY CENTERED ON ALL MOBILE DEVICES
+// UPDATED: Patient Stories Box - SLIGHTLY INCREASED HEIGHT FOR 320px+ screens
 const MobilePatientStoriesBox = () => (
-  <div className="absolute top-0 z-20 h-21 min-[250px]:h-25 min-[320px]:h-29 sm:h-35 flex items-center justify-center left-0 right-0">
-    <div className="relative w-[120px] min-[250px]:w-[140px] min-[320px]:w-[160px] sm:w-[190px] h-21 min-[250px]:h-25 min-[320px]:h-29 sm:h-35 mx-auto">
+  <div className="absolute top-0 z-20 h-21 min-[250px]:h-25 min-[320px]:h-30 sm:h-35 flex items-center justify-center left-0 right-0">
+    <div className="relative w-[120px] min-[250px]:w-[140px] min-[320px]:w-[160px] sm:w-[190px] h-21 min-[250px]:h-25 min-[320px]:h-30 sm:h-35 mx-auto">
       <Image 
         src="/patientstories.svg"
         alt=""
@@ -333,7 +333,7 @@ const NavigationSection = () => (
   </section>
 );
 
-// FIXED: Mobile Navigation Section with equal height patient stories
+// UPDATED: Mobile Navigation Section with increased height for patient stories
 const MobileNavigationSection = () => (
   <section className="block md:hidden relative" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
     <div className="flex w-full relative "  style={{ gap: '0px' }}>
