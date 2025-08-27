@@ -49,13 +49,13 @@ export default function DonatePage() {
         <div className=" bg-[#149ECC] relative overflow-hidden">
           <div className="w-full h-[255px] md:h-[350px] items-center justify-center mx-auto md:max-w-xl lg:max-w-[720px] relative overflow-hidden">
             <Image src="/donate-hero1.png" alt="Medical team providing care" fill className="relative object-cover object-top" />
-            <div className="absolute top-4 md:top-8 -right-6 md:-right-10 p-2 bg-transparent ">
+            <div className="absolute top-2 md:top-8 -right-6 md:-right-10 p-2 bg-transparent ">
               <Image
                 src="/donate-butterfly-navbar.svg"
                 alt="Donate"
                 width={150}
                 height={120}
-                className="h-auto w-[80px] md:w-[200px] max-w-none"
+                className="h-auto w-[100px] md:w-[200px] max-w-none"
               />
               </div>
             {/* <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-8 md:top-12 -right-16 md:-right-10 h-auto max-w-none" />{" "} */}
