@@ -259,7 +259,7 @@ const NavigationBox = ({ item }: { item: NavigationItem }) => (
 
 const PatientStoriesBox = () => (
   <div className="w-20 relative flex flex-col items-center justify-center h-20">
-    <div className="absolute inset-0 z-10 flex items-center justify-center" style={{ width: '330px', height: '120px', left: '72%', top: '73%', transform: 'translate(-50%, -50%)' }}>
+    <div className="absolute inset-0 z-10 flex items-center justify-center" style={{ width: '330px', height: '120px', left: '75%', top: '73%', transform: 'translate(-50%, -50%)' }}>
       <Image 
         src="/patientstories.svg"
         alt=""
@@ -271,17 +271,17 @@ const PatientStoriesBox = () => (
   </div>
 );
 
-// Mobile Navigation Components - FORCED CLOSER TOGETHER
+// Mobile Navigation Components - UPDATED with more right positioning for Book an appointment
 const MobileNavigationBox = ({ item, index }: { item: NavigationItem; index: number }) => (
   <div 
     className={`flex-1 relative flex flex-col items-center justify-center h-16 min-[250px]:h-20 min-[320px]:h-24 sm:h-32 cursor-default min-w-0 ${
-      index === 1 ? '-ml-4 min-[250px]:-ml-6 min-[320px]:-ml-8' : ''
+      index === 1 ? 'ml-7 min-[250px]:ml-8 min-[263px]:ml-11 min-[268px]:ml-11 min-[290px]:ml-11 min-[320px]:ml-12 min-[331px]:ml-13' : ''
     }`}
     style={{ backgroundColor: item.bgColor }}
   >
     <div className={`flex items-center justify-center h-full w-full ${
-      index === 0 ? 'justify-start pl-4 min-[250px]:pl-5 min-[320px]:pl-6 min-[320px]:pr-6' : 
-      index === 1 ? 'justify-end pr-4 min-[250px]:pr-5 min-[320px]:pr-6 min-[320px]:pl-6' : 
+      index === 0 ? 'justify-start pl-2 min-[250px]:pl-3 min-[320px]:pl-4 min-[320px]:pr-6' : 
+      index === 1 ? 'justify-end pr-5 min-[250px]:pr-4 min-[263px]:pr-6 min-[268px]:pr-6 min-[290px]:pr-6 min-[320px]:pr-7 min-[331px]:pr-6 translate-x-1 min-[250px]:translate-x-2 min-[263px]:translate-x-4 min-[268px]:translate-x-4 min-[290px]:translate-x-4 min-[320px]:translate-x-2 min-[331px]:translate-x-3' : 
       'justify-center'
     }`}>
       <p className="text-white text-[10px] min-[250px]:text-xs min-[320px]:text-sm sm:text-base text-center leading-[1.1] font-light whitespace-pre-line overflow-hidden">
@@ -333,7 +333,7 @@ const NavigationSection = () => (
   </section>
 );
 
-// UPDATED: Mobile Navigation Section with increased height for patient stories
+// UPDATED: Mobile Navigation Section with increased spacing pushed further left
 const MobileNavigationSection = () => (
   <section className="block md:hidden relative" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
     <div className="flex w-full relative "  style={{ gap: '0px' }}>
