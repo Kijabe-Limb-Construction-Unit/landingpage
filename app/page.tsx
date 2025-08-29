@@ -275,13 +275,13 @@ const PatientStoriesBox = () => (
 const MobileNavigationBox = ({ item, index }: { item: NavigationItem; index: number }) => (
   <div 
     className={`flex-1 relative flex flex-col items-center justify-center h-16 min-[250px]:h-20 min-[320px]:h-24 sm:h-32 cursor-default min-w-0 ${
-      index === 1 ? 'ml-7 min-[250px]:ml-8 min-[263px]:ml-11 min-[268px]:ml-11 min-[290px]:ml-11 min-[320px]:ml-12 min-[331px]:ml-13' : ''
+      index === 1 ? 'ml-0 min-[215px]:ml-8 min-[219px]:ml-7 min-[227px]:ml-0 min-[228px]:ml-9 min-[231px]:ml-8 min-[250px]:ml-8 min-[263px]:ml-11 min-[268px]:ml-11 min-[290px]:ml-11 min-[320px]:ml-12 min-[331px]:ml-13' : ''
     }`}
     style={{ backgroundColor: item.bgColor }}
   >
     <div className={`flex items-center justify-center h-full w-full ${
       index === 0 ? 'justify-start pl-2 min-[250px]:pl-3 min-[320px]:pl-4 min-[320px]:pr-6' : 
-      index === 1 ? 'justify-end pr-5 min-[250px]:pr-4 min-[263px]:pr-6 min-[268px]:pr-6 min-[290px]:pr-6 min-[320px]:pr-7 min-[331px]:pr-6 translate-x-1 min-[250px]:translate-x-2 min-[263px]:translate-x-4 min-[268px]:translate-x-4 min-[290px]:translate-x-4 min-[320px]:translate-x-2 min-[331px]:translate-x-3' : 
+      index === 1 ? 'justify-end min-[215px]:pr-3 min-[228px]:pr-4 pr-12 min-[250px]:pr-4 min-[263px]:pr-6 min-[268px]:pr-6 min-[290px]:pr-6 min-[320px]:pr-7 min-[331px]:pr-6 translate-x-[-20px] min-[215px]:translate-x-3 min-[228px]:translate-x-3 min-[250px]:translate-x-2 min-[263px]:translate-x-4 min-[268px]:translate-x-4 min-[290px]:translate-x-4 min-[320px]:translate-x-2 min-[331px]:translate-x-3' : 
       'justify-center'
     }`}>
       <p className="text-white text-[10px] min-[250px]:text-xs min-[320px]:text-sm sm:text-base text-center leading-[1.1] font-light whitespace-pre-line overflow-hidden">
