@@ -174,27 +174,13 @@ const HeroSlider = () => {
       aria-label="Hero image slider"
     >
       <div className="absolute inset-0 hidden md:flex items-center justify-center">
-        <div className="absolute left-0 w-1/4 h-full z-10">
-          <SlideImage 
-            slide={slides[previousSlideIndex]} 
-            opacity="opacity-60" 
-          />
-        </div>
-
-        <div className="relative w-1/2 h-full z-20">
+        <div className="relative w-full h-full z-20">
           <SlideImage 
             slide={slides[currentSlide]} 
             priority 
           />
 
           <div className="absolute inset-0 bg-black opacity-40" aria-hidden="true"></div>
-        </div>
-
-        <div className="absolute right-0 w-1/4 h-full z-10">
-          <SlideImage 
-            slide={slides[nextSlideIndex]} 
-            opacity="opacity-60" 
-          />
         </div>
       </div>
 
@@ -221,7 +207,7 @@ const HeroSlider = () => {
       </div>
 
       <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
-        <h1 className="text-[9px] min-[250px]:text-[10px] min-[320px]:text-xs sm:text-base md:text-lg font-semibold mb-0.5 min-[250px]:mb-1 min-[320px]:mb-2 md:mb-4 text-white drop-shadow-lg italic leading-tight">
+        <h1 className="text-header text-white drop-shadow-lg italic">
           {slides[currentSlide].title}
         </h1>     
         <NavigationDots 
@@ -346,39 +332,28 @@ const MobileNavigationSection = () => (
 );
 
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
-  <div className="flex flex-col items-center justify-start group w-full flex-shrink-0">
-    <div className={`relative mb-1 min-[250px]:mb-2 min-[320px]:mb-3 md:mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
+  <div className="flex flex-col items-center justify-center group w-full flex-shrink-0">
+    <div className={`relative mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
       icon.alt === "Poorly Healing Fractures" 
-        ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-39 md:h-39" 
+        ? "w-20 h-20 md:w-24 md:h-24" 
         : icon.alt === "Infected Fractures"
-        ? "w-20 h-20 min-[250px]:w-24 min-[250px]:h-24 min-[320px]:w-28 min-[320px]:h-28 sm:w-42 sm:h-42 md:w-46 md:h-46"
-        : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-24 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-46 md:h-44 pb-2"
+        ? "w-20 h-20 md:w-24 md:h-24"
+        : "w-20 h-20 md:w-24 md:h-24"
     }`}>
-      <div className={`relative ${
-        icon.alt === "Poorly Healing Fractures" 
-          ? "w-full h-full" 
-          : icon.alt === "Infected Fractures"
-          ? "w-full h-full"
-          : "w-full h-full"
-      }`}>
+      <div className="relative w-full h-full">
         <Image 
           src={icon.src} 
           alt={icon.alt} 
           fill
           className="object-contain"
-          sizes="(max-width: 250px) 64px, (max-width: 320px) 80px, (max-width: 640px) 96px, (max-width: 768px) 160px, 176px"
+          sizes="(max-width: 768px) 80px, 96px"
         />
       </div>
     </div>
-    {/* Fixed height container for text at the bottom */}
-    <div className={`h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex  items-start justify-center ${
-      icon.alt === "Poorly Healing Fractures" ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-" : ""
-    }`}>
-      <h2 
-        className="text-[9px] min-[250px]:text-[10px] min-[320px]:text-xs md:text-base font-semibold text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden" 
-        dangerouslySetInnerHTML={{ __html: icon.title }}
-      />
-    </div>
+    <h2 
+      className="text-body font-semibold text-[#003882] text-center px-2" 
+      dangerouslySetInnerHTML={{ __html: icon.title }}
+    />
   </div>
 );
 
@@ -399,8 +374,8 @@ const ServicesSection = () => (
         </div>
       </div>
       
-      {/* Desktop: Three column layout */}
-      <div className="hidden md:grid grid-cols-3 gap-0 max-w-4xl md:max-w-xl mx-auto justify-items-center items-start">
+      {/* Desktop: Three column layout with proper spacing */}
+      <div className="hidden md:grid grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center items-center">
         {serviceIcons.map((icon, index) => (
           <ServiceIconItem key={index} icon={icon} />
         ))}

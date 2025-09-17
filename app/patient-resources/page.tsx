@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Play, Download } from "lucide-react";
+import { patientResourcesData } from "@/lib/fakes/patient-resources-fakes";
 
 interface GetYouTubeVideoId {
     (url: string): string | null;
@@ -89,8 +90,8 @@ const VideoThumbnail = ({ title, description, bgColor, videoUrl, showTeddy = fal
             </div>
           </div>
           <div className="text-white relative z-10">
-            <h3 className="text-xl md:text-2xl font-bold mb-6 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }} dangerouslySetInnerHTML={{ __html: title }}></h3>
-            <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
+            <h3 className="text-semi-header font-bold mb-6 tracking-widest" dangerouslySetInnerHTML={{ __html: title }}></h3>
+            <p className="text-body leading-relaxed">
               {description}
             </p>
           </div>
@@ -127,8 +128,8 @@ const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, file
     <div className={`py-8 ${bgColor}`}>
       <div className="max-w-4xl mx-auto px-8 flex justify-center">
         <div className="w-full max-w-md">
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>{title}</h3>
-          <p className="text-white text-base md:text-lg leading-relaxed mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
+          <h3 className="text-semi-header font-bold text-white mb-4 tracking-widest">{title}</h3>
+          <p className="text-white text-body leading-relaxed mb-6">
             {description}
           </p>
           <button 
@@ -136,7 +137,7 @@ const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, file
             className="flex items-center gap-3 text-white hover:text-blue-200 transition-colors cursor-pointer"
           >
             <Download className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>{buttonText}</span>
+            <span className="text-body font-medium tracking-widest">{buttonText}</span>
           </button>
         </div>
       </div>
@@ -150,75 +151,72 @@ export default function PatientResourcesPage() {
       <div className="bg-[#4FB29E] py-10 text-white">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-3xl md:text-4xl font-normal mb-2" style={{ fontFamily: 'Coves, sans-serif' }}><strong>resources</strong> for patients</h2>
-            <p className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Caveat, cursive' }}>Facts are our friends.</p>
-            <p className="text-base md:text-lg leading-relaxed font-bold" style={{ fontFamily: 'Coves, sans-serif' }}>
-              Here is where you can get more information<br />
-              about your condition or treatment.
+            <h2 className="text-header font-normal mb-2">
+              <strong>{patientResourcesData.hero.title?.split(' ')[0] || 'resources'}</strong> {patientResourcesData.hero.title?.split(' ').slice(1).join(' ') || 'for patients'}
+            </h2>
+            <p className="text-header font-bold mb-6" style={{ fontFamily: 'Caveat, cursive' }}>{patientResourcesData.hero.subtitle}</p>
+            <p className="text-body leading-relaxed font-bold">
+              {patientResourcesData.hero.description}
             </p>
           </div>
         </div>
       </div>
 
-      <VideoThumbnail
-        title='HOW TO <span class="text-[#003683]"> ADJUST</span> YOUR STRUTS'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#149ECC]"
-        videoUrl="https://www.youtube.com/watch?v=QwkcAiTGgQc"
-      />
-
-      <VideoThumbnail
-        title='HOW TO <span class="text-[#00aeef]"> CHANGE</span> YOUR STRUTS'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#003683]"
-        videoUrl="https://www.youtube.com/watch?v=6i7yvVt_EIM"
-      />
-
-      <VideoThumbnail
-        title='INFORMATION FOR  <span class="text-blue-800">kids</span>'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#4FB29E]"
-        videoUrl="https://www.youtube.com/watch?v=zQsls0z6XCE"
-        showTeddy={true}
-      />
+      {patientResourcesData.videos.map((video) => (
+        <VideoThumbnail
+          key={video.id}
+          title={video.title}
+          description={video.description}
+          bgColor={video.bgColor}
+          videoUrl={video.videoUrl}
+          showTeddy={video.showTeddy || false}
+        />
+      ))}
 
       <div className="bg-white py-10">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full max-w-md">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>more <span className="text-teal-500">pdf</span> resources</h2>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span className="text-blue-600 underline cursor-pointer italic">aliquip ex ea</span> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <span className="text-blue-600 underline cursor-pointer italic">cillum dolore</span> eu fugiat nulla pariatur.
+            <h2 className="text-semi-header font-bold text-blue-900 mb-6">{patientResourcesData.pdfSection.title}</h2>
+            <p className="text-body text-gray-600 leading-relaxed">
+              {(() => {
+                const desc = patientResourcesData.pdfSection.description;
+                const highlight1 = patientResourcesData.pdfSection.highlightedText;
+                const highlight2 = patientResourcesData.pdfSection.highlightedText2;
+                
+                if (!desc || !highlight1 || !highlight2) return desc;
+                
+                const parts1 = desc.split(highlight1);
+                if (parts1.length < 2) return desc;
+                
+                const parts2 = parts1[1].split(highlight2);
+                if (parts2.length < 2) return desc;
+                
+                return (
+                  <>
+                    {parts1[0]}
+                    <span className="text-blue-600 underline cursor-pointer italic">{highlight1}</span>
+                    {parts2[0]}
+                    <span className="text-blue-600 underline cursor-pointer italic">{highlight2}</span>
+                    {parts2[1]}
+                  </>
+                );
+              })()}
             </p>
           </div>
         </div>
       </div>
 
-      <DownloadSection
-        title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#149ECC]"
-        buttonText="QUIS AUTEM VEL DOLOR"
-        pdfUrl="/documents/DummyPDF.pdf"
-        fileName="DummyPDF.pdf"
-      />
-
-      <DownloadSection
-        title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#003683]"
-        buttonText="QUIS AUTEM VEL DOLOR"
-        pdfUrl="/documents/DummyPDF.pdf"
-        fileName="DummyPDF.pdf"
-      />
-
-      <DownloadSection
-        title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#4FB29E]"
-        buttonText="QUIS AUTEM VEL DOLOR"
-        pdfUrl="/documents/DummyPDF.pdf"
-        fileName="DummyPDF.pdf"
-      />
+      {patientResourcesData.downloads.map((download) => (
+        <DownloadSection
+          key={download.id}
+          title={download.title}
+          description={download.description}
+          bgColor={download.bgColor}
+          buttonText={download.buttonText}
+          pdfUrl={download.pdfUrl}
+          fileName={download.fileName}
+        />
+      ))}
     </div>
   );
 }

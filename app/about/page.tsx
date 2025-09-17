@@ -1,495 +1,311 @@
 import Image from 'next/image';
+import { aboutData } from '@/lib/fakes/about-fakes';
 
 export default function AboutPage() {
-
-    const mobileColorPattern = [
-        { bgColor: 'bg-[#149ECC]' },
-        { bgColor: 'bg-[#4FB29E]' },
-        { bgColor: 'bg-[#C7D886]' },
-        { bgColor: 'bg-[#003683]' },
-
-    ];
-
     return (
         <div className="min-h-screen bg-white">
-      {/* Desktop*/}
-      <section className="bg-[#4FB29E] relative overflow-hidden hidden lg:flex items-center py-12">
-    <div className="container mx-auto px-8 lg:px-0 relative">
-        <div className="flex flex-row gap-6 items-center h-full">
-            <div className="hidden lg:flex lg:ml-24 justify-center items-center">
-                <Image
-                    src="/question-mark.svg"
-                    alt="Question marks"
-                    width={300}
-                    height={400}
-                    className=""
-                />
-            </div>
-            <div className="text-white space-y-8 flex flex-col items-center lg:items-start text-center lg:text-left">
-                <div className="space-y-4">
-                    <div className="flex flex-row gap-6">
-                        <div className=''>
-                            <h1 className="text-2xl md:text-3xl font-light">
-                                <span className="font-bold">about</span> us
-                            </h1>
-                            <h2 className="text-lg md:text-xl font-bold tracking-wider uppercase">
-                                THE NEED
-                            </h2>
-                        </div>
-                        <Image
-                            src="/question-mark-3d.svg"
-                            alt="3D Question mark"
-                            width={80}
-                            height={80}
-                            className=""
-                        />
-                    </div>
-                </div>
-                <div className="w-full flex justify-center mt-[-32px]">
-                    <div className="max-w-sm mx-auto py-8">
-                        <p className="text-left z-10 text-base leading-relaxed font-light -mt-12">
-                            There is a little-known epidemic. Conditions such as childhood deformity,
-                            neglected trauma and infected fractures cause massive suffering globally. This
-                            results in a significant physical, psychological and social burden as well as often
-                            catastrophic healthcare-related costs and loss of income.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="flex justify-center items-start lg:items-center">
-                <div className="relative">
-                    <Image
-                        src="/chatbox.svg"
-                        alt="Patient stories chatbox"
-                        width={180}
-                        height={180}
-                        className=""
-                    />
-                    <div className="absolute bottom-6 md:bottom-8 inset-0 flex items-center justify-center text-center text-white">
-                        <div className=" md:text-lg lg:text-2xl font-light leading-tight">
-                            <span className="font-bold justify-center text-center">patient</span><br />stories
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-            {/* Mobile layout */}
-            <section className="bg-[#4FB29E] flex lg:hidden items-center relative overflow-hidden py-12">
-                <div className="container mx-auto px-8 lg:px-0 relative">
-                    <div className="flex flex-row gap-6 items-center h-full">
-                        
-                        <div className="text-white space-y-2 flex flex-col items-center lg:items-start text-center lg:text-left">
-                            <div className="w-full text-left">
-                                <h1 className="text-2xl md:text-3xl font-light">
-                                    <span className="font-bold">about</span> us
+            {/* Hero Section */}
+            <section className="bg-gradient-to-br from-[#4FB29E] to-[#149ECC] relative overflow-hidden py-20">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Content */}
+                        <div className="text-white space-y-8">
+                            <div className="space-y-4">
+                                <h1 className="text-header">
+                                    {aboutData.hero.title}
                                 </h1>
-                                <div className="flex items-center flex-nowrap min-h-[40px] relative">
-                                    <h4 className="text-lg md:text-xl font-bold tracking-wider uppercase whitespace-nowrap">
-                                        THE NEED 
-                                    </h4>
-                                    <div 
-                                        className="absolute top-0 overflow-visible z-10" 
-                                        style={{
-                                            right: 'calc(-100vw + 100% + 70px)',
-                                            top: '-60px'
-                                        }}
-                                    >
-                                        <Image
-                                            src="/question-mark-3d.svg"
-                                            alt="3D Question mark"
-                                            width={130}
-                                            height={130}
-                                            className='sm:hidden'
-                                        />
-                                    </div>
-                                    <div 
-                                        className="absolute top-0 overflow-visible z-10 hidden sm:block" 
-                                        style={{
-                                            right: 'calc(-100vw + 100% + 100px)',
-                                            top: '-60px'
-                                        }}
-                                    >
-                                        <Image
-                                            src="/question-mark-3d.svg"
-                                            alt="3D Question mark"
-                                            width={130}
-                                            height={130}
-                                            className=''
-                                        />
+                                <h2 className="text-semi-header font-bold tracking-wider uppercase">
+                                    {aboutData.hero.subtitle}
+                                </h2>
+                            </div>
+                            
+                            <p className="text-body leading-relaxed max-w-lg">
+                                {aboutData.hero.description}
+                            </p>
+                            
+                            {/* Patient Stories Card */}
+                            <div className="relative max-w-sm">
+                                <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
+                                    <div className="flex items-center justify-center text-center">
+                                        <div className="text-semi-header font-bold">
+                                            <span className="text-white">{aboutData.hero.patientStoriesText?.split(' ')[0] || 'patient'}</span><br />
+                                            <span className="text-[#DFFF80]">{aboutData.hero.patientStoriesText?.split(' ')[1] || 'stories'}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="space-y-4">
-                           
+                        </div>
+                        
+                        {/* Right Content - Images */}
+                        <div className="relative">
+                            <div className="relative z-10">
+                                <Image
+                                    src="/question-mark-3d.svg"
+                                    alt="3D Question mark"
+                                    width={200}
+                                    height={200}
+                                    className="mx-auto"
+                                />
                             </div>
-
-                            <p className="text-left lg:text-left z-10 text-sm leading-relaxed font-light max-w-sm">
-                                There is a little-known epidemic. Conditions such as childhood deformity,
-                                neglected trauma and infected fractures cause massive suffering globally. This
-                                results in a significant physical, psychological and social burden as well as of-
-                                ten catastrophic healthcare-related costs and loss of income.
-                            </p>
-                            <div className="lg:hidden absolute z-0 top-48">
+                            <div className="absolute -top-10 -right-10 z-0">
                                 <Image
                                     src="/question-mark.svg"
                                     alt="Question marks"
-                                    width={200}
-                                    height={150}
-                                    className="-mt-10"
+                                    width={300}
+                                    height={400}
+                                    className="opacity-60"
                                 />
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <div className="flex justify-center items-start lg:items-center">
+            {/* The Answer Section */}
+            <section className="bg-gradient-to-r from-[#149ECC] to-[#4FB29E] py-20">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left - Image */}
+                        <div className="relative order-2 lg:order-1">
                             <div className="relative">
                                 <Image
-                                    src="/chatbox.svg"
-                                    alt="Patient stories chatbox"
-                                    width={180}
-                                    height={180}
-                                    className=""
+                                    src="/IMG4.jpg"
+                                    alt="Patient and medical staff"
+                                    width={600}
+                                    height={400}
+                                    className="rounded-2xl shadow-2xl"
                                 />
-                              <div className="absolute inset-0 -top-3 flex items-center justify-center text-center text-white">
-  <div className="md:text-lg lg:text-2xl font-light leading-tight">
-    <span className="font-bold">patient</span><br />stories
-  </div>
-</div>
-
+                                <div className="absolute -top-6 -left-6 z-10">
+                                    <Image
+                                        src="/ticks-light.svg"
+                                        alt="Tick marks"
+                                        width={120}
+                                        height={120}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Right - Content */}
+                        <div className="text-white space-y-6 order-1 lg:order-2">
+                            <div className="flex items-center gap-4">
+                                <h2 className="text-header">
+                                    {aboutData.answer.title}
+                                </h2>
+                                <Image
+                                    src="/tick-blue.svg"
+                                    alt="Blue tick"
+                                    width={60}
+                                    height={60}
+                                    className="flex-shrink-0"
+                                />
+                            </div>
+                            
+                            <div className="text-body leading-relaxed">
+                                {(() => {
+                                    const desc = aboutData.answer.description;
+                                    const highlight = 'equalise access to limb reconstruction surgery by providing world-class, compassionate specialist surgical care';
+                                    if (!desc || !desc.includes(highlight)) return desc;
+                                    
+                                    const parts = desc.split(highlight);
+                                    return (
+                                        <>
+                                            {parts[0]}
+                                            <span className="font-bold text-[#003683] bg-white/20 px-2 py-1 rounded"> {highlight} </span>
+                                            {parts[1]}
+                                        </>
+                                    );
+                                })()}
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Mobile: Show image above answer section */}
-            <section className="lg:hidden h-[180px] relative bg-transparent">
-                <Image
-                    src="/IMG4.jpg"
-                    alt="Patient and medical staff"
-                    fill
-                    className="object-cover"
-                />
-            </section>
-
-            {/* Answer Section */}
-            <section className="bg-[#149ECC] relative overflow-hidden flex items-center py-12">
-                <div className="container mx-auto px-4 sm:px-8 lg:px-0 relative h-full flex flex-col lg:flex-row items-center justify-between">
-
-                    <div className="hidden lg:flex justify-center items-center w-1/5 z-10">
-                        <Image
-                            src="/ticks-light.svg"
-                            alt="Tick marks"
-                            width={200}
-                            height={300}
-                        />
-                    </div>
-
-                    <div className="hidden lg:block absolute top-0 bottom-0 xl:left-[460px] lg:left-[300px] transform -translate-x-1/2 lg:w-[400px] xl:w-[350px] z-0">
-                        <Image
-                            src="/IMG4.jpg"
-                            alt="Patient and medical staff"
-                            fill
-                            className="object-cover h-full w-full"
-                        />
-                    </div>
-
-                    <div className="text-white space-y-4 flex flex-col justify-center w-full lg:w-[52%] z-10 lg:ml-8">
-                        <div className="flex items-center space-x-2">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl tracking-wider font-bold uppercase lg:ml-8 xl:ml-16">
-                                THE ANSWER
+            {/* Vision Section */}
+            <section className="bg-[#003683] py-20">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="text-white space-y-6">
+                            <h2 className="text-header">
+                                {aboutData.vision.title}
                             </h2>
-                            <Image
-                                src="/tick-blue.svg"
-                                alt="Blue tick"
-                                width={40}
-                                height={40}
-                                className="flex-shrink-0"
-                            />
+                            <div className="text-body leading-relaxed">
+                                {(() => {
+                                    const desc = aboutData.vision.description;
+                                    const highlight = 'Kijabe Limb Reconstruction Unit';
+                                    if (!desc || !desc.includes(highlight)) return desc;
+                                    
+                                    const parts = desc.split(highlight);
+                                    return (
+                                        <>
+                                            {parts[0]}<span className="font-bold text-[#DFFF80]">{highlight}</span>{parts[1]}
+                                        </>
+                                    );
+                                })()}
+                            </div>
                         </div>
-
-                        <div className="text-sm leading-relaxed font-light lg:ml-8 xl:ml-16">
-                            Limb reconstruction is a field of orthopaedic surgery that is at the cutting edge of the treatment of limb deformities, fracture-related infection and poorly healing fractures. The Kijabe Limb Reconstruction Unit exists to
-                            <span className="font-bold text-[#003683]"> equalise access to limb reconstruction surgery by providing world-class, compassionate specialist surgical care </span>
-                            to patients whilst serving as a first-of-a-kind training centre for surgical trainees and fellows nationally and regionally. The goal of this unit is to do this at little or no cost to the underprivileged.
-                        </div>
-
-                    </div>
-
-                    {/* Mobile ticks - always centered */}
-                    <div className="lg:hidden absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-                        <Image
-                            src="/ticks-light.svg"
-                            alt="Tick marks"
-                            width={150}
-                            height={100}
-                        />
-                    </div>
-
-                </div>
-            </section>
-
-            <section className="bg-[#003683] py-12">
-                <div className="container mx-auto px-8 lg:px-0">
-                    <div className="flex flex-col lg:flex-row gap-2 items-center justify-center">
-                        <div className="text-white space-y-2 max-w-xs">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-wider uppercase text-center lg:text-left">
-                                THE VISION
-                            </h2>
-                            <p className="text-sm leading-relaxed font-light text-center lg:text-left"style={{ fontFamily: 'Coves, sans-serif' }}>
-                                The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is
-                                a world where men, women and children can access the limb reconstruction care they
-                                need, when they need it - regardless of where they were born or how much money they
-                                happen to have.
-                            </p>
-                        </div>
+                        
                         <div className="flex justify-center">
                             <Image
                                 src="/africa-map-light.svg"
                                 alt="Map of Africa"
-                                width={200}
-                                height={300}
-                                className=""
+                                width={300}
+                                height={400}
+                                className="drop-shadow-2xl"
                             />
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="lg:hidden h-[250px] relative">
-                <Image
-                    src="/mbonisi.png"
-                    alt="Dr. Mbonisi Malaba"
-                    fill
-                    className="object-cover object-top"
-                />
-            </section>
-            <section className="bg-white py-12 relative">
-                <div className="container mx-auto px-8 lg:px-0 relative h-full">
-                    <div className="hidden lg:flex w-full h-full relative">
-                        <div className="absolute -left-24 top-0 bottom-0 h-full w-[600px]">
-                            <Image
-                                src="/mbonisi.png"
-                                alt="Dr. Mbonisi Malaba"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
 
-                        <div className="ml-[620px] flex items-center w-full">
-                            <div className="text-[#003683] space-y-4 w-full">
-                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                                    meet the surgeon
-                                </h2>
-
-                                <div className="space-y-4">
-                                    <h3 className="text-lg md:text-xl font-bold tracking-wider uppercase">
-                                        DR. MBONISI MALABA
-                                    </h3>
-                                    <p className="font-light ">
-                                        Orthopaedic and Limb Reconstruction <br /> Surgeon, Founder of { ' '}
-                                        <span className="font-bold text-[#003683]">
-                                            Kijabe Limb <br /> Reconstruction Unit
-                                        </span>
-                                    </p>
-                                </div>
-
-                                <div className="text-sm leading-relaxed max-w-md font-light ">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eius-
-                                         mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                         voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="lg:hidden h-full">
-                        <div className="flex w-full h-full">
-                            <div className="flex items-center w-full">
-                                <div className="text-[#003683] space-y-4 w-full">
-                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                                        meet the surgeon
-                                    </h2>
-
-                                    <div className="space-y-4">
-                                        <h3 className="text-lg md:text-xl font-bold tracking-wider uppercase">
-                                            DR. MBONISI MALABA
-                                        </h3>
-                                        <p className="font-light ">
-                                            Orthopaedic and Limb Reconstruction Surgeon, founder of{' '}
-                                            <span className="font-bold text-[#003683]">
-                                            Kijabe Limb Reconstruction Unit
-                                        </span>
-                                        </p>
-                                    </div>
-
-                                    <div className="text-base leading-relaxed font-light ">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua...
-                                        </p>
+            {/* Meet the Surgeon Section */}
+            <section className="bg-white py-20">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left - Image */}
+                        <div className="relative">
+                            <div className="relative">
+                                <Image
+                                    src="/mbonisi.png"
+                                    alt="Dr. Mbonisi Malaba"
+                                    width={500}
+                                    height={600}
+                                    className="rounded-2xl shadow-2xl object-cover"
+                                />
+                                <div className="absolute -bottom-6 -right-6 bg-[#003683] text-white p-4 rounded-xl shadow-lg">
+                                    <div className="text-center">
+                                        <div className="text-semi-header font-bold">Dr. Mbonisi</div>
+                                        <div className="text-body">Malaba</div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        
+                        {/* Right - Content */}
+                        <div className="text-[#003683] space-y-6">
+                            <h2 className="text-header">
+                                {aboutData.surgeon.title}
+                            </h2>
+                            
+                            <div className="space-y-4">
+                                <h3 className="text-semi-header font-bold tracking-wider uppercase">
+                                    {aboutData.surgeon.name}
+                                </h3>
+                                
+                                <div className="text-body leading-relaxed">
+                                    {(() => {
+                                        const role = aboutData.surgeon.role;
+                                        const highlight = 'Kijabe Limb Reconstruction Unit';
+                                        if (!role || !role.includes(highlight)) return role;
+                                        
+                                        const parts = role.split(highlight);
+                                        const firstPart = parts[0];
+                                        const secondPart = parts[1]?.split(' ')[0] || '';
+                                        
+                                        return (
+                                            <>
+                                                {firstPart}<br />{secondPart} { ' '}
+                                                <span className="font-bold text-[#149ECC]">
+                                                    Kijabe Limb <br /> Reconstruction Unit
+                                                </span>
+                                            </>
+                                        );
+                                    })()}
+                                </div>
+                            </div>
+                            
+                            <p className="text-body leading-relaxed">
+                                {aboutData.surgeon.description}
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="relative flex h-2">
-                {mobileColorPattern.map((item, index) => (
-                    <div
-                        key={index}
-                        className={`${item.bgColor} flex-1`}
-                    />
-                ))}
+            {/* Color Pattern Divider */}
+            <section className="flex h-3">
+                <div className="bg-[#149ECC] flex-1"></div>
+                <div className="bg-[#4FB29E] flex-1"></div>
+                <div className="bg-[#C7D886] flex-1"></div>
+                <div className="bg-[#003683] flex-1"></div>
             </section>
-            <section className="bg-[#4FB29E] flex items-center py-12">
 
-                <div className="px-4 md:px-8 lg:px-0 relative">
-                    <div className="hidden lg:flex w-full h-full relative">
-                        <div className="mr-[450px] flex items-center w-full">
-                            <div className="text-white space-y-2 w-full lg:px-18 xl:px-28">
-                                <h2 className="text-3xl md:text-4xl  font-light">
-                                    the <span className="font-bold">hospital</span>
-                                </h2>
-
-                                <div className="flex items-start justify-between gap-1">
-                                    <p className=" font-light text-[#003683] text-sm text-left">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                                        Sed do eiusmod tempor incididunt ut labore et dolore magna<br />
-                                        Ut enim ad minim veniam, quis nostrud exercitation.<br />
-                                        Ullamco laboris nisi ut aliquip.<br />
-                                        Ex ea commodo consequat.<br />
-                                        Duis aute irure dolor.<br />
-                                        In voluptate.
-                                    </p>
-                                    <div className="flex-shrink-0 pt-10 lg:pr-8 xl:pr-28 2xl:pr-64">
-                                        <Image
-                                            src="/hospital-icon.svg"
-                                            alt="Hospital icon"
-                                            width={100}
-                                            height={100}
-                                        />
-                                    </div>
+            {/* The Hospital Section */}
+            <section className="bg-gradient-to-br from-[#4FB29E] to-[#149ECC] py-20">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left - Content */}
+                        <div className="text-white space-y-6">
+                            <h2 className="text-header">
+                                {aboutData.hospital.title}
+                            </h2>
+                            
+                            <div className="relative">
+                                <p className="text-body leading-relaxed text-[#003683]">
+                                    {aboutData.hospital.description}
+                                </p>
+                                
+                                <div className="absolute -top-4 -right-4">
+                                    <Image
+                                        src="/hospital-icon.svg"
+                                        alt="Hospital icon"
+                                        width={120}
+                                        height={120}
+                                        className="drop-shadow-lg"
+                                    />
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            className="absolute top-0 bottom-0 h-full lg:w-[600px] hidden lg:block"
-                            style={{ right: 'clamp(0px, calc((100vw - 1024px) / (1280 - 1024) * -108), -108px)' }}
-                        >
+                        
+                        {/* Right - Image */}
+                        <div className="relative">
                             <Image
                                 src="/hospital.png"
                                 alt="Aerial view of Kijabe Hospital"
-                                fill
-                                className="object-cover"
+                                width={600}
+                                height={400}
+                                className="rounded-2xl shadow-2xl"
                             />
-                        </div>
-                    </div>
-
-                    <div className="lg:hidden h-full">
-                        <div className="flex w-full h-full">
-                            <div className="flex items-center w-full">
-                                <div className="text-white space-y-6 w-full">
-                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-light">
-                                        the <span className="font-bold">hospital</span>
-                                    </h2>
-
-                                    <div className="relative">
-                                        <div 
-                                            className="float-right ml-3 mb-3" 
-                                            style={{
-                                                shapeOutside: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
-                                                width: "120px",
-                                                height: "120px"
-                                            }}
-                                        >
-                                            <Image
-                                                src="/hospital-icon.svg"
-                                                alt="Hospital icon"
-                                                width={120}
-                                                height={120}
-                                            />
-                                        </div>
-                                        <p className="text-sm leading-relaxed font-light text-[#003683] text-justify" >
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                            pariatur.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="lg:hidden h-[180px] relative">
-                <Image
-                    src="/hospital.png"
-                    alt="Aerial view of Kijabe Hospital"
-                    fill
-                    className="object-cover"
-                />
-            </section>
-
-            <section className="bg-[#149ECC] flex items-center py-12">
-                <div className="md:px-8 lg:px-0">
-                    <div className="flex flex-row gap-4 items-start px-4 md:px-16">
-                        <div className="hidden lg:flex justify-center items-center">
-                            <Image
-                                src="/bone-about.svg"
-                                alt=""
-                                width={250}
-                                height={250}
-                                className=""
-                            />
-                        </div>
-
-                        <div className="text-white space-y-8 relative">
-                            <h2 className="text-3xl md:text-4xl font-light leading-tight">
-                                the need for <span className="font-bold">reconstruction surgery</span>
+            {/* The Need Section */}
+            <section className="bg-gradient-to-r from-[#149ECC] to-[#4FB29E] py-20">
+                <div className="container mx-auto px-4 lg:px-8">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        {/* Left - Content */}
+                        <div className="text-white space-y-6">
+                            <h2 className="text-header">
+                                {aboutData.need.title}
                             </h2>
-                            <div className="flex flex-row gap-4">
-                                <div className="space-y-6  leading-relaxed font-light relative">
-                                    <div className="flex flex-row gap-4">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                            velit esse cillum dolore eu fugiat nulla pariatur.
-                                        </p>
-                                        <div className="flex lg:hidden justify-center items-center">
-                                            <Image
-                                                src="/bone-about.svg"
-                                                alt=""
-                                                width={700}
-                                                height={700}
-                                            />
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <div className="hidden lg:flex justify-center items-center px-10">
-                                    <Image
-                                        src="/bone-about-light.svg"
-                                        alt=""
-                                        width={700}
-                                        height={700}
-                                    />
-                                </div>
+                            
+                            <p className="text-body leading-relaxed">
+                                {aboutData.need.description}
+                            </p>
+                        </div>
+                        
+                        {/* Right - Images */}
+                        <div className="relative">
+                            <div className="relative z-10">
+                                <Image
+                                    src="/bone-about.svg"
+                                    alt="Bone illustration"
+                                    width={300}
+                                    height={300}
+                                    className="mx-auto"
+                                />
+                            </div>
+                            <div className="absolute -top-10 -right-10 z-0">
+                                <Image
+                                    src="/bone-about-light.svg"
+                                    alt="Bone illustration light"
+                                    width={200}
+                                    height={200}
+                                    className="opacity-60"
+                                />
                             </div>
                         </div>
                     </div>

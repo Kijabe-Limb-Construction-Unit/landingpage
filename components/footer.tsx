@@ -1,58 +1,11 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const Footer = () => {
   return (
     <footer className="w-full">
       {/* Top Section with Logo and Line */}
-      <div className="bg-white border-t-[5.4px] border-[#003683]">
-        <div className="relative bg-white py-6">
-          <div className="absolute top-16 inset-0 flex items-center justify-center z-10">
-            <Image
-              src="/heartbeat-line-complete.svg"
-              alt=""
-              width={1200}
-              height={10}
-              className="h-auto w-full"
-            />
-          </div>
-
-          <div className="relative z-20 px-8 flex items-center justify-between">
-            <Image
-              src="/logo.svg"
-              alt="Kijabe Limb Reconstruction Unit"
-              width={200}
-              height={150}
-              className="h-auto bg-white w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px]"
-            />
-          </div>
-        </div>
-
-        {/* Middle Section with Donate and Tagline */}
-        <div className="bg-white px-8 pt-1 md:pt-4">
-          <div className="flex items-center justify-between">
-            <Link href="/donate" className="mb-4">
-              <Image
-                src="/donate-butterfly-navbar.svg"
-                alt="Donate"
-                width={80}
-                height={70}
-                className="h-auto hover:opacity-80 transition-opacity"
-              />
-            </Link>
-
-                                                   <div className="text-right">
-                <Image
-                  src="/Group16.svg"
-                  alt="Restoring limbs | Rebuilding lives"
-                  width={200}
-                  height={70}
-                  className="h-auto w-auto max-w-[120px] min-[250px]:max-w-[150px] sm:max-w-[200px] md:max-w-[250px]"
-                />
-              </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Footer Section */}
       <div className="bg-[#003683] text-white px-8 py-8">
