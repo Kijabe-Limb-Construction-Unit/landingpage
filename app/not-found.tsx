@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Home, ArrowLeft } from "lucide-react";
+import { notFoundData } from "@/lib/fakes/not-found-fakes";
 
-// Reusable button component
 const ActionButton = ({ 
   children, 
   onClick, 
@@ -41,7 +41,7 @@ const ActionButton = ({
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#4FB29E] via-[#149ECC] to-[#003683] flex items-center justify-center px-4">
-      <div className="max-w-2xl mx-auto text-center">
+      <div className="max-w-2xl mx-auto text-center mt-50">
         {/* 404 Animation/Icon */}
         <div className="mb-8">
           <div className="relative">
@@ -63,13 +63,13 @@ export default function NotFound() {
         {/* Error Message */}
         <div className="mb-8">
           <h1 className="text-header font-bold text-white mb-4">
-            Page Not Found
+            {notFoundData.title}
           </h1>
           <p className="text-semi-header text-white/90 mb-6">
-            The page you're looking for doesn't exist or has been moved.
+            {notFoundData.subtitle}
           </p>
           <p className="text-body text-white/80">
-            Don't worry, we'll help you find your way back to the right place.
+            {notFoundData.description}
           </p>
         </div>
 
@@ -84,39 +84,6 @@ export default function NotFound() {
             <ArrowLeft className="w-5 h-5" />
             Go Back
           </ActionButton>
-        </div>
-
-        {/* Quick Links */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-          <h3 className="text-body font-semibold text-white mb-4">
-            Quick Links
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link
-              href="/about"
-              className="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 rounded transition-colors"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/patient-stories"
-              className="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 rounded transition-colors"
-            >
-              Patient Stories
-            </Link>
-            <Link
-              href="/patient-resources"
-              className="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 rounded transition-colors"
-            >
-              Resources
-            </Link>
-            <Link
-              href="/donate"
-              className="text-white/90 hover:text-white hover:bg-white/10 px-4 py-2 rounded transition-colors"
-            >
-              Donate
-            </Link>
-          </div>
         </div>
 
         {/* Contact Info */}

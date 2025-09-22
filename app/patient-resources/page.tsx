@@ -1,222 +1,148 @@
-"use client";
+import React from "react";
+import { Download } from "lucide-react";
+import { PatientResources } from "@/components/sections/patirnt-story-card";
 
-import Image from "next/image";
-import { Play, Download } from "lucide-react";
-import { patientResourcesData } from "@/lib/fakes/patient-resources-fakes";
-
-interface GetYouTubeVideoId {
-    (url: string): string | null;
-}
-
-const getYouTubeVideoId: GetYouTubeVideoId = (url) => {
-    const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/;
-    const match = url.match(regex);
-    return match ? match[1] : null;
-};
-
-interface VideoThumbnailProps {
-  title: string;
-  description: string;
-  bgColor: string;
-  videoUrl: string;
-  showTeddy?: boolean;
-}
-
-interface DownloadSectionProps {
-  title: string;
-  description: string;
-  bgColor: string;
-  buttonText: string;
-  pdfUrl: string;
-  fileName: string;
-}
-
-
-
-const VideoThumbnail = ({ title, description, bgColor, videoUrl, showTeddy = false }: VideoThumbnailProps) => {
-  const videoId = getYouTubeVideoId(videoUrl);
-
-  const getThumbnailUrl = (id: string) => {
-    return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-  };
-
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, videoId: string | null) => {
-    const target = e.currentTarget;
-    if (videoId) {
-      const fallbackUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-      if (target.src !== fallbackUrl) {
-        target.src = fallbackUrl;
-      } else {
-        target.src = '/thumbnail.png';
-      }
-    } else {
-      target.src = '/thumbnail.png';
-    }
-  };
-
+function App() {
   return (
-    <div className={`py-10 ${bgColor} relative overflow-hidden`}>
-      <div className="max-w-4xl mx-auto px-8 flex justify-center">
-        <div className="w-full max-w-md">
-          <div className="relative mb-8 bg-gray-900 rounded-lg overflow-hidden" style={{ width: '200px', height: '112px' }}>
-            {videoId ? (
-              <Image
-                src={getThumbnailUrl(videoId)}
-                alt={title}
-                width={200}
-                height={112}
-                className="w-full h-full object-cover"
-                onError={(e) => handleImageError(e, videoId)}
-                unoptimized
-              />
-            ) : (
-              <Image
-                src="/thumbnail.png"
-                alt={title}
-                width={200}
-                height={112}
-                className="w-full h-full object-cover"
-              />
-            )}
-            <div className="absolute inset-0 bg-black bg-black/40 flex items-center justify-center">
-              <a
-                href={videoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors"
-              >
-                <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
-              </a>
-            </div>
-          </div>
-          <div className="text-white relative z-10">
-            <h3 className="text-semi-header font-bold mb-6 tracking-widest" dangerouslySetInnerHTML={{ __html: title }}></h3>
-            <p className="text-body leading-relaxed">
-              {description}
-            </p>
-          </div>
-        </div>
+    <div className="min-h-screen">
+      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 px-6 lg:py-16">
+        <h1>Resources for patients</h1>
+        <p>Get more information</p>
+        <p>
+          abour your <span>consition or treatment.</span>
+        </p>
       </div>
-      
-      {/* Teddy Bear - keep original desktop positioning, make visible on mobile */}
-      {showTeddy && (
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 md:right-1/5 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:block">
-          <Image
-            src="/Teddy.svg"
-            alt="Teddy Bear"
-            width={150}
-            height={150}
-            className="opacity-60 md:opacity-30 md:w-[250px] md:h-[250px]"
-          />
-        </div>
-      )}
-    </div>
-  );
-};
-
-const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, fileName }: DownloadSectionProps) => {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  return (
-    <div className={`py-8 ${bgColor}`}>
-      <div className="max-w-4xl mx-auto px-8 flex justify-center">
-        <div className="w-full max-w-md">
-          <h3 className="text-semi-header font-bold text-white mb-4 tracking-widest">{title}</h3>
-          <p className="text-white text-body leading-relaxed mb-6">
-            {description}
-          </p>
-          <button 
-            onClick={handleDownload}
-            className="flex items-center gap-3 text-white hover:text-blue-200 transition-colors cursor-pointer"
-          >
-            <Download className="w-5 h-5" />
-            <span className="text-body font-medium tracking-widest">{buttonText}</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default function PatientResourcesPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-[#4FB29E] py-10 text-white">
-        <div className="max-w-4xl mx-auto px-8 flex justify-center">
-          <div className="w-full max-w-md">
-            <h2 className="text-header font-normal mb-2">
-              <strong>{patientResourcesData.hero.title?.split(' ')[0] || 'resources'}</strong> {patientResourcesData.hero.title?.split(' ').slice(1).join(' ') || 'for patients'}
-            </h2>
-            <p className="text-header font-bold mb-6" style={{ fontFamily: 'Caveat, cursive' }}>{patientResourcesData.hero.subtitle}</p>
-            <p className="text-body leading-relaxed font-bold">
-              {patientResourcesData.hero.description}
-            </p>
+      {/* General Information Section */}
+      <div className="bg-[#149ECC] px-8 py-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-white  font-normal mb-8 tracking-wider">
+            GENERAL INFORMATION
+          </h1>
+          <div className="grid grid-cols-2 items-start gap-4">
+            <PatientResources
+              p1="Limb Reconstruction"
+              p2="with frames overview"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"   youtubeUrl="https://youtu.be/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"          />
+            <PatientResources
+              p1="Frame Information for Kids (and Adults!)"
+              p2="for Kids (and Adults!)"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"    youtubeUrl="https://youtu.be/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"        />
+            <PatientResources
+              p1="Tips for Wearing an"
+              p2="External Fixator"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/c85w0jzeWyY?si=wfSMZXUhSLwLg0Q2"    youtubeUrl="https://youtu.be/c85w0jzeWyY?si=Srr1uXoLF10kw3p1"        />
+            <PatientResources
+              p1="History of Limb"
+              p2="Reconstruction"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/PVn9IfxX74E?si=shXJoL2_-2plMVIs"   youtubeUrl="https://youtu.be/PVn9IfxX74E?si=shXJoL2_-2plMVIs" />
           </div>
         </div>
       </div>
 
-      {patientResourcesData.videos.map((video) => (
-        <VideoThumbnail
-          key={video.id}
-          title={video.title}
-          description={video.description}
-          bgColor={video.bgColor}
-          videoUrl={video.videoUrl}
-          showTeddy={video.showTeddy || false}
-        />
-      ))}
-
-      <div className="bg-white py-10">
-        <div className="max-w-4xl mx-auto px-8 flex justify-center">
-          <div className="w-full max-w-md">
-            <h2 className="text-semi-header font-bold text-blue-900 mb-6">{patientResourcesData.pdfSection.title}</h2>
-            <p className="text-body text-gray-600 leading-relaxed">
-              {(() => {
-                const desc = patientResourcesData.pdfSection.description;
-                const highlight1 = patientResourcesData.pdfSection.highlightedText;
-                const highlight2 = patientResourcesData.pdfSection.highlightedText2;
-                
-                if (!desc || !highlight1 || !highlight2) return desc;
-                
-                const parts1 = desc.split(highlight1);
-                if (parts1.length < 2) return desc;
-                
-                const parts2 = parts1[1].split(highlight2);
-                if (parts2.length < 2) return desc;
-                
-                return (
-                  <>
-                    {parts1[0]}
-                    <span className="text-blue-600 underline cursor-pointer italic">{highlight1}</span>
-                    {parts2[0]}
-                    <span className="text-blue-600 underline cursor-pointer italic">{highlight2}</span>
-                    {parts2[1]}
-                  </>
-                );
-              })()}
-            </p>
+      {/* Looking After Your Pin Sites Section */}
+      <div className="bg-blue-900 px-8 py-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-teal-300  font-normal mb-8 tracking-wider">
+            LOOKING AFTER YOUR PIN SITES
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Pin site Care"
+              p2="(Animated)"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"     youtubeUrl="https://youtu.be/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"  />
+            <PatientResources
+              p1="Pin site Care"
+              p2="(Patient Demonstration)"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7"    youtubeUrl="https://youtu.be/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7" />
           </div>
         </div>
       </div>
 
-      {patientResourcesData.downloads.map((download) => (
-        <DownloadSection
-          key={download.id}
-          title={download.title}
-          description={download.description}
-          bgColor={download.bgColor}
-          buttonText={download.buttonText}
-          pdfUrl={download.pdfUrl}
-          fileName={download.fileName}
-        />
-      ))}
+      {/* Managing Your Struts Section */}
+      <div className="bg-gray-200 px-8 py-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-teal-500  font-normal mb-8 tracking-wider">
+            MANAGING YOUR STRUTS
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Adjusting Your Struts"
+              p2=""
+              bg="blue-900"
+              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/sytSPu19fUY?si=OTpK49OllmqpdELT"    youtubeUrl=""      />
+            <PatientResources
+              p1="Changing a Struts"
+              p2=""
+              bg="blue-900"
+              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/1JMqagnm5gE?si=RJvdaL1o4IYd8MRl"    youtubeUrl={""}      />
+          </div>
+        </div>
+      </div>
+
+      {/* Monorail Frames Section */}
+      <div className="bg-teal-500 px-8 py-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-blue-900 font-normal mb-8 tracking-wider">
+            MONORAIL FRAMES
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Monorail adjustment"
+              p2=""
+              bg="blue-900"
+              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/3x6fM2J3xE8?si=GEcbIplBEPSLGvzi"     youtubeUrl="https://youtu.be/3x6fM2J3xE8?si=elol-sopgXjaqoIG"    />
+          </div>
+        </div>
+      </div>
+
+      {/* Rehabilitation Section */}
+      <div className="bg-[#149ECC] px-8 py-12">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-white font-normal mb-8 tracking-wider">
+            REHABILITATION
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Frames Physiotherapy"
+              p2=""
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"   youtubeUrl="https://youtu.be/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"  />
+            <PatientResources
+              p1="Tibia/Leg Bone Physiotherapy"
+              p2="Exercises Limb Lengthening"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4"   youtubeUrl="https://youtu.be/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4" />
+            <PatientResources
+              p1="Femur/Thigh Bone Physiotherapy"
+              p2="Exercises Limb Lengthening"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu"   youtubeUrl="https://youtu.be/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu" />
+            <PatientResources
+              p1="Physiotherapy Exercises for"
+              p2="Lower Limb External Fixators"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"   youtubeUrl="https://youtu.be/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"  />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#003683] text-white flex justify-center items-center flex-col px-8 py-12 gap-4">
+        <div className="flex items-center gap-4">
+          <Download className="w-20 h-20" />
+          <h1>reading material</h1>
+        </div>
+        <p className="max-w-3xl">
+          Taylor Spatial Frame Patient Information Booklet
+          https://smith-nephew.stylelabs.cloud/api/public/content/f43bb595ee4c4849970524cff681ec73?v=616e0229
+        </p>
+      </div>
     </div>
   );
 }
+
+export default App;

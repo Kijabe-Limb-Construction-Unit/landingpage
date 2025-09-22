@@ -26,10 +26,10 @@ interface ServiceIcon {
 const SLIDE_INTERVAL = 4000;
 
 const COLORS = {
-  primary: '#003683',
-  secondary: '#149ecc',
-  tertiary: '#4fb29d',
-  quaternary: '#c7d886',
+  primary: "#003683",
+  secondary: "#149ecc",
+  tertiary: "#4fb29d",
+  quaternary: "#c7d886",
 } as const;
 
 const slides: Slide[] = [
@@ -39,8 +39,8 @@ const slides: Slide[] = [
     title: "A little-known epidemic.",
   },
   {
-    src: "/IMG1.jpg", 
-    alt: "Hero Background 2", 
+    src: "/IMG1.jpg",
+    alt: "Hero Background 2",
     title: "Another compelling message.",
   },
   {
@@ -49,15 +49,15 @@ const slides: Slide[] = [
     title: "Third powerful statement.",
   },
   {
-    src: "/IMG3.jpg", 
+    src: "/IMG3.jpg",
     alt: "Hero Background 4",
     title: "Fourth amazing headline.",
   },
   {
-    src: "/IMG4.jpg", 
+    src: "/IMG4.jpg",
     alt: "Hero Background 5",
     title: "Fifth incredible message.",
-  }
+  },
 ];
 
 const navigationItems: NavigationItem[] = [
@@ -65,81 +65,91 @@ const navigationItems: NavigationItem[] = [
     label: "Patient\nresources",
     href: "/patient-resources",
     bgColor: COLORS.tertiary,
-    width: "w-40"
+    width: "w-40",
   },
   {
     label: "Book an\nappointment",
     href: "#",
     bgColor: COLORS.secondary,
-    width: "w-48"
-  }
+    width: "w-48",
+  },
 ];
 
 const serviceIcons: ServiceIcon[] = [
   {
     src: "/childhood.png",
     alt: "Childhood Deformity",
-    title: "Childhood<br/>Deformity"
+    title: "Childhood<br/>Deformity",
   },
   {
     src: "/poorly-healing.png",
     alt: "Poorly Healing Fractures",
-    title: "Poorly Healing<br/>Fractures"
+    title: "Poorly Healing<br/>Fractures",
   },
   {
     src: "/infected-fractures.png",
     alt: "Infected Fractures",
-    title: "Infected<br/>Fractures"
-  }
+    title: "Infected<br/>Fractures",
+  },
 ];
 
-const getPreviousSlideIndex = (currentSlide: number, totalSlides: number): number => {
+const getPreviousSlideIndex = (
+  currentSlide: number,
+  totalSlides: number
+): number => {
   return (currentSlide - 1 + totalSlides) % totalSlides;
 };
 
-const getNextSlideIndex = (currentSlide: number, totalSlides: number): number => {
+const getNextSlideIndex = (
+  currentSlide: number,
+  totalSlides: number
+): number => {
   return (currentSlide + 1) % totalSlides;
 };
 
-const SlideImage = ({ 
-  slide, 
-  priority = false, 
-  opacity 
-}: { 
-  slide: Slide; 
-  priority?: boolean; 
+const SlideImage = ({
+  slide,
+  priority = false,
+  opacity,
+}: {
+  slide: Slide;
+  priority?: boolean;
   opacity?: string;
 }) => (
   <div className="relative w-full h-full">
-    <Image 
+    <Image
       src={slide.src}
       alt={slide.alt}
       fill
-      className={`object-cover ${opacity || ''}`}
+      className={`object-cover ${opacity || ""}`}
       priority={priority}
       sizes="(max-width: 768px) 100vw, 50vw"
     />
   </div>
 );
 
-const NavigationDots = ({ 
-  currentSlide, 
-  totalSlides, 
-  onSlideChange 
-}: { 
-  currentSlide: number; 
-  totalSlides: number; 
-  onSlideChange: (index: number) => void; 
+const NavigationDots = ({
+  currentSlide,
+  totalSlides,
+  onSlideChange,
+}: {
+  currentSlide: number;
+  totalSlides: number;
+  onSlideChange: (index: number) => void;
 }) => (
-  <div className="flex justify-center" role="tablist" aria-label="Slide navigation">
+  <div
+    className="flex justify-center"
+    role="tablist"
+    aria-label="Slide navigation"
+  >
     {Array.from({ length: totalSlides }).map((_, index) => (
       <button
         key={index}
         onClick={() => onSlideChange(index)}
         className={`h-1 w-1 min-[250px]:h-1.5 min-[250px]:w-1.5 min-[320px]:h-2 min-[320px]:w-2 rounded-full mx-0.5 min-[320px]:mx-1 md:mx-2 transition-all duration-200 border border-white min-[320px]:border-2 ${
           index === currentSlide
-            ? 'bg-white'
-            : 'bg-transparent hover:bg-white hover:bg-opacity-50'
+            ? "bg-white"
+            : "bg-transparent hover:bg-white hover:bg-opacity-50"
         }`}
         aria-label={`Go to slide ${index + 1}`}
         role="tab"
@@ -169,34 +179,34 @@ const HeroSlider = () => {
   const nextSlideIndex = getNextSlideIndex(currentSlide, slides.length);
 
   return (
-    <section 
+    <section
       className="relative h-[40vh] min-[250px]:h-[45vh] min-[320px]:h-[50vh] sm:h-[60vh] flex items-center justify-center text-white bg-black bg-cover bg-center overflow-hidden"
       aria-label="Hero image slider"
     >
       <div className="absolute inset-0 hidden md:flex items-center justify-center">
         <div className="relative w-full h-full z-20">
-          <SlideImage 
-            slide={slides[currentSlide]} 
-            priority 
-          />
+          <SlideImage slide={slides[currentSlide]} priority />
 
-          <div className="absolute inset-0 bg-black opacity-40" aria-hidden="true"></div>
+          <div
+            className="absolute inset-0 bg-black opacity-40"
+            aria-hidden="true"
+          ></div>
         </div>
       </div>
 
       <div className="absolute inset-0 flex md:hidden items-center justify-center">
         <div className="relative w-full h-full z-20">
-          <SlideImage 
-            slide={slides[currentSlide]} 
-            priority 
-          />
-          <div className="absolute inset-0 bg-black opacity-40" aria-hidden="true"></div>
+          <SlideImage slide={slides[currentSlide]} priority />
+          <div
+            className="absolute inset-0 bg-black opacity-40"
+            aria-hidden="true"
+          ></div>
         </div>
       </div>
 
-      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-6 md:top-8 right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[20%] z-30">
+      <div className="absolute top-20 min-[250px]:top-12 min-[320px]:top-16 md:top-50 right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[20%] z-30">
         <div className="w-48 h-32 min-[250px]:w-56 min-[250px]:h-40 min-[320px]:w-64 min-[320px]:h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 relative">
-          <Image 
+          <Image
             src="/slider.svg"
             alt=""
             fill
@@ -209,8 +219,8 @@ const HeroSlider = () => {
       <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
         <h1 className="text-header text-white drop-shadow-lg italic">
           {slides[currentSlide].title}
-        </h1>     
-        <NavigationDots 
+        </h1>
+        <NavigationDots
           currentSlide={currentSlide}
           totalSlides={slides.length}
           onSlideChange={goToSlide}
@@ -219,7 +229,7 @@ const HeroSlider = () => {
 
       <div className="absolute bottom-0 min-[320px]:bottom-1 md:bottom-2 left-0 w-full z-30">
         <div className="w-full h-2 min-[250px]:h-3 min-[320px]:h-4 sm:h-6 md:h-8 relative">
-          <Image 
+          <Image
             src="/line.svg"
             alt=""
             fill
@@ -233,7 +243,7 @@ const HeroSlider = () => {
 };
 
 const NavigationBox = ({ item }: { item: NavigationItem }) => (
-  <div 
+  <div
     className={`${item.width} relative flex flex-col items-center justify-center h-24 cursor-default`}
     style={{ backgroundColor: item.bgColor }}
   >
@@ -245,8 +255,17 @@ const NavigationBox = ({ item }: { item: NavigationItem }) => (
 
 const PatientStoriesBox = () => (
   <div className="w-20 relative flex flex-col items-center justify-center h-20">
-    <div className="absolute inset-0 z-10 flex items-center justify-center" style={{ width: '330px', height: '120px', left: '75%', top: '73%', transform: 'translate(-50%, -50%)' }}>
-      <Image 
+    <div
+      className="absolute inset-0 z-10 flex items-center justify-center"
+      style={{
+        width: "330px",
+        height: "120px",
+        left: "75%",
+        top: "73%",
+        transform: "translate(-50%, -50%)",
+      }}
+    >
+      <Image
         src="/patientstories.svg"
         alt=""
         fill
@@ -258,18 +277,30 @@ const PatientStoriesBox = () => (
 );
 
 // Mobile Navigation Components - UPDATED with more right positioning for Book an appointment
-const MobileNavigationBox = ({ item, index }: { item: NavigationItem; index: number }) => (
-  <div 
+const MobileNavigationBox = ({
+  item,
+  index,
+}: {
+  item: NavigationItem;
+  index: number;
+}) => (
+  <div
     className={`flex-1 relative flex flex-col items-center justify-center h-16 min-[250px]:h-20 min-[320px]:h-24 sm:h-32 cursor-default min-w-0 ${
-      index === 1 ? 'ml-0 min-[215px]:ml-8 min-[219px]:ml-7 min-[227px]:ml-0 min-[228px]:ml-9 min-[231px]:ml-8 min-[250px]:ml-8 min-[263px]:ml-11 min-[268px]:ml-11 min-[290px]:ml-11 min-[320px]:ml-12 min-[331px]:ml-13' : ''
+      index === 1
+        ? "ml-0 min-[215px]:ml-8 min-[219px]:ml-7 min-[227px]:ml-0 min-[228px]:ml-9 min-[231px]:ml-8 min-[250px]:ml-8 min-[263px]:ml-11 min-[268px]:ml-11 min-[290px]:ml-11 min-[320px]:ml-12 min-[331px]:ml-13"
+        : ""
     }`}
     style={{ backgroundColor: item.bgColor }}
   >
-    <div className={`flex items-center justify-center h-full w-full ${
-      index === 0 ? 'justify-start pl-2 min-[250px]:pl-3 min-[320px]:pl-4 min-[320px]:pr-6' : 
-      index === 1 ? 'justify-end min-[215px]:pr-3 min-[228px]:pr-4 pr-12 min-[250px]:pr-4 min-[263px]:pr-6 min-[268px]:pr-6 min-[290px]:pr-6 min-[320px]:pr-7 min-[331px]:pr-6 translate-x-[-20px] min-[215px]:translate-x-3 min-[228px]:translate-x-3 min-[250px]:translate-x-2 min-[263px]:translate-x-4 min-[268px]:translate-x-4 min-[290px]:translate-x-4 min-[320px]:translate-x-2 min-[331px]:translate-x-3' : 
-      'justify-center'
-    }`}>
+    <div
+      className={`flex items-center justify-center h-full w-full ${
+        index === 0
+          ? "justify-start pl-2 min-[250px]:pl-3 min-[320px]:pl-4 min-[320px]:pr-6"
+          : index === 1
+          ? "justify-end min-[215px]:pr-3 min-[228px]:pr-4 pr-12 min-[250px]:pr-4 min-[263px]:pr-6 min-[268px]:pr-6 min-[290px]:pr-6 min-[320px]:pr-7 min-[331px]:pr-6 translate-x-[-20px] min-[215px]:translate-x-3 min-[228px]:translate-x-3 min-[250px]:translate-x-2 min-[263px]:translate-x-4 min-[268px]:translate-x-4 min-[290px]:translate-x-4 min-[320px]:translate-x-2 min-[331px]:translate-x-3"
+          : "justify-center"
+      }`}
+    >
       <p className="text-white text-[10px] min-[250px]:text-xs min-[320px]:text-sm sm:text-base text-center leading-[1.1] font-light whitespace-pre-line overflow-hidden">
         {item.label}
       </p>
@@ -281,16 +312,16 @@ const MobileNavigationBox = ({ item, index }: { item: NavigationItem; index: num
 const MobilePatientStoriesBox = () => (
   <div className="absolute top-0 z-20 h-21 min-[250px]:h-25 min-[320px]:h-30 sm:h-35 flex items-center justify-center left-0 right-0">
     <div className="relative w-[120px] min-[250px]:w-[140px] min-[320px]:w-[160px] sm:w-[190px] h-21 min-[250px]:h-25 min-[320px]:h-30 sm:h-35 mx-auto">
-      <Image 
+      <Image
         src="/patientstories.svg"
         alt=""
         fill
         className="object-contain"
         aria-hidden="true"
-        style={{ 
-          objectFit: 'contain', 
-          width: '100%', 
-          height: '100%'
+        style={{
+          objectFit: "contain",
+          width: "100%",
+          height: "100%",
         }}
       />
     </div>
@@ -299,9 +330,20 @@ const MobilePatientStoriesBox = () => (
 
 // Desktop Navigation Section (Original)
 const NavigationSection = () => (
-  <section className="h-26 hidden md:block" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
-    <div className="flex w-full relative items-end" style={{ backgroundColor: COLORS.secondary }}>
-      <div className="flex-1 h-24" style={{ backgroundColor: COLORS.secondary }} aria-hidden="true" />
+  <section
+    className="h-26 hidden md:block"
+    style={{ backgroundColor: COLORS.primary }}
+    aria-label="Quick navigation"
+  >
+    <div
+      className="flex w-full relative items-end"
+      style={{ backgroundColor: COLORS.secondary }}
+    >
+      <div
+        className="flex-1 h-24"
+        style={{ backgroundColor: COLORS.secondary }}
+        aria-hidden="true"
+      />
       {navigationItems.map((item, index) => {
         if (index === 0) {
           return <NavigationBox key={index} item={item} />;
@@ -314,15 +356,23 @@ const NavigationSection = () => (
           );
         }
       })}
-      <div className="flex-1 h-24" style={{ backgroundColor: COLORS.tertiary }} aria-hidden="true" />
+      <div
+        className="flex-1 h-24"
+        style={{ backgroundColor: COLORS.tertiary }}
+        aria-hidden="true"
+      />
     </div>
   </section>
 );
 
 // UPDATED: Mobile Navigation Section with increased spacing pushed further left
 const MobileNavigationSection = () => (
-  <section className="block md:hidden relative" style={{ backgroundColor: COLORS.primary }} aria-label="Quick navigation">
-    <div className="flex w-full relative "  style={{ gap: '0px' }}>
+  <section
+    className="block md:hidden relative"
+    style={{ backgroundColor: COLORS.primary }}
+    aria-label="Quick navigation"
+  >
+    <div className="flex w-full relative " style={{ gap: "0px" }}>
       {navigationItems.map((item, index) => (
         <MobileNavigationBox key={index} item={item} index={index} />
       ))}
@@ -333,37 +383,42 @@ const MobileNavigationSection = () => (
 
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
   <div className="flex flex-col items-center justify-center group w-full flex-shrink-0">
-    <div className={`relative mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
-      icon.alt === "Poorly Healing Fractures" 
-        ? "w-20 h-20 md:w-24 md:h-24" 
-        : icon.alt === "Infected Fractures"
-        ? "w-20 h-20 md:w-24 md:h-24"
-        : "w-20 h-20 md:w-24 md:h-24"
-    }`}>
+    <div
+      className={`relative mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
+        icon.alt === "Poorly Healing Fractures"
+          ? "w-20 h-20 md:w-24 md:h-24"
+          : icon.alt === "Infected Fractures"
+          ? "w-20 h-20 md:w-24 md:h-24"
+          : "w-20 h-20 md:w-24 md:h-24"
+      }`}
+    >
       <div className="relative w-full h-full">
-        <Image 
-          src={icon.src} 
-          alt={icon.alt} 
+        <Image
+          src={icon.src}
+          alt={icon.alt}
           fill
           className="object-contain"
           sizes="(max-width: 768px) 80px, 96px"
         />
       </div>
     </div>
-    <h2 
-      className="text-body font-semibold text-[#003882] text-center px-2" 
+    <h2
+      className="text-body font-semibold text-[#003882] text-center px-2"
       dangerouslySetInnerHTML={{ __html: icon.title }}
     />
   </div>
 );
 
 const ServicesSection = () => (
-  <section className="py-2 min-[250px]:py-3 min-[320px]:py-4 md:py-12 bg-white" aria-label="Our services">
+  <section
+    className="py-2 min-[250px]:py-3 min-[320px]:py-4 md:py-12 bg-white"
+    aria-label="Our services"
+  >
     <div className="container mx-auto px-1 min-[250px]:px-2 min-[320px]:px-4 md:px-8">
       {/* Mobile: Display service.jpeg image */}
       <div className="md:hidden w-full flex justify-center mt-4 min-[250px]:mt-5 min-[320px]:mt-6">
         <div className="relative w-full max-w-md">
-          <Image 
+          <Image
             src="/service.jpeg"
             alt="Our Services"
             width={400}
@@ -373,7 +428,7 @@ const ServicesSection = () => (
           />
         </div>
       </div>
-      
+
       {/* Desktop: Three column layout with proper spacing */}
       <div className="hidden md:grid grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center items-center">
         {serviceIcons.map((icon, index) => (

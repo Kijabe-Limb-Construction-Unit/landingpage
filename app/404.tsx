@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Home, ArrowLeft, Search } from "lucide-react";
+import { Home, ArrowLeft } from "lucide-react";
 
 // Reusable button component
 const ActionButton = ({ 
@@ -66,10 +66,10 @@ export default function Custom404() {
             Page Not Found
           </h1>
           <p className="text-semi-header text-white/90 mb-6">
-            The page you're looking for doesn't exist or has been moved.
+            The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
           <p className="text-body text-white/80">
-            Don't worry, we'll help you find your way back to the right place.
+            Don&apos;t worry, we&apos;ll help you find your way back to the right place.
           </p>
         </div>
 

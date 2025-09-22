@@ -2,8 +2,7 @@ export const aboutData = {
   hero: {
     title: "about us",
     subtitle: "THE NEED",
-    description: "There is a little-known epidemic. Conditions such as childhood deformity, neglected trauma and infected fractures cause massive suffering globally. This results in a significant physical, psychological and social burden as well as often catastrophic healthcare-related costs and loss of income.",
-    patientStoriesText: "patient stories"
+    description: "THERE IS A LITTLE KNOWN EPIDEMIC. Conditions such as childhood deformity, infected fractures and neglected trauma cause massive suffering globally.Every year, 30 million people sustain a new disability as a result of musculoskeletal injury. Within that group, 1.8 million sustain a fracture that later becomes infected, making it both more expensive and more challenging to treat, and that could result in the loss of that limb. It is estimated that a country like Kenya has 12 000 new fracture-related infections each year. On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly, developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.",
   },
   answer: {
     title: "THE ANSWER",
@@ -11,11 +10,10 @@ export const aboutData = {
   },
   vision: {
     title: "THE VISION",
-    description: "The vision of the Kijabe Limb Reconstruction Unit is a world where men, women and children can access the limb reconstruction care they need, when they need it - regardless of where they were born or how much money they happen to have."
+    description: "The vision of the Kijabe Limb Reconstruction Unit is a world where men, women and children CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED. when they need it, regardless of where they were born or how much money they happen to have. Towards this end, we are developing a centre of excellence in Kijabe, Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years. MULTIPLYING OUR IMPACT ACROSS THE CONTINENT."
   },
   surgeon: {
-    title: "meet the surgeon",
-    name: "DR. MBONISI MALABA",
+    title: "meet the surgeon DR. MBONISI MALABA",
     role: "Orthopaedic and Limb Reconstruction Surgeon, Founder of Kijabe Limb Reconstruction Unit",
     description: "Dr. Mbonisi Malaba is a world-renowned orthopaedic surgeon specializing in limb reconstruction. With over 15 years of experience, he has dedicated his career to providing life-changing surgical care to patients who would otherwise have no access to such specialized treatment. His innovative techniques and compassionate approach have helped thousands of patients regain their mobility and independence."
   },

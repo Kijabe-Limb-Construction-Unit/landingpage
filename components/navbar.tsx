@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import NavDonate from "./sections/nav-donate";
 // import { HeartbeatAnimation } from "./sections/heartwave-animation";
 
 const Navbar = () => {
@@ -62,7 +63,7 @@ const Navbar = () => {
             key={item.name}
             href={item.path}
             className={`
-              ${item.bgColor} 
+              ${item.bgColor}
               flex-1 px-6 py-1 text-white font-light transition-opacity hover:opacity-90 text-center
               ${pathname === item.path ? "opacity-100" : "opacity-80"}
             `}
@@ -124,31 +125,9 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+        <Image src="/line.svg" alt="line" width={200} height={150} className="h-auto w-full" />
       {/* Donate - restore section  */}
-      {/* <div className="bg-white px-8 pt-1 md:pt-10">
-        <div className="flex items-center justify-between ">
-          <Link href="/donate" className="mb-4">
-            <Image
-              src="/donate-butterfly-navbar.svg"
-              alt="Donate"
-              width={80}
-              height={80}
-              objectFit="contain"
-              className="hover:opacity-80 transition-opacity"
-            />
-          </Link>
-
-          <div className="text-right">
-            <Image
-              src="/Group16.svg"
-              alt="Restoring limbs | Rebuilding lives"
-              width={200}
-              height={70}
-              className="h-auto w-auto max-w-[120px] min-[250px]:max-w-[150px] sm:max-w-[200px] md:max-w-[250px]"
-            />
-          </div>
-        </div>
-      </div> */}
+      <NavDonate />
       {/* bottom lines  */}
       <div className="flex w-full h-2">
         {colorPattern.map((item, index) => (

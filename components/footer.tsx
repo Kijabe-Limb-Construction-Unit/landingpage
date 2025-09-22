@@ -1,12 +1,12 @@
 import Link from 'next/link';
+import Foot from './sections/foot';
 // import Image from 'next/image';
 
 const Footer = () => {
   return (
     <footer className="w-full">
       {/* Top Section with Logo and Line */}
-      
-
+      <Foot/>
       {/* Footer Section */}
       <div className="bg-[#003683] text-white px-8 py-8">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
