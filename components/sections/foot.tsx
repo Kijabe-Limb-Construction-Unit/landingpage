@@ -1,10 +1,7 @@
 "use client";
 
-
 import Image from "next/image";
 import NavDonate from "./nav-donate";
-
-// import { HeartbeatAnimation } from "./sections/heartwave-animation";
 
 const Navbar = () => {
 
@@ -13,17 +10,17 @@ const Navbar = () => {
       {/* Logo and menu section  */}
       <div className="relative bg-white py-6">
         {/* <HeartbeatAnimation /> */}
-        <div className="relative z-20 px-8 flex items-center justify-between">
+        <div className="absolute top-16 px-8 inset-0 flex items-center justify-start z-10">
           <Image
             src="/logo.svg"
             alt="Kijabe Limb Reconstruction Unit"
             width={200}
             height={150}
-            className="h-auto bg-white w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px]"
+            className="h-auto lg:h-25 bg-white w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[450px]"
           />
         </div>
       </div>
-        <Image src="/line.svg" alt="line" width={200} height={150} className="h-auto w-full" />
+        <Image src="/heartbeat-line-complete.svg" alt="line" width={200} height={150} className="h-auto w-full mt-9" />
       {/* Donate - restore section  */}
       <NavDonate />
       {/* bottom lines  */}

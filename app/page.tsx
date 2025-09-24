@@ -36,27 +36,27 @@ const slides: Slide[] = [
   {
     src: "/bb.jpg",
     alt: "Hero Background 1",
-    title: "A little-known epidemic.",
+    title: "Serving the most needy.",
   },
   {
     src: "/IMG1.jpg",
     alt: "Hero Background 2",
-    title: "Another compelling message.",
+    title: "Restoring limbs.",
   },
   {
     src: "/IMG2.jpg",
     alt: "Hero Background 3",
-    title: "Third powerful statement.",
+    title: "Rebuilding lives and rebuilding hope.",
   },
   {
     src: "/IMG3.jpg",
     alt: "Hero Background 4",
-    title: "Fourth amazing headline.",
+    title: "Equalizing access to limb reconstruction surgery.",
   },
   {
     src: "/IMG4.jpg",
     alt: "Hero Background 5",
-    title: "Fifth incredible message.",
+    title: "Training surgeons for regional impact.",
   },
 ];
 
@@ -184,13 +184,21 @@ const HeroSlider = () => {
       aria-label="Hero image slider"
     >
       <div className="absolute inset-0 hidden md:flex items-center justify-center">
-        <div className="relative w-full h-full z-20">
+        <div className="absolute left-0 w-1/4 h-full z-10">
+          <SlideImage slide={slides[previousSlideIndex]} opacity="opacity-60" />
+        </div>
+
+        <div className="relative w-1/2 h-full z-20">
           <SlideImage slide={slides[currentSlide]} priority />
 
           <div
             className="absolute inset-0 bg-black opacity-40"
             aria-hidden="true"
           ></div>
+        </div>
+
+        <div className="absolute right-0 w-1/4 h-full z-10">
+          <SlideImage slide={slides[nextSlideIndex]} opacity="opacity-60" />
         </div>
       </div>
 
@@ -204,7 +212,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute top-20 min-[250px]:top-12 min-[320px]:top-16 md:top-50 right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[20%] z-30">
+      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-6 md:top-8 right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[20%] z-30">
         <div className="w-48 h-32 min-[250px]:w-56 min-[250px]:h-40 min-[320px]:w-64 min-[320px]:h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 relative">
           <Image
             src="/slider.svg"
@@ -217,7 +225,7 @@ const HeroSlider = () => {
       </div>
 
       <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
-        <h1 className="text-header text-white drop-shadow-lg italic">
+        <h1 className="font-bold mb-0.5 text-white italic">
           {slides[currentSlide].title}
         </h1>
         <NavigationDots
@@ -230,7 +238,7 @@ const HeroSlider = () => {
       <div className="absolute bottom-0 min-[320px]:bottom-1 md:bottom-2 left-0 w-full z-30">
         <div className="w-full h-2 min-[250px]:h-3 min-[320px]:h-4 sm:h-6 md:h-8 relative">
           <Image
-            src="/line.svg"
+            src="/line_.svg"
             alt=""
             fill
             className="object-cover"
@@ -382,30 +390,43 @@ const MobileNavigationSection = () => (
 );
 
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
-  <div className="flex flex-col items-center justify-center group w-full flex-shrink-0">
-    <div
-      className={`relative mb-4 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
-        icon.alt === "Poorly Healing Fractures"
-          ? "w-20 h-20 md:w-24 md:h-24"
+  <div className="flex flex-col items-center justify-center w-full flex-shrink-0">
+    <div className={`relative mb-2 min-[250px]:mb-3 min-[320px]:mb-4 md:mb-6 lg:mb-8 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
+      icon.alt === "Poorly Healing Fractures" 
+        ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64" 
+        : icon.alt === "Infected Fractures"
+        ? "w-20 h-20 min-[250px]:w-24 min-[250px]:h-24 min-[320px]:w-28 min-[320px]:h-28 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72"
+        : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-24 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 pb-2"
+    }`}>
+      <div className={`relative ${
+        icon.alt === "Poorly Healing Fractures" 
+          ? "w-full h-full" 
           : icon.alt === "Infected Fractures"
-          ? "w-20 h-20 md:w-24 md:h-24"
-          : "w-20 h-20 md:w-24 md:h-24"
-      }`}
-    >
-      <div className="relative w-full h-full">
-        <Image
-          src={icon.src}
-          alt={icon.alt}
+          ? "w-full h-full"
+          : "w-full h-full"
+      }`}>
+        <Image 
+          src={icon.src} 
+          alt={icon.alt} 
           fill
           className="object-contain"
-          sizes="(max-width: 768px) 80px, 96px"
+          sizes="(max-width: 250px) 64px, (max-width: 320px) 80px, (max-width: 640px) 96px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
         />
       </div>
     </div>
-    <h2
-      className="text-body font-semibold text-[#003882] text-center px-2"
-      dangerouslySetInnerHTML={{ __html: icon.title }}
-    />
+    {/* Fixed height container for text at the bottom */}
+    <div
+      className={`h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex  items-start justify-center ${
+        icon.alt === "Poorly Healing Fractures"
+          ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-5"
+          : ""
+      }`}
+    >
+      <p
+        className="font-semibold text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden"
+        dangerouslySetInnerHTML={{ __html: icon.title }}
+      />
+    </div>
   </div>
 );
 
@@ -424,13 +445,13 @@ const ServicesSection = () => (
             width={400}
             height={300}
             className="w-full h-auto object-contain"
-            sizes="(max-width: 768px) 100vw, 400px"
+            sizes="w(100vw) max-w(800px)"
           />
         </div>
       </div>
 
-      {/* Desktop: Three column layout with proper spacing */}
-      <div className="hidden md:grid grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center items-center">
+      {/* Desktop: Three column layout */}
+      <div className="hidden md:grid grid-cols-3 gap-5 max-w-5xl mx-auto justify-items-center items-start">
         {serviceIcons.map((icon, index) => (
           <ServiceIconItem key={index} icon={icon} />
         ))}

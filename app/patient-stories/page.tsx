@@ -17,7 +17,7 @@ export default function PatientStories() {
       <div className="bg-white py-12 px-6 lg:py-16">
         <div className="max-w-4xl mx-auto text-center relative">
           {/* Left Message Bubble */}
-          <div className="absolute -left-20 top-0 w-16 h-16 hidden lg:block">
+          <div className="absolute -left-10 top-0 w-36 h-36 hidden lg:block">
             <Image
               src="/message-bubble.svg"
               alt=""
@@ -38,13 +38,12 @@ export default function PatientStories() {
             />
           </div>
 
-          <h1 className="text-[#003683] font-bold mb-4">
-            patient stories
+          <h1 className="text-[#003683] font-bold mb-4  text-4xl sm:text-5xl md:text-6xl lg:text-9xl">
+            patient <span className="font-medium">stories</span>
           </h1>
-          <p className="text-[#003683]">
-            Click below to hear some of our patients share their incredible
-            <br className="hidden md:block" />
-            stories of transformation!
+          <p className="text-[#003683] font-bold">
+            Click below <span className="font-sm text-xl">to hear some of our patients share their incredible</span>
+            <br /><span className="hidden md:block font-bold text-4xl">stories of transformation!</span>
           </p>
         </div>
       </div>
@@ -80,19 +79,19 @@ export default function PatientStories() {
         </div>
         
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 bg-[#DFFF80] flex items-center justify-center py-8 lg:py-0">
+        <div className="w-full lg:w-1/2 flex items-center justify-center py-8 lg:py-0">
           <div className="relative">
             <Image 
               src={patientTestimonies[0].image} 
               alt={patientTestimonies[0].name} 
-              className="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-full" 
+              className="w-full object-cover" 
             />
           </div>
         </div>
       </div>
 
       {/* Bottom Section - MOSES */}
-      <div className="bg-[#193380] min-h-[500px] flex flex-col lg:flex-row">
+      <div className="bg-[#193380] min-h-[500px] flex flex-col lg:flex-row ">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
             <Image 

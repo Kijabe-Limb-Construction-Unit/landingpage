@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-white sticky top-0 z-50">
-      {/* <div
+      <div
         className="w-full h-1 border-t-4"
         style={{
           borderTopColor:
@@ -55,7 +55,7 @@ const Navbar = () => {
               ?.bgColor.replace("bg-[", "")
               .replace("]", "") || "#003683",
         }}
-      /> */}
+      />
 
       <nav className="hidden md:flex w-full">
         {navItems.map((item) => (
@@ -79,15 +79,23 @@ const Navbar = () => {
         ))}
       </div>
       {/* Logo and menu section  */}
-      <div className="relative bg-white py-6">
-        {/* <HeartbeatAnimation /> */}
+      <div className="relative bg-white">
+        <div className="absolute top-16 inset-0 flex items-center justify-center z-10">
+          <Image
+            src="/heartbeat-line-complete.svg"
+            alt=""
+            width={1200}
+            height={10}
+            className="h-auto w-full"
+          />
+        </div>
         <div className="relative z-20 px-8 flex items-center justify-between">
           <Image
             src="/logo.svg"
             alt="Kijabe Limb Reconstruction Unit"
             width={200}
             height={150}
-            className="h-auto bg-white w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px]"
+            className="h-auto lg:h-25 bg-white w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[450px]"
           />
 
           <div className="md:hidden">
@@ -125,9 +133,11 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-        <Image src="/line.svg" alt="line" width={200} height={150} className="h-auto w-full" />
       {/* Donate - restore section  */}
-      <NavDonate />
+      <div className="relative mt-8">
+        <NavDonate />
+      </div>
+      {/* <NavDonate /> */}
       {/* bottom lines  */}
       <div className="flex w-full h-2">
         {colorPattern.map((item, index) => (

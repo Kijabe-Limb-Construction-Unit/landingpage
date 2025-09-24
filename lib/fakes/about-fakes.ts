@@ -1,7 +1,6 @@
 export const aboutData = {
   hero: {
-    title: "about us",
-    subtitle: "THE NEED",
+    // title: "about us THE NEED",
     description: "THERE IS A LITTLE KNOWN EPIDEMIC. Conditions such as childhood deformity, infected fractures and neglected trauma cause massive suffering globally.Every year, 30 million people sustain a new disability as a result of musculoskeletal injury. Within that group, 1.8 million sustain a fracture that later becomes infected, making it both more expensive and more challenging to treat, and that could result in the loss of that limb. It is estimated that a country like Kenya has 12 000 new fracture-related infections each year. On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly, developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.",
   },
   answer: {

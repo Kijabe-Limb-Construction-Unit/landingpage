@@ -1,29 +1,90 @@
 import Image from "next/image";
 import { aboutData } from "@/lib/fakes/about-fakes";
+import ColoredBorder from "@/components/sections/ColoredBorder";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="flex bg-[#4FB29E] relative overflow-hidden ">
-        <div className="flex flex-col justify-between items-center align-middle  px-4 lg:px-8 w-[50%]">
-          <div className="text-white space-y-8 flex flex-col justify-center items-center w-full z-10">
-            <h1 className="text-header z-10">
-              {aboutData.hero.title} {aboutData.hero.subtitle}
-            </h1>
+      <section className="flex flex-col lg:flex-row bg-[#4FB29E] relative overflow-hidden min-h-screen">
+        <div className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 w-full lg:w-1/2 py-8 sm:py-12 lg:py-16">
+          <div className="text-white space-y-6 sm:space-y-8 flex flex-col justify-center items-center w-full z-10 max-w-3xl">
+            <div className="flex justify-center gap-2 w-full">
+              <h1 className="z-10 w-[75%]">
+                <div className="flex items-baseline gap-2 w-full">
+                  <span className="font-bold text-white text-5xl md:text-6xl lg:text-8xl">
+                    about
+                  </span>
+                  <span className="font-bold text-white text-5xl md:text-6xl lg:text-7xl">
+                    us
+                  </span>
+                </div>
+                <span className="font-bold text-white text-lg md:text-xl lg:text-3xl">
+                  THE NEED
+                </span>
+              </h1>
+            </div>
             <Image
               src="/question-mark.svg"
               alt="Question marks"
               width={300}
               height={400}
-              className="opacity-60 absolute items-center z-0 top-100 left-100"
+              className="opacity-60 absolute items-center z-0 top-70 left-80 hidden lg:block"
             />
             <p className="text-body leading-relaxed max-w-2xl z-10">
-              {aboutData.hero.description}
+              {(() => {
+                const desc = aboutData.hero.description;
+                const highlights = [
+                  {
+                    text: "childhood deformity, infected fractures and neglected trauma cause massive suffering globally",
+                    className: "font-bold text-[#003683]",
+                  },
+                  {
+                    text: "Kenya has 12 000 new fracture-related infections each year",
+                    className: "font-bold text-[#003683]",
+                  },
+                ];
+
+                // Function to highlight text
+                const highlightText = (text: string): React.ReactNode[] => {
+                  let result: React.ReactNode[] = [text];
+
+                  highlights.forEach((highlight, highlightIndex) => {
+                    result = result.flatMap((node, nodeIndex) => {
+                      if (typeof node !== "string") return node;
+
+                      const parts = node.split(highlight.text);
+                      if (parts.length === 1) return node;
+
+                      return parts.reduce<React.ReactNode[]>(
+                        (acc, part, partIndex) => {
+                          if (partIndex > 0) {
+                            acc.push(
+                              <span
+                                key={`${highlightIndex}-${nodeIndex}-${partIndex}`}
+                                className={highlight.className}
+                              >
+                                {highlight.text}
+                              </span>
+                            );
+                          }
+                          if (part) acc.push(part);
+                          return acc;
+                        },
+                        []
+                      );
+                    });
+                  });
+
+                  return result;
+                };
+
+                return highlightText(desc);
+              })()}
             </p>
           </div>
         </div>
-        <div className="w-[50%] h-full max-w-5xl">
+        <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-auto relative flex-shrink-0">
           <Image
             src="/the-need.png"
             alt="leg"
@@ -35,57 +96,84 @@ export default function AboutPage() {
         </div>
       </section>
       {/* The Answer Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-3 overflow-hidden">
+      <section className="flex flex-col lg:flex-row w-full min-h-screen">
         {/* BOVIN BEFORE Section */}
-        <div className="relative">
-          <div className="bg-[#003683] text-white text-center py-4">
-            <h2 className="font-bold tracking-wide">BOVIN BEFORE</h2>
+        <div className="relative w-full lg:w-1/4 flex flex-col">
+          <div className="bg-[#003683] text-white text-center py-4 flex-shrink-0">
+            <h2 className="font-bold tracking-wide text-sm sm:text-base">
+              BOVIN BEFORE
+            </h2>
           </div>
           {/* Image */}
-          <Image
-            src="/before.png"
-            alt="Patient before treatment"
-            width={400}
-            height={600}
-            className="w-full h-full object-cover"
-          />
+          <div className="flex-1 relative">
+            <Image
+              src="/before.png"
+              alt="Patient before treatment"
+              width={300}
+              height={400}
+              objectFit="cover"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
 
         {/* THE ANSWER Section */}
-        <div className="bg-[#149ECC] text-white p-8 flex flex-col">
-          <h2 className="font-bold my-5">THE ANSWER</h2>
-          <div className="space-y-4 text-sm leading-relaxed">
-            <p className="my-5 font-bold text-[#003683]">
-              LIMB RECONSTRUCTION IS AN ESSENTIAL WEAPON IN ADDRESSING THIS
-              CRISIS.
-            </p>{" "}
-            <p>
-              This is a field within orthopaedic surgery that is at the cutting
-              edge of the treatment of limb deformities, fracture-related
-              infection and poorly healing fractures.
-            </p>
-            <p>
-              The Kijabe Limb Reconstruction Unit is an emerging centre of
-              excellence based in Kijabe, Kenya and providing care for some of
-              the most challenging orthopaedic conditions.
-            </p>
+        <div className="bg-[#149ECC] text-white w-full lg:w-1/2 flex flex-col justify-center">
+          <div className="relative p-4 sm:p-6 md:p-8 lg:p-12 space-y-4 sm:space-y-6 lg:space-y-8 h-full flex flex-col justify-center">
+            {/* Background decorative image */}
+            <Image
+              src="/ticks-light.svg"
+              alt="Decorative ticks"
+              width={200}
+              height={300}
+              className="absolute right-4 sm:right-8 top-8 sm:top-12 opacity-20 z-0 w-32 sm:w-48 md:w-64 lg:w-80"
+            />
+
+            {/* Title */}
+            <h1 className="relative z-10 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
+              THE ANSWER
+            </h1>
+
+            {/* Content with proper spacing */}
+            <div className="relative z-10 space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg leading-relaxed max-w-none lg:max-w-3xl">
+              <p>
+                <span className="font-bold text-[#003683] px-1 py-0.5 rounded">
+                  LIMB RECONSTRUCTION IS AN ESSENTIAL WEAPON IN ADDRESSING THIS
+                  CRISIS.
+                </span>{" "}
+                This is a field within orthopaedic surgery that is at the
+                cutting edge of the treatment of limb deformities,
+                fracture-related infection and poorly healing fractures.
+              </p>
+
+              <p>
+                The Kijabe Limb Reconstruction Unit is an emerging centre of
+                excellence based in Kijabe, Kenya and providing care for some of
+                the most challenging orthopaedic conditions.
+              </p>
+            </div>
           </div>
         </div>
 
         {/* BOVIN AFTER Section */}
-        <div className="relative">
+        <div className="relative w-full lg:w-1/4 flex flex-col">
           {/* Header */}
-          <div className="bg-[#003683] text-white text-center py-4">
-            <h2 className="font-bold tracking-wide">BOVIN AFTER</h2>
+          <div className="bg-[#003683] text-white text-center py-4 flex-shrink-0">
+            <h2 className="font-bold tracking-wide text-sm sm:text-base">
+              BOVIN AFTER
+            </h2>
           </div>
           {/* Image */}
-          <Image
-            src="/after.png"
-            alt="Patient after treatment"
-            width={400}
-            height={600}
-            className="w-full h-full object-cover"
-          />
+          <div className="flex-1 relative">
+            <Image
+              src="/after.png"
+              alt="Patient after treatment"
+              width={300}
+              height={400}
+              objectFit="cover"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </section>
       {/* Vision Section */}
@@ -150,17 +238,17 @@ export default function AboutPage() {
                 alt="Map of Africa"
                 width={300}
                 height={400}
+                objectFit="contain"
                 className="drop-shadow-2xl w-full h-full"
               />
             </div>
           </div>
         </div>
       </section>
-
+      <ColoredBorder />
       {/* Meet the Surgeon Section */}
-      <section className="bg-white py-20 flex flex-col justify-center items-center">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="flex flex-col justify-center items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683]">
             {/* Left - Image */}
             <div className="relative">
               {/* <div className="relative"> */}
@@ -203,7 +291,6 @@ export default function AboutPage() {
                 </div> */}
               </div>
             </div>
-          </div>
         </div>
         <div className="w-[80%] px-4 py-16">
           {/* Family Photo - positioned on the right */}
@@ -256,22 +343,14 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Color Pattern Divider */}
-      <section className="flex h-3">
-        <div className="bg-[#149ECC] flex-1"></div>
-        <div className="bg-[#4FB29E] flex-1"></div>
-        <div className="bg-[#C7D886] flex-1"></div>
-        <div className="bg-[#003683] flex-1"></div>
-      </section>
-
+      <ColoredBorder />
       {/* The Hospital Section */}
       <section className="bg-[#4FB29E]">
         {/* Hospital Section */}
-        <div className="bg-teal-500 text-white">
-          <div className="flex">
+        <div className=" text-white">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Text content */}
-            <div className="w-1/2 p-12">
+            <div className="p-12 ">
               <h1 className="text-5xl font-light mb-8">
                 the <span className="font-bold text-blue-900">hospital</span>
               </h1>
@@ -297,7 +376,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right side - Hospital aerial image */}
-            <div className="w-1/2">
+            <div className="">
               <Image
                 src="/hospital-1.png"
                 width={600}

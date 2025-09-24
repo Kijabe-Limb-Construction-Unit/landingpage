@@ -10,16 +10,13 @@ const NavDonate = () => {
       <div className="flex items-center justify-between">
         {/* Donate Button Side */}
         <Link href="/donate">
-          <div className="flex items-center gap-2">
             <Image
-              src="/butterfly.svg"
+              src="/donate-butterfly-navbar.svg"
               alt="Donate"
-              width={40}
-              height={40}
-              className="w-8 h-8 md:w-10 md:h-10"
+              width={100}
+              height={100}
+              className="w-35 h-20"
             />
-            <span className="text-[#003683] font-medium">donate</span>
-          </div>
         </Link>
         {/* Logo and Tagline Side */}
         <div className="flex items-center gap-4">
