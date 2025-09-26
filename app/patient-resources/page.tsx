@@ -1,22 +1,22 @@
 import React from "react";
 import { Download } from "lucide-react";
-import { PatientResources } from "@/components/sections/patirnt-story-card";
+import { PatientResources } from "@/components/sections/patient-story-card";
 
 function App() {
   return (
     <div className="min-h-screen">
       <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 px-6 lg:py-16">
-        <h1>Resources for patients</h1>
+        <h1 className="text-7xl font-light"><span className="font-bold">resources</span> for patients</h1>
         <p>Get more information</p>
         <p>
-          abour your <span>consition or treatment.</span>
+          about your <span className="font-bold text-4xl">condition or treatment.</span>
         </p>
       </div>
       {/* General Information Section */}
       <div className="bg-[#149ECC] px-8 py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-white  font-normal mb-8 tracking-wider">
-            GENERAL INFORMATION
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-white flex justify-start font-normal mb-8 tracking-wider">
+            GENERAL <span className="font-bold pl-5">INFORMATION</span>
           </h1>
           <div className="grid grid-cols-2 items-start gap-4">
             <PatientResources
@@ -45,9 +45,9 @@ function App() {
 
       {/* Looking After Your Pin Sites Section */}
       <div className="bg-blue-900 px-8 py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-teal-300  font-normal mb-8 tracking-wider">
-            LOOKING AFTER YOUR PIN SITES
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-white flex justify-start font-light mb-8 tracking-wider">
+            LOOKING AFTER <span className="font-bold pl-5">YOUR PIN SITES</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
             <PatientResources
@@ -66,9 +66,9 @@ function App() {
 
       {/* Managing Your Struts Section */}
       <div className="bg-gray-200 px-8 py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-teal-500  font-normal mb-8 tracking-wider">
-            MANAGING YOUR STRUTS
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-teal-500 flex justify-start   font-normal mb-8 tracking-wider">
+            MANAGING <span className="font-bold pl-5">YOUR STRUTS</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
             <PatientResources
@@ -87,9 +87,9 @@ function App() {
 
       {/* Monorail Frames Section */}
       <div className="bg-teal-500 px-8 py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-blue-900 font-normal mb-8 tracking-wider">
-            MONORAIL FRAMES
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-blue-900 flex justify-start font-normal mb-8 tracking-wider">
+            MONORAIL <span className="font-bold pl-5">FRAMES</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
             <PatientResources
@@ -103,8 +103,8 @@ function App() {
 
       {/* Rehabilitation Section */}
       <div className="bg-[#149ECC] px-8 py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-white font-normal mb-8 tracking-wider">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-white font-bold flex justify-start mb-8 tracking-wider">
             REHABILITATION
           </h1>
           <div className="grid grid-cols-2 gap-6">
@@ -133,7 +133,7 @@ function App() {
       </div>
       <div className="bg-[#003683] text-white flex justify-center items-center flex-col px-8 py-12 gap-4">
         <div className="flex items-center gap-4">
-          <Download className="w-20 h-20" />
+          <Download className="w-20 h-20 text-teal-500" />
           <h1>reading material</h1>
         </div>
         <p className="max-w-3xl">

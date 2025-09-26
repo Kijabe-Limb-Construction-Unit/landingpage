@@ -27,7 +27,7 @@ const Navbar = () => {
       bgColor: "bg-[#149ECC]",
     },
     { name: "Donate", path: "/donate", bgColor: "bg-[#003683]" },
-    { name: "Contact us", path: "/contact", bgColor: "bg-[#C7D886]" },
+    { name: "Contact Us", path: "/contact", bgColor: "bg-[#C7D886]" },
   ];
 
   const colorPattern = [
@@ -89,7 +89,7 @@ const Navbar = () => {
             className="h-auto w-full"
           />
         </div>
-        <div className="relative z-20 px-8 flex items-center justify-between">
+        <div className="relative z-20 mt-5 px-8 flex items-center justify-between">
           <Image
             src="/logo.svg"
             alt="Kijabe Limb Reconstruction Unit"

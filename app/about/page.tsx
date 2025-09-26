@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { aboutData } from "@/lib/fakes/about-fakes";
-import ColoredBorder from "@/components/sections/ColoredBorder";
+import { BlueColoredBorder, ColoredBorder } from "@/components/sections/ColoredBorder";
 
 export default function AboutPage() {
   return (
@@ -10,7 +10,7 @@ export default function AboutPage() {
         <div className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 w-full lg:w-1/2 py-8 sm:py-12 lg:py-16">
           <div className="text-white space-y-6 sm:space-y-8 flex flex-col justify-center items-center w-full z-10 max-w-3xl">
             <div className="flex justify-center gap-2 w-full">
-              <h1 className="z-10 w-[75%]">
+              <h1 className="z-10 w-full max-w-2xl">
                 <div className="flex items-baseline gap-2 w-full">
                   <span className="font-bold text-white text-5xl md:text-6xl lg:text-8xl">
                     about
@@ -91,7 +91,7 @@ export default function AboutPage() {
             width={300}
             height={400}
             objectFit="cover"
-            className="z-0 w-full h-full object-cover"
+            className="z-0 w-full h-full"
           />
         </div>
       </section>
@@ -119,18 +119,18 @@ export default function AboutPage() {
 
         {/* THE ANSWER Section */}
         <div className="bg-[#149ECC] text-white w-full lg:w-1/2 flex flex-col justify-center">
-          <div className="relative p-4 sm:p-6 md:p-8 lg:p-12 space-y-4 sm:space-y-6 lg:space-y-8 h-full flex flex-col justify-center">
+          <div className="relative p-4 sm:p-6 md:p-8 lg:p-12 space-y-4 sm:space-y-6 lg:space-y-8 h-full">
             {/* Background decorative image */}
             <Image
               src="/ticks-light.svg"
               alt="Decorative ticks"
               width={200}
               height={300}
-              className="absolute right-4 sm:right-8 top-8 sm:top-12 opacity-20 z-0 w-32 sm:w-48 md:w-64 lg:w-80"
+              className="absolute right-4 sm:right-75 top-10 sm:top-52 opacity-20 z-0 w-32 sm:w-48 md:w-64 lg:w-100"
             />
 
             {/* Title */}
-            <h1 className="relative z-10 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-wider uppercase">
+            <h1 className="relative z-10 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
               THE ANSWER
             </h1>
 
@@ -263,7 +263,7 @@ export default function AboutPage() {
 
             {/* Right - Content */}
             <div className="text-[#003683] space-y-6">
-              <p className="text-header">{aboutData.surgeon.title}</p>
+              <p className="text-4xl w-[60%]"><span className="text-7xl">meet the </span><span className="font-bold text-7xl">surgeon </span><span className="font-bold text-4xl">DR. MBONISI MALABA</span></p>
 
               <div className="space-y-4">
                 <p className="font-bold">{aboutData.surgeon.role}</p>
@@ -347,15 +347,21 @@ export default function AboutPage() {
       {/* The Hospital Section */}
       <section className="bg-[#4FB29E]">
         {/* Hospital Section */}
-        <div className=" text-white">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="text-white">
+          <div className="grid lg:grid-cols-2 gap-0 items-center">
             {/* Left side - Text content */}
-            <div className="p-12 ">
-              <h1 className="text-5xl font-light mb-8">
+            <div className="p-12 px-40">
+              <h1 className="text-8xl text-heading font-light mb-8">
                 the <span className="font-bold text-blue-900">hospital</span>
               </h1>
-
-              <div className="text-lg leading-relaxed space-y-4">
+              <Image
+                src="/hospital-line.svg"
+                width={600}
+                height={400}
+                alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
+                className="relative z-10 bottom-10 right-50 w-[100vw] object-cover"
+              />
+              <div className="leading-relaxed space-y-4 text-blue-900">
                 <p>
                   <span className="font-bold">Kijabe Hospital</span> is a
                   renowned center of excellence in healthcare and medical
@@ -388,6 +394,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <BlueColoredBorder />
     </div>
   );
 }
