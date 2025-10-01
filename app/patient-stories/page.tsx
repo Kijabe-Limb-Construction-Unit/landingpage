@@ -16,23 +16,23 @@ export default function PatientStories() {
   return (
     <div className="min-h-screen bg-white">
       <PatientStoriesSection />
-      {/* Middle Section - BOVIN */}
+      {/* Fisrt story Section - BOVIN */}
       <div className="bg-[#66B2B2] min-h-[500px] flex flex-col lg:flex-row">
         {/* Text Section */}
         <div className="w-full lg:w-1/2 bg-[#66B2B2] flex items-center p-6 lg:p-12">
-          <div className="w-full">
+          <div className="w-full flex flex-col items-end">
             <h2 className="text-semi-header font-bold text-white flex justify-end mb-4 lg:mb-6 tracking-widest">
               {patientTestimonies[0].name}
             </h2>
 
             <p
-              className="text-4xl italic text-white mb-4 lg:mb-6"
+              className="text-4xl italic text-white mb-4 lg:mb-6 flex w-full max-w-5xl"
               style={{ fontFamily: "Caveat, cursive" }}
             >
               &quot;{patientTestimonies[0].testimonial}&quot;
             </p>
 
-            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6">
+            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
               {patientTestimonies[0].fullStory}{" "}
               <span className="font-bold text-3xl">
                 Now he is happy and walking!
@@ -60,18 +60,15 @@ export default function PatientStories() {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center py-8 lg:py-0">
-          <div className="relative">
+          <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
             <Image
               src={patientTestimonies[0].image}
               alt={patientTestimonies[0].name}
-              className="w-full object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
-        </div>
       </div>
-
-      {/* Bottom Section - MOSES */}
+      {/* Second story Section - MOSES */}
       <div className="bg-[#149ECC] min-h-[500px] flex flex-col lg:flex-row ">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
@@ -97,7 +94,7 @@ export default function PatientStories() {
               {patientTestimonies[1].testimonialContinued}&quot;
             </p>
 
-            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6">
+            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
               {patientTestimonies[1].fullStory}{" "}
               <span className="font-bold text-3xl">able to work again!</span>
             </p>
@@ -122,22 +119,23 @@ export default function PatientStories() {
           </div>
         </div>
       </div>
+      {/* Third story Section - Doris */}
       <div className="bg-[#193380] min-h-[500px] flex flex-col lg:flex-row">
         {/* Text Section */}
         <div className="w-full lg:w-1/2 bg-[#193380] flex items-center p-6 lg:p-12">
-          <div className="w-full">
+          <div className="w-full flex flex-col items-end">
             <h2 className="text-semi-header flex justify-end font-bold text-white mb-4 lg:mb-6 tracking-widest">
               DORIS
             </h2>
 
             <p
-              className="text-5xl italic text-white mb-4 lg:mb-6"
+              className="text-5xl italic text-white mb-4 lg:mb-6 w-full max-w-5xl"
               style={{ fontFamily: "Caveat, cursive" }}
             >
               &quot;I see a beautiful me.&quot;
             </p>
 
-            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6">
+            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
               Doris suffered from a multilevel leg deformity for 18 years,
               affecting her schooling and self-image and making her prone to
               falling while walking. Now she{" "}

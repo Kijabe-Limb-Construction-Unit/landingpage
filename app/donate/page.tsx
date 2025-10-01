@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function DonatePage() {
   return (
     <div className="bg-[#149ECC]">
-      <div className="w-full mx-auto max-w-7xl min-h-screen flex">
+      <div className="w-full mx-auto max-w-7xl flex">
         <div className="flex flex-col">
           <div className="flex justify-end items-end gap-5">
             <div className="text-[#003683] flex flex-col items-end text-end">

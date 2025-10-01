@@ -225,9 +225,9 @@ const HeroSlider = () => {
       </div>
 
       <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
-        <h1 className="font-bold mb-0.5 text-white italic">
+        <p className="font-bold mb-0.5 text-white italic" style={{ fontFamily: "Caveat, cursive" }}>
           {slides[currentSlide].title}
-        </h1>
+        </p>
         <NavigationDots
           currentSlide={currentSlide}
           totalSlides={slides.length}
@@ -235,8 +235,8 @@ const HeroSlider = () => {
         />
       </div>
 
-      <div className="absolute bottom-0 min-[320px]:bottom-1 md:bottom-2 left-0 w-full z-10">
-        <div className="w-full h-5 min-[250px]:h-3 min-[320px]:h-4 sm:h-6 md:h-20 relative">
+      <div className="absolute bottom-0 left-0 w-full z-10">
+        <div className="w-full h-5 min-[250px]:h-3 min-[320px]:h-4 sm:h-6 md:h-15 relative">
           <Image
             src="/line_.svg"
             width={1920}
