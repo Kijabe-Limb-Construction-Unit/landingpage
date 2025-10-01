@@ -1,187 +1,52 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { BlueColoredBorder } from "@/components/sections/ColoredBorder";
 import Image from "next/image";
-import React, { useState } from "react";
-import { Clock, Accessibility, Bone } from "lucide-react";
-import ProgressBar from "@/components/ui/progressBar";
-
-const keyFacts = [
-  {
-    id: 1,
-    text: "All funds received worldwide can be traced from receipt to use, including number and type of treatments performed, with 100% of operations",
-    icon: Clock,
-    uppercase: false,
-    iconColor: "text-white",
-    textColor: "text-white",
-  },
-  {
-    id: 2,
-    text: "CREATING EQUAL ACCESS TO CHARITABLE AND GENERAL CONDITIONS",
-    icon: Accessibility,
-    uppercase: true,
-    iconColor: "text-white",
-    textColor: "text-[#003683]",
-  },
-  {
-    id: 3,
-    text: "PROCEDURES STILL REMAIN THE MOST COMPLEX CLEFT-PALATE INJURIES ACROSS THE WORLD",
-    icon: Bone,
-    uppercase: true,
-    iconColor: "text-white",
-    textColor: "text-white",
-  },
-];
+import Link from "next/link";
 
 export default function DonatePage() {
-  const [selectedFrequency, setSelectedFrequency] = useState("Monthly");
-  const [selectedAmount, setSelectedAmount] = useState(50);
-  const [coverFees, setCoverFees] = useState(false);
-
-  const currentMonth = new Date().toLocaleString("default", { month: "long" }).toUpperCase();
-
-  const frequencies = ["One-Time", "Monthly", "Legacy Giving"];
-  const amounts = [10, 25, 50, 100];
-
   return (
-    <section className="w-full overflow-x-hidden">
-      <div className="flex flex-col">
-        {/* Hero Section with Background Image */}
-        <div className=" bg-[#149ECC] relative overflow-hidden">
-          <div className="w-full h-[255px] md:h-[350px] items-center justify-center mx-auto md:max-w-xl lg:max-w-[720px] relative overflow-hidden">
-            <Image src="/donate-hero1.png" alt="Medical team providing care" fill className="relative object-cover object-top" />
-            <div className="absolute top-2 md:top-8 -right-6 md:-right-10 p-2 bg-transparent ">
-              <Image
-                src="/donate-butterfly-navbar.svg"
-                alt="Donate"
-                width={150}
-                height={120}
-                className="h-auto w-[100px] md:w-[200px] max-w-none"
-              />
+    <div className="bg-[#149ECC]">
+      <div className="w-full mx-auto max-w-7xl flex">
+        <div className="flex flex-col">
+          <div className="flex justify-end items-end gap-5">
+            <div className="text-[#003683] flex flex-col items-end text-end">
+              <div className="flex items-center gap-5">
+                <h1 className="font-bold text-white text-8xl">donate</h1>
+                <Image
+                  src="/butterfly.svg"
+                  alt="Donate"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 md:w-20 md:h-20"
+                />
               </div>
-            {/* <Image src="/donate-butterfly-navbar.svg" alt="Donate" width={200} height={150} className="absolute top-8 md:top-12 -right-16 md:-right-10 h-auto max-w-none" />{" "} */}
-          </div>
-        </div>
-
-        {/* Donation Section */}
-        <div className="bg-[#003683] text-white py-12 px-4 items-center justify-center pb-0">
-          <div className=" flex flex-col w-full md:max-w-xl lg:max-w-[720px] mx-auto justify-center items-center mb-10">
-            {/* Butterfly and Progress */}
-            <div className="w-full items-center flex gap-2 md:gap-4 px-2 md:px-10 justify-center mt-1 md:mt-0">
-              <div className="">
-                <Image src="/butterfly.svg" alt="Donate" width={120} height={100} />
-              </div>
-              <div className="flex flex-col p-1 w-full md:w-3/5 mt-0">
-                <h2 className="text-md font-lighht uppercase tracking-wide">SUPPORT OUR GROWTH</h2>
-                <div className="flex flex-col mt-2 gap-1.5">
-                  <p className="text-white/50 text-sm mt-1 uppercase tracking-wider">
-                    {currentMonth}
-                    <span> GOAL</span>
-                  </p>
-                  <ProgressBar amountRaised={70000} expectedAmount={100000} className="w-full" />
-                </div>
-              </div>
+              <Link href="https://globalconnectionsonline.app.neoncrm.com/forms/kijabe-limb-recon" className="font-extrabold text-4xl cursor-pointer bg-blue-900 p-3 rounded text-white">CLICK HERE </Link>
+              <h3 className="w-[60%] font-bold">
+                TO GIVE TO THE KIJABE LIMB RECONSTRUCTION UNIT VIA GLOBAL
+                CONNECTIONS
+              </h3>
             </div>
-
-            {/* Donation Form */}
-            <div className="p-2 md:p-8 w-full mx-auto justify-center items-center">
-              <form className="items-center px-2 md:px-8 space-y-2">
-                {/* Frequency Selection */}
-                <div className="items-center w-full lg:max-w-md py-1 lg:ml-20">
-                  <label className="block text-sm font-light mb-2 text-white tracking-wide">Select frequency</label>
-                  <div className="grid grid-cols-3 gap-1 xs:gap-2">
-                    {frequencies.map((freq) => (
-                      <Button 
-                        key={freq} 
-                        variant={selectedFrequency === freq ? "default" : "outline"} 
-                        type="button" 
-                        onClick={() => setSelectedFrequency(freq)}
-                        className="text-[10px] xs:text-xs sm:text-sm px-1 xs:px-2 sm:px-3 py-2 h-auto min-w-0 leading-tight"
-                      >
-                        {freq === "Legacy Giving" ? (
-                          <span className="flex flex-col items-center">
-                            <span>Legacy</span>
-                            <span>Giving</span>
-                          </span>
-                        ) : (
-                          freq
-                        )}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Amount Selection */}
-                <div className="">
-                  <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 mb-2">
-                    {amounts.map((amount) => (
-                      <Button key={amount} variant={selectedAmount === amount ? "default" : "outline"} type="button" onClick={() => setSelectedAmount(amount)}>
-                        ${amount}
-                      </Button>
-                    ))}
-                    {/* Other option positioned next to last amount, spanning 2 columns */}
-                    <input type="text" placeholder="Other" className="col-span-2 lg:col-span-2 px-4 py-1 bg-transparent border-2 border-[#009EE0] rounded-sm text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#009EE0] focus:border-[#009EE0] transition-all duration-200" />
-                  </div>
-                </div>
-
-                {/* Fee Coverage Checkbox */}
-                <div className="flex items-start space-x-3 py-1 px-4 lg:ml-20">
-                  <input type="checkbox" id="coverFees" checked={coverFees} onChange={(e) => setCoverFees(e.target.checked)} className="mt-1 w-5 h-5 text-[#009EE0] bg-transparent border-1 border-[#009EE0] rounded focus:ring-[#009EE0] focus:ring-1" />
-                  <label htmlFor="coverFees" className="text-sm text-white leading-relaxed">
-                    Support us by covering the fees we have to pay
-                  </label>
-                </div>
-
-                {/* Donate Button */}
-                <Button variant="default" type="button" className="py-3 px-6 uppercase w-full lg:max-w-md lg:ml-20">
-                  DONATE
-                </Button>
-              </form>
-            </div>
+            <Image src="/donate1.png" alt="Donate" width={500} height={500} />
           </div>
-        </div>
-
-        {/* Partner Section */}
-        <div className="bg-[#4FB29E] text-white py-8 px-8">
-          <div className="w-full md:max-w-lg mx-auto text-center items-center justify-center">
-            <h2 className="text-lg font-bold mb-4 uppercase tracking-wide text-left md:text-center">PARTNER WITH US TO MAKE THIS VISION A REALITY</h2>
-            <p className="text-sm w-full md:max-w-[400px] mx-auto p-1 font-light leading-relaxed text-left">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit, duis dis dignissim feugiat egestas semper at libero vitae, eros vehicula venenatis metus viverra augue massa. Pellentesque dis amet lacus consequat convallis quam vehicula litora, penatibus mi accumsan interdum imperdiet. Duis etiam laoreet.
-            </p>
-          </div>
-        </div>
-
-        {/* Key Facts Section */}
-        <div className="bg-[#009EE0] text-white py-8 px-8">
-          <div className="w-full px-0 md:max-w-md mx-auto ">
-            <h2 className="text-3xl font-bold text-left md:text-center mb-5 lowercase">
-              key <span className="font-light"> facts</span>{" "}
-            </h2>
-
-            <div className="space-y-8">
-              {keyFacts.map((fact, index) => {
-                const IconComponent = fact.icon;
-                const isEven = (index + 1) % 2 === 0;
-
-                return (
-                  <div key={fact.id} className={`flex items-start space-x-4 ${isEven ? "flex-row px-4" : "flex-row-reverse space-x-reverse"}`}>
-                    <div className="flex-shrink-0 w-16 h-16">
-                      <div className="w-fill h-fill flex items-center justify-center">
-                        <IconComponent className={`w-full h-full ${fact.iconColor}`} />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <p className={`${fact.textColor} leading-relaxed ${fact.uppercase ? "uppercase font-bold text-sm tracking-wide" : "text-base"}`}>
-                        {fact.id % 2 !== 0 && <span className="mr-2 text-lg ">• </span>}
-                        {fact.text}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+          <div className="w-full flex justify-end items-end">
+            <div className="mt-5 text-[#003683] w-[40%]">
+              <p>
+                ALL DONATIONS RECEIVED ARE USED 100% FOR THE KIJABE LIMB
+                RECONSTRUCTION UNIT.
+              </p>
+              <p className="font-bold">
+                THERE IS NO DEDUCTION FOR ADMINISTRATIVE COSTS.
+              </p>
+              <p className="text-white border-t border-[#003683] mt-9 pt-5 text-[19px]">
+                Your donation is also tax-deductible for US taxpayers! Global
+                Connections is a registered 501(c)3 corporation with the
+                Internal Revenue Service. Tax ID #20-8241793
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <BlueColoredBorder/>
+    </div>
   );
 }

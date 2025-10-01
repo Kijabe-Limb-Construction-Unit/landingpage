@@ -118,6 +118,68 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Coves', sans-serif;
+    font-size: 28px; /* Base text size */
+    line-height: 1.6;
+  }
+  
+  /* Global Typography System */
+  h1, .text-header {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'Coves', sans-serif;
+  }
+  
+  h2, .text-semi-header {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: 'Coves', sans-serif;
+  }
+  
+  h3, h4, h5, h6, p, .text-body {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-family: 'Coves', sans-serif;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    body {
+      font-size: 24px;
+    }
+    
+    h1, .text-header {
+      font-size: 40px;
+    }
+    
+    h2, .text-semi-header {
+      font-size: 32px;
+    }
+    
+    h3, h4, h5, h6, p, .text-body {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 20px;
+    }
+    
+    h1, .text-header {
+      font-size: 32px;
+    }
+    
+    h2, .text-semi-header {
+      font-size: 28px;
+    }
+    
+    h3, h4, h5, h6, p, .text-body {
+      font-size: 20px;
+    }
   }
 }
 @font-face {

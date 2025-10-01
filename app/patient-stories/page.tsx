@@ -1,316 +1,178 @@
-import Mboniso from "@/public/mbonisi.png";
+// import Mboniso from "@/public/mbonisi.png";
 import Bovin from "@/public/bovin.png";
 import Moses from "@/public/moses.png";
-import Doris from "@/public/Screenshot.png";
-import YoutubeIcon from "@/public/youtube.svg"
-import YoutubeBlue from "@/public/youtube-blue.svg"
+import Doris from "@/public/doris.png";
+import { Play } from "lucide-react";
 import Image from "next/image";
+import { storiesData } from "@/lib/fakes/stories-fakes";
+import { PatientStoriesSection } from "@/components/sections/PatientStoryHeader";
 
-const patientTestimonies = [
-  {
-    id: 1,
-    name: "Bovin",
-    testimonial: "I feel so happy 'cause now I can walk.",
-    fullStory:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.",
-    image: Bovin,
-    bgColor: "bg-[#4FB29E]",
-    youtubeLink: "https://www.youtube.com/watch?v=bovin-example"
-  },
-  {
-    id: 2,
-    name: "Moses",
-    testimonial: "I can go back to my work",
-    fullStory:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.",
-    image: Moses,
-    bgColor: "bg-[#149ECC]",
-    youtubeLink: "https://www.youtube.com/watch?v=moses-example"
-  },
-  {
-    id: 3,
-    name: "Doris",
-    testimonial: "I see a beautiful me.",
-    fullStory:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.",
-    image: Doris,
-    bgColor: "bg-[#003683]",
-    youtubeLink: "https://www.youtube.com/watch?v=doris-example"
-  },
-];
+const patientTestimonies = storiesData.patients.map((patient) => ({
+  ...patient,
+  image: patient.name === "BOVIN" ? Bovin : Moses,
+}));
 
 export default function PatientStories() {
   return (
-    <section className="">
-      <div className="bg-[#003882]">
-        <div className="container mx-auto px-0 md:px-4 md:max-w-2xl lg:max-w-4xl">
-          {/* Mobile Layout - Image first, then text */}
-          <div className="flex flex-col md:hidden">
-            <div className="">
-              <Image 
-                src={Mboniso} 
-                alt="Dr. Mbonisi Malaba" 
-                className="w-full h-auto object-cover" 
-              />
-            </div>
-            <div className="text-[#003882] bg-white p-5 relative overflow-hidden">
-              {/* Message SVG Backgrounds */}
-              <Image 
-                src ="/message-bubble.svg"
-                className="absolute top-12 right-5 w-40 h-32 z-0" 
-                alt="Donate" width={200} height={150}
-              />
-              <Image 
-  src="/message.svg"
-  className="absolute top-28 left-14 w-20 h-24 z-0" 
-  alt="Donate"
-  width={180}
-  height={150}
-/>
+    <div className="min-h-screen bg-white">
+      <PatientStoriesSection />
+      {/* Fisrt story Section - BOVIN */}
+      <div className="bg-[#66B2B2] min-h-[500px] flex flex-col lg:flex-row">
+        {/* Text Section */}
+        <div className="w-full lg:w-1/2 bg-[#66B2B2] flex items-center p-6 lg:p-12">
+          <div className="w-full flex flex-col items-end">
+            <h2 className="text-semi-header font-bold text-white flex justify-end mb-4 lg:mb-6 tracking-widest">
+              {patientTestimonies[0].name}
+            </h2>
 
-<Image 
-  src="/message.svg"
-  className="absolute bottom-3 right-8 w-16 h-16 z-0" 
-  alt="Donate"
-  width={200}
-  height={150}
-/>
+            <p
+              className="text-4xl italic text-white mb-4 lg:mb-6 flex w-full max-w-5xl"
+              style={{ fontFamily: "Caveat, cursive" }}
+            >
+              &quot;{patientTestimonies[0].testimonial}&quot;
+            </p>
 
-              {/* Content */}
-              <div className="relative z-10">
-                <h1 className="text-3xl font-bold mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
-                  Patient <span className="font-light">Stories</span>
-                </h1>
-                <div className="mb-4">
-                  <h3 className="text-xs font-light mb-2 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="text-2xl leading-tight font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
-                  &#34;A world where men, women and children can access the limb 
-                    reconstruction care they need, when they need it, irrespective 
-                    of where they were born or how much money they happen to have, 
-                  </p>
-                  <div className="flex flex-row items-center gap-2 mt-2">
-                    <div className="flex">
-                      <a 
-                        href="https://www.youtube.com/watch?v=example" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center bg-[#003882] rounded-lg p-1 w-14 h-auto hover:bg-[#002a6b] transition-colors duration-200"
-                      >
-                        <Image 
-                          src={YoutubeIcon} 
-                          alt="YouTube Icon" 
-                          className="w-full h-full object-contain"
-                        />
-                      </a>
-                    </div>
-                    <p className="text-2xl font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
-                      they deserve the best that we can give.&#34;
-                    </p>
-                  </div>
-                </div>
+            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
+              {patientTestimonies[0].fullStory}{" "}
+              <span className="font-bold text-3xl">
+                Now he is happy and walking!
+              </span>
+            </p>
+
+            <div className="flex justify-end">
+              <div className="mx-5">
+                <p className="text-white">Click here to</p>
+                <p className="text-white">hear more</p>
               </div>
+              <a
+                href={patientTestimonies[0].youtubeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 lg:w-20 lg:h-20 bg-white rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                <Play
+                  className="w-5 h-5 lg:w-8 lg:h-8 text-gray-800 ml-1"
+                  fill="currentColor"
+                />
+              </a>
             </div>
           </div>
+        </div>
 
-          {/* Desktop Layout - Side by side */}
-          <div className="hidden md:grid grid-cols-5">
-            <div className="col-span-2">
-              <Image 
-                src={Mboniso} 
-                alt="Dr. Mbonisi Malaba" 
-                className="w-full h-full object-cover" 
-              />
-            </div>
-            <div className="text-[#003882] col-span-3 bg-white p-5 md:p-10 relative overflow-hidden">
-              {/* Message SVG Backgrounds */}
-              <Image 
-                src ="/message-bubble.svg"
-                className="absolute top-5 right-5 md:top-9 md:right-28 lg:right-52 w-40 h-32 z-0" 
-                alt="Donate" width={200} height={150}
-              />
-              
-              <Image 
-                src="/message.svg"
-                className="absolute top-72 left-14 w-20 h-24 lg:top-30 lg:left-20 z-0" 
-                alt="Donate"
-                width={180}
-                height={150}
-              />
+        {/* Image Section */}
+          <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
+            <Image
+              src={patientTestimonies[0].image}
+              alt={patientTestimonies[0].name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+      </div>
+      {/* Second story Section - MOSES */}
+      <div className="bg-[#149ECC] min-h-[500px] flex flex-col lg:flex-row ">
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
+          <Image
+            src={patientTestimonies[1].image}
+            alt={patientTestimonies[1].name}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-              <Image 
-                src="/message.svg"
-                className="absolute bottom-3 right-8 md:bottom-8 md:right-10 lg:right-24 w-16 h-16 z-0" 
-                alt="Donate"
-                width={200}
-                height={150}
-              />
+        {/* Text Section */}
+        <div className="w-full lg:w-1/2 bg-[#149ECC] flex items-center p-6 lg:p-12">
+          <div className="w-full">
+            <h2 className="text-semi-header font-bold text-white mb-4 lg:mb-6 tracking-widest">
+              {patientTestimonies[1].name}
+            </h2>
 
-              {/* Content */}
-              <div className="relative z-10">
-                <h1 className="text-3xl lg:text-4xl font-bold mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
-                  Patient <span className="font-light">Stories</span>
-                </h1>
-                <div className="mb-4">
-                  <h3 className="text-sm md:text-base lg:text-lg font-light mb-2 tracking-wide" style={{ fontFamily: 'Coves, sans-serif' }}>DR MBONISI MALABA</h3>
-                  <p className="text-lg md:text-xl lg:text-2xl leading-tight font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
-                  &#34;A world where men, women and children can access the limb 
-                    reconstruction care they need, when they need it, irrespective 
-                    of where they were born or how much money they happen to have, 
-                  </p>
-                  <div className="flex flex-row items-center gap-2 mt-2">
-                    <div className="flex">
-                      <a 
-                        href="https://www.youtube.com/watch?v=example" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center bg-[#003882] rounded-lg p-1 w-14 md:h-12 h-auto hover:bg-[#002a6b] transition-colors duration-200"
-                      >
-                        <Image 
-                          src={YoutubeIcon} 
-                          alt="YouTube Icon" 
-                          className="w-full h-full md:h-14 object-contain"
-                        />
-                      </a>
-                    </div>
-                    <p className="text-lg md:text-xl lg:text-2xl font-bold" style={{ fontFamily: 'Caveat, cursive' }}>
-                      they deserve the best that we can give.&#34;
-                    </p>
-                  </div>
-                </div>
+            <p
+              className="text-5xl italic text-white mb-4 lg:mb-6"
+              style={{ fontFamily: "Caveat, cursive" }}
+            >
+              &quot;{patientTestimonies[1].testimonial} <br />
+              {patientTestimonies[1].testimonialContinued}&quot;
+            </p>
+
+            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
+              {patientTestimonies[1].fullStory}{" "}
+              <span className="font-bold text-3xl">able to work again!</span>
+            </p>
+
+            <div className="flex justify-start">
+              <a
+                href={patientTestimonies[1].youtubeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 lg:w-20 lg:h-20 bg-white rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                <Play
+                  className="w-5 h-5 lg:w-8 lg:h-8 text-gray-800 ml-1"
+                  fill="currentColor"
+                />
+              </a>
+              <div className="mx-5">
+                <p className="text-white">Click here to</p>
+                <p className="text-white">hear more</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* Third story Section - Doris */}
+      <div className="bg-[#193380] min-h-[500px] flex flex-col lg:flex-row">
+        {/* Text Section */}
+        <div className="w-full lg:w-1/2 bg-[#193380] flex items-center p-6 lg:p-12">
+          <div className="w-full flex flex-col items-end">
+            <h2 className="text-semi-header flex justify-end font-bold text-white mb-4 lg:mb-6 tracking-widest">
+              DORIS
+            </h2>
 
-      <div className="">
-          <div className="grid grid-cols-1 gap-0">
-            {patientTestimonies.map((patient, index) => {
-              const isOdd = index % 2 === 0;
-              
-              return (
-                <div 
-                  key={patient.id} 
-                  className={`${patient.bgColor}`}
-                >
-                  <div className="container mx-auto px-0 md:px-4 md:max-w-2xl lg:max-w-4xl">
-                    
-                    {/* Mobile Layout - Image first, then text */}
-                    <div className="flex flex-col md:hidden">
-                      <div className="">
-                        <Image 
-                          src={patient.image} 
-                          alt={patient.name} 
-                          className={`w-full object-cover ${patient.name === 'Doris' ? 'h-64' : 'h-auto'}`}
-                        />
-                      </div>
-                      <div className="p-4 text-white">
-                        <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
-                          {patient.name.toUpperCase()}
-                        </h3>
-                        <p className="text-3xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
-                          &#34;{patient.testimonial}&#34;
-                        </p>
-                        <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
-                          {patient.fullStory}
-                        </p>
-                        <div className="flex justify-start">
-                          <a 
-                            href={patient.youtubeLink} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center bg-white rounded-lg p-1 w-14 h-auto hover:bg-gray-300 transition-colors duration-200"
-                          >
-                            <Image 
-                              src={YoutubeBlue} 
-                              alt="YouTube Icon" 
-                              className="w-full h-full object-contain"
-                            />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+            <p
+              className="text-5xl italic text-white mb-4 lg:mb-6 w-full max-w-5xl"
+              style={{ fontFamily: "Caveat, cursive" }}
+            >
+              &quot;I see a beautiful me.&quot;
+            </p>
 
-                    {/* Desktop Layout - Side by side with alternating */}
-                    <div className="hidden md:grid grid-cols-5">
-                      {isOdd ? (
-                        <>
-                          <div className="col-span-3 p-4 md:p-10 text-white">
-                            <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
-                              {patient.name.toUpperCase()}
-                            </h3>
-                            <p className="text-3xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
-                              &#34;{patient.testimonial}&#34;
-                            </p>
-                            <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
-                              {patient.fullStory}
-                            </p>
-                            <div className="flex justify-end">
-                              <a 
-                                href={patient.youtubeLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="flex items-center bg-white rounded-lg p-1 w-14 md:h-12 h-auto hover:bg-gray-300 transition-colors duration-200"
-                              >
-                                <Image 
-                                  src={YoutubeBlue} 
-                                  alt="YouTube Icon" 
-                                  className="w-full h-full md:h-14 object-contain fill"
-                                />
-                              </a>
-                            </div>
-                          </div>
-                          <div className={`${patient.name === 'Doris' ? 'col-span-2 h-48 md:h-64' : 'col-span-2'}`}>
-                            <Image 
-                              src={patient.image} 
-                              alt={patient.name} 
-                              className={`w-full object-cover ${patient.name === 'Doris' ? 'h-64 md:h-80' : 'h-full'}`}
-                            />
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className={`${patient.name === 'Doris' ? 'col-span-2 h-48 md:h-64' : 'col-span-2'}`}>
-                            <Image 
-                              src={patient.image} 
-                              alt={patient.name} 
-                              className={`w-full object-cover object-top ${patient.name === 'Doris' ? 'h-64 md:h-80' : 'h-full'}`}
-                            />
-                          </div>
-                          <div className="col-span-3 p-4 text-white md:p-10">
-                            <h3 className="text-sm font-light mb-2" style={{ fontFamily: 'Coves, sans-serif' }}>
-                             {patient.name.toUpperCase()}
-                            </h3>
-                            <p className="text-3xl font-bold italic mb-4" style={{ fontFamily: 'Caveat, cursive' }}>
-                               &#34;{patient.testimonial} &#34;
-                            </p>
-                            <p className="text- font-light mb-4" style={{ fontFamily: 'Coves, sans-serif' }}>
-                              {patient.fullStory}
-                            </p>
-                            <div className="flex justify-start">
-                              <a 
-                                href={patient.youtubeLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="flex items-center bg-white rounded-lg p-1 w-14 md:h-12 h-auto hover:bg-gray-300 transition-colors duration-200"
-                              >
-                                <Image 
-                                  src={YoutubeBlue} 
-                                  alt="YouTube Icon" 
-                                  className="w-full h-full md:h-14 object-contain"
-                                />
-                              </a>
-                            </div>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
+              Doris suffered from a multilevel leg deformity for 18 years,
+              affecting her schooling and self-image and making her prone to
+              falling while walking. Now she{" "}
+              <span className="font-bold text-3xl">
+                feels like a different person!
+              </span>
+            </p>
+
+            <div className="flex justify-end">
+              <div className="mx-5">
+                <p className="text-white">Click here to</p>
+                <p className="text-white">hear more</p>
+              </div>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 lg:w-20 lg:h-20 bg-white rounded-lg hover:bg-gray-200 transition-colors"
+              >
+                <Play
+                  className="w-5 h-5 lg:w-8 lg:h-8 text-gray-800 ml-1"
+                  fill="currentColor"
+                />
+              </a>
+            </div>
           </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
+          <Image
+            src={Doris}
+            alt="Doris"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

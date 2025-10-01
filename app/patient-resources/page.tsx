@@ -1,224 +1,148 @@
-"use client";
+import React from "react";
+import { Download } from "lucide-react";
+import { PatientResources } from "@/components/sections/patient-story-card";
 
-import Image from "next/image";
-import { Play, Download } from "lucide-react";
-
-interface GetYouTubeVideoId {
-    (url: string): string | null;
-}
-
-const getYouTubeVideoId: GetYouTubeVideoId = (url) => {
-    const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/;
-    const match = url.match(regex);
-    return match ? match[1] : null;
-};
-
-interface VideoThumbnailProps {
-  title: string;
-  description: string;
-  bgColor: string;
-  videoUrl: string;
-  showTeddy?: boolean;
-}
-
-interface DownloadSectionProps {
-  title: string;
-  description: string;
-  bgColor: string;
-  buttonText: string;
-  pdfUrl: string;
-  fileName: string;
-}
-
-
-
-const VideoThumbnail = ({ title, description, bgColor, videoUrl, showTeddy = false }: VideoThumbnailProps) => {
-  const videoId = getYouTubeVideoId(videoUrl);
-
-  const getThumbnailUrl = (id: string) => {
-    return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-  };
-
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>, videoId: string | null) => {
-    const target = e.currentTarget;
-    if (videoId) {
-      const fallbackUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-      if (target.src !== fallbackUrl) {
-        target.src = fallbackUrl;
-      } else {
-        target.src = '/thumbnail.png';
-      }
-    } else {
-      target.src = '/thumbnail.png';
-    }
-  };
-
+function App() {
   return (
-    <div className={`py-10 ${bgColor} relative overflow-hidden`}>
-      <div className="max-w-4xl mx-auto px-8 flex justify-center">
-        <div className="w-full max-w-md">
-          <div className="relative mb-8 bg-gray-900 rounded-lg overflow-hidden" style={{ width: '200px', height: '112px' }}>
-            {videoId ? (
-              <Image
-                src={getThumbnailUrl(videoId)}
-                alt={title}
-                width={200}
-                height={112}
-                className="w-full h-full object-cover"
-                onError={(e) => handleImageError(e, videoId)}
-                unoptimized
-              />
-            ) : (
-              <Image
-                src="/thumbnail.png"
-                alt={title}
-                width={200}
-                height={112}
-                className="w-full h-full object-cover"
-              />
-            )}
-            <div className="absolute inset-0 bg-black bg-black/40 flex items-center justify-center">
-              <a
-                href={videoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors"
-              >
-                <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
-              </a>
-            </div>
-          </div>
-          <div className="text-white relative z-10">
-            <h3 className="text-xl md:text-2xl font-bold mb-6 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }} dangerouslySetInnerHTML={{ __html: title }}></h3>
-            <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
-              {description}
-            </p>
-          </div>
-        </div>
+    <div className="min-h-screen">
+      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 px-6 lg:py-16">
+        <h1 className="text-7xl font-light"><span className="font-bold">resources</span> for patients</h1>
+        <p>Get more information</p>
+        <p>
+          about your <span className="font-bold text-4xl">condition or treatment.</span>
+        </p>
       </div>
-      
-      {/* Teddy Bear - keep original desktop positioning, make visible on mobile */}
-      {showTeddy && (
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 md:right-1/5 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:block">
-          <Image
-            src="/Teddy.svg"
-            alt="Teddy Bear"
-            width={150}
-            height={150}
-            className="opacity-60 md:opacity-30 md:w-[250px] md:h-[250px]"
-          />
-        </div>
-      )}
-    </div>
-  );
-};
-
-const DownloadSection = ({ title, description, bgColor, buttonText, pdfUrl, fileName }: DownloadSectionProps) => {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  return (
-    <div className={`py-8 ${bgColor}`}>
-      <div className="max-w-4xl mx-auto px-8 flex justify-center">
-        <div className="w-full max-w-md">
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-4 tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>{title}</h3>
-          <p className="text-white text-base md:text-lg leading-relaxed mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>
-            {description}
-          </p>
-          <button 
-            onClick={handleDownload}
-            className="flex items-center gap-3 text-white hover:text-blue-200 transition-colors cursor-pointer"
-          >
-            <Download className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-widest" style={{ fontFamily: 'Coves, sans-serif' }}>{buttonText}</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default function PatientResourcesPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-[#4FB29E] py-10 text-white">
-        <div className="max-w-4xl mx-auto px-8 flex justify-center">
-          <div className="w-full max-w-md">
-            <h2 className="text-3xl md:text-4xl font-normal mb-2" style={{ fontFamily: 'Coves, sans-serif' }}><strong>resources</strong> for patients</h2>
-            <p className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Caveat, cursive' }}>Facts are our friends.</p>
-            <p className="text-base md:text-lg leading-relaxed font-bold" style={{ fontFamily: 'Coves, sans-serif' }}>
-              Here is where you can get more information<br />
-              about your condition or treatment.
-            </p>
+      {/* General Information Section */}
+      <div className="bg-[#149ECC] px-8 py-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-white flex justify-start font-normal mb-8 tracking-wider">
+            GENERAL <span className="font-bold pl-5">INFORMATION</span>
+          </h1>
+          <div className="grid grid-cols-2 items-start gap-4">
+            <PatientResources
+              p1="Limb Reconstruction"
+              p2="with frames overview"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"   youtubeUrl="https://youtu.be/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"          />
+            <PatientResources
+              p1="Frame Information for Kids (and Adults!)"
+              p2="for Kids (and Adults!)"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"    youtubeUrl="https://youtu.be/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"        />
+            <PatientResources
+              p1="Tips for Wearing an"
+              p2="External Fixator"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/c85w0jzeWyY?si=wfSMZXUhSLwLg0Q2"    youtubeUrl="https://youtu.be/c85w0jzeWyY?si=Srr1uXoLF10kw3p1"        />
+            <PatientResources
+              p1="History of Limb"
+              p2="Reconstruction"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/PVn9IfxX74E?si=shXJoL2_-2plMVIs"   youtubeUrl="https://youtu.be/PVn9IfxX74E?si=shXJoL2_-2plMVIs" />
           </div>
         </div>
       </div>
 
-      <VideoThumbnail
-        title='HOW TO <span class="text-[#003683]"> ADJUST</span> YOUR STRUTS'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#149ECC]"
-        videoUrl="https://www.youtube.com/watch?v=QwkcAiTGgQc"
-      />
-
-      <VideoThumbnail
-        title='HOW TO <span class="text-[#00aeef]"> CHANGE</span> YOUR STRUTS'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#003683]"
-        videoUrl="https://www.youtube.com/watch?v=6i7yvVt_EIM"
-      />
-
-      <VideoThumbnail
-        title='INFORMATION FOR  <span class="text-blue-800">kids</span>'
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#4FB29E]"
-        videoUrl="https://www.youtube.com/watch?v=zQsls0z6XCE"
-        showTeddy={true}
-      />
-
-      <div className="bg-white py-10">
-        <div className="max-w-4xl mx-auto px-8 flex justify-center">
-          <div className="w-full max-w-md">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6" style={{ fontFamily: 'Coves, sans-serif' }}>more <span className="text-teal-500">pdf</span> resources</h2>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed" style={{ fontFamily: 'Coves, sans-serif' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <span className="text-blue-600 underline cursor-pointer italic">aliquip ex ea</span> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <span className="text-blue-600 underline cursor-pointer italic">cillum dolore</span> eu fugiat nulla pariatur.
-            </p>
+      {/* Looking After Your Pin Sites Section */}
+      <div className="bg-blue-900 px-8 py-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-white flex justify-start font-light mb-8 tracking-wider">
+            LOOKING AFTER <span className="font-bold pl-5">YOUR PIN SITES</span>
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Pin site Care"
+              p2="(Animated)"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"     youtubeUrl="https://youtu.be/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"  />
+            <PatientResources
+              p1="Pin site Care"
+              p2="(Patient Demonstration)"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7"    youtubeUrl="https://youtu.be/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7" />
           </div>
         </div>
       </div>
 
-      <DownloadSection
-        title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#149ECC]"
-        buttonText="QUIS AUTEM VEL DOLOR"
-        pdfUrl="/documents/DummyPDF.pdf"
-        fileName="DummyPDF.pdf"
-      />
+      {/* Managing Your Struts Section */}
+      <div className="bg-gray-200 px-8 py-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-teal-500 flex justify-start   font-normal mb-8 tracking-wider">
+            MANAGING <span className="font-bold pl-5">YOUR STRUTS</span>
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Adjusting Your Struts"
+              p2=""
+              bg="blue-900"
+              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/sytSPu19fUY?si=OTpK49OllmqpdELT"    youtubeUrl=""      />
+            <PatientResources
+              p1="Changing a Struts"
+              p2=""
+              bg="blue-900"
+              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/1JMqagnm5gE?si=RJvdaL1o4IYd8MRl"    youtubeUrl={""}      />
+          </div>
+        </div>
+      </div>
 
-      <DownloadSection
-        title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#003683]"
-        buttonText="QUIS AUTEM VEL DOLOR"
-        pdfUrl="/documents/DummyPDF.pdf"
-        fileName="DummyPDF.pdf"
-      />
+      {/* Monorail Frames Section */}
+      <div className="bg-teal-500 px-8 py-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-blue-900 flex justify-start font-normal mb-8 tracking-wider">
+            MONORAIL <span className="font-bold pl-5">FRAMES</span>
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Monorail adjustment"
+              p2=""
+              bg="blue-900"
+              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/3x6fM2J3xE8?si=GEcbIplBEPSLGvzi"     youtubeUrl="https://youtu.be/3x6fM2J3xE8?si=elol-sopgXjaqoIG"    />
+          </div>
+        </div>
+      </div>
 
-      <DownloadSection
-        title="LOREM IPSUM DOLOR SIT AMET"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        bgColor="bg-[#4FB29E]"
-        buttonText="QUIS AUTEM VEL DOLOR"
-        pdfUrl="/documents/DummyPDF.pdf"
-        fileName="DummyPDF.pdf"
-      />
+      {/* Rehabilitation Section */}
+      <div className="bg-[#149ECC] px-8 py-12">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-white font-bold flex justify-start mb-8 tracking-wider">
+            REHABILITATION
+          </h1>
+          <div className="grid grid-cols-2 gap-6">
+            <PatientResources
+              p1="Frames Physiotherapy"
+              p2=""
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"   youtubeUrl="https://youtu.be/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"  />
+            <PatientResources
+              p1="Tibia/Leg Bone Physiotherapy"
+              p2="Exercises Limb Lengthening"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4"   youtubeUrl="https://youtu.be/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4" />
+            <PatientResources
+              p1="Femur/Thigh Bone Physiotherapy"
+              p2="Exercises Limb Lengthening"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu"   youtubeUrl="https://youtu.be/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu" />
+            <PatientResources
+              p1="Physiotherapy Exercises for"
+              p2="Lower Limb External Fixators"
+              bg="blue-900"
+              textColor="white" iframeSrc="https://www.youtube.com/embed/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"   youtubeUrl="https://youtu.be/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"  />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#003683] text-white flex justify-center items-center flex-col px-8 py-12 gap-4">
+        <div className="flex items-center gap-4">
+          <Download className="w-20 h-20 text-teal-500" />
+          <h1>reading material</h1>
+        </div>
+        <p className="max-w-3xl">
+          Taylor Spatial Frame Patient Information Booklet
+          https://smith-nephew.stylelabs.cloud/api/public/content/f43bb595ee4c4849970524cff681ec73?v=616e0229
+        </p>
+      </div>
     </div>
   );
 }
+
+export default App;
