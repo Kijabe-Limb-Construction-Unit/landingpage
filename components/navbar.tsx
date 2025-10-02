@@ -137,7 +137,6 @@ const Navbar = () => {
       <div className="relative mt-8">
         <NavDonate />
       </div>
-      {/* <NavDonate /> */}
       {/* bottom lines  */}
       <div className="flex w-full h-2">
         {colorPattern.map((item, index) => (

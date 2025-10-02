@@ -212,7 +212,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-6 md:top-[30%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
+      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-35 md:top-[30%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
         <div className="w-48 h-32 min-[250px]:w-56 min-[250px]:h-40 min-[320px]:w-64 min-[320px]:h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 relative">
           <Image
             src="/slider.svg"
@@ -463,7 +463,7 @@ const ServicesSection = () => (
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <HeroSlider />
       <NavigationSection />
       <MobileNavigationSection />

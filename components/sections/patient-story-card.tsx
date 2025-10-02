@@ -32,7 +32,7 @@ export const PatientResources = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-start gap-4">
+      <div className="flex flex-col md:flex-row items-start gap-4 ">
         <div className={`bg-${bg} p-4 rounded-lg flex items-center gap-4 text-left`}>
           <button
             onClick={handlePlayClick}
