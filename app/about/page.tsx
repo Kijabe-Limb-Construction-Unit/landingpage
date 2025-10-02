@@ -7,9 +7,9 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="flex flex-col lg:flex-row bg-[#4FB29E] relative overflow-hidden min-h-screen">
+      <section className="flex flex-col lg:flex-row bg-[#4FB29E] relative">
         <div className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 w-full lg:w-1/2 py-8 sm:py-12 lg:py-16">
           <div className="text-white space-y-6 sm:space-y-8 flex flex-col justify-center items-center w-full z-10 max-w-3xl">
             <div className="flex justify-center gap-2 w-full">
@@ -289,10 +289,9 @@ export default function AboutPage() {
             />
 
             {/* Text Content - wraps around the image */}
-            <div className="text-blue-900 text-lg leading-relaxed ">
-              <p className="font-bold text-2xl">DR. MALABA</p>
-              <p className="font-bold"> IS MARRIED WITH THREE CHILDREN.</p>
-              <p>
+            <div className="text-blue-900 text-lg leading-relaxed mt-25">
+              <p><span className="font-bold text-4xl">DR. MALABA</span>
+              <span className="font-bold text-2xl"> IS MARRIED WITH THREE CHILDREN.</span>
                 {" "}
                 He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in
                 2015 to start and strengthen churches in East Africa and beyond.
@@ -302,30 +301,25 @@ export default function AboutPage() {
                 number of prizes including the medal for best performing
                 candidate in the COSECSA Orthopaedic (2017) and Paediatric
                 Orthopaedic (2021) Examinations as well at the prestigious{" "}
-              </p>
-              <p className="font-bold">Gerald O´Sullivan Medal (2017)</p>
-              <p>
+              <span className="font-bold">Gerald O´Sullivan Medal (2017)</span>
                 {" "}
                 awarded by COSECSA and the Royal College of Surgeons of Ireland
                 to the graduate with the highest overall mark across all
                 surgical specialties. In 2022 he did a further one year{" "}
-              </p>
-              <p className="font-bold">
+              <span className="font-bold">
                 subspecialist fellowship training in paediatric and adult limb
                 reconstruction at the Royal London Hospital
-              </p>
-              <p> (one of the busiest trauma centres in Europe) and the </p>
-              <p className="font-bold">Royal National Orthopaedic Hospital</p>
-              <p> - a centre of excellence north of London. He </p>
-              <p className="font-bold">pastors OneTribe Church</p>
-              <p>
+              </span>
+              (one of the busiest trauma centres in Europe) and the
+              <span className="font-bold">Royal National Orthopaedic Hospital</span>
+              <span> - a centre of excellence north of London. He </span>
+              <span className="font-bold">pastors OneTribe Church</span>
                 {" "}
                 in Nairobi, Kenya and through the Advance Movement serves and{" "}
-              </p>
-              <p className="font-bold">
+              <span className="font-bold">
                 supports several dozen churches or church plants in East Africa
-              </p>
-              <p> as well as serving more broadly in the wider church.</p>
+              </span>
+              as well as serving more broadly in the wider church.</p>
             </div>
           </div>
         </div>
@@ -338,7 +332,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-0 items-center">
             {/* Left side - Text content */}
             <div className="p-12 px-40 w-full">
-              <div className="flex justify-end items-end">
+              <div className="flex md:justify-end md:items-end">
                 <div className="w-full">
                   <h1 className="text-8xl text-heading font-light mb-8">
                     the{" "}
@@ -353,8 +347,8 @@ export default function AboutPage() {
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
                 className="relative z-10 bottom-10 right-50 w-[100vw] object-cover"
               />
-              <div className="leading-relaxed space-y-4 text-blue-900 flex justify-end items-end">
-                <p className="max-w-5xl">
+              <div className="leading-relaxed space-y-4 text-blue-900 flex md:justify-end md:items-end">
+                <p className="w-full md:max-w-5xl">
                   <span className="font-bold">Kijabe Hospital</span> is a
                   renowned center of excellence in healthcare and medical
                   training, serving patients from across Kenya and beyond.
@@ -372,17 +366,14 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-
             {/* Right side - Hospital aerial image */}
-            <div className="">
               <Image
                 src="/hospital-1.png"
                 width={600}
                 height={400}
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
-            </div>
           </div>
         </div>
       </section>

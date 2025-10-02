@@ -4,12 +4,15 @@ import { PatientResources } from "@/components/sections/patient-story-card";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 px-6 lg:py-16">
-        <h1 className="text-7xl font-light"><span className="font-bold">resources</span> for patients</h1>
+        <h1 className="text-7xl font-light">
+          <span className="font-bold">resources</span> for patients
+        </h1>
         <p>Get more information</p>
         <p>
-          about your <span className="font-bold text-4xl">condition or treatment.</span>
+          about your{" "}
+          <span className="font-bold text-4xl">condition or treatment.</span>
         </p>
       </div>
       {/* General Information Section */}
@@ -23,22 +26,34 @@ function App() {
               p1="Limb Reconstruction"
               p2="with frames overview"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"   youtubeUrl="https://youtu.be/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"          />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"
+              youtubeUrl="https://youtu.be/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"
+            />
             <PatientResources
               p1="Frame Information for Kids (and Adults!)"
               p2="for Kids (and Adults!)"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"    youtubeUrl="https://youtu.be/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"        />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"
+              youtubeUrl="https://youtu.be/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"
+            />
             <PatientResources
               p1="Tips for Wearing an"
               p2="External Fixator"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/c85w0jzeWyY?si=wfSMZXUhSLwLg0Q2"    youtubeUrl="https://youtu.be/c85w0jzeWyY?si=Srr1uXoLF10kw3p1"        />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/c85w0jzeWyY?si=wfSMZXUhSLwLg0Q2"
+              youtubeUrl="https://youtu.be/c85w0jzeWyY?si=Srr1uXoLF10kw3p1"
+            />
             <PatientResources
               p1="History of Limb"
               p2="Reconstruction"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/PVn9IfxX74E?si=shXJoL2_-2plMVIs"   youtubeUrl="https://youtu.be/PVn9IfxX74E?si=shXJoL2_-2plMVIs" />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/PVn9IfxX74E?si=shXJoL2_-2plMVIs"
+              youtubeUrl="https://youtu.be/PVn9IfxX74E?si=shXJoL2_-2plMVIs"
+            />
           </div>
         </div>
       </div>
@@ -54,12 +69,18 @@ function App() {
               p1="Pin site Care"
               p2="(Animated)"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"     youtubeUrl="https://youtu.be/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"  />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"
+              youtubeUrl="https://youtu.be/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"
+            />
             <PatientResources
               p1="Pin site Care"
               p2="(Patient Demonstration)"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7"    youtubeUrl="https://youtu.be/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7" />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7"
+              youtubeUrl="https://youtu.be/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7"
+            />
           </div>
         </div>
       </div>
@@ -75,12 +96,18 @@ function App() {
               p1="Adjusting Your Struts"
               p2=""
               bg="blue-900"
-              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/sytSPu19fUY?si=OTpK49OllmqpdELT"    youtubeUrl=""      />
+              textColor="#149ECC"
+              iframeSrc="https://www.youtube.com/embed/sytSPu19fUY?si=OTpK49OllmqpdELT"
+              youtubeUrl=""
+            />
             <PatientResources
               p1="Changing a Struts"
               p2=""
               bg="blue-900"
-              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/1JMqagnm5gE?si=RJvdaL1o4IYd8MRl"    youtubeUrl={""}      />
+              textColor="#149ECC"
+              iframeSrc="https://www.youtube.com/embed/1JMqagnm5gE?si=RJvdaL1o4IYd8MRl"
+              youtubeUrl={""}
+            />
           </div>
         </div>
       </div>
@@ -96,7 +123,10 @@ function App() {
               p1="Monorail adjustment"
               p2=""
               bg="blue-900"
-              textColor="#149ECC" iframeSrc="https://www.youtube.com/embed/3x6fM2J3xE8?si=GEcbIplBEPSLGvzi"     youtubeUrl="https://youtu.be/3x6fM2J3xE8?si=elol-sopgXjaqoIG"    />
+              textColor="#149ECC"
+              iframeSrc="https://www.youtube.com/embed/3x6fM2J3xE8?si=GEcbIplBEPSLGvzi"
+              youtubeUrl="https://youtu.be/3x6fM2J3xE8?si=elol-sopgXjaqoIG"
+            />
           </div>
         </div>
       </div>
@@ -112,22 +142,34 @@ function App() {
               p1="Frames Physiotherapy"
               p2=""
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"   youtubeUrl="https://youtu.be/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"  />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"
+              youtubeUrl="https://youtu.be/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"
+            />
             <PatientResources
               p1="Tibia/Leg Bone Physiotherapy"
               p2="Exercises Limb Lengthening"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4"   youtubeUrl="https://youtu.be/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4" />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4"
+              youtubeUrl="https://youtu.be/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4"
+            />
             <PatientResources
               p1="Femur/Thigh Bone Physiotherapy"
               p2="Exercises Limb Lengthening"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu"   youtubeUrl="https://youtu.be/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu" />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu"
+              youtubeUrl="https://youtu.be/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu"
+            />
             <PatientResources
               p1="Physiotherapy Exercises for"
               p2="Lower Limb External Fixators"
               bg="blue-900"
-              textColor="white" iframeSrc="https://www.youtube.com/embed/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"   youtubeUrl="https://youtu.be/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"  />
+              textColor="white"
+              iframeSrc="https://www.youtube.com/embed/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"
+              youtubeUrl="https://youtu.be/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"
+            />
           </div>
         </div>
       </div>
@@ -136,7 +178,7 @@ function App() {
           <Download className="w-20 h-20 text-teal-500" />
           <h1>reading material</h1>
         </div>
-        <p className="max-w-3xl">
+        <p className="max-w-3xl max-sm:mx-4 px-10 md:px-0 break-words whitespace-normal">
           Taylor Spatial Frame Patient Information Booklet
           https://smith-nephew.stylelabs.cloud/api/public/content/f43bb595ee4c4849970524cff681ec73?v=616e0229
         </p>
