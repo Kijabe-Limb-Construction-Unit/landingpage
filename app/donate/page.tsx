@@ -10,7 +10,7 @@ export default function DonatePage() {
     <div className="flex flex-col w-full md:w-auto">
       <div className="flex flex-col md:flex-row justify-end items-center md:items-end gap-5">
         <div className="text-[#003683] flex flex-col items-center md:items-end text-center md:text-end">
-          <div className="flex flex-col md:flex-row items-center md:items-end gap-5">
+          <div className="flex mt-5 items-center md:items-end gap-5">
             <h1 className="font-bold text-white text-5xl md:text-8xl">donate</h1>
             <Image
               src="/butterfly.svg"
@@ -22,7 +22,7 @@ export default function DonatePage() {
           </div>
           <Link
             href="https://globalconnectionsonline.app.neoncrm.com/forms/kijabe-limb-recon"
-            className="font-extrabold text-2xl md:text-4xl cursor-pointer bg-blue-900 p-3 rounded-xl text-white mt-3 md:mt-0"
+            className="hidden md:block font-extrabold text-2xl cursor-pointer bg-blue-900 p-3 rounded-xl text-white my-3 "
           >
             CLICK HERE
           </Link>
@@ -46,6 +46,14 @@ export default function DonatePage() {
           <p className="font-bold mt-2">
             THERE IS NO DEDUCTION FOR ADMINISTRATIVE COSTS.
           </p>
+          <div className="my-10">
+            <Link
+            href="https://globalconnectionsonline.app.neoncrm.com/forms/kijabe-limb-recon"
+            className="font-extrabold text-2xl md:text-4xl cursor-pointer bg-blue-900 p-3 rounded-xl text-white md:mt-0 md:hidden"
+          >
+            CLICK HERE
+          </Link>
+          </div>
           <p className="text-white border-t border-[#003683] mt-5 pt-5 text-[16px] md:text-[19px]">
             Your donation is also tax-deductible for US taxpayers! Global Connections is a
             registered 501(c)3 corporation with the Internal Revenue Service. Tax ID #20-8241793

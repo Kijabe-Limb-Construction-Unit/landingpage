@@ -18,7 +18,7 @@ function App() {
       {/* General Information Section */}
       <div className="bg-[#149ECC] px-8 py-12">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-white flex justify-start font-normal mb-8 tracking-wider">
+          <h1 className="text-white sm:text-3xl md:text-5xl flex justify-start font-normal mb-8 tracking-wider">
             GENERAL <span className="font-bold pl-5">INFORMATION</span>
           </h1>
           <div className="grid grid-cols-2 items-start gap-4">
@@ -61,7 +61,7 @@ function App() {
       {/* Looking After Your Pin Sites Section */}
       <div className="bg-blue-900 px-8 py-12">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-white flex justify-start font-light mb-8 tracking-wider">
+          <h1 className="text-white text-3xl md:text-5xl  flex justify-start font-light mb-8 tracking-wider">
             LOOKING AFTER <span className="font-bold pl-5">YOUR PIN SITES</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
@@ -88,7 +88,7 @@ function App() {
       {/* Managing Your Struts Section */}
       <div className="bg-gray-200 px-8 py-12">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-teal-500 flex justify-start   font-normal mb-8 tracking-wider">
+          <h1 className="text-teal-500 flex justify-start sm:text-3xl md:text-5xl font-normal mb-8 tracking-wider">
             MANAGING <span className="font-bold pl-5">YOUR STRUTS</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
@@ -115,7 +115,7 @@ function App() {
       {/* Monorail Frames Section */}
       <div className="bg-teal-500 px-8 py-12">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-blue-900 flex justify-start font-normal mb-8 tracking-wider">
+          <h1 className="text-blue-900 flex justify-start sm:text-3xl md:text-5xl font-normal mb-8 tracking-wider">
             MONORAIL <span className="font-bold pl-5">FRAMES</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
@@ -178,7 +178,7 @@ function App() {
           <Download className="w-20 h-20 text-teal-500" />
           <h1>reading material</h1>
         </div>
-        <p className="max-w-3xl max-sm:mx-4 px-10 md:px-0 break-words whitespace-normal">
+        <p className="max-w-3xl max-sm:mx-4 px-10 md:px-0 break-words whitespace-normal text-[13px] sm:text-xl md:text-2xl">
           Taylor Spatial Frame Patient Information Booklet
           https://smith-nephew.stylelabs.cloud/api/public/content/f43bb595ee4c4849970524cff681ec73?v=616e0229
         </p>

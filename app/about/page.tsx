@@ -4,6 +4,8 @@ import {
   BlueColoredBorder,
   ColoredBorder,
 } from "@/components/sections/ColoredBorder";
+import { HospitalSection } from "@/components/sections/HospitalSection";
+import { MeetSurgeonSection } from "@/components/sections/MeetSurgeonSection";
 
 export default function AboutPage() {
   return (
@@ -250,133 +252,10 @@ export default function AboutPage() {
       </section>
       <ColoredBorder />
       {/* Meet the Surgeon Section */}
-      <section className="flex flex-col justify-center items-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683]">
-          {/* Left - Image */}
-          <div className="relative">
-            {/* <div className="relative"> */}
-            <Image
-              src="/donate.png"
-              alt="Dr. Mbonisi Malaba"
-              width={500}
-              height={600}
-              className="h-full w-full object-cover"
-            />
-          </div>
-
-          {/* Right - Content */}
-          <div className="text-[#003683] space-y-6">
-            <p className="text-4xl w-[60%]">
-              <span className="text-7xl">meet the </span>
-              <span className="font-bold text-7xl">surgeon </span>
-              <span className="font-bold text-4xl">DR. MBONISI MALABA</span>
-            </p>
-
-            <div className="space-y-4">
-              <p className="font-bold">{aboutData.surgeon.role}</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center items-center w-full">
-          <div className="w-[80%]">
-            {/* Family Photo - positioned on the right */}
-            <Image
-              src="/malaba-family.png"
-              width={300}
-              height={200}
-              alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
-              className="float-right ml-8 mb-6 w-[65%] max-h-[500px]"
-            />
-
-            {/* Text Content - wraps around the image */}
-            <div className="text-blue-900 text-lg leading-relaxed mt-25">
-              <p><span className="font-bold text-4xl">DR. MALABA</span>
-              <span className="font-bold text-2xl"> IS MARRIED WITH THREE CHILDREN.</span>
-                {" "}
-                He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in
-                2015 to start and strengthen churches in East Africa and beyond.
-                Whilst in Kenya he subspecialised in paediatric orthopaedics
-                with the College of Surgeons of East, Central and Southern
-                Africa (COSECSA). During his surgical training, he was awarded a
-                number of prizes including the medal for best performing
-                candidate in the COSECSA Orthopaedic (2017) and Paediatric
-                Orthopaedic (2021) Examinations as well at the prestigious{" "}
-              <span className="font-bold">Gerald O´Sullivan Medal (2017)</span>
-                {" "}
-                awarded by COSECSA and the Royal College of Surgeons of Ireland
-                to the graduate with the highest overall mark across all
-                surgical specialties. In 2022 he did a further one year{" "}
-              <span className="font-bold">
-                subspecialist fellowship training in paediatric and adult limb
-                reconstruction at the Royal London Hospital
-              </span>
-              (one of the busiest trauma centres in Europe) and the
-              <span className="font-bold">Royal National Orthopaedic Hospital</span>
-              <span> - a centre of excellence north of London. He </span>
-              <span className="font-bold">pastors OneTribe Church</span>
-                {" "}
-                in Nairobi, Kenya and through the Advance Movement serves and{" "}
-              <span className="font-bold">
-                supports several dozen churches or church plants in East Africa
-              </span>
-              as well as serving more broadly in the wider church.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MeetSurgeonSection/>
       <ColoredBorder />
       {/* The Hospital Section */}
-      <section className="bg-[#4FB29E]">
-        {/* Hospital Section */}
-        <div className="text-white">
-          <div className="grid lg:grid-cols-2 gap-0 items-center">
-            {/* Left side - Text content */}
-            <div className="p-12 px-40 w-full">
-              <div className="flex md:justify-end md:items-end">
-                <div className="w-full">
-                  <h1 className="text-8xl text-heading font-light mb-8">
-                    the{" "}
-                    <span className="font-bold text-blue-900">hospital</span>
-                  </h1>
-                </div>
-              </div>
-              <Image
-                src="/hospital-line.svg"
-                width={600}
-                height={400}
-                alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="relative z-10 bottom-10 right-50 w-[100vw] object-cover"
-              />
-              <div className="leading-relaxed space-y-4 text-blue-900 flex md:justify-end md:items-end">
-                <p className="w-full md:max-w-5xl">
-                  <span className="font-bold">Kijabe Hospital</span> is a
-                  renowned center of excellence in healthcare and medical
-                  training, serving patients from across Kenya and beyond.
-                  Nestled on the scenic escarpment overlooking the{" "}
-                  <span className="font-bold">Great Rift Valley</span>, it
-                  combines{" "}
-                  <span className="font-bold">
-                    world-class care with a vibrant teaching environment
-                  </span>{" "}
-                  that equips the next generation of African healthcare
-                  professionals. Located in the welcoming village of Kijabe, the
-                  hospital forms part of a unique medical community alongside
-                  another neighbouring mission hospital, fostering collaboration
-                  and innovation in a serene, picturesque setting.
-                </p>
-              </div>
-            </div>
-            {/* Right side - Hospital aerial image */}
-              <Image
-                src="/hospital-1.png"
-                width={600}
-                height={400}
-                alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="h-full w-full object-cover"
-              />
-          </div>
-        </div>
-      </section>
+      <HospitalSection/>
       <BlueColoredBorder />
     </div>
   );
