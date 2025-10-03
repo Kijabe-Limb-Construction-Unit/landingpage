@@ -64,7 +64,7 @@ const Navbar = () => {
             href={item.path}
             className={`
               ${item.bgColor}
-              flex-1 px-6 py-1 text-white font-light transition-opacity hover:opacity-90 text-center
+              flex-1 sm:px-0 md:px-3 py-3 text-white font-light transition-opacity hover:opacity-90 text-center md:text-lg lg:text-2xl
               ${pathname === item.path ? "opacity-100" : "opacity-80"}
             `}
           >
