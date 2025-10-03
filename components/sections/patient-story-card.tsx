@@ -41,9 +41,9 @@ export const PatientResources = ({
             <Play size={16} fill="white" />
           </button>
         </div>
-        <div className={`text-sm flex flex-col justify-start items-start text-${textColor}`}>
-          <p>{p1}</p>
-          <p>{p2}</p>
+        <div className={`flex flex-col justify-start items-start text-${textColor}`}>
+          <p className="text-[15px] sm:text-lg md:text-2xl">{p1}</p>
+          <p className="text-[15px] sm:text-lg md:text-2xl">{p2}</p>
         </div>
       </div>
       

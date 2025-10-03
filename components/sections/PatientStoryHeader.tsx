@@ -25,7 +25,7 @@ export function PatientStoriesSection() {
 
           {/* Main content - positioned above background elements */}
           <div className="relative z-10 space-y-4">
-            <h1 className="text-[#003683] font-bold mb-4  text-4xl sm:text-5xl md:text-6xl lg:text-9xl">
+            <h1 className="text-[#003683] font-bold mb-4  text-5xl md:text-7xl lg:text-9xl">
               patient <span className="font-medium">stories</span>
             </h1>
             <p className="text-[#003683] font-bold">
@@ -34,7 +34,7 @@ export function PatientStoriesSection() {
                 to hear some of our patients share their incredible
               </span>
               <br />
-              <span className="hidden md:block font-bold text-4xl">
+              <span className="font-bold text-4xl">
                 stories of transformation!
               </span>
             </p>

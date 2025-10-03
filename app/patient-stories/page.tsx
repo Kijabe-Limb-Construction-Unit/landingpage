@@ -19,7 +19,7 @@ export default function PatientStories() {
       {/* Fisrt story Section - BOVIN */}
       <div className="bg-[#66B2B2] min-h-[500px] flex flex-col lg:flex-row">
         {/* Text Section */}
-        <div className="w-full lg:w-1/2 bg-[#66B2B2] flex items-center p-6 lg:p-12">
+        <div className="w-full lg:w-1/2 bg-[#66B2B2] flex items-center p-6 lg:p-12 order-2 lg:order-1">
           <div className="w-full flex flex-col items-end">
             <h2 className="text-semi-header font-bold text-white flex justify-end mb-4 lg:mb-6 tracking-widest">
               {patientTestimonies[0].name}
@@ -60,14 +60,15 @@ export default function PatientStories() {
         </div>
 
         {/* Image Section */}
-          <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
-            <Image
-              src={patientTestimonies[0].image}
-              alt={patientTestimonies[0].name}
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto order-1 lg:order-2">
+          <Image
+            src={patientTestimonies[0].image}
+            alt={patientTestimonies[0].name}
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
+
       {/* Second story Section - MOSES */}
       <div className="bg-[#149ECC] min-h-[500px] flex flex-col lg:flex-row ">
         {/* Image Section */}
@@ -122,7 +123,7 @@ export default function PatientStories() {
       {/* Third story Section - Doris */}
       <div className="bg-[#193380] min-h-[500px] flex flex-col lg:flex-row">
         {/* Text Section */}
-        <div className="w-full lg:w-1/2 bg-[#193380] flex items-center p-6 lg:p-12">
+        <div className="w-full lg:w-1/2 bg-[#193380] flex items-center p-6 lg:p-12 order-2 lg:order-1">
           <div className="w-full flex flex-col items-end">
             <h2 className="text-semi-header flex justify-end font-bold text-white mb-4 lg:mb-6 tracking-widest">
               DORIS
@@ -165,7 +166,7 @@ export default function PatientStories() {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
+        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto order-1 lg:order-2">
           <Image
             src={Doris}
             alt="Doris"
