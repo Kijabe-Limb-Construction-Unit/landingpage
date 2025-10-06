@@ -15,12 +15,12 @@ const NavDonate = () => {
               alt="Donate"
               width={100}
               height={100}
-              className="w-45 h-20"
+              className="w-20 h-10 md:w-45 md:h-20"
             />
         </Link>
         {/* Logo and Tagline Side */}
         <div className="flex items-center gap-4">
-            <p className="text-[#003683] text-xl font-bold md:text-3xl md:font-normal">
+            <p className="text-[#003683] text-lg font-bold md:text-3xl md:font-normal">
               Restoring limbs <span className="text-[#4FB29E]">|</span> Rebuilding lives
             </p>
         </div>
