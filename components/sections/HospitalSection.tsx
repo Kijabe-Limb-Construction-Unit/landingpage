@@ -9,7 +9,7 @@ export function HospitalSection() {
           <div className="p-12 px-40 w-full">
             <div className="flex md:justify-end md:items-end">
               <div className="w-full">
-                <h1 className="text-8xl text-heading font-light mb-8">
+                <h1 className="text-5xl md:text-7xl text-heading font-light mb-8">
                   the <span className="font-bold text-blue-900">hospital</span>
                 </h1>
               </div>
@@ -50,12 +50,12 @@ export function HospitalSection() {
         </div>
       </div>
       {/* Hospital Section mobile view*/}
-      <div className="text-white md:hidden mx-5 md:mx-0">
+      <div className="text-white md:hidden m-5 md:mx-0">
         <div className="grid lg:grid-cols-2 gap-0 items-center">
           {/* Left side - Text content */}
           <div className="flex">
             {/* <div className="w-full"> */}
-            <h1 className="text-8xl text-heading font-light mb-8">
+            <h1 className="text-7xl text-heading font-light mb-8">
               the <span className="font-bold text-blue-900">hospital</span>
             </h1>
             {/* </div> */}

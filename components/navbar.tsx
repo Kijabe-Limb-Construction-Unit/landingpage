@@ -47,14 +47,7 @@ const Navbar = () => {
   return (
     <header className="w-full bg-white sticky top-0 z-50">
       <div
-        className="w-full h-1 border-t-4"
-        style={{
-          borderTopColor:
-            navItems
-              .find((item) => pathname === item.path)
-              ?.bgColor.replace("bg-[", "")
-              .replace("]", "") || "#003683",
-        }}
+        className="w-full h-1 bg-white"
       />
 
       <nav className="hidden md:flex w-full">
@@ -64,8 +57,8 @@ const Navbar = () => {
             href={item.path}
             className={`
               ${item.bgColor}
-              flex-1 px-6 py-1 text-white font-light transition-opacity hover:opacity-90 text-center
-              ${pathname === item.path ? "opacity-100" : "opacity-80"}
+              flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg lg:text-2xl
+              ${pathname === item.path ? "bg-white font-bold text-[#003683]" : "text-white font-light"}
             `}
           >
             {item.name}

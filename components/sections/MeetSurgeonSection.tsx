@@ -3,7 +3,7 @@ import { aboutData } from "@/lib/fakes/about-fakes";
 
 export function MeetSurgeonSection() {
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center mb-20">
       <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683]">
         {/* Left - Image */}
         <div className="relative">
@@ -19,14 +19,10 @@ export function MeetSurgeonSection() {
 
         {/* Right - Content */}
         <div className="text-[#003683] space-y-6 mx-5 lg:mx-0">
-          <p className="w-[70%] sm:w-[60%]">
-          {/* <p className="text-4xl w-40% lg:w-[60%]"> */}
-            <span className="text-6xl md:text-7xl">meet the </span>
-            <span className="font-bold text-6xl md:text-7xl">surgeon </span>
-            <span className="font-bold text-4xl">DR. MBONISI MALABA</span>
-            {/* <span className="sm:text-5xl md:text-7xl">meet the </span>
-            <span className="font-bold sm:text-5xl md:text-7xl">surgeon </span>
-            <span className="font-bold text-md sm:text-lg md:text-4xl">DR. MBONISI MALABA</span> */}
+          <p className="w-full md:w-[85%]">
+            <span className="text-5xl md:text-7xl">meet the </span>
+            <span className="font-bold text-5xl md:text-7xl">surgeon </span><br />
+            <span className="font-bold text-2xl md:text-4xl">DR. MBONISI MALABA</span>
           </p>
 
           <div className="space-y-4">
