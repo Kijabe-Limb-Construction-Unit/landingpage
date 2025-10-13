@@ -194,3 +194,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.light-letter-spacing {
+  letter-spacing: 0.4em;
+}

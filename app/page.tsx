@@ -1,5 +1,7 @@
 "use client";
 
+import { BlueColoredBorder } from "@/components/sections/ColoredBorder";
+import { PatientNavigation } from "@/components/sections/PatientServices";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
@@ -9,14 +11,6 @@ interface Slide {
   title: string;
 }
 
-interface NavigationItem {
-  label: string;
-  href: string;
-  bgColor: string;
-  width: string;
-  isHighlighted?: boolean;
-}
-
 interface ServiceIcon {
   src: string;
   alt: string;
@@ -24,13 +18,6 @@ interface ServiceIcon {
 }
 
 const SLIDE_INTERVAL = 4000;
-
-const COLORS = {
-  primary: "#003683",
-  secondary: "#149ecc",
-  tertiary: "#4fb29d",
-  quaternary: "#c7d886",
-} as const;
 
 const slides: Slide[] = [
   {
@@ -57,21 +44,6 @@ const slides: Slide[] = [
     src: "/IMG4.jpg",
     alt: "Hero Background 5",
     title: "Training surgeons for regional impact.",
-  },
-];
-
-const navigationItems: NavigationItem[] = [
-  {
-    label: "Patient\nresources",
-    href: "/patient-resources",
-    bgColor: COLORS.tertiary,
-    width: "w-40",
-  },
-  {
-    label: "Book an\nappointment",
-    href: "#",
-    bgColor: COLORS.secondary,
-    width: "w-48",
   },
 ];
 
@@ -225,7 +197,10 @@ const HeroSlider = () => {
       </div>
 
       <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
-        <p className="font-bold mb-0.5 text-white italic" style={{ fontFamily: "Caveat, cursive" }}>
+        <p
+          className="mb-0.5 text-5xl text-white"
+          style={{ fontFamily: "Caveat, cursive" }}
+        >
           {slides[currentSlide].title}
         </p>
         <NavigationDots
@@ -235,14 +210,14 @@ const HeroSlider = () => {
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full z-10">
-        <div className="w-full h-5 min-[250px]:h-3 min-[320px]:h-4 sm:h-6 md:h-15 relative">
+      <div className="absolute bottom-0 left-0 w-full z-20">
+        <div className="w-full mb-2 min-[250px]:h-100 min-[320px]:h-8 sm:h-12 md:h-15 relative">
           <Image
             src="/line_.svg"
             width={1920}
             height={100}
             alt=""
-            className="object-cover z-10"
+            className="object-cover pt-5 lg:pt-0"
             aria-hidden="true"
           />
         </div>
@@ -251,164 +226,30 @@ const HeroSlider = () => {
   );
 };
 
-const NavigationBox = ({ item }: { item: NavigationItem }) => (
-  <div
-    className={`${item.width} relative flex flex-col items-center justify-center h-24 cursor-default`}
-    style={{ backgroundColor: item.bgColor }}
-  >
-    <p className="text-white text-sm text-center leading-tight font-light whitespace-pre-line">
-      {item.label}
-    </p>
-  </div>
-);
-
-const PatientStoriesBox = () => (
-  <div className="w-20 relative flex flex-col items-center justify-center h-20">
-    <div
-      className="absolute inset-0 z-10 flex items-center justify-center"
-      style={{
-        width: "330px",
-        height: "120px",
-        left: "75%",
-        top: "73%",
-        transform: "translate(-50%, -50%)",
-      }}
-    >
-      <Image
-        src="/patientstories.svg"
-        alt=""
-        fill
-        className="object-contain"
-        aria-hidden="true"
-      />
-    </div>
-  </div>
-);
-
-// Mobile Navigation Components - UPDATED with more right positioning for Book an appointment
-const MobileNavigationBox = ({
-  item,
-  index,
-}: {
-  item: NavigationItem;
-  index: number;
-}) => (
-  <div
-    className={`flex-1 relative flex flex-col items-center justify-center h-16 min-[250px]:h-20 min-[320px]:h-24 sm:h-32 cursor-default min-w-0 ${
-      index === 1
-        ? "ml-0 min-[215px]:ml-8 min-[219px]:ml-7 min-[227px]:ml-0 min-[228px]:ml-9 min-[231px]:ml-8 min-[250px]:ml-8 min-[263px]:ml-11 min-[268px]:ml-11 min-[290px]:ml-11 min-[320px]:ml-12 min-[331px]:ml-13"
-        : ""
-    }`}
-    style={{ backgroundColor: item.bgColor }}
-  >
-    <div
-      className={`flex items-center justify-center h-full w-full ${
-        index === 0
-          ? "justify-start pl-2 min-[250px]:pl-3 min-[320px]:pl-4 min-[320px]:pr-6"
-          : index === 1
-          ? "justify-end min-[215px]:pr-3 min-[228px]:pr-4 pr-12 min-[250px]:pr-4 min-[263px]:pr-6 min-[268px]:pr-6 min-[290px]:pr-6 min-[320px]:pr-7 min-[331px]:pr-6 translate-x-[-20px] min-[215px]:translate-x-3 min-[228px]:translate-x-3 min-[250px]:translate-x-2 min-[263px]:translate-x-4 min-[268px]:translate-x-4 min-[290px]:translate-x-4 min-[320px]:translate-x-2 min-[331px]:translate-x-3"
-          : "justify-center"
-      }`}
-    >
-      <p className="text-white text-[10px] min-[250px]:text-xs min-[320px]:text-sm sm:text-base text-center leading-[1.1] font-light whitespace-pre-line overflow-hidden">
-        {item.label}
-      </p>
-    </div>
-  </div>
-);
-
-// UPDATED: Patient Stories Box - SLIGHTLY INCREASED HEIGHT FOR 320px+ screens
-const MobilePatientStoriesBox = () => (
-  <div className="absolute top-0 z-20 h-21 min-[250px]:h-25 min-[320px]:h-30 sm:h-35 flex items-center justify-center left-0 right-0">
-    <div className="relative w-[120px] min-[250px]:w-[140px] min-[320px]:w-[160px] sm:w-[190px] h-21 min-[250px]:h-25 min-[320px]:h-30 sm:h-35 mx-auto">
-      <Image
-        src="/patientstories.svg"
-        alt=""
-        fill
-        className="object-contain"
-        aria-hidden="true"
-        style={{
-          objectFit: "contain",
-          width: "100%",
-          height: "100%",
-        }}
-      />
-    </div>
-  </div>
-);
-
-// Desktop Navigation Section (Original)
-const NavigationSection = () => (
-  <section
-    className="h-26 hidden md:block"
-    style={{ backgroundColor: COLORS.primary }}
-    aria-label="Quick navigation"
-  >
-    <div
-      className="flex w-full relative items-end"
-      style={{ backgroundColor: COLORS.secondary }}
-    >
-      <div
-        className="flex-1 h-24"
-        style={{ backgroundColor: COLORS.secondary }}
-        aria-hidden="true"
-      />
-      {navigationItems.map((item, index) => {
-        if (index === 0) {
-          return <NavigationBox key={index} item={item} />;
-        } else {
-          return (
-            <div key={index} className="flex">
-              <PatientStoriesBox />
-              <NavigationBox item={item} />
-            </div>
-          );
-        }
-      })}
-      <div
-        className="flex-1 h-24"
-        style={{ backgroundColor: COLORS.tertiary }}
-        aria-hidden="true"
-      />
-    </div>
-  </section>
-);
-
-// UPDATED: Mobile Navigation Section with increased spacing pushed further left
-const MobileNavigationSection = () => (
-  <section
-    className="block md:hidden relative"
-    style={{ backgroundColor: COLORS.primary }}
-    aria-label="Quick navigation"
-  >
-    <div className="flex w-full relative " style={{ gap: "0px" }}>
-      {navigationItems.map((item, index) => (
-        <MobileNavigationBox key={index} item={item} index={index} />
-      ))}
-    </div>
-    <MobilePatientStoriesBox />
-  </section>
-);
 
 const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
-  <div className="flex flex-col items-center justify-center w-full flex-shrink-0">
-    <div className={`relative mb-2 min-[250px]:mb-3 min-[320px]:mb-4 md:mb-6 lg:mb-8 transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
-      icon.alt === "Poorly Healing Fractures" 
-        ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64" 
-        : icon.alt === "Infected Fractures"
-        ? "w-20 h-20 min-[250px]:w-24 min-[250px]:h-24 min-[320px]:w-28 min-[320px]:h-28 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72"
-        : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-24 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 pb-2"
-    }`}>
-      <div className={`relative ${
-        icon.alt === "Poorly Healing Fractures" 
-          ? "w-full h-full" 
+  <div className="mb-10 flex flex-col items-center justify-center w-full flex-shrink-0">
+    <div
+      className={`relative transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
+        icon.alt === "Poorly Healing Fractures"
+          ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64"
           : icon.alt === "Infected Fractures"
-          ? "w-full h-full"
-          : "w-full h-full"
-      }`}>
-        <Image 
-          src={icon.src} 
-          alt={icon.alt} 
+          ? "w-20 h-20 min-[250px]:w-24 min-[250px]:h-24 min-[320px]:w-28 min-[320px]:h-28 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72"
+          : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-24 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 pb-2"
+      }`}
+    >
+      <div
+        className={`relative ${
+          icon.alt === "Poorly Healing Fractures"
+            ? "w-full h-full"
+            : icon.alt === "Infected Fractures"
+            ? "w-full h-full"
+            : "w-full h-full"
+        }`}
+      >
+        <Image
+          src={icon.src}
+          alt={icon.alt}
           fill
           className="object-contain"
           sizes="(max-width: 250px) 64px, (max-width: 320px) 80px, (max-width: 640px) 96px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
@@ -419,12 +260,12 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
     <div
       className={`h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex  items-start justify-center ${
         icon.alt === "Poorly Healing Fractures"
-          ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-5"
+          ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-0"
           : ""
       }`}
     >
       <p
-        className="font-semibold text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden"
+        className="font-semibold light-letter-spacing text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden text-2xl"
         dangerouslySetInnerHTML={{ __html: icon.title }}
       />
     </div>
@@ -433,7 +274,7 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
 
 const ServicesSection = () => (
   <section
-    className="py-2 min-[250px]:py-3 min-[320px]:py-4 md:py-12 bg-white"
+    className="py-2 min-[250px]:py-3 min-[320px]:py-4 md:py-5 bg-white"
     aria-label="Our services"
   >
     <div className="container mx-auto px-1 min-[250px]:px-2 min-[320px]:px-4 md:px-8">
@@ -465,9 +306,9 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <HeroSlider />
-      <NavigationSection />
-      <MobileNavigationSection />
+      <PatientNavigation />
       <ServicesSection />
+      <BlueColoredBorder />
     </main>
   );
 }
