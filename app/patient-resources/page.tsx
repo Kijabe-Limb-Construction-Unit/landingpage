@@ -10,12 +10,12 @@ function App() {
         <h1 className="text-7xl font-light">
           <span className="font-bold">resources</span> for patients <br /><p className="text-md font-light relative md:-left-30">Get more information</p>
         </h1>
-        <Image src="/left-line.svg" width={1200} height={10} alt={""} className="h-10 relative left-80 w-3xl -top-8 w-full"/>
+        <Image src="/left-line.svg" width={1200} height={10} alt={""} className="h-10 relative left-20 md:left-80 w-3xl -top-8 w-full"/>
         <p className="relative -top-5">
           about your{" "}
           <span className="font-bold text-4xl">condition or treatment.</span>
         </p>
-        <Image src="/right-line.svg" width={10} height={10} alt={""} className="h-10 relative right-80 -top-10 w-full" />
+        <Image src="/right-line.svg" width={10} height={10} alt={""} className="h-10 relative right-30 md:right-80 -top-10 w-full" />
       </div>
       {/* General Information Section */}
       <div className="bg-[#149ECC] px-8 py-12">

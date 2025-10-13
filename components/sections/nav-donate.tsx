@@ -20,8 +20,8 @@ const NavDonate = () => {
         </Link>
         {/* Logo and Tagline Side */}
         <div className="flex items-center gap-4">
-            <p className="text-[#003683] text-lg font-bold md:text-3xl md:font-normal">
-              Restoring limbs <span className="text-[#4FB29E]">|</span> Rebuilding lives
+            <p className="text-[#003683] text-lg md:text-3xl md:font-normal">
+              Restoring limbs |<span className="font-bold ml-2">Rebuilding lives</span>
             </p>
         </div>
       </div>

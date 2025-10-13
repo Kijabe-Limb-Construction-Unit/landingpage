@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import {BlueColoredBorder} from "@/components/sections/ColoredBorder";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import NavDonate from "./sections/nav-donate";
 // import { HeartbeatAnimation } from "./sections/heartwave-animation";
@@ -46,10 +47,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-white sticky top-0 z-50">
-      <div
-        className="w-full h-1 bg-white"
-      />
-
+      <BlueColoredBorder/>
       <nav className="hidden md:flex w-full">
         {navItems.map((item) => (
           <Link
@@ -57,8 +55,8 @@ const Navbar = () => {
             href={item.path}
             className={`
               ${item.bgColor}
-              flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg lg:text-2xl
-              ${pathname === item.path ? "bg-white font-bold text-[#003683]" : "text-white font-light"}
+              flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg min-[1020px]:text-xl max-[1113px]:text-md lg:text-xl
+              ${pathname === item.path ? "bg-white font-bold uppercase text-[#003683]" : "text-white font-light"}
             `}
           >
             {item.name}
@@ -75,11 +73,18 @@ const Navbar = () => {
       <div className="relative bg-white">
         <div className="absolute top-16 inset-0 flex items-center justify-center z-10">
           <Image
+            src="/heartbeat-line-complet.svg"
+            alt=""
+            width={1200}
+            height={10}
+            className="h-auto w-full block md:hidden"
+          />
+          <Image
             src="/heartbeat-line-complete.svg"
             alt=""
             width={1200}
             height={10}
-            className="h-auto w-full"
+            className="h-auto w-full hidden md:block"
           />
         </div>
         <div className="relative z-20 mt-5 px-8 flex items-center justify-between">
@@ -131,7 +136,7 @@ const Navbar = () => {
         <NavDonate />
       </div>
       {/* bottom lines  */}
-      <div className="flex w-full h-2">
+      <div className="flex w-full h-4">
         {colorPattern.map((item, index) => (
           <div key={index} className={`${item.bgColor} flex-1`} />
         ))}

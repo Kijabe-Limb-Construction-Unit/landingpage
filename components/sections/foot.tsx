@@ -4,7 +4,6 @@ import Image from "next/image";
 import NavDonate from "./nav-donate";
 
 const Navbar = () => {
-
   return (
     <header className="w-full bg-white sticky top-0 z-50">
       {/* Logo and menu section  */}
@@ -20,7 +19,21 @@ const Navbar = () => {
           />
         </div>
       </div>
-        <Image src="/heartbeat-line-complete.svg" alt="line" width={200} height={150} className="h-auto w-full mt-9" />
+      {/* <Image src="/heartbeat-line-complete.svg" alt="line" width={200} height={150} className="h-auto w-full mt-9" /> */}
+      <Image
+        src="/heartbeat-line-complet.svg"
+        alt=""
+        width={1200}
+        height={10}
+        className="h-auto w-full block md:hidden mt-9"
+      />
+      <Image
+        src="/heartbeat-line-complete.svg"
+        alt=""
+        width={1200}
+        height={10}
+        className="h-auto w-full hidden md:block mt-9"
+      />
       {/* Donate - restore section  */}
       <NavDonate />
       {/* bottom lines  */}
