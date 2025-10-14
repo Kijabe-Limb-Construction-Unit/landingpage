@@ -1,9 +1,9 @@
 "use client";
 
 import { BlueColoredBorder } from "@/components/sections/ColoredBorder";
-import { PatientNavigation } from "@/components/sections/PatientServices";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
+import PatientSect from "@/components/sections/PatientSect";
 
 interface Slide {
   src: string;
@@ -217,7 +217,7 @@ const HeroSlider = () => {
             width={1920}
             height={100}
             alt=""
-            className="object-cover pt-5 lg:pt-0"
+            className="object-cover pt-5 lg:pt-3"
             aria-hidden="true"
           />
         </div>
@@ -306,7 +306,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <HeroSlider />
-      <PatientNavigation />
+      <PatientSect/>
       <ServicesSection />
       <BlueColoredBorder />
     </main>

@@ -55,8 +55,8 @@ const Navbar = () => {
             href={item.path}
             className={`
               ${item.bgColor}
-              flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg min-[1020px]:text-xl max-[1113px]:text-md lg:text-xl
-              ${pathname === item.path ? "bg-white font-bold uppercase text-[#003683]" : "text-white font-light"}
+              flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg min-[1020px]:text-xl max-[1113px]:text-md lg:text-xl md:text-[10px] pt-5 lg:text-[16px]
+              ${pathname === item.path ? "bg-white font-bold uppercase text-[#003683] font-normal md:text-[10px] pt-5 lg:text-[14px] sm:text-[9px]" : "text-white font-light"}
             `}
           >
             {item.name}
@@ -84,7 +84,7 @@ const Navbar = () => {
             alt=""
             width={1200}
             height={10}
-            className="h-auto w-full hidden md:block"
+            className="h-auto w-full hidden md:block border"
           />
         </div>
         <div className="relative z-20 mt-5 px-8 flex items-center justify-between">
