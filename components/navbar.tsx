@@ -84,7 +84,7 @@ const Navbar = () => {
             alt=""
             width={1200}
             height={10}
-            className="h-auto w-full hidden md:block border"
+            className="h-auto w-full hidden md:block"
           />
         </div>
         <div className="relative z-20 mt-5 px-8 flex items-center justify-between">
