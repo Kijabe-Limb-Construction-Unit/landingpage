@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 px-6 lg:py-16">
-        <h1 className="text-7xl font-light">
-          <span className="font-bold">resources</span> for patients <br /><p className="text-md font-light relative md:-left-30">Get more information</p>
+        <h1 className="text-9xl font-light">
+          <span className="font-bold">resources</span> for patients <br /><p className="text-4xl font-light relative md:-left-30">Get more information</p>
         </h1>
         <Image src="/left-line.svg" width={1200} height={10} alt={""} className="h-10 relative left-20 md:left-80 w-3xl -top-8 w-full"/>
-        <p className="relative -top-5">
+        <p className="text-4xl relative -top-5">
           about your{" "}
           <span className="font-bold text-4xl">condition or treatment.</span>
         </p>
@@ -27,16 +27,16 @@ function App() {
           <div className="grid grid-cols-2 items-start gap-4">
             <PatientResources
               p1="Limb Reconstruction"
-              p2="with frames overview"
-              bg="blue-900"
+              p2="with Frames Overview"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"
               youtubeUrl="https://youtu.be/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"
             />
             <PatientResources
-              p1="Frame Information for Kids (and Adults!)"
+              p1="Frame Information for"
               p2="for Kids (and Adults!)"
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"
               youtubeUrl="https://youtu.be/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"
@@ -44,7 +44,7 @@ function App() {
             <PatientResources
               p1="Tips for Wearing an"
               p2="External Fixator"
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/c85w0jzeWyY?si=wfSMZXUhSLwLg0Q2"
               youtubeUrl="https://youtu.be/c85w0jzeWyY?si=Srr1uXoLF10kw3p1"
@@ -52,7 +52,7 @@ function App() {
             <PatientResources
               p1="History of Limb"
               p2="Reconstruction"
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/PVn9IfxX74E?si=shXJoL2_-2plMVIs"
               youtubeUrl="https://youtu.be/PVn9IfxX74E?si=shXJoL2_-2plMVIs"
@@ -72,17 +72,17 @@ function App() {
           </h1>
           <div className="grid grid-cols-2 gap-6">
             <PatientResources
-              p1="Pin site Care"
+              p1="Pin Site Care"
               p2="(Animated)"
-              bg="blue-900"
+              btnColor="sky-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"
               youtubeUrl="https://youtu.be/ZBBF81nwdtE?si=Z4sgt_zMmTaz4BhL"
             />
             <PatientResources
-              p1="Pin site Care"
+              p1="Pin Site Care"
               p2="(Patient Demonstration)"
-              bg="blue-900"
+              btnColor="sky-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7"
               youtubeUrl="https://youtu.be/qU9UbzUEcqk?si=sMi2PNsWtFsjEQC7"
@@ -99,17 +99,17 @@ function App() {
           </h1>
           <div className="grid grid-cols-2 gap-6">
             <PatientResources
-              p1="Adjusting Your Struts"
+              p1="Adjusting a Strut"
               p2=""
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="#149ECC"
               iframeSrc="https://www.youtube.com/embed/sytSPu19fUY?si=OTpK49OllmqpdELT"
               youtubeUrl=""
             />
             <PatientResources
-              p1="Changing a Struts"
+              p1="Changing a Strut"
               p2=""
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="#149ECC"
               iframeSrc="https://www.youtube.com/embed/1JMqagnm5gE?si=RJvdaL1o4IYd8MRl"
               youtubeUrl={""}
@@ -126,9 +126,9 @@ function App() {
           </h1>
           <div className="grid grid-cols-2 gap-6">
             <PatientResources
-              p1="Monorail adjustment"
+              p1="Monorail Adjustment"
               p2=""
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="#149ECC"
               iframeSrc="https://www.youtube.com/embed/3x6fM2J3xE8?si=GEcbIplBEPSLGvzi"
               youtubeUrl="https://youtu.be/3x6fM2J3xE8?si=elol-sopgXjaqoIG"
@@ -147,23 +147,23 @@ function App() {
             <PatientResources
               p1="Frames Physiotherapy"
               p2=""
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"
               youtubeUrl="https://youtu.be/me66wP2M5lE?si=IgjQc9G0Sq_M9Gan"
             />
             <PatientResources
               p1="Tibia/Leg Bone Physiotherapy"
-              p2="Exercises Limb Lengthening"
-              bg="blue-900"
+              p2="Exercises (Limb Lengthening)"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4"
               youtubeUrl="https://youtu.be/5WMtS9hiOFY?si=K2dtREXEuk5LtRH4"
             />
             <PatientResources
               p1="Femur/Thigh Bone Physiotherapy"
-              p2="Exercises Limb Lengthening"
-              bg="blue-900"
+              p2="Exercises (Limb Lengthening)"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu"
               youtubeUrl="https://youtu.be/vp3j5ujYq5c?si=ZjCU_s7W54O0Utzu"
@@ -171,7 +171,7 @@ function App() {
             <PatientResources
               p1="Physiotherapy Exercises for"
               p2="Lower Limb External Fixators"
-              bg="blue-900"
+              btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"
               youtubeUrl="https://youtu.be/5MjZ4RoJK84?si=f8o4IFEe7XNtVSvA"

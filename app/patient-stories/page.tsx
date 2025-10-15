@@ -2,7 +2,6 @@
 import Bovin from "@/public/bovin.png";
 import Moses from "@/public/moses.png";
 import Doris from "@/public/doris.png";
-import { Play } from "lucide-react";
 import Image from "next/image";
 import { storiesData } from "@/lib/fakes/stories-fakes";
 import { PatientStoriesSection } from "@/components/sections/PatientStoryHeader";
@@ -26,57 +25,41 @@ export default function PatientStories() {
             </h2>
 
             <p
-              className="text-4xl italic text-white mb-4 lg:mb-6 flex w-full max-w-5xl"
+              className="text-5xl italic text-white mb-4 lg:mb-6 w-full max-w-5xl"
               style={{ fontFamily: "Caveat, cursive" }}
             >
-              &quot;{patientTestimonies[0].testimonial}&quot;
+              <span className="text-6xl mr-2">“</span>{patientTestimonies[0].testimonial}<span className="text-6xl -ml-1">”</span>
             </p>
-
-            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
+            
+            <p className="text-5xl text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
               {patientTestimonies[0].fullStory}{" "}
-              <span className="font-bold text-3xl">
+              <span className="font-bold">
                 Now he is happy and walking!
               </span>
             </p>
-
-            <div className="flex justify-end">
-              <div className="mx-5">
-                <p className="text-white">Click here to</p>
-                <p className="text-white">hear more</p>
-              </div>
-              <a
-                href={patientTestimonies[0].youtubeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 lg:w-20 lg:h-20 bg-white rounded-lg hover:bg-gray-200 transition-colors"
-              >
-                <Play
-                  className="w-5 h-5 lg:w-8 lg:h-8 text-gray-800 ml-1"
-                  fill="currentColor"
-                />
-              </a>
-            </div>
           </div>
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto order-1 lg:order-2">
+        <div className="w-full flex lg:w-1/2 relative h-64 lg:h-auto order-1 lg:order-2">
           <Image
             src={patientTestimonies[0].image}
             alt={patientTestimonies[0].name}
-            className="w-full h-full object-cover"
+            className="w-[80%] h-full object-cover"
           />
+          <Image src="./click-here-blue.svg" alt="" height={100} width={100} className="w-[20%] h-full"/>
         </div>
       </div>
 
       {/* Second story Section - MOSES */}
       <div className="bg-[#149ECC] min-h-[500px] flex flex-col lg:flex-row ">
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
+        <div className="w-full flex lg:w-1/2 relative h-64 lg:h-auto">
+          <Image src="./click-here-yellow.svg" alt="" height={100} width={100} className="w-[20%] h-full"/>
           <Image
             src={patientTestimonies[1].image}
             alt={patientTestimonies[1].name}
-            className="w-full h-full object-cover"
+            className="w-[80%] h-full object-cover"
           />
         </div>
 
@@ -91,32 +74,14 @@ export default function PatientStories() {
               className="text-5xl italic text-white mb-4 lg:mb-6"
               style={{ fontFamily: "Caveat, cursive" }}
             >
-              &quot;{patientTestimonies[1].testimonial} <br />
-              {patientTestimonies[1].testimonialContinued}&quot;
+              <span className="text-6xl mr-2">“</span>{patientTestimonies[1].testimonial} <br />
+              {patientTestimonies[1].testimonialContinued}<span className="text-6xl -ml-1">”</span>
             </p>
 
             <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
               {patientTestimonies[1].fullStory}{" "}
               <span className="font-bold text-3xl">able to work again!</span>
             </p>
-
-            <div className="flex justify-start">
-              <a
-                href={patientTestimonies[1].youtubeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 lg:w-20 lg:h-20 bg-white rounded-lg hover:bg-gray-200 transition-colors"
-              >
-                <Play
-                  className="w-5 h-5 lg:w-8 lg:h-8 text-gray-800 ml-1"
-                  fill="currentColor"
-                />
-              </a>
-              <div className="mx-5">
-                <p className="text-white">Click here to</p>
-                <p className="text-white">hear more</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -133,7 +98,7 @@ export default function PatientStories() {
               className="text-5xl italic text-white mb-4 lg:mb-6 w-full max-w-5xl"
               style={{ fontFamily: "Caveat, cursive" }}
             >
-              &quot;I see a beautiful me.&quot;
+              <span className="text-6xl mr-2">“</span>I see a beautiful me.<span className="text-6xl -ml-1">”</span>
             </p>
 
             <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
@@ -144,34 +109,17 @@ export default function PatientStories() {
                 feels like a different person!
               </span>
             </p>
-
-            <div className="flex justify-end">
-              <div className="mx-5">
-                <p className="text-white">Click here to</p>
-                <p className="text-white">hear more</p>
-              </div>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 lg:w-20 lg:h-20 bg-white rounded-lg hover:bg-gray-200 transition-colors"
-              >
-                <Play
-                  className="w-5 h-5 lg:w-8 lg:h-8 text-gray-800 ml-1"
-                  fill="currentColor"
-                />
-              </a>
-            </div>
           </div>
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 relative h-64 lg:h-auto order-1 lg:order-2">
+        <div className="w-full flex lg:w-1/2 relative h-64 lg:h-auto order-1 lg:order-2">
           <Image
             src={Doris}
             alt="Doris"
-            className="w-full h-full object-cover"
+            className="w-[80%] h-full object-cover"
           />
+          <Image src="./click-here-green.svg" alt="" height={100} width={100} className="w-[20%] h-full"/>
         </div>
       </div>
     </div>

@@ -122,7 +122,18 @@
     font-size: 28px; /* Base text size */
     line-height: 1.6;
   }
-  
+  /* ////////////////////////////////////////////////////////// */
+  /* Example CSS to fallback for commas only */
+.some-text {
+  font-family: 'Coves', Arial, sans-serif;
+}
+
+.some-text::after {
+  content: ",";
+  font-family: Arial, sans-serif; /* fallback to Arial for comma */
+}
+
+  /* ///////////////////////////////////////////////////////// */
   /* Global Typography System */
   h1, .text-header {
     font-size: 48px;

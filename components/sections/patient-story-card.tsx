@@ -1,12 +1,12 @@
 'use client';   
 
-import { Play, } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export const PatientResources = ({
   p1,
   p2,
-  bg,
+  btnColor,
   textColor,
   youtubeUrl,
   iframeSrc,
@@ -15,7 +15,7 @@ export const PatientResources = ({
   p1: string;
   p2: string;
   textColor: string;
-  bg: string;
+  btnColor: string;
   youtubeUrl?: string;
   iframeSrc?: string;
   showIframe?: boolean;
@@ -33,14 +33,7 @@ export const PatientResources = ({
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col md:flex-row items-start gap-4 ">
-        <div className={`bg-${bg} p-4 rounded-lg flex items-center gap-4 text-left`}>
-          <button
-            onClick={handlePlayClick}
-            className="bg-red-600 rounded p-2 flex-shrink-0 text-white hover:bg-red-700 transition-colors cursor-pointer"
-          >
-            <Play size={16} fill="white" />
-          </button>
-        </div>
+        <Image src={btnColor} alt={""} width={100} height={100} className="" onClick={handlePlayClick}/>
         <div className={`flex flex-col justify-start items-start text-${textColor}`}>
           <p className="text-[15px] sm:text-lg md:text-2xl">{p1}</p>
           <p className="text-[15px] sm:text-lg md:text-2xl">{p2}</p>

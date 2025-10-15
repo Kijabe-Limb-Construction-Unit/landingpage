@@ -13,7 +13,7 @@ export const aboutData = {
   },
   surgeon: {
     title: "meet the surgeon DR. MBONISI MALABA",
-    role: "Orthopaedic and Limb Reconstruction Surgeon, Founder of Kijabe Limb Reconstruction Unit",
+    role: "Orthopaedic and Limb Reconstruction Surgeon, Founder of the Kijabe Limb Reconstruction Unit",
     description: "Dr. Mbonisi Malaba is a world-renowned orthopaedic surgeon specializing in limb reconstruction. With over 15 years of experience, he has dedicated his career to providing life-changing surgical care to patients who would otherwise have no access to such specialized treatment. His innovative techniques and compassionate approach have helped thousands of patients regain their mobility and independence."
   },
   hospital: {

@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Title & Address */}
           <div className="mb-6">
             <h3 className="text-xl font-bold mb-2">KIJABE LIMB RECONSTRUCTION UNIT</h3>
-            <p className="font-light">AIC Kijabe Main hospital, Kijabe Road, Kijabe, Kiambu.</p>
+            <p className="font-light">AIC Kijabe Main Hospital, Kijabe Road, Kijabe, Kiambu.</p>
           </div>
 
           {/* Social Media Icons */}

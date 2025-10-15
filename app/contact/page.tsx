@@ -9,7 +9,7 @@ export default function ContactUsPage() {
             <div className="mb-2">
               <p className="font-bold text-[#003683] mb-2">KIJABE LIMB RECONSTRUCTION UNIT</p>
               <div className="space-y-1 text-sm">
-                <p>E-mail: info@kijaberecon.org</p>
+                <p>info@kijaberecon.org</p>
               </div>
             </div>
           </div>
