@@ -6,17 +6,42 @@ import Image from "next/image";
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 px-6 lg:py-16">
-        <h1 className="text-9xl font-light">
+      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 lg:py-16">
+        <h1 className="text-6xl md:text-9xl font-light">
           <span className="font-bold">resources</span> for patients <br /><p className="text-4xl font-light relative md:-left-30">Get more information</p>
         </h1>
-        <Image src="/left-line.svg" width={1200} height={10} alt={""} className="h-10 relative left-20 md:left-80 w-3xl -top-8 w-full"/>
-        <p className="text-4xl relative -top-5">
+        {/* left line on desktop screen */}
+        <div className="relative flex w-full justify-end items-end mb-0">
+          <Image
+            src="/pr-line.svg"
+            width={1200}
+            height={10}
+            alt={""}
+            className="h-15 hidden md:block justify-end -mt-10 w-[40%]"
+          />
+        </div>
+        {/* Left line on small screens */}
+        <div className="relative flex w-full justify-end items-end mb-0">
+         <Image src="/pr-line.svg" width={1200} height={10} alt={""} className="h-15 block md:hidden justify-end left-1 w-[40%] -mt-2 -top-2" />
+        </div>
+        <p className="text-4xl relative ">
           about your{" "}
           <span className="font-bold text-4xl">condition or treatment.</span>
         </p>
-        <Image src="/right-line.svg" width={10} height={10} alt={""} className="h-10 relative right-30 md:right-80 -top-10 w-full" />
+        {/* Right line on desktop screens */}
+        <div className="relative flex -top-2 w-full justify-start items-start">
+          <Image src="/pr-line.svg" width={10} height={10} alt={""} className="h-15 hidden md:block justify-end right-1 -mt-3 w-[40%]" />
+        </div>
+        {/* Rght line on small screens */}
+        <div className="relative flex -top-2 w-full justify-start items-start">
+          <Image src="/pr-line.svg" width={10} height={10} alt={""} className="h-15 relative block md:hidden justify-end right-1 w-[40%]" />
+        </div>
       </div>
+      {/*  */}
+      {/*  */}
+      {/*  */}
+      {/*  */}
+      {/*  */}
       {/* General Information Section */}
       <div className="bg-[#149ECC] px-8 py-12">
         <div className="max-w-5xl mx-auto text-center">

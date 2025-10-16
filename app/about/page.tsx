@@ -12,11 +12,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="flex flex-col lg:flex-row bg-[#4FB29E] relative">
-        <div className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 w-full lg:w-1/2 py-8 sm:py-12 lg:py-16">
-          <div className="text-white space-y-6 sm:space-y-8 flex flex-col justify-center items-center w-full z-10 max-w-3xl">
+      <section className="flex flex-col lg:flex-row justify-end bg-[#4FB29E] relative">
+        <div className="flex flex-col justify-start items-end w-full lg:w-[50%] mr-10 px-10">
+          <div className="relative text-white space-y-6 flex flex-col justify-center items-center w-full z-10">
             <div className="flex justify-center gap-2 w-full">
-              <h1 className="z-10 w-full max-w-2xl">
+              <h1 className="z-10 w-full">
                 <div className="flex items-baseline gap-2 w-full">
                   <span className="font-bold text-white text-5xl md:text-6xl lg:text-8xl">
                     about
@@ -35,19 +35,18 @@ export default function AboutPage() {
               alt="Question marks"
               width={300}
               height={400}
-              className="opacity-60 absolute items-center z-0 top-70 left-80 hidden lg:block"
+              className="opacity-60 absolute  items-center -z-10 top-1/2 transform -translate-y-1/4 hidden lg:block"
             />
-            <p className="text-body leading-relaxed max-w-2xl z-10 border"><span className="uppercase">There is a little known epidemic.</span> Conditions such as <span className="font-bold text-[#003683]">childhood deformity<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> infected fractures and neglected trauma cause massive suffering globally</span>. Every year<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> 30 million people sustain a new disability as a result of musculoskeletal injury. Within that group<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> 1.8 million sustain a fracture that later becomes infected<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> making it both more expensive and more challenging to treat<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683]">Kenya has 12 000 new fracture-related infections each year</span>. On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.</p>
+            <p className="text-body space-x-2 relative z-10"><span className="uppercase">There is a little known epidemic.</span> Conditions such as <span className="font-bold text-[#003683]">childhood deformity<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> infected fractures and neglected trauma cause massive suffering globally</span>. Every year<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> 30 million people sustain a new disability as a result of musculoskeletal injury. Within that group<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> 1.8 million sustain a fracture that later becomes infected<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> making it both more expensive and more challenging to treat<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683]">Kenya has 12 000 new fracture-related infections each year</span>. On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.</p>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 h-auto flex-shrink-0">
+        <div className="w-full lg:w-[29%] h-[50%] flex-shrink-0 justify-end">
           <Image
             src="/abt-legs.svg"
             alt="leg"
-            width={300}
-            height={200}
-            objectFit="cover"
-            className="z-0 w-full"
+            width={600}
+            height={600}
+            className="z-0 w-full h-full"
           />
         </div>
       </section>
@@ -98,13 +97,13 @@ export default function AboutPage() {
                   CRISIS.
                 </span>{" "}
                 This is a field within orthopaedic surgery that is at the
-                cutting edge of the treatment of limb deformities<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">, </span>
+                cutting edge of the treatment of limb deformities<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">, </span>
                 fracture-related infection and poorly healing fractures.
               </p>
 
               <p>
                 The Kijabe Limb Reconstruction Unit is an emerging centre of
-                excellence based in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> Kenya and providing care for some of
+                excellence based in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> Kenya and providing care for some of
                 the most challenging orthopaedic conditions.
               </p>
             </div>
@@ -139,7 +138,7 @@ export default function AboutPage() {
             <div className="text-white space-y-6">
               <h2 className="text-header">{aboutData.vision.title}</h2>
               <div className="text-body leading-relaxed">
-                <p>The vision of the Kijabe Limb Reconstruction Unit is a world where men<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> women and children <span className="font-bold text-[#DFFF80]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> when they need it<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> regardless of where they were born or how much money they happen to have. Towards this end<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> we are developing a centre of excellence in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> <span className="font-bold text-[#DFFF80]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span></p>
+                <p>The vision of the Kijabe Limb Reconstruction Unit is a world where men<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> women and children <span className="font-bold text-[#DFFF80]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> when they need it<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> regardless of where they were born or how much money they happen to have. Towards this end<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> we are developing a centre of excellence in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> <span className="font-bold text-[#DFFF80]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span></p>
               </div>
             </div>
 
@@ -158,10 +157,10 @@ export default function AboutPage() {
       </section>
       <ColoredBorder />
       {/* Meet the Surgeon Section */}
-      <MeetSurgeonSection/>
+      <MeetSurgeonSection />
       <ColoredBorder />
       {/* The Hospital Section */}
-      <HospitalSection/>
+      <HospitalSection />
       <BlueColoredBorder />
     </div>
   );

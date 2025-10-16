@@ -31,7 +31,7 @@ export default function PatientStories() {
               <span className="text-6xl mr-2">“</span>{patientTestimonies[0].testimonial}<span className="text-6xl -ml-1">”</span>
             </p>
             
-            <p className="text-5xl text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
+            <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
               {patientTestimonies[0].fullStory}{" "}
               <span className="font-bold">
                 Now he is happy and walking!
@@ -47,7 +47,8 @@ export default function PatientStories() {
             alt={patientTestimonies[0].name}
             className="w-[80%] h-full object-cover"
           />
-          <Image src="./click-here-blue.svg" alt="" height={100} width={100} className="w-[20%] h-full"/>
+          <Image src="./click-here-blue.svg" alt="" height={100} width={100} className="w-[20%] h-full hidden md:block"/>
+          <Image src="./click-here-blue-sm.svg" alt="" height={100} width={100} className="w-[20%] h-full block md:hidden"/>
         </div>
       </div>
 
@@ -55,7 +56,8 @@ export default function PatientStories() {
       <div className="bg-[#149ECC] min-h-[500px] flex flex-col lg:flex-row ">
         {/* Image Section */}
         <div className="w-full flex lg:w-1/2 relative h-64 lg:h-auto">
-          <Image src="./click-here-yellow.svg" alt="" height={100} width={100} className="w-[20%] h-full"/>
+          <Image src="./click-here-yellow.svg" alt="" height={100} width={100} className="w-[20%] h-full hidden md:block"/>
+          <Image src="./click-here-yellow-sm.svg" alt="" height={100} width={100} className="w-[20%] h-full block md:hidden"/>
           <Image
             src={patientTestimonies[1].image}
             alt={patientTestimonies[1].name}
@@ -119,7 +121,8 @@ export default function PatientStories() {
             alt="Doris"
             className="w-[80%] h-full object-cover"
           />
-          <Image src="./click-here-green.svg" alt="" height={100} width={100} className="w-[20%] h-full"/>
+          <Image src="./click-here-green.svg" alt="" height={100} width={100} className="w-[20%] h-full hidden md:block"/>
+          <Image src="./click-here-green-sm.svg" alt="" height={100} width={100} className="w-[20%] h-full block md:hidden"/>
         </div>
       </div>
     </div>
