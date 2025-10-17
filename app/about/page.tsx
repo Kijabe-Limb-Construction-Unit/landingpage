@@ -8,14 +8,15 @@ import { HospitalSection } from "@/components/sections/HospitalSection";
 import { MeetSurgeonSection } from "@/components/sections/MeetSurgeonSection";
 
 export default function AboutPage() {
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <section className="flex flex-col lg:flex-row bg-[#4FB29E] relative">
-        <div className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-12 w-full lg:w-1/2 py-8 sm:py-12 lg:py-16">
-          <div className="text-white space-y-6 sm:space-y-8 flex flex-col justify-center items-center w-full z-10 max-w-3xl">
+      <section className="flex flex-col lg:flex-row justify-end bg-[#4FB29E] relative">
+        <div className="flex flex-col justify-start items-end w-full lg:w-[50%] mr-10 px-10">
+          <div className="relative text-white space-y-6 flex flex-col justify-center items-center w-full z-10">
             <div className="flex justify-center gap-2 w-full">
-              <h1 className="z-10 w-full max-w-2xl">
+              <h1 className="z-10 w-full">
                 <div className="flex items-baseline gap-2 w-full">
                   <span className="font-bold text-white text-5xl md:text-6xl lg:text-8xl">
                     about
@@ -34,68 +35,17 @@ export default function AboutPage() {
               alt="Question marks"
               width={300}
               height={400}
-              className="opacity-60 absolute items-center z-0 top-70 left-80 hidden lg:block"
+              className="opacity-60 absolute  items-center -z-10 top-1/2 transform -translate-y-1/4 hidden lg:block"
             />
-            <p className="text-body leading-relaxed max-w-2xl z-10">
-              {(() => {
-                const desc = aboutData.hero.description;
-                const highlights = [
-                  {
-                    text: "childhood deformity, infected fractures and neglected trauma cause massive suffering globally",
-                    className: "font-bold text-[#003683]",
-                  },
-                  {
-                    text: "Kenya has 12 000 new fracture-related infections each year",
-                    className: "font-bold text-[#003683]",
-                  },
-                ];
-
-                // Function to highlight text
-                const highlightText = (text: string): React.ReactNode[] => {
-                  let result: React.ReactNode[] = [text];
-
-                  highlights.forEach((highlight, highlightIndex) => {
-                    result = result.flatMap((node, nodeIndex) => {
-                      if (typeof node !== "string") return node;
-
-                      const parts = node.split(highlight.text);
-                      if (parts.length === 1) return node;
-
-                      return parts.reduce<React.ReactNode[]>(
-                        (acc, part, partIndex) => {
-                          if (partIndex > 0) {
-                            acc.push(
-                              <span
-                                key={`${highlightIndex}-${nodeIndex}-${partIndex}`}
-                                className={highlight.className}
-                              >
-                                {highlight.text}
-                              </span>
-                            );
-                          }
-                          if (part) acc.push(part);
-                          return acc;
-                        },
-                        []
-                      );
-                    });
-                  });
-
-                  return result;
-                };
-
-                return highlightText(desc);
-              })()}
-            </p>
+            <p className="text-body space-x-2 relative z-10"><span className="uppercase">There is a little known epidemic.</span> Conditions such as <span className="font-bold text-[#003683]">childhood deformity<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> infected fractures and neglected trauma cause massive suffering globally</span>. Every year<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> 30 million people sustain a new disability as a result of musculoskeletal injury. Within that group<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> 1.8 million sustain a fracture that later becomes infected<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> making it both more expensive and more challenging to treat<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683]">Kenya has 12 000 new fracture-related infections each year</span>. On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.</p>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-auto relative flex-shrink-0">
+        <div className="w-full lg:w-[29%] h-[50%] flex-shrink-0 justify-end">
           <Image
-            src="/the-need.png"
+            src="/abt-legs.svg"
             alt="leg"
-            width={300}
-            height={400}
-            objectFit="cover"
+            width={600}
+            height={600}
             className="z-0 w-full h-full"
           />
         </div>
@@ -147,13 +97,13 @@ export default function AboutPage() {
                   CRISIS.
                 </span>{" "}
                 This is a field within orthopaedic surgery that is at the
-                cutting edge of the treatment of limb deformities,
+                cutting edge of the treatment of limb deformities<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">, </span>
                 fracture-related infection and poorly healing fractures.
               </p>
 
               <p>
                 The Kijabe Limb Reconstruction Unit is an emerging centre of
-                excellence based in Kijabe, Kenya and providing care for some of
+                excellence based in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> Kenya and providing care for some of
                 the most challenging orthopaedic conditions.
               </p>
             </div>
@@ -188,52 +138,7 @@ export default function AboutPage() {
             <div className="text-white space-y-6">
               <h2 className="text-header">{aboutData.vision.title}</h2>
               <div className="text-body leading-relaxed">
-                {(() => {
-                  const desc = aboutData.vision.description;
-                  const one = "MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.";
-                  const two =
-                    "CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED.";
-
-                  if (!desc) return desc;
-
-                  // Split the description by the two texts to individually highlight them
-                  const partsOne = desc.split(one);
-                  const result = [];
-
-                  for (let i = 0; i < partsOne.length; i++) {
-                    const subPartsTwo = partsOne[i].split(two);
-
-                    for (let j = 0; j < subPartsTwo.length; j++) {
-                      result.push(subPartsTwo[j]);
-
-                      // Insert highlight for second text if not last occurrence
-                      if (j !== subPartsTwo.length - 1) {
-                        result.push(
-                          <span
-                            key={`highlight-two-${i}-${j}`}
-                            className="font-bold text-[#DFFF80]"
-                          >
-                            {two}
-                          </span>
-                        );
-                      }
-                    }
-
-                    // Insert highlight for first text if not last occurrence
-                    if (i !== partsOne.length - 1) {
-                      result.push(
-                        <span
-                          key={`highlight-one-${i}`}
-                          className="font-bold text-[#DFFF80]"
-                        >
-                          {one}
-                        </span>
-                      );
-                    }
-                  }
-
-                  return result;
-                })()}
+                <p>The vision of the Kijabe Limb Reconstruction Unit is a world where men<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> women and children <span className="font-bold text-[#DFFF80]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> when they need it<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> regardless of where they were born or how much money they happen to have. Towards this end<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> we are developing a centre of excellence in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> <span className="font-bold text-[#DFFF80]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span></p>
               </div>
             </div>
 
@@ -252,10 +157,10 @@ export default function AboutPage() {
       </section>
       <ColoredBorder />
       {/* Meet the Surgeon Section */}
-      <MeetSurgeonSection/>
+      <MeetSurgeonSection />
       <ColoredBorder />
       {/* The Hospital Section */}
-      <HospitalSection/>
+      <HospitalSection />
       <BlueColoredBorder />
     </div>
   );

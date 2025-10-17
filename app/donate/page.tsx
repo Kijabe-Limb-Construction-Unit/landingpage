@@ -11,7 +11,7 @@ export default function DonatePage() {
       <div className="flex flex-col md:flex-row justify-end items-center md:items-end gap-5">
         <div className="text-[#003683] flex flex-col items-center md:items-end text-center md:text-end">
           <div className="flex mt-5 items-center md:items-end gap-5">
-            <h1 className="font-bold text-white text-5xl md:text-8xl">donate</h1>
+            <h1 className="font-bold text-white text-6xl md:text-9xl">donate</h1>
             <Image
               src="/butterfly.svg"
               alt="Donate"
@@ -22,11 +22,11 @@ export default function DonatePage() {
           </div>
           <Link
             href="https://globalconnectionsonline.app.neoncrm.com/forms/kijabe-limb-recon"
-            className="hidden md:block font-extrabold text-2xl cursor-pointer bg-blue-900 p-3 rounded-xl text-white my-3 "
+            className="hidden md:block font-extrabold text-4xl cursor-pointer bg-blue-900 p-3 rounded-xl text-white my-3 "
           >
             CLICK HERE
           </Link>
-          <h3 className="w-full md:w-[60%] font-bold mt-4 md:mt-0">
+          <h3 className="w-full text-3xl md:w-[70%] font-bold mt-4 md:mt-0">
             TO GIVE TO THE KIJABE LIMB RECONSTRUCTION UNIT VIA GLOBAL CONNECTIONS
           </h3>
         </div>
@@ -35,13 +35,13 @@ export default function DonatePage() {
           alt="Donate"
           width={300}
           height={300}
-          className="w-full max-w-xs md:max-w-md"
+          className="w-full max-w-7xl md:max-w-5xl"
         />
       </div>
       <div className="w-full flex justify-center md:justify-end items-center md:items-end mt-5">
         <div className="text-[#003683] w-full md:w-[40%] text-center md:text-right">
-          <p>
-            ALL DONATIONS RECEIVED ARE USED 100% FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
+          <p className="text-3xl">
+            ALL DONATIONS RECEIVED ARE USED 100<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
           </p>
           <p className="font-bold mt-2">
             THERE IS NO DEDUCTION FOR ADMINISTRATIVE COSTS.
@@ -54,7 +54,7 @@ export default function DonatePage() {
             CLICK HERE
           </Link>
           </div>
-          <p className="text-white border-t border-[#003683] mt-5 pt-5 text-[16px] md:text-[19px]">
+          <p className="text-white border-t border-[#003683] mt-5 pt-5 text-[19px] md:text-[23px]">
             Your donation is also tax-deductible for US taxpayers! Global Connections is a
             registered 501(c)3 corporation with the Internal Revenue Service. Tax ID #20-8241793
           </p>

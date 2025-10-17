@@ -51,9 +51,9 @@ export function MeetSurgeonSection() {
               </span>{" "}
               He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in
               2015 to start and strengthen churches in East Africa and beyond.
-              Whilst in Kenya he subspecialised in paediatric orthopaedics with
-              the College of Surgeons of East, Central and Southern Africa
-              (COSECSA). During his surgical training, he was awarded a number
+              Whilst in Kenya<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he subspecialised in paediatric orthopaedics with
+              the College of Surgeons of East<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> Central and Southern Africa
+              (COSECSA). During his surgical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he was awarded a number
               of prizes including the medal for best performing candidate in the
               COSECSA Orthopaedic (2017) and Paediatric Orthopaedic (2021)
               Examinations as well at the prestigious{" "}
@@ -62,7 +62,7 @@ export function MeetSurgeonSection() {
               </span>{" "}
               awarded by COSECSA and the Royal College of Surgeons of Ireland to
               the graduate with the highest overall mark across all surgical
-              specialties. In 2022 he did a further one year{" "}
+              specialties. In 2022<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he did a further one year{" "}
               <span className="font-bold">
                 subspecialist fellowship training in paediatric and adult limb
                 reconstruction at the Royal London Hospital
@@ -73,10 +73,10 @@ export function MeetSurgeonSection() {
               </span>
               <span> - a centre of excellence north of London. He </span>
               <span className="font-bold">pastors OneTribe Church</span> in
-              Nairobi, Kenya and through the Advance Movement serves and{" "}
+              Nairobi<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> Kenya and through the Advance Movement serves and{" "}
               <span className="font-bold">
                 supports several dozen churches or church plants in East Africa
-              </span>
+              </span>{" "}
               as well as serving more broadly in the wider church.
             </p>
           </div>
