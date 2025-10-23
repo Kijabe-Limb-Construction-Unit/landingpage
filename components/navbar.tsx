@@ -46,7 +46,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50">
+    <header className="w-full bg-white sticky top-0 z-50 overflow-hidden">
       <BlueColoredBorder/>
       <nav className="hidden md:flex w-full">
         {navItems.map((item) => (
@@ -56,7 +56,7 @@ const Navbar = () => {
             className={`
               ${item.bgColor}
               flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg min-[1020px]:text-xl max-[1113px]:text-md lg:text-xl md:text-[10px] pt-5 lg:text-[16px]
-              ${pathname === item.path ? "bg-white font-bold uppercase text-[#003683] md:text-[8px] pt-5 sm:text-[9px]" : "text-white font-light"}
+              ${pathname === item.path ? `font-serif bg-white font-extrabold uppercase text-[#003683] md:text-[8px] pt-5 sm:text-[9px] `  : "text-white font-light"}
             `}
           >
             {item.name}
@@ -71,13 +71,13 @@ const Navbar = () => {
       </div>
       {/* Logo and menu section  */}
       <div className="relative bg-white">
-        <div className="absolute top-16 inset-0 flex items-center justify-center z-10 ">
+        <div className="absolute top-16 inset-0 flex items-center justify-center z-30 w-[103vw] md:w-full">
           <Image
             src="/heartbeat-line-complet.svg"
             alt=""
             width={1200}
             height={10}
-            className="h-auto w-full block md:hidden "
+            className="h-auto block md:hidden"
           />
           <Image
             src="/heartbeat-line-complete.svg"
@@ -136,7 +136,7 @@ const Navbar = () => {
         <NavDonate />
       </div>
       {/* bottom lines  */}
-      <div className="flex w-full h-4">
+      <div className="flex w-full h-3 md:h-4">
         {colorPattern.map((item, index) => (
           <div key={index} className={`${item.bgColor} flex-1`} />
         ))}

@@ -6,7 +6,7 @@ import Image from "next/image";
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 lg:py-16">
+      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-5 md:py-10 lg:py-13">
         <h1 className="text-6xl md:text-9xl font-light">
           <span className="font-bold">resources</span> for patients <br /><p className="text-4xl font-light relative md:-left-30">Get more information</p>
         </h1>
@@ -17,30 +17,22 @@ function App() {
             width={1200}
             height={10}
             alt={""}
-            className="h-15 hidden md:block justify-end -mt-10 w-[40%]"
+            className="h-15 justify-end sm:-mt-10 -mr-25 sm:-ml-20 w-[70%] lg:w-[40%]"
           />
         </div>
-        {/* Left line on small screens */}
-        <div className="relative flex w-full justify-end items-end mb-0">
-         <Image src="/pr-line.svg" width={1200} height={10} alt={""} className="h-15 block md:hidden justify-end left-1 w-[40%] -mt-2 -top-2" />
-        </div>
-        <p className="text-4xl relative ">
+        <p className="text-4xl relative">
           about your{" "}
           <span className="font-bold text-4xl">condition or treatment.</span>
         </p>
         {/* Right line on desktop screens */}
         <div className="relative flex -top-2 w-full justify-start items-start">
-          <Image src="/pr-line.svg" width={10} height={10} alt={""} className="h-15 hidden md:block justify-end right-1 -mt-3 w-[40%]" />
-        </div>
-        {/* Rght line on small screens */}
-        <div className="relative flex -top-2 w-full justify-start items-start">
-          <Image src="/pr-line.svg" width={10} height={10} alt={""} className="h-15 relative block md:hidden justify-end right-1 w-[40%]" />
+          <Image src="/pl-line.svg" width={10} height={10} alt={""} className="h-15 justify-end right-1 mt-1 xl:-mt-5 lg:-mt-3  -ml-20 w-full sm:w-[70%] md:w-[60%] lg:w-[40%]" />
         </div>
       </div>
       {/* General Information Section */}
       <div className="bg-[#149ECC] px-8 py-12">
         <div className="max-w-5xl mx-auto text-center md:pl-10">
-          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
+          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider justify-center md:justify-start">
             GENERAL{" "}
             <span className="font-bold pl-1 md:pl-5 w-auto">INFORMATION</span>
           </h1>

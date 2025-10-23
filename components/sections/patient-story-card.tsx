@@ -33,10 +33,10 @@ export const PatientResources = ({
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col md:flex-row items-center gap-4">
-        <Image src={btnColor} alt={""} width={100} height={100} className="" onClick={handlePlayClick}/>
-        <div className={`flex flex-col justify-start items-start text-${textColor}`}>
-          <p className="text-[15px] sm:text-lg md:text-2xl">{p1}</p>
-          <p className="text-[15px] sm:text-lg md:text-2xl">{p2}</p>
+        <Image src={btnColor} alt={""} width={100} height={100} className="w-[70%] sm:w-[50%] md:w-auto" onClick={handlePlayClick}/>
+        <div className={`flex flex-col justify-center items-center md:items-start w-[70%] sm:w-[50%] md:w-auto text-${textColor}`}>
+          <p className="text-[17px] sm:text-lg md:text-2xl">{p1}</p>
+          <p className="text-[17px] sm:text-lg md:text-2xl">{p2}</p>
         </div>
       </div>
       

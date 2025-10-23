@@ -7,34 +7,44 @@ export function HospitalSection() {
       <div className="text-white hidden md:flex">
         <div className="grid lg:grid-cols-2 gap-0 items-center">
           <div className="w-full">
-            <div className="lg:w-[100vw] z:0 relative md:-left-25 lg:-left-0 md:-left-70 top-25 md:top-35 lg:bottom-5 my-5 h-10">
-              {/* SMALL SCREENS */}
-              <Image
-                src="/hospital-line.svg"
-                width={600}
-                height={400}
-                alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-full block lg:hidden"
-              />
-              {/* LARGE CREENS */}
+             {/* border-3 md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
+            <div className="lg:w-[100vw] z:0 relative md:-left-25 lg:-left-0 top-25 md:top-35 lg:bottom-5 my-5 h-10">
+              {/* LG CREENS */}
               <Image
                 src="/hosp-line.svg"  
                 width={600}
                 height={400}
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-full relative lg:-top-10 xl:-left-[20rem] xl:-top-10 lg:block"
+                className="w-full relative lg:top-5 lg:-left-40 xl:-left-[25rem] xl:-top-10 hidden lg:block"
+              />
+              {/* MD CREENS */}
+              <Image
+                src="/hosp-line.svg"  
+                width={600}
+                height={400}
+                alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
+                className="w-[110vw] relative md:left-25 md:bottom-5 hidden md:block lg:hidden"
+              />
+              {/* SMALL SCREENS */}
+              <Image
+                src="/hosp-line.svg"
+                width={600}
+                height={400}
+                alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
+                className="w-full block md:hidden border3 border-amber-500"
               />
             </div>
-            <div className="flex md:justify-end md:items-end px-30">
-              <div className="w-full ml-25 lg:ml-30">
-                <h1 className="text-5xl md:text-5xl lg:text-6xl w-full text-heading font-light mb-8">
+            <div className="flex md:justify-center px-20  ">
+              <div className="w-full ml-20 md:ml-0 lg:ml-3">
+                 {/* border md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
+                <h1 className="text-5xl md:text-5xl lg:text-6xl w-full text-heading md:ml-0 font-light mb-8">
                   the <span className="font-bold text-blue-900">hospital</span>
                 </h1>
               </div>
             </div>
 
-            <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-end md:items-end mt-10">
-              <p className="w-full md:max-w-xl lg:mt-5 ml-25">
+            <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-center md:items-center mt-10">
+              <p className="w-full lg:mt-5 ml-25 md:ml-0">
                 <span className="font-bold">Kijabe Hospital</span> is a renowned
                 center of excellence in healthcare and medical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> serving
                 patients from across Kenya and beyond. Nestled on the scenic
@@ -73,11 +83,11 @@ export function HospitalSection() {
             {/* </div> */}
           </div>
           <Image
-            src="/hospital-line.svg"
+            src="/hosp-line.svg"
             width={600}
             height={400}
             alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-            className="sticky md:absolute z-30 -mt-5 mb-5 left-1 md:pt-5 right-20 w-[100%] -right-60 object-cover"
+            className="sticky md:absolute z-30 -mt-5 mb-5 md:pt-5 w-[100%] object-cover"
           />
           <div className="leading-relaxed space-y-4 text-blue-900 flex justify-end px-5 items-end">
             <p className="w-full md:max-w-5xl">
@@ -102,7 +112,7 @@ export function HospitalSection() {
             width={600}
             height={400}
             alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-            className="h-full w-full object-cover border-2 border-red-700"
+            className="h-full w-full object-cover -mb-10 xl:-mb-0"
           />
         </div>
       </div>

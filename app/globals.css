@@ -211,19 +211,19 @@
 }
 
 .hdin {
-  @media (min-width: 1619px) and (max-width: 1806px) {
-    width: 45%; /* or any other value you want */
+  /* @media (min-width: 1619px) and (max-width: 1806px) {
+    width: 45%;
   }
   @media (min-width: 967px) and (max-width: 1619px) {
-    width: 50%; /* or any other value you want */
+    width: 50%;
   }
   @media (min-width: 967px) and (max-width: 1000px) {
-    width: 50%; /* or any other value you want */
+    width: 50%;
   }
   @media (min-width: 967px) and (max-width: 1000px) {
-    width: 50%; /* or any other value you want */
+    width: 50%;
   }
   @media (min-width: 967px) and (max-width: 1000px) {
-    width: 50%; /* or any other value you want */
-  }
+    width: 50%;
+  } */
 }
