@@ -62,7 +62,7 @@ export default function AboutPage() {
           {/* Image */}
           <div className="flex-1 relative">
             <Image
-              src="/before.png"
+              src="/before.svg"
               alt="Patient before treatment"
               width={300}
               height={400}

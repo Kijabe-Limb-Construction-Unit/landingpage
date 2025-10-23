@@ -28,9 +28,9 @@ export function PatientStoriesSection() {
             <h1 className="text-[#003683] font-bold mb-4  text-5xl md:text-7xl lg:text-9xl">
               patient <span className="font-medium">stories</span>
             </h1>
-            <p className="text-[#003683] font-bold">
+            <p className="text-[#003683] font-bold -mt-5">
               Click below{" "}
-              <span className="font-sm text-xl">
+              <span className="font-sm text-2xl">
                 to hear some of our patients share their incredible
               </span>
               <br />

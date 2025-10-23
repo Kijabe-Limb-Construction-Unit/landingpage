@@ -14,7 +14,7 @@ export const ColoredBorder = () => {
 export const BlueColoredBorder = () => {
   return (
     <div>
-      <section className="flex h-3">
+      <section className="flex h-4">
         <div className="bg-[#003683] flex-1"></div>
       </section>
     </div>

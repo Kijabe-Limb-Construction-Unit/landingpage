@@ -32,7 +32,7 @@ export const PatientResources = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col md:flex-row items-start gap-4 ">
+      <div className="flex flex-col md:flex-row items-center gap-4">
         <Image src={btnColor} alt={""} width={100} height={100} className="" onClick={handlePlayClick}/>
         <div className={`flex flex-col justify-start items-start text-${textColor}`}>
           <p className="text-[15px] sm:text-lg md:text-2xl">{p1}</p>

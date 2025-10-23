@@ -4,11 +4,11 @@ export default function ContactUsPage() {
       <div className="bg-[#4FB29E] py-4">
         <div className="max-w-4xl mx-auto px-8 flex justify-center">
           <div className="w-full text-white">
-            <h1 className="mb-2 font-bold">contact us</h1>
+            <h1 className="mb-2 font-bold text-6xl flex justify-center md:justify-start md:text-8xl ">contact <span className="font-light ml-3">us</span></h1>
             
             <div className="mb-2">
-              <p className="font-bold text-[#003683] mb-2">KIJABE LIMB RECONSTRUCTION UNIT</p>
-              <div className="space-y-1 text-sm">
+              <p className="font-bold text-[#003683] mb-2 flex justify-center sm:justify-start sm:ml-25">KIJABE LIMB RECONSTRUCTION UNIT</p>
+              <div className="space-y-1 text-sm flex justify-center items-center">
                 <p>info@kijaberecon.org</p>
               </div>
             </div>

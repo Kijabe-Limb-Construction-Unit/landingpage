@@ -265,7 +265,8 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
       }`}
     >
       <p
-        className="font-semibold light-letter-spacing text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden text-2xl"
+        // className="font-semibold light-letter-spacing text-[#003882] text-center leading-[1] px-0.5 overflow-hidden text-2xl  border-2 border-red-500"
+        className="font-semibold leading-snug tracking-[0.2em] w-50 text-[#003882] text-center leading-[1] px-0.5 overflow-hidden text-2xl"
         dangerouslySetInnerHTML={{ __html: icon.title }}
       />
     </div>
