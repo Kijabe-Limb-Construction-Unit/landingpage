@@ -15,7 +15,7 @@ export function HospitalSection() {
                 width={600}
                 height={400}
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-full relative lg:top-5 lg:-left-40 xl:-left-[25rem] xl:-top-10 hidden lg:block"
+                className="w-full relative lg:top-1 lg:-left-55 xl:-left-[20rem] xl:-top-5 hidden lg:block"
               />
               {/* MD CREENS */}
               <Image
@@ -23,7 +23,7 @@ export function HospitalSection() {
                 width={600}
                 height={400}
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-[110vw] relative md:left-25 md:bottom-5 hidden md:block lg:hidden"
+                className="w-[110vw] relative md:left-25 md:bottom-5 hidden md:block lg:hidden "
               />
               {/* SMALL SCREENS */}
               <Image
@@ -31,20 +31,20 @@ export function HospitalSection() {
                 width={600}
                 height={400}
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-full block md:hidden border3 border-amber-500"
+                className="w-full block md:hidden"
               />
             </div>
-            <div className="flex md:justify-center px-20  ">
-              <div className="w-full ml-20 md:ml-0 lg:ml-3">
+            <div className="flex md:justify-center px-20">
+              <div className="w-full ml-20 md:-mr-30 lg:-ml-5 xl:-ml-0">
                  {/* border md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
-                <h1 className="text-5xl md:text-5xl lg:text-6xl w-full text-heading md:ml-0 font-light mb-8">
+                <h1 className="text-5xl md:text-5xl font-bold lg:text-7xl lg:pl-0 xl:pl-10 w-full text-heading md:ml-5 font-light mb-8">
                   the <span className="font-bold text-blue-900">hospital</span>
                 </h1>
               </div>
             </div>
 
-            <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-center md:items-center mt-10">
-              <p className="w-full lg:mt-5 ml-25 md:ml-0">
+            <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-center md:items-center lg:justify-end lg:px-2 xl:px-20 mt-10">
+              <p className="w-full lg:mt-5 pl-30 md:ml-0">
                 <span className="font-bold">Kijabe Hospital</span> is a renowned
                 center of excellence in healthcare and medical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> serving
                 patients from across Kenya and beyond. Nestled on the scenic
