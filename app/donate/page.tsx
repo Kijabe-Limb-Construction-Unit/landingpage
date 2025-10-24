@@ -41,7 +41,7 @@ export default function DonatePage() {
       {/* border-4 */}
       <div className="w-full flex justify-center md:justify-end items-center md:items-end mt-5">
         {/* border-3 md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
-        <div className="text-[#003683] w-full md:w-[56%] lg:w-[47%] xl:w-[46%] xl:max-w-[45%] xl:min-w-[8xl] pr-10 text-center md:text-left lg:-ml-[25rem]">
+        <div className="gnz text-[#003683] w-full pr-10 text-center md:text-left lg:-ml-[25rem]">
           <p className="text-3xl">
             ALL DONATIONS RECEIVED ARE USED 100<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
           </p>

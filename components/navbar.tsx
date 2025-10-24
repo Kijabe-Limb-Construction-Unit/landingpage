@@ -8,7 +8,13 @@ import { Menu } from "lucide-react";
 import {BlueColoredBorder} from "@/components/sections/ColoredBorder";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import NavDonate from "./sections/nav-donate";
-// import { HeartbeatAnimation } from "./sections/heartwave-animation";
+import { Josefin_Sans } from 'next/font/google';
+
+const josefin = Josefin_Sans({
+  subsets: ['latin'],
+  weight: [ '600', '700'],
+  style: ['normal', 'italic'],
+});
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -55,8 +61,8 @@ const Navbar = () => {
             href={item.path}
             className={`
               ${item.bgColor}
-              flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg min-[1020px]:text-xl max-[1113px]:text-md lg:text-xl md:text-[10px] pt-5 lg:text-[16px]
-              ${pathname === item.path ? `font-serif bg-white font-extrabold uppercase text-[#003683] md:text-[8px] pt-5 sm:text-[9px] `  : "text-white font-light"}
+              flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center md:text-lg min-[1020px]:text-xl max-[1113px]:text-md md:text-[9px] pt-5 lg:text-[13px]
+              ${pathname === item.path ?`bg-white font-extrabold uppercase text-[#003683] md:text-[8px] lg:text-[7px] pt-5 sm:text-[9px] ${josefin.className}`  : "text-white font-light"}
             `}
           >
             {item.name}

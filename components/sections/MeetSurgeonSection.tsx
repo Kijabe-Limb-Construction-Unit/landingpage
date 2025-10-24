@@ -9,11 +9,11 @@ export function MeetSurgeonSection() {
         <div className="h-full relative">
           {/* <div className="relative"> */}
           <Image
-            src="/donate.svg"
+            src="/donate.png"
             alt="Dr. Mbonisi Malaba"
             width={500}
             height={600}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover border"
           />
         </div>
 
