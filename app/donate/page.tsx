@@ -6,12 +6,12 @@ import Link from "next/link";
 export default function DonatePage() {
   return (
     <div className="bg-[#149ECC]">
-  <div className="w-full mx-auto max-w-7xl flex flex-col md:flex-row px-4 md:px-0">
-    <div className="flex flex-col w-full md:w-auto">
+  <div className="w-full mx-auto flex flex-col md:flex-row px-4 md:px-0">
+    <div className="flex flex-col w-full">
       <div className="flex flex-col md:flex-row justify-end items-center md:items-end gap-5">
         <div className="text-[#003683] flex flex-col items-center md:items-end text-center md:text-end">
           <div className="flex mt-5 items-center md:items-end gap-5">
-            <h1 className="font-bold text-white text-6xl md:text-9xl">donate</h1>
+            <h1 className="font-bold text-white text-7xl md:text-6xl lg:text-6xl xl:text-8xl">donate</h1>
             <Image
               src="/butterfly.svg"
               alt="Donate"
@@ -26,8 +26,8 @@ export default function DonatePage() {
           >
             CLICK HERE
           </Link>
-          <h3 className="w-full text-3xl md:w-[70%] font-bold mt-4 md:mt-0">
-            TO GIVE TO THE KIJABE LIMB RECONSTRUCTION UNIT VIA GLOBAL CONNECTIONS
+          <h3 className="w-full text-4xl md:text-2xl lg:text-4xl font-normal mt-4 md:mt-0">
+            TO GIVE TO THE KIJABE <br /> LIMB RECONSTRUCTION <br /> UNIT VIA GLOBAL <br /> CONNECTIONS
           </h3>
         </div>
         <Image
@@ -35,11 +35,13 @@ export default function DonatePage() {
           alt="Donate"
           width={300}
           height={300}
-          className="w-full max-w-7xl md:max-w-5xl"
+          className="w-full max-w-7xl h-96 md:max-w-lg lg:max-w-xl xl:max-w-3xl md:h-full xl:h-96"
         />
       </div>
+      {/* border-4 */}
       <div className="w-full flex justify-center md:justify-end items-center md:items-end mt-5">
-        <div className="text-[#003683] w-full md:w-[40%] text-center md:text-right">
+        {/* border-3 md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
+        <div className="gnz text-[#003683] w-full pr-10 text-center md:text-left lg:-ml-[25rem]">
           <p className="text-3xl">
             ALL DONATIONS RECEIVED ARE USED 100<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
           </p>

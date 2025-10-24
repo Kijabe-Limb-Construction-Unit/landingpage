@@ -12,7 +12,7 @@ export function PatientLS() {
         <div className="flex w-[66%] items-center">
           {/* GREEN */}
           <div className="bg-[#4FB29E] h-full text-white flex z-10 items-center justify-center px-2h-full border-[#003683] flex-1 min-w-0">
-            <p className="whitespace-pre-line text-center leading-snug tracking-[0.2em] md:tracking-[0.35em] text-sm md:text-lg lg:text-xl">
+            <p className="whitespace-pre-line text-center leading-snug tracking-[0.2em] text-sm md:text-lg lg:text-xl">
               patient
               {"\n"}
               resources
@@ -35,7 +35,7 @@ export function PatientLS() {
           </div>
           {/* NAVY BLUE */}
           <div className="bg-[#003683] h-full text-white flex z-10 items-center justify-center px-2 flex-1 min-w-0">
-            <p className="whitespace-pre-line text-center leading-snug tracking-[0.2em] md:tracking-[0.35em]  text-sm md:text-lg lg:text-xl">
+            <p className="whitespace-pre-line text-center leading-snug tracking-[0.2em] text-sm md:text-lg lg:text-xl">
               book an
               {"\n"}
               appointment

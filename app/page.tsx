@@ -184,7 +184,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-35 md:top-[30%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
+      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-5 md:top-[30%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
         <div className="w-48 h-32 min-[250px]:w-56 min-[250px]:h-40 min-[320px]:w-64 min-[320px]:h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 relative">
           <Image
             src="/slider.svg"
@@ -198,7 +198,7 @@ const HeroSlider = () => {
 
       <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
         <p
-          className="mb-0.5 text-5xl text-white"
+          className="mb-0.5 text-2xl md:text-5xl text-white"
           style={{ fontFamily: "Caveat, cursive" }}
         >
           {slides[currentSlide].title}
@@ -210,7 +210,7 @@ const HeroSlider = () => {
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full z-20">
+      <div className="absolute bottom-0 left-0 w-[100vw] z-20">
         <div className="w-full mb-2 min-[250px]:h-100 min-[320px]:h-8 sm:h-12 md:h-15 relative">
           <Image
             src="/line_.svg"
@@ -265,7 +265,8 @@ const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
       }`}
     >
       <p
-        className="font-semibold light-letter-spacing text-[#003882] text-center leading-[1.1] px-0.5 overflow-hidden text-2xl"
+        // className="font-semibold light-letter-spacing text-[#003882] text-center leading-[1] px-0.5 overflow-hidden text-2xl  border-2 border-red-500"
+        className="font-semibold leading-snug tracking-[0.2em] w-50 text-[#003882] text-center leading-[1] px-0.5 overflow-hidden text-2xl"
         dangerouslySetInnerHTML={{ __html: icon.title }}
       />
     </div>

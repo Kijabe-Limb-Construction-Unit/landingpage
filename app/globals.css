@@ -122,7 +122,6 @@
     font-size: 28px; /* Base text size */
     line-height: 1.6;
   }
-  /* ////////////////////////////////////////////////////////// */
   /* Example CSS to fallback for commas only */
 .some-text {
   font-family: 'Coves', Arial, sans-serif;
@@ -132,8 +131,6 @@
   content: ",";
   font-family: Arial, sans-serif; /* fallback to Arial for comma */
 }
-
-  /* ///////////////////////////////////////////////////////// */
   /* Global Typography System */
   h1, .text-header {
     font-size: 48px;
@@ -208,4 +205,118 @@
 
 .light-letter-spacing {
   letter-spacing: 0.4em;
+}
+
+.gnz {
+  @media (min-width: 1826px) and (max-width: 2000px) {
+    width: 40%;
+  }
+  @media (min-width: 1780px) and (max-width: 1826px) {
+    width: 42%;
+  }
+  @media (min-width: 1780px) and (max-width: 1730px) {
+    width: 43%;
+  }
+  @media (min-width: 1694px) and (max-width: 1780px) {
+    width: 43%;
+  }
+  @media (min-width: 1642px) and (max-width: 1694px) {
+    width: 45%;
+  }
+  @media (min-width: 1600px) and (max-width: 1642px) {
+    width: 47%;
+  }
+  @media (min-width: 1570px) and (max-width: 1599px) {
+    width: 48%;
+  }
+  @media (min-width: 1550px) and (max-width: 1570px) {
+    width: 49%;
+  }
+  @media (min-width: 1520px) and (max-width: 1550px) {
+    width: 50%;
+  }
+  @media (min-width: 1490px) and (max-width: 1520px) {
+    width: 51%;
+  }
+  @media (min-width: 1460px) and (max-width: 1490px) {
+    width: 52%;
+  }
+  @media (min-width: 1430px) and (max-width: 1460px) {
+    width: 53%;
+  }
+  @media (min-width: 1400px) and (max-width: 1430px) {
+    width: 54%;
+  }
+  @media (min-width: 1370px) and (max-width: 1400px) {
+    width: 55%;
+  }
+  @media (min-width: 1340px) and (max-width: 1370px) {
+    width: 56%;
+  }
+  @media (min-width: 1305px) and (max-width: 1340px) {
+    width: 58%;
+  }
+  @media (min-width: 1280px) and (max-width: 1305px) {
+    width: 59%;
+  }
+  @media (min-width: 1281px) and (max-width: 1280px) {
+    width: 55%;
+  }
+  @media (min-width: 1250px) and (max-width: 1279px) {
+    width: 45%;
+  }
+  @media (min-width: 1220px) and (max-width: 1250px) {
+    width: 46%;
+  }
+  @media (min-width: 1190px) and (max-width: 1220px) {
+    width: 47%;
+  }
+  @media (min-width: 1160px) and (max-width: 1190px) {
+    width: 49%;
+  }
+  @media (min-width: 1130px) and (max-width: 1160px) {
+    width: 50%;
+  }
+   @media (min-width: 1100px) and (max-width: 1130px) {
+    width: 51%;
+  }
+   @media (min-width: 1070px) and (max-width: 1100px) {
+    width: 53%;
+  }
+   @media (min-width: 1040px) and (max-width: 1070px) {
+    width: 54%;
+  }
+   @media (min-width: 1024px) and (max-width: 1040px) {
+    width: 55%;
+  }
+   @media (min-width: 990px) and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media (min-width: 950px) and (max-width: 990px) {
+    width: 52%;
+  }
+  @media (min-width: 920px) and (max-width: 950px) {
+    width: 54%;
+  }
+  @media (min-width: 890px) and (max-width: 920px) {
+    width: 56%;
+  }
+  @media (min-width: 860px) and (max-width: 890px) {
+    width: 58%;
+  }
+  @media (min-width: 830px) and (max-width: 860px) {
+    width: 60%;
+  }
+  @media (min-width: 800px) and (max-width: 830px) {
+    width: 62%;
+  }
+  @media (min-width: 790px) and (max-width: 800px) {
+    width: 64%;
+  }
+  @media (min-width: 770px) and (max-width: 790px) {
+    width: 66%;
+  }
+  @media (min-width: 768px) and (max-width: 770px) {
+    width: 67%;
+  }
 }

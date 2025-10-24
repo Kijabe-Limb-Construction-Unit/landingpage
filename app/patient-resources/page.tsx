@@ -6,7 +6,7 @@ import Image from "next/image";
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-12 lg:py-16">
+      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-5 md:py-10 lg:py-13">
         <h1 className="text-6xl md:text-9xl font-light">
           <span className="font-bold">resources</span> for patients <br /><p className="text-4xl font-light relative md:-left-30">Get more information</p>
         </h1>
@@ -17,35 +17,22 @@ function App() {
             width={1200}
             height={10}
             alt={""}
-            className="h-15 hidden md:block justify-end -mt-10 w-[40%]"
+            className="h-15 justify-end sm:-mt-10 -mr-25 sm:-ml-20 w-[70%] lg:w-[40%]"
           />
         </div>
-        {/* Left line on small screens */}
-        <div className="relative flex w-full justify-end items-end mb-0">
-         <Image src="/pr-line.svg" width={1200} height={10} alt={""} className="h-15 block md:hidden justify-end left-1 w-[40%] -mt-2 -top-2" />
-        </div>
-        <p className="text-4xl relative ">
+        <p className="text-4xl relative">
           about your{" "}
           <span className="font-bold text-4xl">condition or treatment.</span>
         </p>
         {/* Right line on desktop screens */}
         <div className="relative flex -top-2 w-full justify-start items-start">
-          <Image src="/pr-line.svg" width={10} height={10} alt={""} className="h-15 hidden md:block justify-end right-1 -mt-3 w-[40%]" />
-        </div>
-        {/* Rght line on small screens */}
-        <div className="relative flex -top-2 w-full justify-start items-start">
-          <Image src="/pr-line.svg" width={10} height={10} alt={""} className="h-15 relative block md:hidden justify-end right-1 w-[40%]" />
+          <Image src="/pl-line.svg" width={10} height={10} alt={""} className="h-15 justify-end right-1 mt-1 xl:-mt-5 lg:-mt-3  -ml-20 w-full sm:w-[70%] md:w-[60%] lg:w-[40%]" />
         </div>
       </div>
-      {/*  */}
-      {/*  */}
-      {/*  */}
-      {/*  */}
-      {/*  */}
       {/* General Information Section */}
       <div className="bg-[#149ECC] px-8 py-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider">
+        <div className="max-w-5xl mx-auto text-center md:pl-10">
+          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider justify-center md:justify-start">
             GENERAL{" "}
             <span className="font-bold pl-1 md:pl-5 w-auto">INFORMATION</span>
           </h1>
@@ -88,8 +75,8 @@ function App() {
 
       {/* Looking After Your Pin Sites Section */}
       <div className="bg-blue-900 px-8 py-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider">
+        <div className="max-w-5xl mx-auto text-center md:pl-10">
+          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             LOOKING AFTER
             <span className="font-bold pl-2 md:pl-5 w-auto">
               YOUR PIN SITES
@@ -118,8 +105,8 @@ function App() {
 
       {/* Managing Your Struts Section */}
       <div className="bg-gray-200 px-8 py-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-teal-500 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider border">
+        <div className="max-w-5xl mx-auto text-center md:pl-10">
+          <h1 className="text-teal-500 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             MANAGING <span className="font-bold pl-2 md:pl-5">YOUR STRUTS</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
@@ -145,8 +132,8 @@ function App() {
 
       {/* Monorail Frames Section */}
       <div className="bg-teal-500 px-8 py-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-blue-900 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider">
+        <div className="max-w-5xl mx-auto text-center md:pl-10">
+          <h1 className="text-blue-900 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             MONORAIL <span className="font-bold pl-2 md:pl-5">FRAMES</span>
           </h1>
           <div className="grid grid-cols-2 gap-6">
@@ -164,8 +151,8 @@ function App() {
 
       {/* Rehabilitation Section */}
       <div className="bg-[#149ECC] px-8 py-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider">
+        <div className="max-w-5xl mx-auto text-center md:pl-10">
+          <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-bold mb-8 tracking-wider flex justify-center md:justify-start">
             REHABILITATION
           </h1>
           <div className="grid grid-cols-2 gap-6">
@@ -207,7 +194,7 @@ function App() {
       <div className="bg-[#003683] text-white flex justify-center items-center flex-col px-8 py-12 gap-4">
         <div className="flex items-center gap-4">
           <Download className="w-20 h-20 text-teal-500" />
-          <h1>reading material</h1>
+          <h1>reading <span className="font-light">material</span></h1>
         </div>
         <p className="sm:text-xl md:text-2xl">
           Taylor Spatial Frame Patient Information Booklet

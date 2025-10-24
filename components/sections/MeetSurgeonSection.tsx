@@ -4,16 +4,16 @@ import { aboutData } from "@/lib/fakes/about-fakes";
 export function MeetSurgeonSection() {
   return (
     <section className="flex flex-col justify-center items-center mb-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683]">
+      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683] border">
         {/* Left - Image */}
-        <div className="relative">
+        <div className="h-full relative">
           {/* <div className="relative"> */}
           <Image
             src="/donate.png"
             alt="Dr. Mbonisi Malaba"
             width={500}
             height={600}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover border"
           />
         </div>
 
@@ -21,7 +21,7 @@ export function MeetSurgeonSection() {
         <div className="text-[#003683] space-y-6 mx-5 lg:mx-0">
           <p className="w-full md:w-[85%]">
             <span className="text-5xl md:text-7xl">meet the </span>
-            <span className="font-bold text-5xl md:text-7xl">surgeon </span><br />
+            <span className="font-bold text-5xl md:text-7xl relative -top-0 md:-top-2 lg:-top-4 xl:-top-0">surgeon </span><br />
             <span className="font-bold text-2xl md:text-4xl">DR. MBONISI MALABA</span>
           </p>
 
@@ -30,8 +30,8 @@ export function MeetSurgeonSection() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center w-full">
-        <div className="w-[80%]">
+      <div className="flex justify-end items-end w-full">
+        <div className="w-[90%]">
           {/* Family Photo - positioned on the right */}
           <Image
             src="/malaba-family.png"
