@@ -5,7 +5,7 @@ export function HospitalSection() {
     <section className="bg-[#4FB29E] overflow-x-hidden">
       {/* Hospital Section desktop view*/}
       <div className="text-white hidden md:flex">
-        <div className="grid lg:grid-cols-2 gap-0 items-center">
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
           <div className="w-full">
              {/* border-3 md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
             <div className="lg:w-[100vw] z:0 relative md:-left-25 lg:-left-0 top-25 md:top-35 lg:bottom-5 my-5 h-10">
@@ -37,14 +37,14 @@ export function HospitalSection() {
             <div className="flex md:justify-center px-20">
               <div className="w-full ml-20 md:-mr-30 lg:-ml-5 xl:-ml-0">
                  {/* border md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
-                <h1 className="text-5xl md:text-5xl font-bold lg:text-7xl lg:pl-0 xl:pl-10 w-full text-heading md:ml-5 font-light mb-8">
+                <h1 className="text-5xl md:text-5xl font-bold lg:text-7xl lg:pl-0 xl:pl-10 w-full text-heading md:ml-5 mb-8">
                   the <span className="font-bold text-blue-900">hospital</span>
                 </h1>
               </div>
             </div>
 
             <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-center md:items-center lg:justify-end lg:px-2 xl:px-20 mt-10">
-              <p className="w-full lg:mt-5 pl-30 md:ml-0">
+              <p className="w-full lg:mt-10 pl-30 md:ml-0">
                 <span className="font-bold">Kijabe Hospital</span> is a renowned
                 center of excellence in healthcare and medical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> serving
                 patients from across Kenya and beyond. Nestled on the scenic
@@ -62,13 +62,15 @@ export function HospitalSection() {
               </p>
             </div>
           </div>
-          <Image
-            src="/hospital-1.svg"
-            width={600}
-            height={400}
-            alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-            className="h-full w-full object-cover z-20"
-          />
+          <div className="relative w-full h-[100vh] flex items-stretch">
+            <Image
+              src="/hospital-1.png"
+              width={600}
+              height={400}
+              alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
+              className="z-10 h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
       {/* Hospital Section mobile view*/}
@@ -92,7 +94,7 @@ export function HospitalSection() {
           <div className="leading-relaxed space-y-4 text-blue-900 flex justify-end px-5 items-end">
             <p className="w-full md:max-w-5xl">
               <span className="font-bold">Kijabe Hospital</span> is a renowned
-              center of excellence in healthcare and medical training, serving
+              centre of excellence in healthcare and medical training, serving
               patients from across Kenya and beyond. Nestled on the scenic
               escarpment overlooking the{" "}
               <span className="font-bold">Great Rift Valley</span>, it combines{" "}

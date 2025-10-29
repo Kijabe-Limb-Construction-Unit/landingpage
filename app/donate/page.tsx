@@ -31,17 +31,17 @@ export default function DonatePage() {
           </h3>
         </div>
         <Image
-          src="/donate1.png"
+          src="/donate1.svg"
           alt="Donate"
           width={300}
           height={300}
-          className="w-full max-w-7xl h-96 md:max-w-lg lg:max-w-xl xl:max-w-3xl md:h-full xl:h-96"
+          className="w-full max-w-7xl h-96 md:max-w-xl lg:max-w-3xl xl:max-w-3xl md:h-full xl:h-96 object-cover"
         />
       </div>
       {/* border-4 */}
       <div className="w-full flex justify-center md:justify-end items-center md:items-end mt-5">
         {/* border-3 md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
-        <div className="gnz text-[#003683] w-full pr-10 text-center md:text-left lg:-ml-[25rem]">
+        <div className="gnz flex flex-col justify-center text-[#003683] w-full pr-0 md:pr-10 text-center md:text-left lg:-ml-[25rem]">
           <p className="text-3xl">
             ALL DONATIONS RECEIVED ARE USED 100<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
           </p>

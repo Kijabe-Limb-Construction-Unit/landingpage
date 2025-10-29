@@ -5,7 +5,7 @@ import NavDonate from "./nav-donate";
 
 const Navbar = () => {
   return (
-    <header className="w-[105vw] md:w-full bg-white sticky top-0 z-50">
+    <header className="w-full md:w-full bg-white sticky top-0 z-50">
       {/* Logo and menu section  */}
       <div className="relative bg-white py-6">
         {/* <HeartbeatAnimation /> */}
@@ -32,7 +32,7 @@ const Navbar = () => {
         alt=""
         width={1200}
         height={10}
-        className="h-auto w-full hidden md:block mt-9"
+        className="h-auto md:w-[105vw] hidden md:block mt-9"
       />
       {/* Donate - restore section  */}
       <NavDonate />

@@ -280,17 +280,14 @@ const ServicesSection = () => (
   >
     <div className="container mx-auto px-1 min-[250px]:px-2 min-[320px]:px-4 md:px-8">
       {/* Mobile: Display service.jpeg image */}
-      <div className="md:hidden w-full flex justify-center mt-4 min-[250px]:mt-5 min-[320px]:mt-6">
-        <div className="relative w-full max-w-md">
+      <div className="md:hidden w-full flex justify-center items-center mt-4 min-[250px]:mt-5 min-[320px]:mt-6">
           <Image
-            src="/service.jpeg"
+            src="/service.svg"
             alt="Our Services"
             width={400}
             height={300}
             className="w-full h-auto object-contain"
-            sizes="w(100vw) max-w(800px)"
           />
-        </div>
       </div>
 
       {/* Desktop: Three column layout */}

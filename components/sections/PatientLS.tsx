@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export function PatientLS() {
   return (
@@ -12,11 +13,11 @@ export function PatientLS() {
         <div className="flex w-[66%] items-center">
           {/* GREEN */}
           <div className="bg-[#4FB29E] h-full text-white flex z-10 items-center justify-center px-2h-full border-[#003683] flex-1 min-w-0">
-            <p className="whitespace-pre-line text-center leading-snug tracking-[0.2em] text-sm md:text-lg lg:text-xl">
+            <Link href="/patient-resources" className="whitespace-pre-line text-center leading-snug tracking-[0.2em] text-sm md:text-xl lg:text-2xl">
               patient
               {"\n"}
               resources
-            </p>
+            </Link>
           </div>
         {/* PATIENT STORIES */}
           <div className="relative z-40 shrink-0">
@@ -25,6 +26,7 @@ export function PatientLS() {
               <div className="w-1/2 h-full bg-[#4FB29E]" />
               <div className="w-1/2 h-full bg-[#003683]" />
             </div>
+            <Link href="/patient-stories">
             <Image
               src="/mess-btn.svg"
               alt="patient stories"
@@ -32,14 +34,15 @@ export function PatientLS() {
               height={140}
               className="relative top-5 x-4 h-[100px] md:h-[150px] lg:h-[180px] w-auto drop-shadow-md md:drop-shadow-lg"
             />
+            </Link>
           </div>
           {/* NAVY BLUE */}
           <div className="bg-[#003683] h-full text-white flex z-10 items-center justify-center px-2 flex-1 min-w-0">
-            <p className="whitespace-pre-line text-center leading-snug tracking-[0.2em] text-sm md:text-lg lg:text-xl">
+            <Link href="/contact" className="whitespace-pre-line text-center leading-snug tracking-[0.2em] text-sm md:text-xl lg:text-2xl">
               book an
               {"\n"}
               appointment
-            </p>
+            </Link>
           </div>
         </div>
         {/* SIDE RIGHT */}

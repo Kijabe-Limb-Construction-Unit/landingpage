@@ -2,6 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Josefin_Sans } from 'next/font/google';
+
+const josefin = Josefin_Sans({
+  subsets: ['latin'],
+  weight: ['300', '600', '700'],
+  style: ['normal', 'italic'],
+});
 
 export const PatientResources = ({
   p1,
@@ -36,7 +43,7 @@ export const PatientResources = ({
         <Image src={btnColor} alt={""} width={100} height={100} className="w-[70%] sm:w-[50%] md:w-auto" onClick={handlePlayClick}/>
         <div className={`flex flex-col justify-center items-center md:items-start w-[70%] sm:w-[50%] md:w-auto text-${textColor}`}>
           <p className="text-[17px] sm:text-lg md:text-2xl">{p1}</p>
-          <p className="text-[17px] sm:text-lg md:text-2xl">{p2}</p>
+          <p className={`text-[17px] sm:text-lg md:text-2xl ${josefin.className} font-light`}>{p2}</p>
         </div>
       </div>
       
