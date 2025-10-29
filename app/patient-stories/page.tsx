@@ -49,28 +49,38 @@ export default function PatientStories() {
                 className="object-cover"
               />
             </div>
-            <div className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative">
+            <a 
+              href="https://drive.google.com/file/d/1GfTXX4HA9dk10wd4pyYHjbhQNW-4OxDs/view?ts=6900e3e9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative block cursor-pointer"
+            >
               <Image
                 src="/click-here-blue.svg"
-                alt=""
+                alt="Click to watch Bovin's video"
                 fill
-                className="object-cover"
+                className="object-cover hover:opacity-90 transition-opacity"
               />
-            </div>
+            </a>
           </div>
         </div>
       {/* Second story Section - MOSES */}
       <div className="bg-[#149ECC] flex flex-col lg:flex-row">
         <div className="w-full flex aspect-[16/9] lg:w-1/2 relative">
-          <div className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative">
+          <a 
+            href="https://drive.google.com/file/d/1VgCPE1g_CVJm96Q8HRZlUcbj8VpqJpRA/view?ts=6900e43c"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative block cursor-pointer"
+          >
             <Image
               src="/click-here-yellow.svg"
-              alt=""
+              alt="Click to watch Moses's video"
               fill
-              className="object-cover"
+              className="object-cover hover:opacity-90 transition-opacity"
             />
-          </div>
-          <div className="w-[60%] lg:w-[50%] xl:w-[60%] h-full relative">
+          </a>
+          <div className="w-[60%] lg:w-[50%] xl:w-[60%] h-full relative"  >
             <Image
               src={patientTestimonies[1].image}
               alt={patientTestimonies[1].name}
@@ -96,7 +106,7 @@ export default function PatientStories() {
             </p>
 
             <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
-              {patientTestimonies[1].fullStory}{" "}
+            Moses went from expecting an amputation after a leg fracture to being pain free<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md mr-1">,</span>
               <span className="font-bold text-3xl">able to work again!</span>
             </p>
           </div>
@@ -121,7 +131,7 @@ export default function PatientStories() {
             </p>
 
             <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
-              Doris suffered from a multilevel leg deformity for 18 years,
+              Doris suffered from a multilevel leg deformity for 18 years<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md mr-1">,</span>
               affecting her schooling and self-image and making her prone to
               falling while walking. Now she{" "}
               <span className="font-bold text-3xl">
@@ -139,14 +149,19 @@ export default function PatientStories() {
               className="object-cover"
             />
           </div>
-          <div className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative">
+          <a 
+            href="https://drive.google.com/file/d/1i_AU8L6f34i2qW7F21AiWgCuWwdcUC0Q/view?ts=6900e469"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative block cursor-pointer"
+          >
             <Image
               src="/click-here-green.svg"
-              alt=""
+              alt="Click to watch Doris's video"
               fill
-              className="object-cover"
+              className="object-cover hover:opacity-90 transition-opacity"
             />
-          </div>
+          </a>
         </div>
       </div>
     </div>

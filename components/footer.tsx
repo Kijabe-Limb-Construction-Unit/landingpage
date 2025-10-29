@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="w-full">
       {/* Top Section with Logo and Line */}
-      <Foot/>
+      <Foot />
       {/* Footer Section */}
       <div className="bg-[#003683] text-white px-8 py-8">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
@@ -45,12 +45,20 @@ const Footer = () => {
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
+
+            {/* X (Twitter) */}
+            <a href="#" className="w-10 h-10 bg-white rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity" aria-label="X (Twitter)">
+              <svg className="w-5 h-5 text-[#003683]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.954 4.569c-0.885 0.392-1.83 0.656-2.825 0.775 1.014-0.609 1.794-1.574 2.163-2.724-0.949 0.564-2.005 0.974-3.127 1.195-0.897-0.957-2.178-1.555-3.594-1.555-2.723 0-4.93 2.207-4.93 4.93 0 0.386 0.045 0.762 0.127 1.124-4.09-0.205-7.72-2.165-10.148-5.144-0.423 0.724-0.666 1.562-0.666 2.457 0 1.695 0.863 3.19 2.175 4.067-0.802-0.025-1.558-0.246-2.218-0.616v0.063c0 2.37 1.684 4.347 3.918 4.793-0.41 0.11-0.841 0.17-1.287 0.17-0.315 0-0.622-0.03-0.92-0.086 0.623 1.943 2.432 3.359 4.576 3.4-1.675 1.312-3.787 2.093-6.081 2.093-0.395 0-0.785-0.023-1.17-0.069 2.169 1.39 4.75 2.201 7.522 2.201 9.025 0 13.965-7.48 13.965-13.965 0-0.21-0.005-0.423-0.014-0.633 0.962-0.695 1.797-1.562 2.457-2.549z" />
+              </svg>
+            </a>
+
           </div>
 
           {/* Policy Links */}
           <div className="flex justify-center space-x-8 mb-6 text-sm">
             <Link href="/privacy-policy" className="hover:underline font-light">
-              PRIVACY POLICY
+              PRIVACY <span className="ml-1">POLICY</span>
             </Link>
             <Link href="/disclaimer" className="hover:underline font-light">
               DISCLAIMER

@@ -1,10 +1,17 @@
 import Image from "next/image";
 import { aboutData } from "@/lib/fakes/about-fakes";
+import { Josefin_Sans } from 'next/font/google';
+
+const josefin = Josefin_Sans({
+  subsets: ['latin'],
+  weight: [ '200', '600', '700'],
+  style: ['normal', 'italic'],
+});
 
 export function MeetSurgeonSection() {
   return (
     <section className="flex flex-col justify-center items-center mb-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683] border">
+      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683]">
         {/* Left - Image */}
         <div className="h-full relative">
           {/* <div className="relative"> */}
@@ -13,7 +20,7 @@ export function MeetSurgeonSection() {
             alt="Dr. Mbonisi Malaba"
             width={500}
             height={600}
-            className="h-full w-full object-cover border"
+            className="h-full w-full object-cover"
           />
         </div>
 
@@ -38,7 +45,7 @@ export function MeetSurgeonSection() {
             width={300}
             height={200}
             alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
-            className="float-right ml-8 mb-6 w-[65%] max-h-[500px]"
+            className="float-right ml-8 mb-6 w-[55%] max-h-[500px]"
           />
 
           {/* Text Content - wraps around the image */}
@@ -49,31 +56,31 @@ export function MeetSurgeonSection() {
                 {" "}
                 IS MARRIED WITH THREE CHILDREN.
               </span>{" "}
-              He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in
-              2015 to start and strengthen churches in East Africa and beyond.
-              Whilst in Kenya<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he subspecialised in paediatric orthopaedics with
-              the College of Surgeons of East<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> Central and Southern Africa
-              (COSECSA). During his surgical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he was awarded a number
-              of prizes including the medal for best performing candidate in the
-              COSECSA Orthopaedic (2017) and Paediatric Orthopaedic (2021)
+              He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in 
+              <span style={{ fontFamily: "Roboto" }}> 2015</span> to start and strengthen churches in East Africa and beyond.
+              Whilst in Kenya<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he subspecialised in paediatric orthopaedics with
+              the College of Surgeons of East<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> Central and Southern Africa
+              <span className={`${josefin.className} font-light`}> (</span>COSECSA<span className={`${josefin.className} font-light`}>)</span> During his surgical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he was awarded a number
+              of prizes including the medal for best<span className={`${josefin.className} font-light`}>-</span>performing candidate in the
+              COSECSA Orthopaedic <span className={`${josefin.className} font-light`}>(2017)</span> and Paediatric Orthopaedic <span style={{ fontFamily: "Roboto" }}><span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>)</span></span>
               Examinations as well at the prestigious{" "}
               <span className="font-bold">
-                Gerald O´Sullivan Medal (2017)
+                Gerald <span className={`${josefin.className} font-light`}>O´Sullivan</span> Medal <span style={{ fontFamily: "Roboto" }}><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}> (</span>2017<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>)</span></span>
               </span>{" "}
               awarded by COSECSA and the Royal College of Surgeons of Ireland to
               the graduate with the highest overall mark across all surgical
-              specialties. In 2022<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he did a further one year{" "}
+              specialties. In <span style={{ fontFamily: "Roboto" }}>2022</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he did a further one year{" "}
               <span className="font-bold">
                 subspecialist fellowship training in paediatric and adult limb
                 reconstruction at the Royal London Hospital
               </span>
-              (one of the busiest trauma centres in Europe) and the
+              <span className={`${josefin.className} font-normal`}> (</span>one of the busiest trauma centres in Europe<span className={`${josefin.className} font-light`}>)</span> and the
               <span className="font-bold">
                 Royal National Orthopaedic Hospital
               </span>
-              <span> - a centre of excellence north of London. He </span>
+              <span> <span className={`${josefin.className} font-light`}>-</span> a centre of excellence north of London. He </span>
               <span className="font-bold">pastors OneTribe Church</span> in
-              Nairobi<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> Kenya and through the Advance Movement serves and{" "}
+              Nairobi<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> Kenya and through the Advance Movement serves and{" "}
               <span className="font-bold">
                 supports several dozen churches or church plants in East Africa
               </span>{" "}

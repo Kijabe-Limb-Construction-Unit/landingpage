@@ -39,7 +39,7 @@ function App() {
           <div className="grid grid-cols-2 items-start gap-4">
             <PatientResources
               p1="Limb Reconstruction"
-              p2="with Frames Overview"
+              p2="with An Overview"
               btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"
@@ -47,7 +47,7 @@ function App() {
             />
             <PatientResources
               p1="Frame Information for"
-              p2="for Kids (and Adults!)"
+              p2="Kids (and Adults!)"
               btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/QwkcAiTGgQc?si=TDmCC2JBflmC2nRC"
@@ -131,7 +131,7 @@ function App() {
       </div>
 
       {/* Monorail Frames Section */}
-      <div className="bg-teal-500 px-8 py-12">
+      <div className="bg-[#4FB29E] px-8 py-12">
         <div className="max-w-5xl mx-auto text-center md:pl-10">
           <h1 className="text-blue-900 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             MONORAIL <span className="font-bold pl-2 md:pl-5">FRAMES</span>
