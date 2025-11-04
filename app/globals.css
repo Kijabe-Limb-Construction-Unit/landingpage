@@ -325,7 +325,6 @@
 .gmz {
   @media (min-width: 1335px) and (max-width: 1374px) {
     width: 100%;
-    border: 1px solid red;
   }
   /* @media (min-width: 1780px) and (max-width: 1826px) {
     width: 42%;
@@ -344,7 +343,7 @@
 }
 .hv-nv-lnks {
   /* Default for extra large screens (1625px+) */
-  font-size: 9px;
+  font-size: 8.5px;
   
   @media (min-width: 1107px) and (max-width: 2031px) {
     font-size: 15px;
@@ -353,7 +352,28 @@
     font-size: 14px;
   }
   @media (min-width: 785px) and (max-width: 1043px) {
-    font-size: 10px;
+    font-size: 9px;
   }
 
+}
+.hp-cont {
+  @media (min-width: 1280px) and (max-width: 1826px) {
+    /* padding-left: ; */
+    /* margin-left:  */
+    margin-top: 20px;
+    /* font-size: 28px; */
+    /* border: 1px solid red; */
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    /* padding-left: ;*/
+    margin-left: 30px;
+    /* margin-top: ; */
+    /* font-size: 26px; */
+    /* border: 1px solid blue; */
+  }
+  @media (min-width: 600px) and (max-width: 1024px) {
+    /* padding-left: ;
+    margin-left:  */
+    /* border: 1px solid green; */
+  }
 }

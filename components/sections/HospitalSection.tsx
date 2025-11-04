@@ -15,7 +15,7 @@ export function HospitalSection() {
                 width={600}
                 height={400}
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-full relative lg:top-1 lg:-left-55 xl:-left-[20rem] xl:-top-5 hidden lg:block"
+                className="w-full relative lg:top-1 lg:-left-55 xl:-left-[20rem] xl:-top-2 hidden lg:block"
               />
               {/* MD CREENS */}
               <Image
@@ -44,7 +44,7 @@ export function HospitalSection() {
             </div>
 
             <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-center md:items-center lg:justify-end lg:px-2 xl:px-20 mt-10">
-              <p className="w-full lg:mt-10 pl-30 md:ml-0">
+              <p className="w-full lg:mt-20 pl-30 md:ml-0">
                 <span className="font-bold">Kijabe Hospital</span> is a renowned
                 center of excellence in healthcare and medical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> serving
                 patients from across Kenya and beyond. Nestled on the scenic

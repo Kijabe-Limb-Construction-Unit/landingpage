@@ -67,7 +67,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center text-sm font-light">
-            <p>© Copyright 2025 - 2026 Kijabe Limb Reconstruction Unit</p>
+            <p>© Copyright <span style={{ fontFamily: "Roboto" }}>2025 - 2026</span> Kijabe Limb Reconstruction Unit</p>
           </div>
         </div>
       </div>

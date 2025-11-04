@@ -6,9 +6,9 @@ import Image from "next/image";
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-5 md:py-10 lg:py-13">
+      <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-5">
         <h1 className="text-6xl md:text-9xl font-light">
-          <span className="font-bold">resources</span> for patients <br /><p className="text-4xl font-light relative md:-left-30">Get more information</p>
+          <span className="font-bold">resources</span> for patients <br /><p className="text-6xl font-light relative md:-left-[10rem]">Get more information</p>
         </h1>
         {/* left line on desktop screen */}
         <div className="relative flex w-full justify-end items-end mb-0">
@@ -17,15 +17,15 @@ function App() {
             width={1200}
             height={10}
             alt={""}
-            className="h-15 justify-end sm:-mt-10 -mr-25 sm:-ml-20 w-[70%] lg:w-[40%]"
+            className="h-15 justify-end sm:-mt-15 -mr-25 sm:-ml-20 w-[70%] lg:w-[40%]"
           />
         </div>
-        <p className="text-4xl relative">
+        <p className="text-6xl relative ml-[15rem]">
           about your{" "}
-          <span className="font-bold text-4xl">condition or treatment.</span>
+          <span className="font-bold">condition or treatment.</span>
         </p>
         {/* Right line on desktop screens */}
-        <div className="relative flex -top-2 w-full justify-start items-start">
+        <div className="relative flex -top-5 w-full justify-start items-start">
           <Image src="/pl-line.svg" width={10} height={10} alt={""} className="h-15 justify-end right-1 mt-1 xl:-mt-5 lg:-mt-3  -ml-20 w-full sm:w-[70%] md:w-[60%] lg:w-[40%]" />
         </div>
       </div>
@@ -38,8 +38,8 @@ function App() {
           </h1>
           <div className="grid grid-cols-2 items-start gap-4">
             <PatientResources
-              p1="Limb Reconstruction"
-              p2="with An Overview"
+              p1="Limb Reconstruction with"
+              p2="Frames: An Overview "
               btnColor="dark-blue-yt-btn.svg"
               textColor="white"
               iframeSrc="https://www.youtube.com/embed/bUtQcVV5D_U?si=radgQsZ-bNk9e-fp"
@@ -109,12 +109,12 @@ function App() {
           <h1 className="text-teal-500 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             MANAGING <span className="font-bold pl-2 md:pl-5">YOUR STRUTS</span>
           </h1>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6 text-[#083783]">
             <PatientResources
               p1="Adjusting a Strut"
               p2=""
               btnColor="dark-blue-yt-btn.svg"
-              textColor="#149ECC"
+              textColor="#083783"
               iframeSrc="https://www.youtube.com/embed/sytSPu19fUY?si=OTpK49OllmqpdELT"
               youtubeUrl=""
             />
@@ -122,7 +122,7 @@ function App() {
               p1="Changing a Strut"
               p2=""
               btnColor="dark-blue-yt-btn.svg"
-              textColor="#149ECC"
+              textColor="#083783"
               iframeSrc="https://www.youtube.com/embed/1JMqagnm5gE?si=RJvdaL1o4IYd8MRl"
               youtubeUrl={""}
             />
@@ -133,15 +133,15 @@ function App() {
       {/* Monorail Frames Section */}
       <div className="bg-[#4FB29E] px-8 py-12">
         <div className="max-w-5xl mx-auto text-center md:pl-10">
-          <h1 className="text-blue-900 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
+          <h1 className="text-[#083783] text-3xl md:text-4xl flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             MONORAIL <span className="font-bold pl-2 md:pl-5">FRAMES</span>
           </h1>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6 text-[#083783]">
             <PatientResources
               p1="Monorail Adjustment"
               p2=""
               btnColor="dark-blue-yt-btn.svg"
-              textColor="#149ECC"
+              textColor="#083783"
               iframeSrc="https://www.youtube.com/embed/3x6fM2J3xE8?si=GEcbIplBEPSLGvzi"
               youtubeUrl="https://youtu.be/3x6fM2J3xE8?si=elol-sopgXjaqoIG"
             />

@@ -11,7 +11,7 @@ const josefin = Josefin_Sans({
 export function MeetSurgeonSection() {
   return (
     <section className="flex flex-col justify-center items-center mb-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683]">
+      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683] pb-10 sm:pb-0">
         {/* Left - Image */}
         <div className="h-full relative">
           {/* <div className="relative"> */}
@@ -29,7 +29,7 @@ export function MeetSurgeonSection() {
           <p className="w-full md:w-[85%]">
             <span className="text-5xl md:text-7xl">meet the </span>
             <span className="font-bold text-5xl md:text-7xl relative -top-0 md:-top-2 lg:-top-4 xl:-top-0">surgeon </span><br />
-            <span className="font-bold text-2xl md:text-4xl">DR. MBONISI MALABA</span>
+            <span className={`font-bold text-xl md:text-3xl ${josefin.className}`}>DR. MBONISI MALABA</span>
           </p>
 
           <div className="space-y-4">
@@ -62,11 +62,9 @@ export function MeetSurgeonSection() {
               the College of Surgeons of East<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> Central and Southern Africa
               <span className={`${josefin.className} font-light`}> (</span>COSECSA<span className={`${josefin.className} font-light`}>)</span> During his surgical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he was awarded a number
               of prizes including the medal for best<span className={`${josefin.className} font-light`}>-</span>performing candidate in the
-              COSECSA Orthopaedic <span className={`${josefin.className} font-light`}>(2017)</span> and Paediatric Orthopaedic <span style={{ fontFamily: "Roboto" }}><span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>)</span></span>
+              COSECSA Orthopaedic <span style={{ fontFamily: "Roboto" }}>(2017)</span> and Paediatric Orthopaedic <span style={{ fontFamily: "Roboto", fontWeight: "normal" }}><span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>)</span></span>
               Examinations as well at the prestigious{" "}
-              <span className="font-bold">
-                Gerald <span className={`${josefin.className} font-light`}>O´Sullivan</span> Medal <span style={{ fontFamily: "Roboto" }}><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}> (</span>2017<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>)</span></span>
-              </span>{" "}
+              <span className={`${josefin.className} font-semibold`}>Gerald  O´Sullivan Medal</span><span style={{ fontFamily: "Roboto", fontWeight: "bold" }}><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}> (</span>2017<span style={{ fontFamily: "Arial, Helvetica, sans-serif"}}>)</span></span>{" "}
               awarded by COSECSA and the Royal College of Surgeons of Ireland to
               the graduate with the highest overall mark across all surgical
               specialties. In <span style={{ fontFamily: "Roboto" }}>2022</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he did a further one year{" "}

@@ -11,10 +11,14 @@ export const ColoredBorder = () => {
   );
 }
 
-export const BlueColoredBorder = () => {
+type BlueColoredBorderProps = {
+  pst: string;
+};
+
+export const BlueColoredBorder = ({pst}:BlueColoredBorderProps) => {
   return (
     <div>
-      <section className="flex h-3 sm:h-4 fixed  top-0 left-0 right-0 z-50">
+      <section className={`flex h-3 sm:h-4 z-50 ${pst}`}>
         <div className="bg-[#003683] flex-1"></div>
       </section>
     </div>

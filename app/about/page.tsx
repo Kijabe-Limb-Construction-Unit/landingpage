@@ -176,7 +176,7 @@ export default function AboutPage() {
       <ColoredBorder />
       {/* The Hospital Section */}
       <HospitalSection />
-      <BlueColoredBorder />
+      <BlueColoredBorder pst={""} />
     </div>
   );
 }
