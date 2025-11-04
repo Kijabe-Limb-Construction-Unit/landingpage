@@ -15,7 +15,7 @@ export function HospitalSection() {
                 width={600}
                 height={400}
                 alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"
-                className="w-full relative lg:top-1 lg:-left-55 xl:-left-[20rem] xl:-top-2 hidden lg:block"
+                className="w-full relative lg:top-15 lg:-left-55 xl:-left-[20rem] xl:top-5 hidden lg:block"
               />
               {/* MD CREENS */}
               <Image
@@ -43,8 +43,8 @@ export function HospitalSection() {
               </div>
             </div>
 
-            <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-center md:items-center lg:justify-end lg:px-2 xl:px-20 mt-10">
-              <p className="w-full lg:mt-20 pl-30 md:ml-0">
+            <div className="leading-relaxed space-y-4 px-20 text-blue-900 flex md:justify-center md:items-center lg:justify-end lg:px-2 xl:px-20 mt-10 lg:mt-20">
+              <p className="w-full lg:mt-20 pl-30 md:ml-0 text-3xl">
                 <span className="font-bold">Kijabe Hospital</span> is a renowned
                 center of excellence in healthcare and medical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> serving
                 patients from across Kenya and beyond. Nestled on the scenic
@@ -62,9 +62,9 @@ export function HospitalSection() {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-[100vh] flex items-stretch">
+          <div className="relative w-full h-auto max-h-[55rem] flex items-stretch hp-cont">
             <Image
-              src="/hospital-1.png"
+              src="/hospital-1.svg"
               width={600}
               height={400}
               alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"

@@ -159,7 +159,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-5 md:top-[30%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
+      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-5 md:top-[15%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
         <div className="w-48 h-32 min-[250px]:w-56 min-[250px]:h-40 min-[320px]:w-64 min-[320px]:h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 relative">
           <Image
             src="/slider.svg"
@@ -221,15 +221,12 @@ const ServicesSection = () => (
 
       {/* Desktop: Three column layout */}
       <div className="hidden md:flex gap-5 max-w-4xl mx-auto justify-center items-center my-5">
-        {/* {serviceIcons.map((icon, index) => (
-          <ServiceIconItem key={index} icon={icon} />
-        ))} */}
         <Image
           src="/service-lg.svg"
           alt="Our Services"
           width={400}
           height={300}
-          className="w-full h-auto object-contain"
+          className="w-full h-auto max-w-3xl object-contain"
         />
       </div>
     </div>
