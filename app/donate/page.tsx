@@ -3,6 +3,7 @@ import { BlueColoredBorder } from "@/components/sections/ColoredBorder";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function DonatePage() {
   return (
     <div className="bg-[#149ECC]">
@@ -17,16 +18,16 @@ export default function DonatePage() {
               alt="Donate"
               width={40}
               height={40}
-              className="w-8 h-8 md:w-20 md:h-20"
+              className="w-8 h-8 md:w-15 md:h-15"
             />
           </div>
           <Link
             href="https://globalconnectionsonline.app.neoncrm.com/forms/kijabe-limb-recon"
-            className="hidden md:block font-extrabold text-4xl cursor-pointer bg-blue-900 p-3 rounded-xl text-white my-3 "
+            className="hidden md:block font-extrabold text-4xl sm:text-2xl md:text-4xl cursor-pointer bg-blue-900 p-3 rounded-xl text-white my-3 "
           >
             CLICK HERE
           </Link>
-          <h3 className="w-full text-4xl md:text-2xl lg:text-4xl font-normal mt-4 md:mt-0">
+          <h3 className="w-full text-4xl  md:text-2xl lg:text-4xl font-normal mt-4 md:mt-0">
             TO GIVE TO THE KIJABE <br /> LIMB RECONSTRUCTION <br /> UNIT VIA GLOBAL <br /> CONNECTIONS
           </h3>
         </div>
@@ -35,7 +36,7 @@ export default function DonatePage() {
           alt="Donate"
           width={300}
           height={300}
-          className="w-full max-w-7xl h-96 md:max-w-xl lg:max-w-3xl xl:max-w-3xl md:h-full xl:h-96 object-cover"
+          className="w-full max-w-7xl h-96 md:max-w-lg lg:max-w-3xl xl:max-w-3xl md:h-full xl:h-96 object-cover"
         />
       </div>
       {/* border-4 */}
@@ -43,7 +44,7 @@ export default function DonatePage() {
         {/* border-3 md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
         <div className="gnz flex flex-col justify-center text-[#003683] w-full pr-0 md:pr-10 text-center md:text-left lg:-ml-[25rem]">
           <p className="text-3xl">
-            ALL DONATIONS RECEIVED ARE USED 100<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
+            ALL DONATIONS RECEIVED ARE USED <span style={{ fontFamily: "Roboto" }}>100%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
           </p>
           <p className="font-bold mt-2">
             THERE IS NO DEDUCTION FOR ADMINISTRATIVE COSTS.
@@ -58,13 +59,13 @@ export default function DonatePage() {
           </div>
           <p className="text-white border-t border-[#003683] mt-5 pt-5 text-[19px] md:text-[23px]">
             Your donation is also tax-deductible for US taxpayers! Global Connections is a
-            registered 501(c)3 corporation with the Internal Revenue Service. Tax ID #20-8241793
+            registered <span style={{ fontFamily: "Roboto" }}>501 (c)3</span> corporation with the Internal Revenue Service. Tax ID <span style={{ fontFamily: "Roboto" }}> #20-8241793</span>
           </p>
         </div>
       </div>
     </div>
   </div>
-  <BlueColoredBorder />
+  <BlueColoredBorder pst={""} />
 </div>
 
   );

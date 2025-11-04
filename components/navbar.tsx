@@ -65,7 +65,9 @@ const Navbar = () => {
     <header className="w-full bg-white overflow-hidden">
       {/* Sticky section on medium screens and above when scrolled */}
       <div className={`w-full bg-white sticky top-0 z-50 ${isScrolled ? 'md:sticky' : 'md:relative'} transition-all duration-300`}>
-        <BlueColoredBorder />
+        <div className="fixed top-0 left-0 right-0 z-60 hidden md:block">
+          <BlueColoredBorder pst="" />
+        </div>
         <nav className="hidden md:flex w-full fixed top-4 left-0 right-0 z-50">
           {navItems.map((item) => (
             <Link
@@ -73,8 +75,8 @@ const Navbar = () => {
               href={item.path}
               className={`
                 ${item.bgColor}
-                flex-1 sm:px-0 md:px-3 py-3 transition-opacity hover:opacity-90 text-center pt-5
-                ${pathname === item.path ? `bg-white font-extrabold uppercase text-[#003683] hv-nv-lnks ${josefin.className}` : "text-white font-light nv-lnks"}
+                flex-1 sm:px-0 md:px-3 py-2 transition-opacity hover:opacity-90 text-center pt-2
+                ${pathname === item.path ? `bg-white font-extrabold uppercase text-[#003683] hv-nv-lnks pt-4 ${josefin.className}` : "text-white font-light lowercase nv-lnks"}
               `}
             >
               {item.name}
@@ -105,7 +107,7 @@ const Navbar = () => {
               className="h-auto w-full hidden md:block"
             />
           </div>
-          <div className="relative z-20 mt-5 md:mt-15 px-8 flex items-center justify-between">
+          <div className="relative z-20 mt-5 md:mt-20 px-8 flex items-center justify-between">
             <Image
               src="/logo.svg"
               alt="Kijabe Limb Reconstruction Unit"

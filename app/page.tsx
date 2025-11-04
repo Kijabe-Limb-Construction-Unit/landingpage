@@ -11,12 +11,6 @@ interface Slide {
   title: string;
 }
 
-interface ServiceIcon {
-  src: string;
-  alt: string;
-  title: string;
-}
-
 const SLIDE_INTERVAL = 4000;
 
 const slides: Slide[] = [
@@ -44,24 +38,6 @@ const slides: Slide[] = [
     src: "/IMG4.jpg",
     alt: "Hero Background 5",
     title: "Training surgeons for regional impact.",
-  },
-];
-
-const serviceIcons: ServiceIcon[] = [
-  {
-    src: "/childhood.png",
-    alt: "Childhood Deformity",
-    title: "Childhood<br/>Deformity",
-  },
-  {
-    src: "/poorly-healing.png",
-    alt: "Poorly Healing Fractures",
-    title: "Poorly Healing<br/>Fractures",
-  },
-  {
-    src: "/infected-fractures.png",
-    alt: "Infected Fractures",
-    title: "Infected<br/>Fractures",
   },
 ];
 
@@ -118,11 +94,10 @@ const NavigationDots = ({
       <button
         key={index}
         onClick={() => onSlideChange(index)}
-        className={`h-1 w-1 min-[250px]:h-1.5 min-[250px]:w-1.5 min-[320px]:h-2 min-[320px]:w-2 rounded-full mx-0.5 min-[320px]:mx-1 md:mx-2 transition-all duration-200 border border-white min-[320px]:border-2 ${
-          index === currentSlide
+        className={`h-1 w-1 min-[250px]:h-1.5 min-[250px]:w-1.5 min-[320px]:h-2 min-[320px]:w-2 rounded-full mx-0.5 min-[320px]:mx-1 md:mx-2 transition-all duration-200 border border-white min-[320px]:border-2 ${index === currentSlide
             ? "bg-white"
             : "bg-transparent hover:bg-white hover:bg-opacity-50"
-        }`}
+          }`}
         aria-label={`Go to slide ${index + 1}`}
         role="tab"
         aria-selected={index === currentSlide}
@@ -184,7 +159,7 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-5 md:top-[30%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
+      <div className="absolute top-3 min-[250px]:top-4 min-[320px]:top-5 md:top-[15%] right-6 min-[250px]:right-8 min-[320px]:right-10 md:right-[25%] z-30">
         <div className="w-48 h-32 min-[250px]:w-56 min-[250px]:h-40 min-[320px]:w-64 min-[320px]:h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 relative">
           <Image
             src="/slider.svg"
@@ -217,7 +192,7 @@ const HeroSlider = () => {
             width={1920}
             height={100}
             alt=""
-            className="object-cover pt-5 lg:pt-3"
+            className="object-cover pt-5 sm:pt-7 lg:pt-3"
             aria-hidden="true"
           />
         </div>
@@ -227,52 +202,6 @@ const HeroSlider = () => {
 };
 
 
-const ServiceIconItem = ({ icon }: { icon: ServiceIcon }) => (
-  <div className="mb-10 flex flex-col items-center justify-center w-full flex-shrink-0">
-    <div
-      className={`relative transition-transform group-hover:scale-105 flex-shrink-0 flex items-center justify-center ${
-        icon.alt === "Poorly Healing Fractures"
-          ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-4 ml-1 min-[250px]:ml-1 min-[320px]:ml-2 sm:ml-3 md:ml-4 w-14 h-14 min-[250px]:w-18 min-[250px]:h-18 min-[320px]:w-22 min-[320px]:h-22 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64"
-          : icon.alt === "Infected Fractures"
-          ? "w-20 h-20 min-[250px]:w-24 min-[250px]:h-24 min-[320px]:w-28 min-[320px]:h-28 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72"
-          : "w-17 h-17 min-[250px]:w-21 min-[250px]:h-24 min-[320px]:w-25 min-[320px]:h-25 sm:w-42 sm:h-42 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72 pb-2"
-      }`}
-    >
-      <div
-        className={`relative ${
-          icon.alt === "Poorly Healing Fractures"
-            ? "w-full h-full"
-            : icon.alt === "Infected Fractures"
-            ? "w-full h-full"
-            : "w-full h-full"
-        }`}
-      >
-        <Image
-          src={icon.src}
-          alt={icon.alt}
-          fill
-          className="object-contain"
-          sizes="(max-width: 250px) 64px, (max-width: 320px) 80px, (max-width: 640px) 96px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
-        />
-      </div>
-    </div>
-    {/* Fixed height container for text at the bottom */}
-    <div
-      className={`h-6 min-[250px]:h-7 min-[320px]:h-8 sm:h-12 flex  items-start justify-center ${
-        icon.alt === "Poorly Healing Fractures"
-          ? "mt-1 min-[250px]:mt-1 min-[320px]:mt-2 sm:mt-3 md:mt-0"
-          : ""
-      }`}
-    >
-      <p
-        // className="font-semibold light-letter-spacing text-[#003882] text-center leading-[1] px-0.5 overflow-hidden text-2xl  border-2 border-red-500"
-        className="font-semibold leading-snug tracking-[0.2em] w-50 text-[#003882] text-center leading-[1] px-0.5 overflow-hidden text-2xl"
-        dangerouslySetInnerHTML={{ __html: icon.title }}
-      />
-    </div>
-  </div>
-);
-
 const ServicesSection = () => (
   <section
     className="py-2 min-[250px]:py-3 min-[320px]:py-4 md:py-5 bg-white"
@@ -281,20 +210,24 @@ const ServicesSection = () => (
     <div className="container mx-auto px-1 min-[250px]:px-2 min-[320px]:px-4 md:px-8">
       {/* Mobile: Display service.jpeg image */}
       <div className="md:hidden w-full flex justify-center items-center mt-4 min-[250px]:mt-5 min-[320px]:mt-6">
-          <Image
-            src="/service.svg"
-            alt="Our Services"
-            width={400}
-            height={300}
-            className="w-full h-auto object-contain"
-          />
+        <Image
+          src="/service.svg"
+          alt="Our Services"
+          width={400}
+          height={300}
+          className="w-full h-auto object-contain"
+        />
       </div>
 
       {/* Desktop: Three column layout */}
-      <div className="hidden md:grid grid-cols-3 gap-5 max-w-3xl mx-auto justify-items-center items-start">
-        {serviceIcons.map((icon, index) => (
-          <ServiceIconItem key={index} icon={icon} />
-        ))}
+      <div className="hidden md:flex gap-5 max-w-4xl mx-auto justify-center items-center my-5">
+        <Image
+          src="/service-lg.svg"
+          alt="Our Services"
+          width={400}
+          height={300}
+          className="w-full h-auto max-w-3xl object-contain"
+        />
       </div>
     </div>
   </section>
@@ -304,9 +237,9 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <HeroSlider />
-      <PatientSect/>
+      <PatientSect />
       <ServicesSection />
-      <BlueColoredBorder />
+      <BlueColoredBorder pst={""} />
     </main>
   );
 }
