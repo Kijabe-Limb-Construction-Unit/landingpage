@@ -36,7 +36,7 @@ export default function DonatePage() {
           alt="Donate"
           width={300}
           height={300}
-          className="w-full max-w-7xl h-96 md:max-w-lg lg:max-w-3xl xl:max-w-3xl md:h-full xl:h-96 object-cover"
+          className="w-full max-w-7xl h-96 md:max-w-lg lg:max-w-3xl xl:max-w-3xl md:h-full xl:h-96 object-cover -pr-2"
         />
       </div>
       {/* border-4 */}

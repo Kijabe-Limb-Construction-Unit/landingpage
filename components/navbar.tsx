@@ -8,9 +8,9 @@ import { Menu } from "lucide-react";
 import { BlueColoredBorder } from "@/components/sections/ColoredBorder";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import NavDonate from "./sections/nav-donate";
-import { Josefin_Sans } from 'next/font/google';
+import { IBM_Plex_Sans } from 'next/font/google';
 
-const josefin = Josefin_Sans({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['latin'],
   weight: ['600', '700'],
   style: ['normal', 'italic'],
@@ -70,18 +70,18 @@ const Navbar = () => {
         </div>
         <nav className="hidden md:flex w-full fixed top-4 left-0 right-0 z-50">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.name}
               href={item.path}
               className={`
                 ${item.bgColor}
                 flex-1 sm:px-0 md:px-3 py-2 transition-opacity hover:opacity-90 text-center pt-2
-                ${pathname === item.path ? `bg-white font-extrabold uppercase text-[#003683] hv-nv-lnks pt-4 ${josefin.className}` : "text-white font-light lowercase nv-lnks"}
+                ${pathname === item.path ? `bg-white font-extrabold uppercase text-[#003683] hv-nv-lnks pt-4 ${ibmPlexSans.className}` : "text-white font-light lowercase nv-lnks"}
               `}
             >
               {item.name}
-            </Link>
-          ))}
+            </a>
+          ))} 
         </nav>
 
         <div className="flex w-full h-2 md:hidden">
@@ -91,13 +91,13 @@ const Navbar = () => {
         </div>
         {/* Logo and menu section  */}
         <div className="relative bg-white top-0 md:top-5">
-          <div className="absolute top-20 inset-0 flex items-center justify-center z-30 w-[100vw] md:w-full">
+          <div className="absolute top-20 inset-0 flex items-center justify-center z-30 w-[105vw]">
             <Image
               src="/heartbeat-line-complet.svg"
               alt=""
               width={1200}
               height={10}
-              className="h-auto block md:hidden"
+              className="h-auto block md:hidden mr-5"
             />
             <Image
               src="/heartbeat-line-complete.svg"
@@ -109,11 +109,12 @@ const Navbar = () => {
           </div>
           <div className="relative z-20 mt-5 md:mt-20 px-8 flex items-center justify-between">
             <Image
-              src="/logo.svg"
+              src="/KLRU_Logo.png"
               alt="Kijabe Limb Reconstruction Unit"
               width={200}
               height={150}
-              className="h-auto lg:h-25 bg-white w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[450px]"
+              className="h-auto lg:h-25 bg-white w-auto max-w-[200px] lg:max-w-[450px]"
+              // className="w-30 h-10 md:w-70 md:h-50 border-2"
             />
 
             <div className="md:hidden">
@@ -131,7 +132,7 @@ const Navbar = () => {
                         href={item.path}
                         onClick={() => setIsOpen(false)}
                         className={`
-                                                  px-6 py-1 text-lg font-light transition-all duration-200 rounded-sm
+                                                  px-6 py-1 text-lg font-bold transition-all duration-200 rounded-sm
                                                   ${pathname === item.path
                             ? `${item.bgColor.replace(
                               "bg-",

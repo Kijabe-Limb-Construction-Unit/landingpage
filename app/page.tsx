@@ -76,42 +76,42 @@ const SlideImage = ({
   </div>
 );
 
-const NavigationDots = ({
-  currentSlide,
-  totalSlides,
-  onSlideChange,
-}: {
-  currentSlide: number;
-  totalSlides: number;
-  onSlideChange: (index: number) => void;
-}) => (
-  <div
-    className="flex justify-center mt-5"
-    role="tablist"
-    aria-label="Slide navigation"
-  >
-    {Array.from({ length: totalSlides }).map((_, index) => (
-      <button
-        key={index}
-        onClick={() => onSlideChange(index)}
-        className={`h-1 w-1 min-[250px]:h-1.5 min-[250px]:w-1.5 min-[320px]:h-2 min-[320px]:w-2 rounded-full mx-0.5 min-[320px]:mx-1 md:mx-2 transition-all duration-200 border border-white min-[320px]:border-2 ${index === currentSlide
-            ? "bg-white"
-            : "bg-transparent hover:bg-white hover:bg-opacity-50"
-          }`}
-        aria-label={`Go to slide ${index + 1}`}
-        role="tab"
-        aria-selected={index === currentSlide}
-      />
-    ))}
-  </div>
-);
+// const NavigationDots = ({
+//   currentSlide,
+//   totalSlides,
+//   onSlideChange,
+// }: {
+//   currentSlide: number;
+//   totalSlides: number;
+//   onSlideChange: (index: number) => void;
+// }) => (
+//   <div
+//     className="flex justify-center mt-5"
+//     role="tablist"
+//     aria-label="Slide navigation"
+//   >
+//     {Array.from({ length: totalSlides }).map((_, index) => (
+//       <button
+//         key={index}
+//         onClick={() => onSlideChange(index)}
+//         className={`h-1 w-1 min-[250px]:h-1.5 min-[250px]:w-1.5 min-[320px]:h-2 min-[320px]:w-2 rounded-full mx-0.5 min-[320px]:mx-1 md:mx-2 transition-all duration-200 border border-white min-[320px]:border-2 ${index === currentSlide
+//             ? "bg-white"
+//             : "bg-transparent hover:bg-white hover:bg-opacity-50"
+//           }`}
+//         aria-label={`Go to slide ${index + 1}`}
+//         role="tab"
+//         aria-selected={index === currentSlide}
+//       />
+//     ))}
+//   </div>
+// );
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const goToSlide = useCallback((index: number) => {
-    setCurrentSlide(index);
-  }, []);
+  // const goToSlide = useCallback((index: number) => {
+  //   setCurrentSlide(index);
+  // }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -171,18 +171,18 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
+      <div className="absolute bottom-1 min-[250px]:bottom-2 min-[320px]:bottom-4 md:bottom-15 left-1/2 transform -translate-x-1/2 w-full text-center z-40 px-1 min-[320px]:px-4">
         <p
           className="mb-0.5 text-2xl md:text-5xl text-white"
           style={{ fontFamily: "Caveat, cursive" }}
         >
           {slides[currentSlide].title}
         </p>
-        <NavigationDots
+        {/* <NavigationDots
           currentSlide={currentSlide}
           totalSlides={slides.length}
           onSlideChange={goToSlide}
-        />
+        /> */}
       </div>
 
       <div className="absolute bottom-0 left-0 w-[100vw] z-20">
@@ -211,7 +211,8 @@ const ServicesSection = () => (
       {/* Mobile: Display service.jpeg image */}
       <div className="md:hidden w-full flex justify-center items-center mt-4 min-[250px]:mt-5 min-[320px]:mt-6">
         <Image
-          src="/service.svg"
+          // src="/service-lg.svg"
+          src="/service-ll.png"
           alt="Our Services"
           width={400}
           height={300}
@@ -222,7 +223,8 @@ const ServicesSection = () => (
       {/* Desktop: Three column layout */}
       <div className="hidden md:flex gap-5 max-w-4xl mx-auto justify-center items-center my-5">
         <Image
-          src="/service-lg.svg"
+          // src="/service-lg.svg"
+          src="/service-ll.png"
           alt="Our Services"
           width={400}
           height={300}

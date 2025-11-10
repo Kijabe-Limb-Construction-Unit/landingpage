@@ -11,11 +11,11 @@ const Navbar = () => {
         {/* <HeartbeatAnimation /> */}
         <div className="absolute top-16 px-8 inset-0 flex items-center justify-start z-10">
           <Image
-            src="/logo.svg"
+            src="/KLRU_Logo.png"
             alt="Kijabe Limb Reconstruction Unit"
             width={200}
             height={150}
-            className="h-auto lg:h-25 bg-white w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[450px]"
+            className="h-auto mb-5 sm:mb-2 md:mb-0 lg:h-25 bg-white w-auto max-w-[200px] lg:max-w-[450px]"
           />
         </div>
       </div>
@@ -25,14 +25,14 @@ const Navbar = () => {
         alt=""
         width={1200}
         height={10}
-        className="h-auto w-[105vw] block md:hidden mt-9"
+        className="h-auto w-[100vw] block md:hidden mt-9"
       />
       <Image
         src="/heartbeat-line-complete.svg"
         alt=""
         width={1200}
         height={10}
-        className="h-auto md:w-[105vw] hidden md:block mt-9"
+        className="h-auto md:w-[100vw] hidden md:block mt-9"
       />
       {/* Donate - restore section  */}
       <NavDonate />

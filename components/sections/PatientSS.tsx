@@ -38,7 +38,7 @@ export function PatientSS() {
           alt="patient stories"
           width={260}
           height={140}
-          className="relative top-2 sm:top-4 md:top-5 lg:top-5 h-[100px] md:h-[150px] lg:h-[180px] w-auto drop-shadow-md md:drop-shadow-lg"
+          className="relative top-2 sm:top-3 md:top-5 lg:top-5 h-[87px] sm:h-[107px] md:h-[146px] lg:h-[180px] w-auto drop-shadow-md md:drop-shadow-lg"
         />
         
       </div>
