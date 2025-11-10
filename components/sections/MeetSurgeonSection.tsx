@@ -11,7 +11,7 @@ const josefin = Josefin_Sans({
 export function MeetSurgeonSection() {
   return (
     <section className="flex flex-col justify-center items-center mb-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683] pb-10 sm:pb-0">
+      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683] pb-12 sm:pb-0">
         {/* Left - Image */}
         <div className="h-full relative">
           {/* <div className="relative"> */}
@@ -37,8 +37,8 @@ export function MeetSurgeonSection() {
           </div>
         </div>
       </div>
-      <div className="flex justify-end items-end w-full">
-        <div className="w-[90%]">
+      <div className="flex justify-center items-end w-full max-w-8xl">
+        <div className="w-full mx-auto">
           {/* Family Photo - positioned on the right */}
           <Image
             src="/malaba-family.png"
@@ -49,25 +49,25 @@ export function MeetSurgeonSection() {
           />
 
           {/* Text Content - wraps around the image */}
-          <div className="text-blue-900 text-lg leading-relaxed mt-25">
-            <p>
+          <div className="text-blue-900 mx-5 lg:pl-[13rem] leading-relaxed mt-25">
+            <p className="pr-0 lg:pr-[12rem]">
               <span className="font-bold text-4xl">DR. MALABA</span>
               <span className="font-bold text-2xl">
                 {" "}
                 IS MARRIED WITH THREE CHILDREN.
               </span>{" "}
               He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in 
-              <span style={{ fontFamily: "Roboto" }}> 2015</span> to start and strengthen churches in East Africa and beyond.
+               2015 to start and strengthen churches in East Africa and beyond.
               Whilst in Kenya<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he subspecialised in paediatric orthopaedics with
               the College of Surgeons of East<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> Central and Southern Africa
               <span className={`${josefin.className} font-light`}> (</span>COSECSA<span className={`${josefin.className} font-light`}>)</span> During his surgical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he was awarded a number
               of prizes including the medal for best<span className={`${josefin.className} font-light`}>-</span>performing candidate in the
-              COSECSA Orthopaedic <span style={{ fontFamily: "Roboto" }}>(2017)</span> and Paediatric Orthopaedic <span style={{ fontFamily: "Roboto", fontWeight: "normal" }}><span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>)</span></span>
+              COSECSA Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2017<span className={`${josefin.className} font-light`}>)</span> and Paediatric Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>)</span>
               Examinations as well at the prestigious{" "}
-              <span className={`${josefin.className} font-semibold`}>Gerald  O´Sullivan Medal</span><span style={{ fontFamily: "Roboto", fontWeight: "bold" }}><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}> (</span>2017<span style={{ fontFamily: "Arial, Helvetica, sans-serif"}}>)</span></span>{" "}
+              <span className={`${josefin.className} font-semibold`}>Gerald  O´Sullivan Medal</span><span style={{fontWeight: "bold" }}><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}> (</span>2017<span style={{ fontFamily: "Arial, Helvetica, sans-serif"}}>)</span></span>{" "}
               awarded by COSECSA and the Royal College of Surgeons of Ireland to
               the graduate with the highest overall mark across all surgical
-              specialties. In <span style={{ fontFamily: "Roboto" }}>2022</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he did a further one year{" "}
+              specialties. In 2022<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he did a further one year{" "}
               <span className="font-bold">
                 subspecialist fellowship training in paediatric and adult limb
                 reconstruction at the Royal London Hospital

@@ -6,9 +6,14 @@ import Image from "next/image";
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      {/*  */}
+      {/*  */}
+      {/*  */}
+      {/*  */}
       <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-5">
-        <h1 className="text-6xl md:text-9xl font-light">
-          <span className="font-bold">resources</span> for patients <br /><p className="text-6xl font-light relative md:-left-[10rem]">Get more information</p>
+        <h1 className="text-5xl md:text-6xl lg:text-8xl font-light leading-tight">
+          <span className="font-bold">resources</span> for patients <br />
+          <p className="text-4xl md:text-5xl font-light leading-tight mt-2 xl:mr-[15rem] md:mt-4">Get more information</p>
         </h1>
         {/* left line on desktop screen */}
         <div className="relative flex w-full justify-end items-end mb-0">
@@ -17,18 +22,22 @@ function App() {
             width={1200}
             height={10}
             alt={""}
-            className="h-15 justify-end sm:-mt-15 -mr-25 sm:-ml-20 w-[70%] lg:w-[40%]"
+            className="h-15 justify-end -mt-[2rem] lg:-mt-[2rem] xl:-mt-[15rem] -mr-10 sm:-ml-20 w-[70%] lg:w-[40%]"
           />
         </div>
-        <p className="text-6xl relative ml-[15rem]">
+        <p className="text-4xl md:text-5xl font-light leading-tight mt-2 md:mt-4 xl:mt-0 xl:ml-[10rem] w-[75%] sm:w-full">
           about your{" "}
           <span className="font-bold">condition or treatment.</span>
         </p>
         {/* Right line on desktop screens */}
         <div className="relative flex -top-5 w-full justify-start items-start">
-          <Image src="/pl-line.svg" width={10} height={10} alt={""} className="h-15 justify-end right-1 mt-1 xl:-mt-5 lg:-mt-3  -ml-20 w-full sm:w-[70%] md:w-[60%] lg:w-[40%]" />
+          <Image src="/pl-line.svg" width={10} height={10} alt={""} className="h-15 justify-end right-1 -mt-1 md:mt-3 lg:-mt-5 lg:-ml-[5rem] -ml-[10rem] sm:-ml-[12rem] w-full sm:w-[70%] md:w-[60%] lg:w-[40%]" />
         </div>
       </div>
+      {/*  */}
+      {/*  */}
+      {/*  */}
+      {/*  */}
       {/* General Information Section */}
       <div className="bg-[#149ECC] px-8 py-12">
         <div className="max-w-5xl mx-auto text-center md:pl-10">
@@ -191,12 +200,12 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-[#003683] text-white flex justify-center items-center flex-col px-8 py-12 gap-4">
+      <div className="bg-[#003683] text-white flex justify-center items-center flex-col px-8 py-12 gap-2">
         <div className="flex items-center gap-4">
-          <Download className="w-20 h-20 text-teal-500" />
-          <h1>reading <span className="font-light">material</span></h1>
+          <Download className="w-12 h-12 text-teal-500" />
+          <h1 className="text-4xl md:text-7xl">reading <span className="font-light">material</span></h1>
         </div>
-        <p className="sm:text-xl md:text-2xl">
+        <p className="text-lg sm:text-xl md:text-2xl">
           Taylor Spatial Frame Patient Information Booklet
         </p>
         <a
