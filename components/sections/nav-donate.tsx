@@ -15,7 +15,7 @@ const NavDonate = () => {
               alt="Donate"
               width={100}
               height={100}
-              className="w-30 h-10 md:w-28 md:h-15 -mt-3 md:mb-2"
+              className="w-30 h-10 md:w-30 md:h-13 -mt-3 md:-mt-0"
             />
         </Link>
         {/* Logo and Tagline Side */}
