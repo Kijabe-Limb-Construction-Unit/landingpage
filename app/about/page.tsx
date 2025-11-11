@@ -98,7 +98,7 @@ export default function AboutPage() {
             />
 
             {/* Title */}
-            <h1 className="relative z-10 font-bold text-3xl lg:text-4xl mt-15 border lg:px-15  md:mt-0">
+            <h1 className="relative z-10 font-bold text-3xl lg:text-4xl mt-15 lg:px-15  md:mt-0">
               THE ANSWER
             </h1>
 
