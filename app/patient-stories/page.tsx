@@ -35,7 +35,7 @@ export default function PatientStories() {
                 className="text-5xl italic text-white mb-4 lg:mb-6 w-full font-bold max-w-5xl -ml-3"
                 style={{ fontFamily: "Caveat, cursive" }}
               >
-                <span className="text-5xl mr-2 font-normal">“</span>{patientTestimonies[0].testimonial}<span className="text-5xl -ml-1 font-normal">”</span>
+                <span className="text-5xl mr-2 font-normal">“</span>{patientTestimonies[0].testimonial}<span className="text-5xl -ml-1.5 font-normal">”</span>
               </p>
 
               <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
@@ -48,7 +48,7 @@ export default function PatientStories() {
           </div>
 
           <div className="w-full flex aspect-[16/9] lg:w-1/2 order-1 lg:order-2">
-            <div className="w-[60%] lg:w-[50%] xl:w-[60%] h-full relative">
+            <div className="w-[80%] sm:w-[85%] lg:w-[50%] xl:w-[70%] h-full relative">
               <Image
                 src={patientTestimonies[0].image}
                 alt={patientTestimonies[0].name}
@@ -87,7 +87,7 @@ export default function PatientStories() {
               className="object-cover hover:opacity-90 transition-opacity"
             />
           </a>
-          <div className="w-[60%] lg:w-[50%] xl:w-[60%] h-full relative"  >
+          <div className="w-[80%] sm:w-[85%] lg:w-[55%] xl:w-[75%] h-full relative"  >
             <Image
               src={patientTestimonies[1].image}
               alt={patientTestimonies[1].name}
@@ -113,8 +113,8 @@ export default function PatientStories() {
             </p>
 
             <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
-            Moses went from expecting an amputation after a leg fracture to being pain free<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md mr-1">,</span>
-              <span className="font-bold text-3xl">able to work again!</span>
+            Moses went from expecting an amputation after a leg fracture to being pain free and 
+              <span className="font-bold text-3xl"> able to work again!</span>
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function PatientStories() {
               className="text-5xl italic text-white mb-4 lg:mb-6 w-full max-w-5xl font-bold mr-3"
               style={{ fontFamily: "Caveat, cursive" }}
             >
-              <span className="text-5xl mr-2 font-normal">“</span>I see a beautiful me.<span className="text-5xl -ml-1 font-normal">”</span>
+              <span className="text-5xl mr-2 font-normal">“</span>I see a beautiful me.<span className="text-5xl -ml-1.5 font-normal">”</span>
             </p>
 
             <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
@@ -146,7 +146,7 @@ export default function PatientStories() {
           </div>
         </div>
         <div className="w-full flex aspect-[16/9] lg:w-1/2 order-1 lg:order-2">
-          <div className="w-[60%] lg:w-[50%] xl:w-[60%] h-full relative">
+          <div className="w-[80%] sm:w-[85%] lg:w-[55%] xl:w-[75%] h-full relative">
             <Image
               src={Doris}
               alt="Doris"
@@ -164,7 +164,7 @@ export default function PatientStories() {
               src="/click-here-green.svg"
               alt="Click to watch Doris's video"
               fill
-              className="object-cover hover:opacity-90 transition-opacity"
+              className="object-cover hover:opacity-90 h-96 transition-opacity"
             />
           </a>
         </div>

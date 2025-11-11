@@ -2,7 +2,13 @@
 import { BlueColoredBorder } from "@/components/sections/ColoredBorder";
 import Image from "next/image";
 import Link from "next/link";
+import { Josefin_Sans } from 'next/font/google';
 
+const josefin = Josefin_Sans({
+  subsets: ['latin'],
+  weight: [ '200', '600', '700'],
+  style: ['normal', 'italic'],
+});
 
 export default function DonatePage() {
   return (
@@ -44,7 +50,7 @@ export default function DonatePage() {
         {/* border-3 md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
         <div className="gnz flex flex-col justify-center text-[#003683] w-full pr-0 md:pr-10 text-center md:text-left lg:-ml-[25rem]">
           <p className="text-3xl">
-            ALL DONATIONS RECEIVED ARE USED <span style={{ fontFamily: "Roboto" }}>100%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
+            ALL DONATIONS RECEIVED ARE USED 100<span style={{ fontFamily: "Roboto" }}>%</span> FOR THE KIJABE LIMB RECONSTRUCTION UNIT.
           </p>
           <p className="font-bold mt-2">
             THERE IS NO DEDUCTION FOR ADMINISTRATIVE COSTS.
@@ -57,9 +63,9 @@ export default function DonatePage() {
             CLICK HERE
           </Link>
           </div>
-          <p className="text-white border-t border-[#003683] mt-5 pt-5 text-[19px] md:text-[23px]">
+          <p className="text-white border-t border-[#003683] mt-0 md:-mt-10 pt-8 text-[20px] md:text-[25px]">
             Your donation is also tax-deductible for US taxpayers! Global Connections is a
-            registered <span style={{ fontFamily: "Roboto" }}>501 (c)3</span> corporation with the Internal Revenue Service. Tax ID <span style={{ fontFamily: "Roboto" }}> #20-8241793</span>
+            registered 501 <span className={`${josefin.className} font-light`}>(</span>c<span className={`${josefin.className} font-light`}>)</span>3 corporation with the Internal Revenue Service. Tax ID #20-8241793
           </p>
         </div>
       </div>

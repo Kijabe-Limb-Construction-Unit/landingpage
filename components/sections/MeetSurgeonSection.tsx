@@ -49,8 +49,8 @@ export function MeetSurgeonSection() {
           />
 
           {/* Text Content - wraps around the image */}
-          <div className="text-blue-900 mx-5 lg:pl-[13rem] leading-relaxed mt-25">
-            <p className="pr-0 lg:pr-[12rem]">
+          <div className="text-blue-900 mx-5 md:pl-[5rem] lg:pl-[13rem] leading-relaxed mt-25">
+            <p className="pr-0 md:pr-[5rem] lg:pr-[12rem]">
               <span className="font-bold text-4xl">DR. MALABA</span>
               <span className="font-bold text-2xl">
                 {" "}

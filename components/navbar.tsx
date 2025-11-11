@@ -97,7 +97,7 @@ const Navbar = () => {
               alt=""
               width={1200}
               height={10}
-              className="h-auto block md:hidden mr-5"
+              className="h-auto block md:hidden mr-5 mt-10"
             />
             <Image
               src="/heartbeat-line-complete.svg"

@@ -71,7 +71,7 @@ export function HospitalSection() {
           </div>
           <div className="relative w-full lg:w-1/2 min-h-[560px] lg:min-h-[720px]">
             <Image
-              src="/hospital-1.svg"
+              src="/hospital-1.jpeg"
               width={1200}
               height={800}
               alt="Aerial view of Kijabe Hospital complex nestled in the Great Rift Valley landscape"

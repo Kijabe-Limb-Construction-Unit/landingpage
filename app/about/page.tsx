@@ -98,12 +98,12 @@ export default function AboutPage() {
             />
 
             {/* Title */}
-            <h1 className="relative z-10 font-bold text-3xl lg:text-4xl mt-15 md:mt-0">
+            <h1 className="relative z-10 font-bold text-3xl lg:text-4xl mt-15 border lg:px-15  md:mt-0">
               THE ANSWER
             </h1>
 
             {/* Content with proper spacing */}
-            <div className="relative z-10 sm:space-y-6 leading-relaxed space-y-5 max-w-none lg:max-w-3xl">
+            <div className="relative z-10 sm:space-y-6 leading-relaxed space-y-5 max-w-none lg:max-w-3xl lg:px-15">
               <p>
                 <span className="font-bold text-[#003683] px-1 py-0.5 rounded">
                   LIMB RECONSTRUCTION IS AN ESSENTIAL WEAPON IN ADDRESSING THIS
@@ -124,7 +124,7 @@ export default function AboutPage() {
         </div>
 
         {/* BOVIN AFTER Section */}
-        <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[720px]">
+        <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[700px]">
           {/* Header */}
           <div className="bg-[#003683] text-white text-center py-4 flex-shrink-0">
             <h2 className="font-bold tracking-wide text-3xl lg:text-4xl">
@@ -152,11 +152,11 @@ export default function AboutPage() {
             <div className="text-white space-y-6">
               <h2 className="text-3xl lg:text-4xl">{aboutData.vision.title}</h2>
               <div className="leading-relaxed">
-                <p>The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is a world where men<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span>
-                  women and children <span className="font-bold text-[#DFFF80]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span>
+                <p>The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is a world where men<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">, </span>
+                  women and children <span className="font-bold text-[#DFFF80]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">, </span>
                   when they need it<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> regardless of where they were born or how much money they happen to have. Towards this end
-                  <span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> we are developing a centre of excellence in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span>
-                  Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span>
+                  <span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> we are developing a centre of excellence in Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">, </span>
+                  Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">, </span>
                   <span className="font-bold text-[#DFFF80]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span></p>
               </div>
             </div>

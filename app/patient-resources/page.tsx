@@ -13,7 +13,7 @@ function App() {
       <div className="flex flex-col items-center justify-center text-center bg-[#4FB29E] text-white py-5">
         <h1 className="text-5xl md:text-6xl lg:text-8xl font-light leading-tight">
           <span className="font-bold">resources</span> for patients <br />
-          <p className="text-4xl md:text-5xl font-light leading-tight mt-2 xl:mr-[15rem] md:mt-4">Get more information</p>
+          <p className="text-4xl md:text-5xl font-light leading-tight mt-2 xl:mr-[15rem] md:mt-4 xl:-mt-4">Get more information</p>
         </h1>
         {/* left line on desktop screen */}
         <div className="relative flex w-full justify-end items-end mb-0">
@@ -22,7 +22,7 @@ function App() {
             width={1200}
             height={10}
             alt={""}
-            className="h-15 justify-end -mt-[2rem] lg:-mt-[2rem] xl:-mt-[15rem] -mr-10 sm:-ml-20 w-[70%] lg:w-[40%]"
+            className="h-15 justify-end -mt-[2rem] lg:-mt-[2rem] xl:-mt-[15rem] -mr-10 sm:-ml-20 xl:-ml-0 xl:-mr-25 w-[70%] lg:w-[40%]"
           />
         </div>
         <p className="text-4xl md:text-5xl font-light leading-tight mt-2 md:mt-4 xl:mt-0 xl:ml-[10rem] w-[75%] sm:w-full">

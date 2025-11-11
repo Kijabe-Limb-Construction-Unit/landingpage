@@ -22,7 +22,7 @@ export const storiesData = {
       name: "MOSES",
       testimonial: "This is like a miracle... ",
       testimonialContinued: "I can go back to my work.",
-      fullStory: "Moses went from expecting an amputation after a leg fracture to being pain free, walking normally and",
+      fullStory: "Moses went from expecting an amputation after a leg fracture to being pain free, and walking normally and",
       image: "/moses.png",
       bgColor: "bg-[#149ECC]",
       textBgColor: "bg-[#193380]",

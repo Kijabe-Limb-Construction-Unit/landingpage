@@ -224,7 +224,7 @@ const ServicesSection = () => (
       <div className="hidden md:flex gap-5 max-w-4xl mx-auto justify-center items-center my-5">
         <Image
           // src="/service-lg.svg"
-          src="/service-ll.png"
+          src="/service-l.svg"
           alt="Our Services"
           width={400}
           height={300}
