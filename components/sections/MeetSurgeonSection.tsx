@@ -45,7 +45,7 @@ export function MeetSurgeonSection() {
             width={300}
             height={200}
             alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
-            className="float-right ml-8 mb-6 w-[55%] max-h-[500px]"
+            className="float-right ml-8 mb-6 w-[52%] max-h-[500px]"
           />
 
           {/* Text Content - wraps around the image */}

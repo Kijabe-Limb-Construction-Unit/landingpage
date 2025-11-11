@@ -34,13 +34,24 @@ const Footer = () => {
               </svg>
             </a>
 
-            <Link className='w-10 h-10 bg-white text-[#003683] rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity' href='+254794806940'>
+            <Link
+              className='w-10 h-10 bg-white text-[#003683] rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity'
+              href="https://wa.me/254794806940"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp className='w-5 h-5' />
             </Link>
 
-            <Link className='w-10 h-10 bg-white text-[#003683] rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity' href='info@kijaberecon.org'>
+            <Link
+              className='w-10 h-10 bg-white text-[#003683] rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity'
+              href="mailto:info@kijaberecon.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Mail className='w-5 h-5' />
             </Link>
+            
           </div>
 
           {/* Policy Links */}
