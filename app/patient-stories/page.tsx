@@ -32,10 +32,10 @@ export default function PatientStories() {
               </h2>
 
               <p
-                className="text-5xl italic text-white mb-4 lg:mb-6 w-full font-bold max-w-5xl -ml-3"
+                className="text-4xl sm:text-5xl italic text-white mb-4 lg:mb-6 w-full font-bold max-w-5xl -ml-3"
                 style={{ fontFamily: "Caveat, cursive" }}
               >
-                <span className="text-5xl mr-2 font-normal">“</span>{patientTestimonies[0].testimonial}<span className="text-5xl -ml-1.5 font-normal">”</span>
+                <span className="text-5xl mr-2 font-normal">“</span>I feel so happy cause now I can walk<span className="text-5xl ml-0.5 font-normal">.</span><span className="text-5xl -ml-1.5 font-normal">”</span>
               </p>
 
               <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
@@ -57,7 +57,7 @@ export default function PatientStories() {
               />
             </div>
             <a 
-              href="https://drive.google.com/file/d/1GfTXX4HA9dk10wd4pyYHjbhQNW-4OxDs/view?ts=6900e3e9"
+              href="https://youtu.be/fOJjvntwIoM"
               target="_blank"
               rel="noopener noreferrer"
               className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative block cursor-pointer"
@@ -75,7 +75,7 @@ export default function PatientStories() {
       <div className="bg-[#149ECC] flex flex-col lg:flex-row">
         <div className="w-full flex aspect-[16/9] lg:w-1/2 relative">
           <a 
-            href="https://drive.google.com/file/d/1VgCPE1g_CVJm96Q8HRZlUcbj8VpqJpRA/view?ts=6900e43c"
+            href="https://youtu.be/FzLt01aMoBA"
             target="_blank"
             rel="noopener noreferrer"
             className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative block cursor-pointer"
@@ -105,7 +105,7 @@ export default function PatientStories() {
             </h2>
 
             <p
-              className="text-5xl italic text-white mb-4 lg:mb-6 font-bold"
+              className="text-4xl sm:text-5xl italic text-white mb-4 lg:mb-6 font-bold"
               style={{ fontFamily: "Caveat, cursive" }}
             >
               <span className="text-5xl mr-2 font-normal">“</span>{patientTestimonies[1].testimonial} <br />
@@ -129,7 +129,7 @@ export default function PatientStories() {
             </h2>
 
             <p
-              className="text-5xl italic text-white mb-4 lg:mb-6 w-full max-w-5xl font-bold mr-3"
+              className="text-4xl sm:text-5xl italic text-white mb-4 lg:mb-6 w-full max-w-5xl font-bold mr-3"
               style={{ fontFamily: "Caveat, cursive" }}
             >
               <span className="text-5xl mr-2 font-normal">“</span>I see a beautiful me.<span className="text-5xl -ml-1.5 font-normal">”</span>
@@ -155,7 +155,7 @@ export default function PatientStories() {
             />
           </div>
           <a 
-            href="https://drive.google.com/file/d/1i_AU8L6f34i2qW7F21AiWgCuWwdcUC0Q/view?ts=6900e469"
+            href="https://youtu.be/q8fI15H71oQ"
             target="_blank"
             rel="noopener noreferrer"
             className="w-[40%] lg:w-[50%] xl:w-[40%] h-full relative block cursor-pointer"

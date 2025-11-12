@@ -10,7 +10,7 @@ export const storiesData = {
     {
       id: 1,
       name: "BOVIN",
-      testimonial: "I feel so happy cause now I can walk .",
+      testimonial: "I feel so happy cause now I can walk.",
       fullStory: "Bovin spent his teen years being ridiculed by his peers and unable to walk long distances due to an extreme and disfiguring case of knock-knees.",
       image: "/bovin.png",
       bgColor: "bg-[#66B2B2]",
