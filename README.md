@@ -1,6 +1,6 @@
-# GANZ Africa Landing Page
+## Kijabe Limb Reconstruction Unit WebSite
 
-This is a modern landing page for GANZ Africa, built with [Next.js](https://nextjs.org) and TypeScript, following the App Router architecture.
+This is a modern landing page for Kijabe Limb Reconstruction Unit, built with [Next.js](https://nextjs.org) and TypeScript, following the App Router architecture.
 
 ## Tech Stack
 
