@@ -45,12 +45,21 @@ export function MeetSurgeonSection() {
             width={300}
             height={200}
             alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
-            className="float-right ml-[6rem] mb-6 w-[45%] max-h-[550px]"
+            className="float-right ml-[6rem] mb-6 hidden md:block md:w-[45%] max-h-[550px] "
+          />
+
+          {/* small screen */}
+          <Image
+            src="/malaba-family.jpg"
+            width={300}
+            height={200}
+            alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
+            className="float-right ml-[6rem] mb-6 w-full md:hidden max-h-[550px] "
           />
 
           {/* Text Content - wraps around the image */}
-          <div className="text-blue-900 mx-5 md:pl-[5rem] lg:pl-[13rem] leading-relaxed mt-25">
-            <p className="pr-0 md:pr-[5rem] lg:pr-[12rem]">
+          <div className="text-blue-900 mx-5 md:pl-[5rem] lg:pl-[7rem] xl:pl-[13rem] leading-relaxed mt-25">
+            <p className="pr-0 md:pr-[5rem] lg:pr-[10rem] xl:pr-[12rem]">
               <span className="font-bold text-4xl">DR. MALABA</span>
               <span className="font-bold text-2xl">
                 {" "}

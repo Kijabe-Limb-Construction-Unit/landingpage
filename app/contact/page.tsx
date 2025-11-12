@@ -14,10 +14,10 @@ export default function ContactUsPage() {
               <div className="flex flex-col justify-center items-center">
                 <p className="tracking-wider text-lg md:text-xl lg:text-4xl">info@kijaberecon.org <span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md mr-0"> /</span></p>
                 <p className="tracking-wider text-lg md:text-xl lg:text-4xl flex">whatsapp: <span className="flex space-x-3 text-2xl justify-center items-center text-middle ml-2">
-                  <span>+254</span>
-                  <span>794</span>
-                  <span>806</span>
-                  <span>940</span>
+                  <span className="text-lg lg:text-2xl">+254</span>
+                  <span className="text-lg lg:text-2xl">794</span>
+                  <span className="text-lg lg:text-2xl">806</span>
+                  <span className="text-lg lg:text-2xl">940</span>
                 </span>
                 </p>
               </div>
