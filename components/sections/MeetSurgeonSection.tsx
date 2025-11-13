@@ -25,7 +25,7 @@ export function MeetSurgeonSection() {
         </div>
 
         {/* Right - Content */}
-        <div className="text-[#003683] space-y-6 mx-5 lg:mx-0">
+        <div className="text-[#003683] space-y-6 mx-5 pb-15 lg:mx-0">
           <p className="w-full md:w-[85%]">
             <span className="text-5xl md:text-7xl">meet the </span>
             <span className="font-bold text-5xl md:text-7xl relative -top-0 md:-top-2 lg:-top-4 xl:-top-0">surgeon </span><br />
@@ -41,16 +41,25 @@ export function MeetSurgeonSection() {
         <div className="w-full mx-auto">
           {/* Family Photo - positioned on the right */}
           <Image
-            src="/malaba-family.png"
+            src="/malaba-family.svg"
             width={300}
             height={200}
             alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
-            className="float-right ml-8 mb-6 w-[52%] max-h-[500px]"
+            className="float-right ml-[6rem] mb-6 hidden md:block md:w-[45%] max-h-[550px] "
+          />
+
+          {/* small screen */}
+          <Image
+            src="/malaba-family.jpg"
+            width={300}
+            height={200}
+            alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
+            className="float-right ml-[6rem] mb-6 w-full md:hidden max-h-[550px] "
           />
 
           {/* Text Content - wraps around the image */}
-          <div className="text-blue-900 mx-5 md:pl-[5rem] lg:pl-[13rem] leading-relaxed mt-25">
-            <p className="pr-0 md:pr-[5rem] lg:pr-[12rem]">
+          <div className="text-blue-900 mx-5 md:pl-[5rem] lg:pl-[7rem] xl:pl-[13rem] leading-relaxed mt-25">
+            <p className="pr-0 md:pr-[5rem] lg:pr-[10rem] xl:pr-[12rem]">
               <span className="font-bold text-4xl">DR. MALABA</span>
               <span className="font-bold text-2xl">
                 {" "}
@@ -62,7 +71,7 @@ export function MeetSurgeonSection() {
               the College of Surgeons of East<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> Central and Southern Africa
               <span className={`${josefin.className} font-light`}> (</span>COSECSA<span className={`${josefin.className} font-light`}>)</span> During his surgical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he was awarded a number
               of prizes including the medal for best<span className={`${josefin.className} font-light`}>-</span>performing candidate in the
-              COSECSA Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2017<span className={`${josefin.className} font-light`}>)</span> and Paediatric Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>)</span>
+              COSECSA Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2017<span className={`${josefin.className} font-light`}>)</span> and Paediatric Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>) </span>
               Examinations as well at the prestigious{" "}
               <span className={`${josefin.className} font-semibold`}>Gerald  O´Sullivan Medal</span><span style={{fontWeight: "bold" }}><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}> (</span>2017<span style={{ fontFamily: "Arial, Helvetica, sans-serif"}}>)</span></span>{" "}
               awarded by COSECSA and the Royal College of Surgeons of Ireland to

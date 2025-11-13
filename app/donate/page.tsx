@@ -63,7 +63,7 @@ export default function DonatePage() {
             CLICK HERE
           </Link>
           </div>
-          <p className="text-white border-t border-[#003683] mt-0 md:-mt-10 pt-8 text-[20px] md:text-[25px]">
+          <p className="text-white border-t border-[#003683] mt-0 mb-4 md:-mt-10 pt-8 text-[20px] md:text-[25px]">
             Your donation is also tax-deductible for US taxpayers! Global Connections is a
             registered 501 <span className={`${josefin.className} font-light`}>(</span>c<span className={`${josefin.className} font-light`}>)</span>3 corporation with the Internal Revenue Service. Tax ID #20-8241793
           </p>

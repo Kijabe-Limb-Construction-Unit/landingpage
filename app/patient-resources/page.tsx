@@ -22,7 +22,7 @@ function App() {
             width={1200}
             height={10}
             alt={""}
-            className="h-15 justify-end -mt-[2rem] lg:-mt-[2rem] xl:-mt-[15rem] -mr-10 sm:-ml-20 xl:-ml-0 xl:-mr-25 w-[70%] lg:w-[40%]"
+            className="h-15 justify-end -mt-[1rem] lg:-mt-[2rem] xl:-mt-[15rem] -mr-10 sm:-ml-20 xl:-ml-0 xl:-mr-25 w-[70%] lg:w-[40%]"
           />
         </div>
         <p className="text-4xl md:text-5xl font-light leading-tight mt-2 md:mt-4 xl:mt-0 xl:ml-[10rem] w-[75%] sm:w-full">
@@ -45,7 +45,7 @@ function App() {
             GENERAL{" "}
             <span className="font-bold pl-1 md:pl-5 w-auto">INFORMATION</span>
           </h1>
-          <div className="grid grid-cols-2 items-start gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <PatientResources
               p1="Limb Reconstruction with"
               p2="Frames: An Overview "
@@ -91,7 +91,7 @@ function App() {
               YOUR PIN SITES
             </span>
           </h1>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <PatientResources
               p1="Pin Site Care"
               p2="(Animated)"
@@ -118,7 +118,7 @@ function App() {
           <h1 className="text-teal-500 text-3xl md:text-4xl flex flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             MANAGING <span className="font-bold pl-2 md:pl-5">YOUR STRUTS</span>
           </h1>
-          <div className="grid grid-cols-2 gap-6 text-[#083783]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 text-[#083783] gap-6">
             <PatientResources
               p1="Adjusting a Strut"
               p2=""
@@ -145,7 +145,7 @@ function App() {
           <h1 className="text-[#083783] text-3xl md:text-4xl flex-wrap items-center font-light mb-8 tracking-wider flex justify-center md:justify-start">
             MONORAIL <span className="font-bold pl-2 md:pl-5">FRAMES</span>
           </h1>
-          <div className="grid grid-cols-2 gap-6 text-[#083783]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 text-[#083783] gap-6">
             <PatientResources
               p1="Monorail Adjustment"
               p2=""
@@ -164,7 +164,7 @@ function App() {
           <h1 className="text-white text-3xl md:text-4xl flex flex-wrap items-center font-bold mb-8 tracking-wider flex justify-center md:justify-start">
             REHABILITATION
           </h1>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <PatientResources
               p1="Frames Physiotherapy"
               p2=""
@@ -200,9 +200,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-[#003683] text-white flex justify-center items-center flex-col px-8 py-12 gap-2">
+      <div className="bg-[#003683] text-white flex justify-center items-center text-center flex-col px-8 py-12 gap-2">
         <div className="flex items-center gap-4">
-          <Download className="w-12 h-12 text-teal-500" />
+          <Download className="w-12 h-12 text-teal-500 -mr-2 sm:-mr-0" />
           <h1 className="text-4xl md:text-7xl">reading <span className="font-light">material</span></h1>
         </div>
         <p className="text-lg sm:text-xl md:text-2xl">
