@@ -25,7 +25,7 @@ export function AfricaVisionSection() {
       </div>
 
       {/* Desktop view - custom shape text wrapping */}
-      <div className="hidden lg:block relative min-h-[500px]">
+      <div className="hidden lg:block relative min-h-[700px]">
         {/* Africa map positioned absolutely */}
         <div className="absolute right-0 top-0 z-10">
           <Image
@@ -37,31 +37,31 @@ export function AfricaVisionSection() {
           />
         </div>
         
-        {/* Custom shaped text container */}
-        <div className="relative z-20 text-lg xl:text-xl font-light leading-relaxed">
+        {/* Custom shaped text container - positioned much lower */}
+        <div className="relative z-20 text-lg xl:text-xl font-light leading-relaxed" style={{ marginTop: '120px' }}>
           {/* Text content with custom CSS shape */}
           <div 
             className="africa-text-shape text-justify hyphens-auto"
             style={{
               shapeOutside: `polygon(
                 0% 0%, 
-                70% 0%, 
-                75% 10%, 
-                80% 15%, 
-                85% 25%, 
-                88% 35%, 
-                90% 45%, 
-                92% 55%, 
-                90% 65%, 
-                87% 75%, 
-                83% 85%, 
-                78% 95%, 
-                70% 100%, 
+                45% 0%, 
+                50% 5%, 
+                58% 12%, 
+                65% 20%, 
+                70% 30%, 
+                75% 42%, 
+                78% 55%, 
+                75% 68%, 
+                70% 80%, 
+                65% 90%, 
+                58% 96%, 
+                45% 100%, 
                 0% 100%
               )`,
               float: 'left',
-              width: '75%',
-              minHeight: '500px'
+              width: '70%',
+              minHeight: '400px'
             }}
           >
             <p className="mb-6">
@@ -71,10 +71,13 @@ export function AfricaVisionSection() {
               Towards this end, we are developing a centre of excellence in Kijabe, Kenya that trains <span className="font-extrabold text-[#4FB29E] xl:text-2xl text-xl">10 limb reconstruction surgeons</span> from <span className="font-extrabold text-[#4FB29E] xl:text-2xl text-xl">10 sub-Saharan countries</span> in the <span className="font-extrabold text-[#4FB29E] xl:text-2xl text-xl">next 10 years</span>, <span className="font-bold text-[#4FB29E]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span>
             </p>
             <p className="mb-6">
-              This comprehensive training program will establish a network of skilled surgeons who can provide life-changing care to patients across sub-Saharan Africa, creating a ripple effect of healing and hope that extends far beyond our borders in Kijabe.
+              This comprehensive training program will establish a network of skilled surgeons who can provide life-changing care to patients across sub-Saharan Africa, creating a ripple effect of healing and hope that extends far beyond our borders in Kijabe. Each trained surgeon will return to their home country equipped with advanced techniques and knowledge.
+            </p>
+            <p className="mb-6">
+              Through strategic partnerships and innovative training methodologies, we aim to build sustainable healthcare infrastructure that will serve generations of patients throughout the continent, ensuring that no one is left behind due to geographic or economic barriers.
             </p>
             <p>
-              Through strategic partnerships and innovative training methodologies, we aim to build sustainable healthcare infrastructure that will serve generations of patients throughout the continent, ensuring that no one is left behind due to geographic or economic barriers.
+              Our vision extends beyond individual treatment to systemic change, creating a future where limb reconstruction surgery is accessible and affordable across Africa, transforming lives and communities through the power of skilled, compassionate medical care.
             </p>
           </div>
         </div>

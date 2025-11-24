@@ -10,39 +10,41 @@ const josefin = Josefin_Sans({
 
 export function MeetSurgeonSection() {
   return (
-    <section className="flex flex-col justify-center items-center pt-20 pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center border-b-3 border-[#003683] w-full max-w-7xl">
-        {/* Left - Image */}
-        <div className="h-full relative">
-          {/* <div className="relative"> */}
-          <Image
-            src="/donate.png"
-            alt="Dr. Mbonisi Malaba"
-            width={500}
-            height={600}
-            className="h-full w-full object-cover"
-          />
-        </div>
-
-        {/* Right - Content */}
-        <div className="text-[#003683] space-y-6 mx-5 pb-15 lg:mx-0 md:pl-4 lg:pl-[18px] xl:pl-5">
-          <div className="w-full">
-            <div className="leading-tight">
-              <span className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">meet the </span>
-              <span className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">surgeon</span>
-            </div>
-            <div className="mt-2">
-              <span className={`font-bold text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${josefin.className}`}>DR. MBONISI MALABA</span>
-            </div>
+    <section className="flex flex-col justify-center items-center pt-0 pb-12">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-0">
+        {/* Top - Image and Content Side by Side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center border-b-3 border-[#003683] mb-12">
+          {/* Left - Image */}
+          <div className="h-full relative -mx-4 sm:-mx-6 md:-mx-8 lg:mx-0">
+            <Image
+              src="/donate.png"
+              alt="Dr. Mbonisi Malaba"
+              width={500}
+              height={600}
+              className="h-full w-full object-cover"
+            />
           </div>
 
-          <div className="space-y-4">
-            <p className="font-bold">{aboutData.surgeon.role}</p>
+          {/* Right - Content */}
+          <div className="text-[#003683] space-y-6 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 lg:py-12">
+            <div className="w-full">
+              <div className="leading-tight">
+                <span className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">meet the </span>
+                <span className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">surgeon</span>
+              </div>
+              <div className="mt-2">
+                <span className={`font-bold text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${josefin.className}`}>DR. MBONISI MALABA</span>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <p className="font-bold">{aboutData.surgeon.role}</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-end w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="w-full mx-auto">
+        {/* Bottom - Biography Section */}
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
           {/* Family Photo - positioned on the right */}
           <Image
             src="/malaba-family.svg"
@@ -62,7 +64,7 @@ export function MeetSurgeonSection() {
           />
 
           {/* Text Content - wraps around the image */}
-          <div className="text-blue-900 mx-5 sm:mx-6 md:pl-8 lg:pl-12 xl:pl-16 leading-relaxed mt-16">
+          <div className="text-blue-900 leading-relaxed mt-16">
             <p className="pr-0 sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16 text-justify hyphens-auto">
               <span className="font-bold text-4xl">DR. MALABA</span>
               <span className="font-bold text-2xl">
@@ -99,7 +101,6 @@ export function MeetSurgeonSection() {
             </p>
           </div>
         </div>
-      </div>
     </section>
   );
 }
