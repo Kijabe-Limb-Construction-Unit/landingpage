@@ -1,4 +1,4 @@
-// import Mboniso from "@/public/mbonisi.png";
+// import Mboniso from "@/public/mbon                <span className="text-5xl mr-2 font-normal">"</span>I feel so happy cause now I can walk.<span className="text-5xl ml-0.5 font-normal">"</span>si.png";
 import Bovin from "@/public/bovin.png";
 import Moses from "@/public/moses.png";
 import Doris from "@/public/doris.png";
@@ -136,7 +136,7 @@ export default function PatientStories() {
             </p>
 
             <p className="text-body text-white leading-relaxed mb-4 lg:mb-6 w-full max-w-5xl">
-              Doris suffered from a multilevel leg deformity for 18 years<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md mr-1">,</span>
+              Doris suffered from a multilevel leg deformity for 18 years,
               affecting her schooling and self-image and making her prone to
               falling while walking. Now she{" "}
               <span className="font-bold text-3xl">

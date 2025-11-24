@@ -113,7 +113,7 @@ const Navbar = () => {
               alt="Kijabe Limb Reconstruction Unit"
               width={200}
               height={150}
-              className="h-auto lg:h-25 bg-white w-auto max-w-[200px] lg:max-w-[450px]"
+              className="h-auto lg:h-25 bg-white w-auto max-w-[280px] md:max-w-[400px] lg:max-w-[500px]"
               // className="w-30 h-10 md:w-70 md:h-50 border-2"
             />
 

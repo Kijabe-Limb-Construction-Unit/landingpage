@@ -51,21 +51,21 @@ export function HospitalSection() {
             </div>
 
             <div className="flex-1 flex items-center leading-relaxed space-y-4 px-20 text-blue-900 lg:px-2 xl:px-20 mt-10 lg:mt-20">
-              <p className="w-full lg:my-20 pl-30 md:ml-0 leading-relaxed space-y-5">
+              <p className="w-full lg:my-20 pl-30 md:ml-0 leading-relaxed space-y-5 text-justify hyphens-none pr-6 lg:pr-8 xl:pr-10">
                 <span className="font-bold">Kijabe Hospital</span> is a renowned
-                center of excellence in healthcare and medical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> serving
+                center of excellence in healthcare and medical training, serving
                 patients from across Kenya and beyond. Nestled on the scenic
                 escarpment overlooking the{" "}
-                <span className="font-bold">Great Rift Valley</span><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> it
+                <span className="font-bold">Great Rift Valley</span>, it
                 combines{" "}
                 <span className="font-bold">
                   world-class care with a vibrant teaching environment
                 </span>{" "}
                 that equips the next generation of African healthcare
-                professionals. Located in the welcoming village of Kijabe<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> the
+                professionals. Located in the welcoming village of Kijabe, the
                 hospital forms part of a unique medical community alongside
-                another neighbouring mission hospital<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> fostering collaboration
-                and innovation in a serene<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }} className="text-md">,</span> picturesque setting.
+                another neighbouring mission hospital, fostering collaboration
+                and innovation in a serene, picturesque setting.
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export function HospitalSection() {
             className="sticky md:absolute z-30 -mt-5 mb-5 md:pt-5 w-[100%] object-cover"
           />
           <div className="leading-relaxed space-y-4 text-blue-900 flex justify-end px-5 items-end">
-            <p className="w-full md:max-w-5xl">
+            <p className="w-full md:max-w-5xl text-justify hyphens-none">
               <span className="font-bold">Kijabe Hospital</span> is a renowned
               centre of excellence in healthcare and medical training, serving
               patients from across Kenya and beyond. Nestled on the scenic

@@ -10,8 +10,8 @@ const josefin = Josefin_Sans({
 
 export function MeetSurgeonSection() {
   return (
-    <section className="flex flex-col justify-center items-center mb-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center border-b-3 border-[#003683] pb-12 sm:pb-0">
+    <section className="flex flex-col justify-center items-center pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center border-b-3 border-[#003683] w-full max-w-7xl">
         {/* Left - Image */}
         <div className="h-full relative">
           {/* <div className="relative"> */}
@@ -25,19 +25,23 @@ export function MeetSurgeonSection() {
         </div>
 
         {/* Right - Content */}
-        <div className="text-[#003683] space-y-6 mx-5 pb-15 lg:mx-0">
-          <p className="w-full md:w-[85%]">
-            <span className="text-5xl md:text-7xl">meet the </span>
-            <span className="font-bold text-5xl md:text-7xl relative -top-0 md:-top-2 lg:-top-4 xl:-top-0">surgeon </span><br />
-            <span className={`font-bold text-xl md:text-3xl ${josefin.className}`}>DR. MBONISI MALABA</span>
-          </p>
+        <div className="text-[#003683] space-y-6 mx-5 pb-15 lg:mx-0 md:pl-4 lg:pl-[18px] xl:pl-5">
+          <div className="w-full">
+            <div className="leading-tight">
+              <span className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">meet the </span>
+              <span className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">surgeon</span>
+            </div>
+            <div className="mt-2">
+              <span className={`font-bold text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${josefin.className}`}>DR. MBONISI MALABA</span>
+            </div>
+          </div>
 
           <div className="space-y-4">
             <p className="font-bold">{aboutData.surgeon.role}</p>
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-end w-full max-w-8xl">
+      <div className="flex justify-center items-end w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="w-full mx-auto">
           {/* Family Photo - positioned on the right */}
           <Image
@@ -45,7 +49,7 @@ export function MeetSurgeonSection() {
             width={300}
             height={200}
             alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
-            className="float-right ml-[6rem] mb-6 hidden md:block md:w-[45%] max-h-[550px] "
+            className="float-right ml-4 sm:ml-8 md:ml-12 lg:ml-16 xl:ml-20 mb-6 hidden md:block w-[40%] sm:w-[42%] md:w-[45%] max-h-[550px]"
           />
 
           {/* small screen */}
@@ -54,29 +58,29 @@ export function MeetSurgeonSection() {
             width={300}
             height={200}
             alt="Dr. Malaba with his family - a happy family of five standing together outdoors"
-            className="float-right ml-[6rem] mb-6 w-full md:hidden max-h-[550px] "
+            className="float-right ml-4 mb-6 w-full md:hidden max-h-[550px]"
           />
 
           {/* Text Content - wraps around the image */}
-          <div className="text-blue-900 mx-5 md:pl-[5rem] lg:pl-[7rem] xl:pl-[13rem] leading-relaxed mt-25">
-            <p className="pr-0 md:pr-[5rem] lg:pr-[10rem] xl:pr-[12rem]">
+          <div className="text-blue-900 mx-5 sm:mx-6 md:pl-8 lg:pl-12 xl:pl-16 leading-relaxed mt-16">
+            <p className="pr-0 sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16 text-justify hyphens-auto">
               <span className="font-bold text-4xl">DR. MALABA</span>
               <span className="font-bold text-2xl">
                 {" "}
                 IS MARRIED WITH THREE CHILDREN.
               </span>{" "}
-              He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in 
-               2015 to start and strengthen churches in East Africa and beyond.
-              Whilst in Kenya<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he subspecialised in paediatric orthopaedics with
-              the College of Surgeons of East<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> Central and Southern Africa
-              <span className={`${josefin.className} font-light`}> (</span>COSECSA<span className={`${josefin.className} font-light`}>)</span> During his surgical training<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}className="text-md">,</span> he was awarded a number
+              He is a Zimbabwean orthopaedic surgeon who relocated to Kenya in
+              2015 to start and strengthen churches in East Africa and beyond.
+              Whilst in Kenya, he subspecialised in paediatric orthopaedics with
+              the College of Surgeons of East, Central and Southern Africa
+              <span className={`${josefin.className} font-light`}> (</span>COSECSA<span className={`${josefin.className} font-light`}>)</span> During his surgical training, he was awarded a number
               of prizes including the medal for best<span className={`${josefin.className} font-light`}>-</span>performing candidate in the
               COSECSA Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2017<span className={`${josefin.className} font-light`}>)</span> and Paediatric Orthopaedic <span className={`${josefin.className} font-light`}>(</span>2021<span className={`${josefin.className} font-light`}>) </span>
               Examinations as well at the prestigious{" "}
-              <span className={`${josefin.className} font-semibold`}>Gerald  O´Sullivan Medal</span><span style={{fontWeight: "bold" }}><span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}> (</span>2017<span style={{ fontFamily: "Arial, Helvetica, sans-serif"}}>)</span></span>{" "}
+              <span className={`${josefin.className} font-semibold`}>Gerald  O´Sullivan Medal</span><span style={{fontWeight: "bold" }}> (2017)</span>{" "}
               awarded by COSECSA and the Royal College of Surgeons of Ireland to
               the graduate with the highest overall mark across all surgical
-              specialties. In 2022<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> he did a further one year{" "}
+              specialties. In 2022, he did a further one year{" "}
               <span className="font-bold">
                 subspecialist fellowship training in paediatric and adult limb
                 reconstruction at the Royal London Hospital
@@ -87,7 +91,7 @@ export function MeetSurgeonSection() {
               </span>
               <span> <span className={`${josefin.className} font-light`}>-</span> a centre of excellence north of London. He </span>
               <span className="font-bold">pastors OneTribe Church</span> in
-              Nairobi<span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>,</span> Kenya and through the Advance Movement serves and{" "}
+              Nairobi, Kenya and through the Advance Movement serves and{" "}
               <span className="font-bold">
                 supports several dozen churches or church plants in East Africa
               </span>{" "}
