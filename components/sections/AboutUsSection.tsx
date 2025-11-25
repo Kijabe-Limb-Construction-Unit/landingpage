@@ -4,9 +4,6 @@ import Image from "next/image";
 import { AfricaVisionSection } from './AfricaVisionSection';
 
 // Coves font is configured globally in globals.css
-const coves = {
-    className: 'font-coves'
-};
 
 export function AboutUsSection() {
     return (
