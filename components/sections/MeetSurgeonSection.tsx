@@ -26,19 +26,19 @@ export function MeetSurgeonSection() {
           </div>
 
           {/* Right - Content */}
-          <div className="text-[#003683] space-y-6 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 lg:py-12">
+          <div className="text-[#003683] space-y-4 sm:space-y-6 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-6 sm:py-8 lg:py-12">
             <div className="w-full">
               <div className="leading-tight">
-                <span className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">meet the </span>
-                <span className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">surgeon</span>
+                <span className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">meet the </span>
+                <span className="font-bold text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">surgeon</span>
               </div>
               <div className="mt-2">
-                <span className={`font-bold text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${josefin.className}`}>DR. MBONISI MALABA</span>
+                <span className={`font-bold text-sm xs:text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl ${josefin.className}`}>DR. MBONISI MALABA</span>
               </div>
             </div>
 
             <div className="space-y-4">
-              <p className="font-bold">{aboutData.surgeon.role}</p>
+              <p className="font-bold text-sm sm:text-base md:text-base lg:text-lg">{aboutData.surgeon.role}</p>
             </div>
           </div>
         </div>
@@ -64,10 +64,10 @@ export function MeetSurgeonSection() {
           />
 
           {/* Text Content - wraps around the image */}
-          <div className="text-blue-900 leading-relaxed mt-16">
+          <div className="text-blue-900 leading-relaxed mt-12 sm:mt-16 text-xs sm:text-sm md:text-base lg:text-lg">
             <p className="pr-0 sm:pr-4 md:pr-8 lg:pr-12 xl:pr-16 text-justify hyphens-auto">
-              <span className="font-bold text-4xl">DR. MALABA</span>
-              <span className="font-bold text-2xl">
+              <span className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">DR. MALABA</span>
+              <span className="font-bold text-base sm:text-lg md:text-xl lg:text-2xl">
                 {" "}
                 IS MARRIED WITH THREE CHILDREN.
               </span>{" "}

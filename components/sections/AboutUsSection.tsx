@@ -18,17 +18,17 @@ export function AboutUsSection() {
 
                 {/* The Need */}
                 <div className="w-full lg:w-1/2 bg-[#4FB29E] text-white p-8 md:p-16 lg:p-20 flex flex-col justify-center">
-                    <h2 className="text-5xl md:text-7xl mb-2">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">
                         <span className="md:font-light font-bold text-white">about</span> <span className={`font-bold text-white ${josefin.className}`}>us</span>
                     </h2>
-                    <h3 className="text-2xl md:text-3xl tracking-widest mb-8 font-light uppercase">The Need</h3>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl tracking-widest mb-6 sm:mb-8 font-light uppercase">The Need</h3>
 
-                    <div className="space-y-6 text-lg md:text-xl font-light leading-relaxed">
+                    <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl font-light leading-relaxed">
                         <p className="text-justify hyphens-auto">
                             <span className="font-bold">THERE IS A LITTLE KNOWN EPIDEMIC.</span> Conditions such as <span className="font-bold text-[#003683]">childhood deformity, infected fractures and neglected trauma cause massive suffering globally.</span>
                         </p>
-                        <p className="md:text-xl lg:text-xl text-xl md:font-normal font-bold text-justify hyphens-auto">
-                            <span className="md:text-xl lg:text-xl text-2xl font-extrabold">Every year <span className="text-[#003683]">30 million people</span> sustain a new disability</span> as a result of musculoskeletal injury. Within that group, <span className="font-bold text-[#003683]">1.8 million</span> sustain a fracture that later becomes infected, making it both more expensive and more challenging to treat, and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683] md:text-xl lg:text-2xl text-2xl">Kenya has 12 000 new fracture-related infections each year.</span>
+                        <p className="text-base sm:text-lg md:text-xl md:font-normal font-bold text-justify hyphens-auto">
+                            <span className="text-lg sm:text-xl md:text-xl lg:text-xl font-extrabold">Every year <span className="text-[#003683]">30 million people</span> sustain a new disability</span> as a result of musculoskeletal injury. Within that group, <span className="font-bold text-[#003683]">1.8 million</span> sustain a fracture that later becomes infected, making it both more expensive and more challenging to treat, and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683] text-lg sm:text-xl md:text-xl lg:text-2xl">Kenya has 12 000 new fracture-related infections each year.</span>
                         </p>
                         <p className="text-justify hyphens-auto">
                             On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly, developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.
@@ -66,7 +66,7 @@ export function AboutUsSection() {
                         />
                     </div>
 
-                    <div className="absolute bottom-0 left-0 bg-[#003683] text-white py-3 px-8 text-xl tracking-widest uppercase font-bold z-10">
+                    <div className="absolute bottom-0 left-0 bg-[#003683] text-white py-2 sm:py-3 px-4 sm:px-8 text-base sm:text-lg md:text-xl tracking-widest uppercase font-bold z-10">
                         Bovin Before
                     </div>
                 </div>
@@ -77,14 +77,14 @@ export function AboutUsSection() {
 
                 {/* The Answer */}
                 <div className="w-full lg:w-1/2 bg-[#1096C9] text-white p-8 md:p-16 lg:p-20 order-2 lg:order-1 flex flex-col justify-center">
-                    <h3 className="text-3xl md:text-4xl mb-8 font-light uppercase">The Answer</h3>
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 font-light uppercase">The Answer</h3>
 
-                    <div className="space-y-6 text-lg md:text-xl font-light leading-relaxed">
+                    <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl font-light leading-relaxed">
                         <p>
                             <span className="font-bold">LIMB RECONSTRUCTION IS AN ESSENTIAL WEAPON IN ADDRESSING THIS CRISIS.</span> This is a field within orthopaedic surgery that is at the cutting edge of the treatment of limb deformities, fracture-related infection and poorly healing fractures.
                         </p>
                         <p>
-                            The Kijabe Limb Reconstruction Unit is an emerging centre of excellence based in Kijabe, Kenya and <span className="font-bold md:text-xl lg:text-xl text-2xl text-[#4FB29E]">providing care for some of the most challenging orthopaedic conditions.</span>
+                            The Kijabe Limb Reconstruction Unit is an emerging centre of excellence based in Kijabe, Kenya and <span className="font-bold text-lg sm:text-xl md:text-xl lg:text-xl text-[#4FB29E]">providing care for some of the most challenging orthopaedic conditions.</span>
                         </p>
                     </div>
 
@@ -141,7 +141,7 @@ export function AboutUsSection() {
                         />
                     </div>
 
-                    <div className="absolute bottom-0 left-0 bg-[#003683] text-white py-3 px-8 text-xl tracking-widest uppercase font-bold z-10">
+                    <div className="absolute bottom-0 left-0 bg-[#003683] text-white py-2 sm:py-3 px-4 sm:px-8 text-base sm:text-lg md:text-xl tracking-widest uppercase font-bold z-10">
                         Bovin After
                     </div>
                 </div>

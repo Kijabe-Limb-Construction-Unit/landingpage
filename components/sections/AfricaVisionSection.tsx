@@ -2,16 +2,16 @@ import Image from "next/image";
 
 export function AfricaVisionSection() {
   return (
-    <div className="w-full bg-[#003683] text-white p-8 md:p-16 lg:p-20 relative">
-      <h3 className="text-3xl md:text-4xl mb-8 font-light uppercase lg:mb-12">The Vision</h3>
+    <div className="w-full bg-[#003683] text-white p-6 sm:p-8 md:p-16 lg:p-20 relative">
+      <h3 className="text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 font-light uppercase lg:mb-12">The Vision</h3>
       
       {/* Mobile and tablet view - stacked layout */}
-      <div className="lg:hidden space-y-6 text-lg md:text-xl font-light leading-relaxed">
+      <div className="lg:hidden space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl font-light leading-relaxed">
         <p className="text-justify hyphens-auto">
           The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is a world where men, women and children <span className="font-bold text-[#4FB29E]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span>, when they need it, regardless of where they were born or how much money they happen to have.
         </p>
         <p className="text-justify hyphens-auto">
-          Towards this end, we are developing a centre of excellence in Kijabe, Kenya that trains <span className="font-extrabold text-[#4FB29E] md:text-xl lg:text-xl text-2xl">10 limb reconstruction surgeons</span> from <span className="font-extrabold text-[#4FB29E] md:text-xl lg:text-xl text-2xl">10 sub-Saharan countries</span> in the <span className="font-extrabold text-[#4FB29E] md:text-xl lg:text-xl text-2xl">next 10 years</span>, <span className="font-bold text-[#4FB29E]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span>
+          Towards this end, we are developing a centre of excellence in Kijabe, Kenya that trains <span className="font-extrabold text-[#4FB29E] text-lg sm:text-xl md:text-xl lg:text-xl">10 limb reconstruction surgeons</span> from <span className="font-extrabold text-[#4FB29E] text-lg sm:text-xl md:text-xl lg:text-xl">10 sub-Saharan countries</span> in the <span className="font-extrabold text-[#4FB29E] text-lg sm:text-xl md:text-xl lg:text-xl">next 10 years</span>, <span className="font-bold text-[#4FB29E]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span>
         </p>
         <div className="flex justify-center mt-8">
           <Image
@@ -38,30 +38,64 @@ export function AfricaVisionSection() {
         </div>
         
         {/* Custom shaped text container - positioned much lower */}
-        <div className="relative z-20 text-lg xl:text-xl font-light leading-relaxed" style={{ marginTop: '120px' }}>
-          {/* Text content with custom CSS shape */}
+        <div className="relative z-20 text-lg xl:text-xl font-light leading-relaxed" style={{ marginTop: '60px' }}>
+          {/* Text content with custom CSS shape - fits into Africa's western contour */}
           <div 
             className="africa-text-shape text-justify hyphens-auto"
             style={{
               shapeOutside: `polygon(
                 0% 0%, 
-                45% 0%, 
-                50% 5%, 
-                58% 12%, 
-                65% 20%, 
-                70% 30%, 
-                75% 42%, 
-                78% 55%, 
-                75% 68%, 
-                70% 80%, 
-                65% 90%, 
-                58% 96%, 
-                45% 100%, 
+                50% 0%, 
+                52% 5%, 
+                54% 10%, 
+                56% 15%, 
+                58% 20%, 
+                62% 25%, 
+                66% 30%, 
+                70% 35%, 
+                75% 40%, 
+                80% 45%, 
+                85% 50%, 
+                88% 55%, 
+                85% 60%, 
+                80% 65%, 
+                75% 70%, 
+                68% 75%, 
+                62% 80%, 
+                58% 85%, 
+                54% 90%, 
+                52% 95%, 
+                50% 100%, 
+                0% 100%
+              )`,
+              clipPath: `polygon(
+                0% 0%, 
+                50% 0%, 
+                52% 5%, 
+                54% 10%, 
+                56% 15%, 
+                58% 20%, 
+                62% 25%, 
+                66% 30%, 
+                70% 35%, 
+                75% 40%, 
+                80% 45%, 
+                85% 50%, 
+                88% 55%, 
+                85% 60%, 
+                80% 65%, 
+                75% 70%, 
+                68% 75%, 
+                62% 80%, 
+                58% 85%, 
+                54% 90%, 
+                52% 95%, 
+                50% 100%, 
                 0% 100%
               )`,
               float: 'left',
-              width: '70%',
-              minHeight: '400px'
+              width: '85%',
+              minHeight: '550px'
             }}
           >
             <p className="mb-6">

@@ -20,14 +20,14 @@ export default function AboutPage() {
               <div className="flex justify-center gap-2 w-full">
                 <h1 className=" z-10 w-full mx-5 md:mx:2">
                   <div className="flex items-baseline gap-2 w-full">
-                    <span className="font-bold text-white text-7xl md:text-6xl lg:text-8xl">
+                    <span className="font-bold text-white text-5xl sm:text-6xl md:text-6xl lg:text-8xl">
                       about
                     </span>
-                    <span className="font-bold text-white text-5xl md:text-6xl lg:text-7xl">
+                    <span className="font-bold text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                       us
                     </span>
                   </div>
-                  <span className="font-bold text-white text-3xl lg:text-4xl">
+                  <span className="font-bold text-white text-2xl sm:text-3xl lg:text-4xl">
                     THE NEED
                   </span>
                 </h1>
@@ -39,7 +39,7 @@ export default function AboutPage() {
                 height={400}
                 className="opacity-60 absolute items-center -z-10 top-1/2 transform -translate-y-1/4 hidden lg:block"
               />
-              <p className="space-x-2 leading-relaxed space-y-5 relative z-10 mx-5 md:mx:2">
+              <p className="space-x-2 leading-relaxed space-y-4 sm:space-y-5 relative z-10 mx-5 md:mx:2 text-sm sm:text-base md:text-lg">
                 <span className="uppercase">There is a little known epidemic.</span> Conditions such as <span className="font-bold mr-0 text-[#003683]">childhood deformity, 
                   infected fractures and neglected trauma cause massive suffering globally</span>. Every year, 30 million people sustain a new disability as a result of musculoskeletal injury.
                 Within that group, 
@@ -67,8 +67,8 @@ export default function AboutPage() {
         <div className="mx-auto w-full max-w-8xl flex flex-col lg:flex-row items-stretch min-h-[560px] lg:min-h-[720px]">
         {/* BOVIN BEFORE Section */}
         <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[720px]">
-          <div className="bg-[#003683] text-white text-center py-4 flex-shrink-0">
-            <h2 className="font-bold tracking-wide text-3xl lg:text-4xl">
+          <div className="bg-[#003683] text-white text-center py-3 sm:py-4 flex-shrink-0">
+            <h2 className="font-bold tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl">
               BOVIN BEFORE
             </h2>
           </div>
@@ -95,16 +95,16 @@ export default function AboutPage() {
               alt="Decorative ticks"
               width={200}
               height={300}
-              className="absolute right-[5rem] sm:right-75 top-[10rem] sm:top-52 md:left-65 lg:right-25 xl:right-55 opacity-20 z-0 w-55 sm:w-48 md:w-69 lg:w-100"
+              className="absolute right-[5rem] sm:right-75 top-[10rem] sm:top-52 md:left-65 lg:right-25 xl:right-55 opacity-40 z-0 w-55 sm:w-48 md:w-69 lg:w-100"
             />
 
             {/* Title */}
-            <h1 className="relative z-10 font-bold text-3xl lg:text-4xl mt-15 lg:px-15  md:mt-0">
+            <h1 className="relative z-10 font-bold text-2xl sm:text-3xl lg:text-4xl mt-15 lg:px-15  md:mt-0">
               THE ANSWER
             </h1>
 
             {/* Content with proper spacing */}
-            <div className="relative z-10 sm:space-y-6 leading-relaxed space-y-5 max-w-none lg:max-w-3xl lg:px-15">
+            <div className="relative z-10 sm:space-y-6 leading-relaxed space-y-4 sm:space-y-5 max-w-none lg:max-w-3xl lg:px-15 text-sm sm:text-base md:text-lg">
               <p>
                 <span className="font-bold text-[#003683] px-1 py-0.5 rounded">
                   LIMB RECONSTRUCTION IS AN ESSENTIAL WEAPON IN ADDRESSING THIS
@@ -127,8 +127,8 @@ export default function AboutPage() {
         {/* BOVIN AFTER Section */}
         <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[700px]">
           {/* Header */}
-          <div className="bg-[#003683] text-white text-center py-4 flex-shrink-0">
-            <h2 className="font-bold tracking-wide text-3xl lg:text-4xl">
+          <div className="bg-[#003683] text-white text-center py-3 sm:py-4 flex-shrink-0">
+            <h2 className="font-bold tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl">
               BOVIN AFTER
             </h2>
           </div>
