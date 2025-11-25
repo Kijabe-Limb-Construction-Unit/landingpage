@@ -2,13 +2,8 @@
 import { BlueColoredBorder } from "@/components/sections/ColoredBorder";
 import Image from "next/image";
 import Link from "next/link";
-import { Josefin_Sans } from 'next/font/google';
 
-const josefin = Josefin_Sans({
-  subsets: ['latin'],
-  weight: [ '200', '600', '700'],
-  style: ['normal', 'italic'],
-});
+// Coves font is configured globally in globals.css
 
 export default function DonatePage() {
   return (
@@ -65,7 +60,7 @@ export default function DonatePage() {
           </div>
           <p className="text-white border-t border-[#003683] mt-0 mb-4 md:-mt-10 pt-8 text-[20px] md:text-[25px]">
             Your donation is also tax-deductible for US taxpayers! Global Connections is a
-            registered 501 <span className={`${josefin.className} font-light`}>(</span>c<span className={`${josefin.className} font-light`}>)</span>3 corporation with the Internal Revenue Service. Tax ID #20-8241793
+            registered 501 <span className="font-light">(</span>c<span className="font-light">)</span>3 corporation with the Internal Revenue Service. Tax ID #20-8241793
           </p>
         </div>
       </div>

@@ -2,13 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Josefin_Sans } from 'next/font/google';
 
-const josefin = Josefin_Sans({
-  subsets: ['latin'],
-  weight: ['300', '600', '700'],
-  style: ['normal', 'italic'],
-});
+// Coves font is configured globally in globals.css
 
 export const PatientResources = ({
   p1,
@@ -43,7 +38,7 @@ export const PatientResources = ({
         <Image src={btnColor} alt={""} width={100} height={100} className="w-[40%] sm:w-[30%] cursor-pointer" onClick={handlePlayClick}/>
         <div className={`flex flex-col justify-center items-center gap-2 md:items-start w-[70%] sm:w-[50%] md:w-auto text-${textColor}`}>
           <p className="text-[17px] sm:text-lg md:text-xl">{p1}</p>
-          <p className={`text-[17px] sm:text-lg md:text-xl ${josefin.className} font-light`}>{p2}</p>
+          <p className="text-[17px] sm:text-lg md:text-xl font-light">{p2}</p>
         </div>
       </div>
       

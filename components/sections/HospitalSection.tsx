@@ -1,11 +1,6 @@
 import Image from "next/image";
-import { Josefin_Sans } from 'next/font/google';
 
-const josefin = Josefin_Sans({
-  subsets: ['latin'],
-  weight: ['600', '700'],
-  style: ['normal', 'italic'],
-});
+// Coves font is configured globally in globals.css
 
 export function HospitalSection() {
   return (
@@ -45,13 +40,13 @@ export function HospitalSection() {
               <div className="w-full ml-20 md:-mr-30 lg:-ml-5 xl:-ml-0">
                  {/* border md:border-red-600 lg:border-blue-600 xl:border-green-600 */}
                 <h1 className="text-4xl md:text-5xl font-light lg:text-6xl xl:text-7xl lg:pl-0 xl:pl-10 w-full text-heading md:ml-5 mb-6 sm:mb-8">
-                  the <span className={`font-semibold text-blue-900 ${josefin.className}`}>hospital</span>
+                  the <span className="font-bold text-blue-900">hospital</span>
                 </h1>
               </div>
             </div>
 
             <div className="flex-1 flex items-center leading-relaxed space-y-4 px-20 text-blue-900 lg:px-2 xl:px-20 mt-10 lg:mt-20">
-              <p className="w-full lg:my-20 pl-30 md:ml-0 leading-relaxed space-y-5 text-justify hyphens-none pr-6 lg:pr-8 xl:pr-10 text-sm sm:text-base md:text-lg">
+              <p className="w-full lg:my-20 pl-30 md:ml-0 leading-relaxed space-y-5 text-justify hyphens-none pr-6 lg:pr-8 xl:pr-10 text-base sm:text-lg md:text-xl lg:text-xl">
                 <span className="font-bold">Kijabe Hospital</span> is a renowned
                 center of excellence in healthcare and medical training, serving
                 patients from across Kenya and beyond. Nestled on the scenic
@@ -99,7 +94,7 @@ export function HospitalSection() {
             className="sticky md:absolute z-30 -mt-5 mb-5 md:pt-5 w-[100%] object-cover"
           />
           <div className="leading-relaxed space-y-4 text-blue-900 flex justify-end px-5 items-end">
-            <p className="w-full md:max-w-5xl text-justify hyphens-none text-sm sm:text-base md:text-lg">
+            <p className="w-full md:max-w-5xl text-justify hyphens-none text-base sm:text-lg md:text-xl lg:text-xl">
               <span className="font-bold">Kijabe Hospital</span> is a renowned
               centre of excellence in healthcare and medical training, serving
               patients from across Kenya and beyond. Nestled on the scenic

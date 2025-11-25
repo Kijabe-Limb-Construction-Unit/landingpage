@@ -190,17 +190,53 @@
     }
   }
 }
+/* Coves Light Font */
 @font-face {
   font-family: 'Coves';
-  src: url('/fonts/Coves-Light.otf') format('opentype');
+  src: url('/fonts/coves_light-webfont.woff2') format('woff2'),
+       url('/fonts/coves_light-webfont.woff') format('woff'),
+       url('/fonts/Coves-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Coves Normal (using Light) */
+@font-face {
+  font-family: 'Coves';
+  src: url('/fonts/coves_light-webfont.woff2') format('woff2'),
+       url('/fonts/coves_light-webfont.woff') format('woff'),
+       url('/fonts/Coves-Light.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
+
+/* Coves Bold Font */
 @font-face {
   font-family: 'Coves';
-  src: url('/fonts/Coves-Bold.otf') format('opentype');
+  src: url('/fonts/coves_bold-webfont.woff2') format('woff2'),
+       url('/fonts/coves_bold-webfont.woff') format('woff'),
+       url('/fonts/Coves-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+/* Coves Extra Bold (using Bold) */
+@font-face {
+  font-family: 'Coves';
+  src: url('/fonts/coves_bold-webfont.woff2') format('woff2'),
+       url('/fonts/coves_bold-webfont.woff') format('woff'),
+       url('/fonts/Coves-Bold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utility class for Coves font */
+.font-coves {
+  font-family: 'Coves', sans-serif;
 }
 
 .light-letter-spacing {

@@ -5,13 +5,8 @@ import Doris from "@/public/doris.png";
 import Image from "next/image";
 import { storiesData } from "@/lib/fakes/stories-fakes";
 import { PatientStoriesSection } from "@/components/sections/PatientStoryHeader";
-import { Josefin_Sans } from 'next/font/google';
 
-const josefin = Josefin_Sans({
-  subsets: ['latin'],
-  weight: ['600', '700'],
-  style: ['normal', 'italic'],
-});
+// Coves font is configured globally in globals.css
 const patientTestimonies = storiesData.patients.map((patient) => ({
   ...patient,
   image: patient.name === "BOVIN" ? Bovin : Moses,
@@ -26,7 +21,7 @@ export default function PatientStories() {
           {/* Text Section */}
           <div className="w-full lg:w-1/2 bg-[#4FB29E] flex items-center p-6 lg:p-8 order-2 lg:order-1">
             <div className="w-full flex flex-col items-endpx-5">
-              <h2 className={`font-semibold text-white flex justify-end mb-2 lg:mb-3 tracking-widest ${josefin.className}`}>
+              <h2 className="font-bold text-white flex justify-end mb-2 lg:mb-3 tracking-widest">
 
                 {patientTestimonies[0].name}
               </h2>
@@ -100,7 +95,7 @@ export default function PatientStories() {
         {/* Text Section */}
         <div className="w-full lg:w-1/2 bg-[#149ECC] flex items-center p-3 lg:p-8">
           <div className="w-full px-5">
-            <h2 className={`text-semi-header font-semibold text-white mb-2 lg:mb-3 tracking-widest ${josefin.className}`}>
+            <h2 className="text-semi-header font-bold text-white mb-2 lg:mb-3 tracking-widest">
               {patientTestimonies[1].name}
             </h2>
 
@@ -124,7 +119,7 @@ export default function PatientStories() {
         {/* Text Section */}
         <div className="w-full lg:w-1/2 bg-[#193380] flex items-center  p-6 lg:p-8 order-2 lg:order-1">
           <div className="w-full flex flex-col items-end px-5">
-            <h2 className={`text-semi-header flex justify-end font-semibold text-white mb-2 lg:mb-3 tracking-widest ${josefin.className}`}>
+            <h2 className="text-semi-header flex justify-end font-bold text-white mb-2 lg:mb-3 tracking-widest">
               DORIS
             </h2>
 

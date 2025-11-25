@@ -1,14 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { Josefin_Sans } from 'next/font/google';
 import { AfricaVisionSection } from './AfricaVisionSection';
 
-const josefin = Josefin_Sans({
-    subsets: ['latin'],
-    weight: ['300', '400', '600', '700'],
-    style: ['normal', 'italic'],
-});
+// Coves font is configured globally in globals.css
+const coves = {
+    className: 'font-coves'
+};
 
 export function AboutUsSection() {
     return (
@@ -19,7 +17,7 @@ export function AboutUsSection() {
                 {/* The Need */}
                 <div className="w-full lg:w-1/2 bg-[#4FB29E] text-white p-8 md:p-16 lg:p-20 flex flex-col justify-center">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">
-                        <span className="md:font-light font-bold text-white">about</span> <span className={`font-bold text-white ${josefin.className}`}>us</span>
+                        <span className="md:font-light font-bold text-white">about</span> <span className="font-bold text-white">us</span>
                     </h2>
                     <h3 className="text-xl sm:text-2xl md:text-3xl tracking-widest mb-6 sm:mb-8 font-light uppercase">The Need</h3>
 
