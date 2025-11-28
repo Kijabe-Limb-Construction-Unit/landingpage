@@ -81,7 +81,7 @@ const Navbar = () => {
             >
               {item.name}
             </a>
-          ))} 
+          ))}
         </nav>
 
         <div className="flex w-full h-2 md:hidden">
@@ -91,20 +91,20 @@ const Navbar = () => {
         </div>
         {/* Logo and menu section  */}
         <div className="relative bg-white top-0 md:top-5">
-          <div className="absolute top-20 inset-0 flex items-center justify-center z-30 w-[105vw]">
+          <div className="absolute top-20 md:top-28 lg:top-20 inset-0 flex items-center justify-center z-30 w-[105vw]">
             <Image
               src="/heartbeat-line-complet.svg"
               alt=""
               width={1200}
               height={10}
-              className="h-auto block md:hidden mr-5 mt-10"
+              className="h-auto min-h-[10px] block md:hidden mr-5 mt-14 object-cover"
             />
             <Image
               src="/heartbeat-line-complete.svg"
               alt=""
               width={1200}
               height={10}
-              className="h-auto w-full hidden md:block"
+              className="w-full hidden md:block h-auto min-h-[15px] object-cover"
             />
           </div>
           <div className="relative z-20 mt-5 md:mt-20 px-8 flex items-center justify-between">
@@ -113,8 +113,8 @@ const Navbar = () => {
               alt="Kijabe Limb Reconstruction Unit"
               width={200}
               height={150}
-              className="h-auto lg:h-25 bg-white w-auto max-w-[280px] md:max-w-[400px] lg:max-w-[500px]"
-              // className="w-30 h-10 md:w-70 md:h-50 border-2"
+              className="h-auto lg:h-25 bg-white w-auto max-w-[280px] lg:max-w-[500px]"
+            // className="w-30 h-10 md:w-70 md:h-50 border-2"
             />
 
             <div className="md:hidden">

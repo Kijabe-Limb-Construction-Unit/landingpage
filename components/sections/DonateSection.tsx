@@ -24,15 +24,20 @@ export function DonateSection() {
                 <div className="flex flex-col lg:flex-row min-h-[600px]">
                     {/* Left Content */}
                     <div className="w-full lg:w-1/2 py-16 lg:py-24 pr-0 lg:pr-12 flex flex-col justify-center">
-                        <div className="mb-8 flex items-center gap-4">
+                        <div className="mb-8 flex items-center gap-2 sm:gap-3 md:gap-4">
                             <h2 className="text-5xl md:text-7xl font-light">donate</h2>
-                            <Image
-                                src="/butterfly.svg"
-                                alt="Butterfly"
-                                width={60}
-                                height={60}
-                                className="animate-pulse"
-                            />
+                            <div className="flex-shrink-0">
+                                <Image
+                                    src="/butterfly.svg"
+                                    alt="Butterfly"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    priority
+                                    className="w-auto h-10 md:h-14 lg:h-15"
+                                    style={{ width: 'auto' }}
+                                />
+                            </div>
                         </div>
 
                         <div className="space-y-8 text-xl font-light leading-relaxed max-w-xl">
@@ -48,7 +53,7 @@ export function DonateSection() {
                                     alt="Click Here to Give"
                                     width={250}
                                     height={80}
-                                    className="drop-shadow-lg"
+                                    className="drop-shadow-lg w-full max-w-[200px] md:max-w-[250px] h-auto object-contain"
                                 />
                             </Link>
 
