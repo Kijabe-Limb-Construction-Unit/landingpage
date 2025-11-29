@@ -12,7 +12,7 @@ export function AboutUsSection() {
             <div className="flex flex-col lg:flex-row w-full">
 
                 {/* The Need */}
-                <div className="w-full lg:w-1/2 bg-[#4FB29E] text-white p-8 md:p-16 lg:p-20 flex flex-col justify-center">
+                <div className="w-full lg:w-1/2 bg-[#4FB29E] text-white p-12 md:p-20 flex flex-col justify-center">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2">
                         <span className="md:font-light font-bold text-white">about</span> <span className="font-bold text-white">us</span>
                     </h2>
@@ -23,7 +23,7 @@ export function AboutUsSection() {
                             <span className="font-bold">THERE IS A LITTLE KNOWN EPIDEMIC.</span> Conditions such as <span className="font-bold text-[#003683]">childhood deformity, infected fractures and neglected trauma cause massive suffering globally.</span>
                         </p>
                         <p className="text-base sm:text-lg md:text-xl md:font-normal font-bold text-justify hyphens-auto">
-                            <span className="text-lg sm:text-xl md:text-xl lg:text-xl font-extrabold">Every year <span className="text-[#003683]">30 million people</span> sustain a new disability</span> as a result of musculoskeletal injury. Within that group, <span className="font-bold text-[#003683]">1.8 million</span> sustain a fracture that later becomes infected, making it both more expensive and more challenging to treat, and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683] text-lg sm:text-xl md:text-xl lg:text-2xl">Kenya has 12 000 new fracture-related infections each year.</span>
+                            <span className="text-lg sm:text-xl md:text-xl lg:text-xl font-extrabold">Every year<span className="text-[#003683]">30 million people</span> sustain a new disability</span> as a result of musculoskeletal injury. Within that group, <span className="font-bold text-[#003683]">1.8 million</span> sustain a fracture that later becomes infected, making it both more expensive and more challenging to treat, and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683] text-lg sm:text-xl md:text-xl lg:text-2xl">Kenya has 12 000 new fracture-related infections each year.</span>
                         </p>
                         <p className="text-justify hyphens-auto">
                             On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly, developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.
@@ -71,7 +71,7 @@ export function AboutUsSection() {
             <div className="flex flex-col lg:flex-row w-full">
 
                 {/* The Answer */}
-                <div className="w-full lg:w-1/2 bg-[#1096C9] text-white p-8 md:p-16 lg:p-20 order-2 lg:order-1 flex flex-col justify-center">
+                <div className="w-full lg:w-1/2 bg-[#1096C9] text-white p-12 md:p-20 order-2 lg:order-1 flex flex-col justify-center">
                     <h3 className="text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 font-light uppercase">The Answer</h3>
 
                     <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl font-light leading-relaxed">

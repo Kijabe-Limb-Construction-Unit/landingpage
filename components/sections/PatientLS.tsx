@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function PatientLS() {
   return (
-    <section className="w-full relative overflow-visible mb-5">
+    <section className="w-full relative overflow-visible">
       {/* Alternating color strip with exactly two provided columns */}
       <div className="flex w-[100%] h-[64px] sm:h-[80px] md:h-[112px] lg:h-[136px] relative">
         {/* SIDE LEFT */}

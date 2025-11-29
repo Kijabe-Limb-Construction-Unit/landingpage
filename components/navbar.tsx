@@ -75,7 +75,7 @@ const Navbar = () => {
               href={item.path}
               className={`
                 ${item.bgColor}
-                flex-1 sm:px-0 md:px-3 py-2 transition-opacity hover:opacity-90 text-center pt-2
+                flex-1 sm:px-0 md:px-3 py-2 transition-opacity hover:opacity-90 text-center pt-2 text-base sm:text-lg md:text-xl
                 ${pathname === item.path ? `bg-white font-extrabold uppercase text-[#003683] hv-nv-lnks pt-4 ${ibmPlexSans.className}` : "text-white font-light lowercase nv-lnks"}
               `}
             >
@@ -107,15 +107,17 @@ const Navbar = () => {
               className="w-full hidden md:block h-auto min-h-[15px] object-cover"
             />
           </div>
-          <div className="relative z-20 mt-5 md:mt-20 px-8 flex items-center justify-between">
-            <Image
-              src="/KLRU_Logo.png"
-              alt="Kijabe Limb Reconstruction Unit"
-              width={200}
-              height={150}
-              className="h-auto lg:h-25 bg-white w-auto max-w-[280px] lg:max-w-[500px]"
-            // className="w-30 h-10 md:w-70 md:h-50 border-2"
-            />
+          <div className="relative z-20 py-3 md:py-12 px-8 flex items-center justify-between">
+            <div className="flex items-center">
+              <Image
+                src="/KLRU_Logo.png"
+                alt="Kijabe Limb Reconstruction Unit"
+                width={200}
+                height={150}
+                className="h-auto lg:h-25 bg-white w-auto max-w-[280px] lg:max-w-[500px]"
+              // className="w-30 h-10 md:w-70 md:h-50 border-2"
+              />
+            </div>
 
             <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -156,7 +158,7 @@ const Navbar = () => {
       {/* Non-sticky section - scrolls away on medium screens and above */}
       <div className="w-full bg-white">
         {/* Donate - restore section  */}
-        <div className="relative mt-8">
+        <div className="relative mt-8 sm:mt-12 md:mt-5 lg:mt-0">
           <NavDonate />
         </div>
         {/* bottom lines  */}

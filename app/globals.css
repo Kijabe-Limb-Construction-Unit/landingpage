@@ -199,6 +199,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-002B, U+002D-10FFFF; /* Excludes U+002C (comma) */
 }
 
 /* Coves Normal (using Light) */
@@ -210,6 +211,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-002B, U+002D-10FFFF; /* Excludes U+002C (comma) */
 }
 
 /* Coves Bold Font */
@@ -221,6 +223,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-002B, U+002D-10FFFF; /* Excludes U+002C (comma) */
 }
 
 /* Coves Extra Bold (using Bold) */
@@ -232,6 +235,7 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-002B, U+002D-10FFFF; /* Excludes U+002C (comma) */
 }
 
 /* Utility class for Coves font */

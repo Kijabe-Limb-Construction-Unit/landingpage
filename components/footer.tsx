@@ -2,7 +2,7 @@
 import { Mail } from 'lucide-react';
 import Foot from './sections/foot';
 import Link from 'next/link';
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -34,6 +34,28 @@ const Footer = () => {
               </svg>
             </a>
 
+            {/* X (Twitter) */}
+            <Link
+              className='w-12 h-12 md:w-14 md:h-14 bg-white text-[#003683] rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity shadow-lg'
+              href="https://x.com/kijaberecon"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+            >
+              <FaXTwitter className='w-6 h-6 md:w-7 md:h-7' />
+            </Link>
+
+            {/* LinkedIn */}
+            <Link
+              className='w-12 h-12 md:w-14 md:h-14 bg-white text-[#003683] rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity shadow-lg'
+              href="https://www.linkedin.com/in/kijabe-limb-reconstruction-unit"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn className='w-6 h-6 md:w-7 md:h-7' />
+            </Link>
+
             <Link
               className='w-12 h-12 md:w-14 md:h-14 bg-white text-[#003683] rounded-sm flex items-center justify-center hover:opacity-80 transition-opacity shadow-lg'
               href="https://wa.me/254794806940"
@@ -51,7 +73,6 @@ const Footer = () => {
             >
               <Mail className='w-6 h-6 md:w-7 md:h-7' />
             </Link>
-            
           </div>
 
           {/* Policy Links */}

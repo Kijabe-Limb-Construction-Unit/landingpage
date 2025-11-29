@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <header className="w-full md:w-full bg-white sticky top-0 z-50">
       {/* Logo and menu section  */}
-      <div className="relative bg-white py-6">
+      <div className="relative bg-white py-6 md:py-8 sm:py-6">
         {/* <HeartbeatAnimation /> */}
         <div className="absolute top-16 px-8 inset-0 flex items-center justify-start z-10">
           <Image

@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function AfricaVisionSection() {
   return (
-    <div className="w-full bg-[#003683] text-white p-6 sm:p-8 md:p-16 lg:p-20 relative">
+    <div className="w-full bg-[#003683] text-white p-12 md:p-20 relative">
       <h3 className="text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 font-light uppercase lg:mb-12">The Vision</h3>
-      
+
       {/* Mobile and tablet view - stacked layout */}
       <div className="lg:hidden space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl font-light leading-relaxed">
         <p className="text-justify hyphens-auto">
@@ -36,11 +36,11 @@ export function AfricaVisionSection() {
             className="w-[500px] h-auto opacity-90 hover:opacity-100 transition-opacity"
           />
         </div>
-        
+
         {/* Custom shaped text container - positioned much lower */}
         <div className="relative z-20 text-lg xl:text-xl font-light leading-relaxed" style={{ marginTop: '60px' }}>
           {/* Text content with custom CSS shape - fits into Africa's western contour */}
-          <div 
+          <div
             className="africa-text-shape text-justify hyphens-auto"
             style={{
               shapeOutside: `polygon(
@@ -115,7 +115,7 @@ export function AfricaVisionSection() {
             </p>
           </div>
         </div>
-        
+
         {/* Clear float */}
         <div className="clear-both"></div>
       </div>

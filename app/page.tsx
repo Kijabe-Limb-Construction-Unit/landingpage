@@ -204,7 +204,7 @@ const HeroSlider = () => {
 
 const ServicesSection = () => (
   <section
-    className="py-2 min-[250px]:py-3 min-[320px]:py-4 md:py-5 bg-white"
+    className="py-12 md:py-20 bg-white"
     aria-label="Our services"
   >
     <div className="container mx-auto px-1 min-[250px]:px-2 min-[320px]:px-4 md:px-8">
@@ -235,12 +235,21 @@ const ServicesSection = () => (
   </section>
 );
 
+import { AboutUsSection } from "@/components/sections/AboutUsSection";
+import { MeetSurgeonSection } from "@/components/sections/MeetSurgeonSection";
+import { HospitalSection } from "@/components/sections/HospitalSection";
+import { DonateSection } from "@/components/sections/DonateSection";
+
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <HeroSlider />
-      <PatientSect />
+      <AboutUsSection />
       <ServicesSection />
+      <PatientSect />
+      <MeetSurgeonSection />
+      <HospitalSection />
+      <DonateSection />
       <BlueColoredBorder pst={""} />
     </main>
   );

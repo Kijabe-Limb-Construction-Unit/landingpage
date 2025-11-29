@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function PatientSS() {
   return (
-    <section className="w-full relative overflow-visible mb-5">
+    <section className="w-full relative overflow-visible">
       {/* Alternating color strip with exactly two provided columns */}
       <div className="grid grid-cols-2 min-[859px]:grid-cols-4 lg:grid-cols-12 w-full h-[64px] sm:h-[80px] md:h-[112px] lg:h-[136px]">
         {/* Side left (sky blue) - visible only above 858px */}
@@ -40,9 +40,9 @@ export function PatientSS() {
           height={140}
           className="relative top-2 sm:top-3 md:top-5 lg:top-5 h-[87px] sm:h-[107px] md:h-[146px] lg:h-[180px] w-auto drop-shadow-md md:drop-shadow-lg"
         />
-        
+
       </div>
-      <div className="bg-[#003683] h-[8px]"/>
+      <div className="bg-[#003683] h-[8px]" />
     </section>
   );
 }

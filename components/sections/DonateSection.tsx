@@ -23,7 +23,7 @@ export function DonateSection() {
             <div className="container mx-auto px-4 relative z-20">
                 <div className="flex flex-col lg:flex-row min-h-[600px]">
                     {/* Left Content */}
-                    <div className="w-full lg:w-1/2 py-16 lg:py-24 pr-0 lg:pr-12 flex flex-col justify-center">
+                    <div className="w-full lg:w-1/2 py-12 md:py-20 pr-0 lg:pr-12 flex flex-col justify-center">
                         <div className="mb-8 flex items-center gap-2 sm:gap-3 md:gap-4">
                             <h2 className="text-5xl md:text-7xl font-light">donate</h2>
                             <div className="flex-shrink-0">

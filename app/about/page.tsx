@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-[#4FB29E] relative">
+      <section className="bg-[#4FB29E] relative py-12 md:py-20">
         <div className="mx-auto w-full max-w-8xl flex flex-col md:justify-end lg:flex-row items-stretch">
           {/* left content */}
           <div className=" w-full mr-20 lg:w-1/2 flex flex-col justify-center min-h-[560px] lg:min-h-[720px]">
@@ -39,14 +39,14 @@ export default function AboutPage() {
                 height={400}
                 className="opacity-60 absolute items-center -z-10 top-1/2 transform -translate-y-1/4 hidden lg:block"
               />
-              <p className="space-x-2 leading-relaxed space-y-4 sm:space-y-5 relative z-10 mx-5 md:mx:2 text-sm sm:text-base md:text-lg">
-                <span className="uppercase">There is a little known epidemic.</span> Conditions such as <span className="font-bold mr-0 text-[#003683]">childhood deformity, 
+              <p className="leading-relaxed space-y-4 sm:space-y-5 relative z-10 mx-5 md:mx:2 text-sm sm:text-base md:text-3xl antialiased">
+                <span className="uppercase">There is a little known epidemic.</span> Conditions such as <span className="font-bold mr-0 text-[#003683]">childhood deformity,
                   infected fractures and neglected trauma cause massive suffering globally</span>. Every year, 30 million people sustain a new disability as a result of musculoskeletal injury.
-                Within that group, 
-                 1.8 million sustain a fracture that later becomes infected, 
-                making it both more expensive and more challenging to treat, 
+                Within that group,
+                1.8 million sustain a fracture that later becomes infected,
+                making it both more expensive and more challenging to treat,
                 and that could result in the loss of that limb. It is estimated that a country like <span className="font-bold text-[#003683]">Kenya has 12000 new fracture-related infections each year.</span>
-                On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly, 
+                On top of this are the many cases of congenital childhood deformity and other neglected trauma. Sadly,
                 developing countries are disproportionately affected by these challenges because of poor infrastructure and a lack of access to limb reconstruction surgery.</p>
             </div>
           </div>
@@ -63,101 +63,100 @@ export default function AboutPage() {
         </div>
       </section>
       {/* The Answer Section */}
-      <section className="w-full">
+      <section className="w-full py-12 md:py-20">
         <div className="mx-auto w-full max-w-8xl flex flex-col lg:flex-row items-stretch min-h-[560px] lg:min-h-[720px]">
-        {/* BOVIN BEFORE Section */}
-        <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[720px]">
-          <div className="bg-[#003683] text-white text-center py-3 sm:py-4 flex-shrink-0">
-            <h2 className="font-bold tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-              BOVIN BEFORE
-            </h2>
+          {/* BOVIN BEFORE Section */}
+          <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[720px]">
+            <div className="bg-[#003683] text-white text-center py-3 sm:py-4 flex-shrink-0">
+              <h2 className="font-bold tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                BOVIN BEFORE
+              </h2>
+            </div>
+            {/* Image */}
+            <div className="flex-1 relative flex items-center justify-center bg-gray-50 overflow-hidden">
+              <Image
+                src="/before.svg"
+                alt="Patient before treatment"
+                width={300}
+                height={400}
+                objectFit="cover"
+                className="object-cover object-[60%_center] w-full h-full"
+              />
+              {/* Descriptive text overlay for desktop */}
+
+            </div>
           </div>
-          {/* Image */}
-          <div className="flex-1 relative flex items-center justify-center bg-gray-50 overflow-hidden">
-            <Image
-              src="/before.svg"
-              alt="Patient before treatment"
-              width={300}
-              height={400}
-              objectFit="cover"
-              className="object-cover object-[60%_center] w-full h-full"
-            />
-            {/* Descriptive text overlay for desktop */}
-        
+
+          {/* THE ANSWER Section */}
+          <div className="bg-[#149ECC] text-white w-full lg:w-1/2 flex flex-col justify-center min-h-[560px] lg:min-h-[720px]">
+            <div className="relative p-4 sm:p-6 md:p-8 lg:p-12 space-y-4 sm:space-y-6 lg:space-y-8 h-full flex-1">
+              <Image
+                src="/ticks-light.svg"
+                alt="Decorative ticks"
+                width={200}
+                height={300}
+                className="absolute right-[5rem] sm:right-75 top-[10rem] sm:top-52 md:left-65 lg:right-25 xl:right-55 opacity-40 z-0 w-55 sm:w-48 md:w-69 lg:w-100"
+              />
+              <div className="flex flex-col justify-center h-full">
+                <h1 className="relative z-10 font-bold text-2xl sm:text-3xl lg:text-4xl mt-15 lg:px-15  md:mt-0">
+                  THE ANSWER
+                </h1>
+
+                <div className="relative z-10 sm:space-y-6 leading-relaxed space-y-4 sm:space-y-5 max-w-none lg:max-w-3xl lg:px-15 text-sm sm:text-base md:text-lg">
+                  <p>
+                    <span className="font-bold text-[#003683] px-1 py-0.5 rounded">
+                      LIMB RECONSTRUCTION IS AN ESSENTIAL WEAPON IN ADDRESSING THIS
+                      CRISIS.
+                    </span>{" "}
+                    This is a field within orthopaedic surgery that is at the
+                    cutting edge of the treatment of limb deformities,
+                    fracture-related infection and poorly healing fractures.
+                  </p>
+
+                  <p>
+                    The Kijabe Limb Reconstruction Unit is an emerging centre of
+                    excellence based in Kijabe, Kenya and providing care for some of
+                    the most challenging orthopaedic conditions.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* THE ANSWER Section */}
-        <div className="bg-[#149ECC] text-white w-full lg:w-1/2 flex flex-col justify-center min-h-[560px] lg:min-h-[720px]">
-          <div className="relative p-4 sm:p-6 md:p-8 lg:p-12 space-y-4 sm:space-y-6 lg:space-y-8 h-full flex-1">
-            <Image
-              src="/ticks-light.svg"
-              alt="Decorative ticks"
-              width={200}
-              height={300}
-              className="absolute right-[5rem] sm:right-75 top-[10rem] sm:top-52 md:left-65 lg:right-25 xl:right-55 opacity-40 z-0 w-55 sm:w-48 md:w-69 lg:w-100"
-            />
-
-            {/* Title */}
-            <h1 className="relative z-10 font-bold text-2xl sm:text-3xl lg:text-4xl mt-15 lg:px-15  md:mt-0">
-              THE ANSWER
-            </h1>
-
-            {/* Content with proper spacing */}
-            <div className="relative z-10 sm:space-y-6 leading-relaxed space-y-4 sm:space-y-5 max-w-none lg:max-w-3xl lg:px-15 text-sm sm:text-base md:text-lg">
-              <p>
-                <span className="font-bold text-[#003683] px-1 py-0.5 rounded">
-                  LIMB RECONSTRUCTION IS AN ESSENTIAL WEAPON IN ADDRESSING THIS
-                  CRISIS.
-                </span>{" "}
-                This is a field within orthopaedic surgery that is at the
-                cutting edge of the treatment of limb deformities, 
-                fracture-related infection and poorly healing fractures.
-              </p>
-
-              <p>
-                The Kijabe Limb Reconstruction Unit is an emerging centre of
-                excellence based in Kijabe, Kenya and providing care for some of
-                the most challenging orthopaedic conditions.
-              </p>
+          {/* BOVIN AFTER Section */}
+          <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[700px]">
+            {/* Header */}
+            <div className="bg-[#003683] text-white text-center py-3 sm:py-4 flex-shrink-0">
+              <h2 className="font-bold tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                BOVIN AFTER
+              </h2>
+            </div>
+            {/* Image */}
+            <div className="flex-1 relative flex items-center justify-center bg-gray-50 overflow-hidden">
+              <Image
+                src="/after.svg"
+                alt="Patient after treatment"
+                width={300}
+                height={400}
+                objectFit="cover"
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
         </div>
-
-        {/* BOVIN AFTER Section */}
-        <div className="relative w-full lg:w-1/4 flex flex-col min-h-[560px] lg:min-h-[700px]">
-          {/* Header */}
-          <div className="bg-[#003683] text-white text-center py-3 sm:py-4 flex-shrink-0">
-            <h2 className="font-bold tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-              BOVIN AFTER
-            </h2>
-          </div>
-          {/* Image */}
-          <div className="flex-1 relative flex items-center justify-center bg-gray-50 overflow-hidden">
-            <Image
-              src="/after.svg"
-              alt="Patient after treatment"
-              width={300}
-              height={400}
-              objectFit="cover"
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
-        </div>
       </section>
       {/* Vision Section */}
-      <section className="bg-[#003683] py-20">
+      <section className="bg-[#003683] py-12 md:py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6">
               <h2 className="text-3xl lg:text-4xl">{aboutData.vision.title}</h2>
               <div className="leading-relaxed">
-                <p>The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is a world where men, 
-                  women and children <span className="font-bold text-[#DFFF80]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span>, 
-                  when they need it, regardless of where they were born or how much money they happen to have. Towards this end, we are developing a centre of excellence in Kijabe, 
-                  Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years, 
-                  <span className="font-bold text-[#DFFF80]">MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span></p>
+                <p>The vision of the <span className="font-bold">Kijabe Limb Reconstruction Unit</span> is a world where men,
+                  women and children <span className="font-bold text-[#DFFF80]">CAN ACCESS THE LIMB RECONSTRUCTION CARE THAT THEY NEED</span>,
+                  when they need it, regardless of where they were born or how much money they happen to have. Towards this end, we are developing a centre of excellence in Kijabe,
+                  Kenya that trains 10 limb reconstruction surgeons from 10 sub-Saharan countries in the next 10 years,
+                  <span className="font-bold text-[#DFFF80]"> MULTIPLYING OUR IMPACT ACROSS THE CONTINENT.</span></p>
               </div>
             </div>
 
@@ -175,10 +174,8 @@ export default function AboutPage() {
         </div>
       </section>
       <ColoredBorder />
-      {/* Meet the Surgeon Section */}
       <MeetSurgeonSection />
       <ColoredBorder />
-      {/* The Hospital Section */}
       <HospitalSection />
       <BlueColoredBorder pst={""} />
     </div>
